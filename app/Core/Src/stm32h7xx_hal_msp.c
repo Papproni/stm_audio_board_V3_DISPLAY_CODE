@@ -236,6 +236,139 @@ void HAL_CRC_MspDeInit(CRC_HandleTypeDef* hcrc)
 }
 
 /**
+* @brief OSPI MSP Initialization
+* This function configures the hardware resources used in this example
+* @param hospi: OSPI handle pointer
+* @retval None
+*/
+void HAL_OSPI_MspInit(OSPI_HandleTypeDef* hospi)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+  if(hospi->Instance==OCTOSPI1)
+  {
+  /* USER CODE BEGIN OCTOSPI1_MspInit 0 */
+
+  /* USER CODE END OCTOSPI1_MspInit 0 */
+
+  /** Initializes the peripherals clock
+  */
+    PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_OSPI;
+    PeriphClkInitStruct.OspiClockSelection = RCC_OSPICLKSOURCE_D1HCLK;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    /* Peripheral clock enable */
+    __HAL_RCC_OCTOSPIM_CLK_ENABLE();
+    __HAL_RCC_OSPI1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOE_CLK_ENABLE();
+    __HAL_RCC_GPIOF_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    /**OCTOSPI1 GPIO Configuration
+    PE2     ------> OCTOSPIM_P1_IO2
+    PF10     ------> OCTOSPIM_P1_CLK
+    PC3_C     ------> OCTOSPIM_P1_IO0
+    PA1     ------> OCTOSPIM_P1_IO3
+    PB0     ------> OCTOSPIM_P1_IO1
+    PE11     ------> OCTOSPIM_P1_NCS
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_2;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_3;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_1;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF4_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_11;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF11_OCTOSPIM_P1;
+    HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN OCTOSPI1_MspInit 1 */
+
+  /* USER CODE END OCTOSPI1_MspInit 1 */
+  }
+
+}
+
+/**
+* @brief OSPI MSP De-Initialization
+* This function freeze the hardware resources used in this example
+* @param hospi: OSPI handle pointer
+* @retval None
+*/
+void HAL_OSPI_MspDeInit(OSPI_HandleTypeDef* hospi)
+{
+  if(hospi->Instance==OCTOSPI1)
+  {
+  /* USER CODE BEGIN OCTOSPI1_MspDeInit 0 */
+
+  /* USER CODE END OCTOSPI1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_OCTOSPIM_CLK_DISABLE();
+    __HAL_RCC_OSPI1_CLK_DISABLE();
+
+    /**OCTOSPI1 GPIO Configuration
+    PE2     ------> OCTOSPIM_P1_IO2
+    PF10     ------> OCTOSPIM_P1_CLK
+    PC3_C     ------> OCTOSPIM_P1_IO0
+    PA1     ------> OCTOSPIM_P1_IO3
+    PB0     ------> OCTOSPIM_P1_IO1
+    PE11     ------> OCTOSPIM_P1_NCS
+    */
+    HAL_GPIO_DeInit(GPIOE, GPIO_PIN_2|GPIO_PIN_11);
+
+    HAL_GPIO_DeInit(GPIOF, GPIO_PIN_10);
+
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_3);
+
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_1);
+
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_0);
+
+  /* USER CODE BEGIN OCTOSPI1_MspDeInit 1 */
+
+  /* USER CODE END OCTOSPI1_MspDeInit 1 */
+  }
+
+}
+
+/**
 * @brief SPI MSP Initialization
 * This function configures the hardware resources used in this example
 * @param hspi: SPI handle pointer
@@ -254,7 +387,15 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
   /** Initializes the peripherals clock
   */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SPI1;
-    PeriphClkInitStruct.Spi123ClockSelection = RCC_SPI123CLKSOURCE_CLKP;
+    PeriphClkInitStruct.PLL3.PLL3M = 32;
+    PeriphClkInitStruct.PLL3.PLL3N = 129;
+    PeriphClkInitStruct.PLL3.PLL3P = 30;
+    PeriphClkInitStruct.PLL3.PLL3Q = 2;
+    PeriphClkInitStruct.PLL3.PLL3R = 2;
+    PeriphClkInitStruct.PLL3.PLL3RGE = RCC_PLL3VCIRANGE_1;
+    PeriphClkInitStruct.PLL3.PLL3VCOSEL = RCC_PLL3VCOWIDE;
+    PeriphClkInitStruct.PLL3.PLL3FRACN = 0;
+    PeriphClkInitStruct.Spi123ClockSelection = RCC_SPI123CLKSOURCE_PLL3;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
     {
       Error_Handler();
@@ -317,12 +458,11 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
 
     __HAL_RCC_GPIOF_CLK_ENABLE();
     /**SPI5 GPIO Configuration
-    PF6     ------> SPI5_NSS
     PF7     ------> SPI5_SCK
     PF8     ------> SPI5_MISO
     PF9     ------> SPI5_MOSI
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9;
+    GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -402,12 +542,11 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     __HAL_RCC_SPI5_CLK_DISABLE();
 
     /**SPI5 GPIO Configuration
-    PF6     ------> SPI5_NSS
     PF7     ------> SPI5_SCK
     PF8     ------> SPI5_MISO
     PF9     ------> SPI5_MOSI
     */
-    HAL_GPIO_DeInit(GPIOF, GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9);
+    HAL_GPIO_DeInit(GPIOF, GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9);
 
     /* SPI5 DMA DeInit */
     HAL_DMA_DeInit(hspi->hdmatx);

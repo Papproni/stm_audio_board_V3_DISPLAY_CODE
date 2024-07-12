@@ -10,9 +10,9 @@
             "Width": 320,
             "Height": 240,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Red": 232,
+              "Green": 16,
+              "Blue": 16
             }
           },
           {
@@ -21,7 +21,7 @@
             "X": 87,
             "Y": 86,
             "Width": 109,
-            "Height": 20,
+            "Height": 24,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "AutoSize": true

@@ -12,7 +12,7 @@ screenViewBase::screenViewBase()
     add(__background);
 
     box1.setPosition(0, 0, 320, 240);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(232, 16, 16));
     add(box1);
 
     textArea1.setXY(87, 86);

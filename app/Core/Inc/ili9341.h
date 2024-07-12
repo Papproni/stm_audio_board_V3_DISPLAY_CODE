@@ -51,13 +51,14 @@ void LCD_WR_REG(uint8_t data);
 void LCD_IO_WriteMultipleData(uint8_t *pData, uint32_t Size);
 
 
-//#define SPI1_NSS_Pin GPIO_PIN_3
-//#define SPI1_NSS_GPIO_Port GPIOE
+#define SPI5_NSS_Pin ILI9341_CS_Pin
+#define SPI5_NSS_GPIO_Port ILI9341_CS_GPIO_Port
 
+#define DC_Pin LED_OK_Pin
+#define DC_GPIO_Port LED_OK_GPIO_Port
 
-#define RESET_Pin GPIO_PIN_10
-#define RESET_GPIO_Port GPIOG
-
+#define RESET_Pin ILI9341_RESET_Pin
+#define RESET_GPIO_Port ILI9341_RESET_GPIO_Port
 
 #ifdef __cplusplus
 }

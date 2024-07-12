@@ -45,6 +45,8 @@ ADC_HandleTypeDef hadc1;
 
 CRC_HandleTypeDef hcrc;
 
+OSPI_HandleTypeDef hospi1;
+
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi5;
 DMA_HandleTypeDef hdma_spi5_tx;
@@ -55,13 +57,13 @@ DMA_HandleTypeDef hdma_spi5_tx;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void PeriphCommonClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_CRC_Init(void);
 static void MX_ADC1_Init(void);
+static void MX_OCTOSPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -93,9 +95,6 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
-/* Configure the peripherals common clocks */
-  PeriphCommonClock_Config();
-
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -107,8 +106,15 @@ int main(void)
   MX_SPI5_Init();
   MX_CRC_Init();
   MX_ADC1_Init();
+  MX_OCTOSPI1_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+//  while(1){
+//	  uint8_t cmd = 0x01;
+//	  HAL_SPI_Transmit(&hspi5, &cmd, 1, 1000);
+//  }
+
+
   ILI9341_Init();
 
   /* USER CODE END 2 */
@@ -117,8 +123,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//	  MX_TouchGFX_Process();
-//	 	  touchgfxSignalVSync();
+	  MX_TouchGFX_Process();
+	  HAL_Delay(1);
+	  touchgfxSignalVSync();
     /* USER CODE END WHILE */
 
   MX_TouchGFX_Process();
@@ -181,24 +188,6 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-}
-
-/**
-  * @brief Peripherals Common Clock Configuration
-  * @retval None
-  */
-void PeriphCommonClock_Config(void)
-{
-  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
-
-  /** Initializes the peripherals clock
-  */
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_CKPER;
-  PeriphClkInitStruct.CkperClockSelection = RCC_CLKPSOURCE_HSI;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
@@ -304,6 +293,57 @@ static void MX_CRC_Init(void)
 }
 
 /**
+  * @brief OCTOSPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_OCTOSPI1_Init(void)
+{
+
+  /* USER CODE BEGIN OCTOSPI1_Init 0 */
+
+  /* USER CODE END OCTOSPI1_Init 0 */
+
+  OSPIM_CfgTypeDef sOspiManagerCfg = {0};
+
+  /* USER CODE BEGIN OCTOSPI1_Init 1 */
+
+  /* USER CODE END OCTOSPI1_Init 1 */
+  /* OCTOSPI1 parameter configuration*/
+  hospi1.Instance = OCTOSPI1;
+  hospi1.Init.FifoThreshold = 1;
+  hospi1.Init.DualQuad = HAL_OSPI_DUALQUAD_DISABLE;
+  hospi1.Init.MemoryType = HAL_OSPI_MEMTYPE_MICRON;
+  hospi1.Init.DeviceSize = 32;
+  hospi1.Init.ChipSelectHighTime = 1;
+  hospi1.Init.FreeRunningClock = HAL_OSPI_FREERUNCLK_DISABLE;
+  hospi1.Init.ClockMode = HAL_OSPI_CLOCK_MODE_0;
+  hospi1.Init.WrapSize = HAL_OSPI_WRAP_NOT_SUPPORTED;
+  hospi1.Init.ClockPrescaler = 1;
+  hospi1.Init.SampleShifting = HAL_OSPI_SAMPLE_SHIFTING_NONE;
+  hospi1.Init.DelayHoldQuarterCycle = HAL_OSPI_DHQC_DISABLE;
+  hospi1.Init.ChipSelectBoundary = 0;
+  hospi1.Init.DelayBlockBypass = HAL_OSPI_DELAY_BLOCK_BYPASSED;
+  hospi1.Init.MaxTran = 0;
+  hospi1.Init.Refresh = 0;
+  if (HAL_OSPI_Init(&hospi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sOspiManagerCfg.ClkPort = 1;
+  sOspiManagerCfg.NCSPort = 1;
+  sOspiManagerCfg.IOLowPort = HAL_OSPIM_IOPORT_1_LOW;
+  if (HAL_OSPIM_Config(&hospi1, &sOspiManagerCfg, HAL_OSPI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN OCTOSPI1_Init 2 */
+
+  /* USER CODE END OCTOSPI1_Init 2 */
+
+}
+
+/**
   * @brief SPI1 Initialization Function
   * @param None
   * @retval None
@@ -373,8 +413,8 @@ static void MX_SPI5_Init(void)
   hspi5.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi5.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi5.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi5.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi5.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
+  hspi5.Init.NSS = SPI_NSS_SOFT;
+  hspi5.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
   hspi5.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi5.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi5.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -427,6 +467,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
@@ -439,6 +480,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LED_OK_GPIO_Port, LED_OK_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(ILI9341_RESET_GPIO_Port, ILI9341_RESET_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : LED_OK_Pin */
@@ -447,6 +491,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_OK_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : ILI9341_CS_Pin */
+  GPIO_InitStruct.Pin = ILI9341_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(ILI9341_CS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : ILI9341_TOUCH_IQR_Pin */
   GPIO_InitStruct.Pin = ILI9341_TOUCH_IQR_Pin;
@@ -457,8 +508,8 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : ILI9341_RESET_Pin */
   GPIO_InitStruct.Pin = ILI9341_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(ILI9341_RESET_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */

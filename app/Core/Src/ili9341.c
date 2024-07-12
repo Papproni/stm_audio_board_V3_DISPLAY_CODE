@@ -57,10 +57,10 @@ static void LCD_WR_DATA(uint8_t data);
 static void LCD_direction(LCD_Horizontal_t direction);
 static void RESET_L(void);
 static void RESET_H(void);
-//static void CS_L(void);
-//static void DC_L(void);
-//static void DC_H(void);
-//static void LED_H(void);
+static void CS_L(void);
+static void DC_L(void);
+static void DC_H(void);
+static void LED_H(void);
 
 // Initialization
 void ILI9341_Init(void)
@@ -236,7 +236,7 @@ void ILI9341_DrawBitmap(uint16_t w, uint16_t h, uint8_t *s)
 	// Enable to access GRAM
 	LCD_WR_REG(0x2c);
 
-//	DC_H();
+	DC_H();
 #if 0
 	__HAL_SPI_DISABLE(&hspi5);
 	hspi5.Instance->CR2 |= SPI_DATASIZE_16BIT; // Set 16 bit mode
@@ -267,24 +267,25 @@ void ILI9341_Reset(void)
 	HAL_Delay(100);
 	RESET_H();
 	HAL_Delay(100);
-//	CS_L();
-//	LED_H();
+	CS_L();
+	LED_H();
 }
 
 void ILI9341_SoftReset(void)
 {
 	uint8_t cmd;
 	cmd = 0x01; //Software reset
-//	DC_L();
+	DC_L();
 	if (HAL_SPI_Transmit(&hspi5, &cmd, 1, 1000) != HAL_OK) {
 		Error_Handler();
 	}
+
 }
 
 
 void LCD_WR_REG(uint8_t data)
 {
-//	DC_L();
+	DC_L();
 	if (HAL_SPI_Transmit(&hspi5, &data, 1, 1000) != HAL_OK) {
 		Error_Handler();
 	}
@@ -292,7 +293,7 @@ void LCD_WR_REG(uint8_t data)
 
 static void LCD_WR_DATA(uint8_t data)
 {
-//	DC_H();
+	DC_H();
 	if (HAL_SPI_Transmit(&hspi5, &data, 1, 1000) != HAL_OK) {
 		Error_Handler();
 	}
@@ -303,7 +304,7 @@ void LCD_IO_WriteMultipleData(uint8_t *pData, uint32_t Size)
 	/* Swap endianes */
 	ConvHL(pData, (int32_t)Size*2);
 
-//	DC_H();
+	DC_H();
 //	HAL_SPI_Transmit(&hspi5, (uint8_t*)pData, Size * 2, HAL_MAX_DELAY);
 	spiDmaTransferComplete = 0;
 	HAL_SPI_Transmit_DMA(&hspi5, pData, Size*2 );
@@ -349,23 +350,23 @@ static void RESET_H(void)
 	HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
 }
 
-//static void CS_L(void)
-//{
-////	HAL_GPIO_WritePin(SPI1_NSS_GPIO_Port, SPI1_NSS_Pin, GPIO_PIN_RESET);
-//}
-//
-//static void DC_L(void)
-//{
-////	HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, GPIO_PIN_RESET);
-//}
-//
-//static void DC_H(void)
-//{
-////	HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, GPIO_PIN_SET);
-//}
-//
-//static void LED_H(void)
-//{
-//	//HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-//}
+static void CS_L(void)
+{
+	HAL_GPIO_WritePin(SPI5_NSS_GPIO_Port, SPI5_NSS_Pin, GPIO_PIN_RESET);
+}
+
+static void DC_L(void)
+{
+	HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, GPIO_PIN_RESET);
+}
+
+static void DC_H(void)
+{
+	HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, GPIO_PIN_SET);
+}
+
+static void LED_H(void)
+{
+	//HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+}
 
