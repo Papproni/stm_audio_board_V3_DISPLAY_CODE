@@ -56,6 +56,7 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_spi5_tx;
+extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi5;
 /* USER CODE BEGIN EV */
 
@@ -211,6 +212,34 @@ void DMA1_Stream0_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream0_IRQn 1 */
 
   /* USER CODE END DMA1_Stream0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(T_IRQ_Pin);
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+
+  /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles SPI1 global interrupt.
+  */
+void SPI1_IRQHandler(void)
+{
+  /* USER CODE BEGIN SPI1_IRQn 0 */
+
+  /* USER CODE END SPI1_IRQn 0 */
+  HAL_SPI_IRQHandler(&hspi1);
+  /* USER CODE BEGIN SPI1_IRQn 1 */
+
+  /* USER CODE END SPI1_IRQn 1 */
 }
 
 /**

@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ili9341.h"
+#include "xpt2046.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,7 +117,7 @@ int main(void)
 
 
   ILI9341_Init();
-
+  XPT2046_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -362,11 +363,11 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -483,6 +484,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(T_CS_GPIO_Port, T_CS_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(ILI9341_RESET_GPIO_Port, ILI9341_RESET_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : LED_OK_Pin */
@@ -499,11 +503,18 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(ILI9341_CS_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : ILI9341_TOUCH_IQR_Pin */
-  GPIO_InitStruct.Pin = ILI9341_TOUCH_IQR_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  /*Configure GPIO pin : T_CS_Pin */
+  GPIO_InitStruct.Pin = T_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(ILI9341_TOUCH_IQR_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(T_CS_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : T_IRQ_Pin */
+  GPIO_InitStruct.Pin = T_IRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(T_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : ILI9341_RESET_Pin */
   GPIO_InitStruct.Pin = ILI9341_RESET_Pin;
@@ -511,6 +522,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(ILI9341_RESET_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

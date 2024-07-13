@@ -30,9 +30,19 @@ protected:
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::TextArea text_preset_num_main;
     touchgfx::TextArea text_preset_num_queue;
-    touchgfx::ButtonWithLabel btn_back;
+    touchgfx::ButtonWithLabel btn_opt;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<screen_perf_modeViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

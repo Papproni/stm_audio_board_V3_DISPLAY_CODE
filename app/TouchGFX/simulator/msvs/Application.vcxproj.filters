@@ -196,6 +196,18 @@
     <Filter Include="Source Files\generated\gui_generated\screen_perf_mode_screen">
       <UniqueIdentifier>72920D1F-5A8C-09DB-B8BD-03C5E3C81F6A</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen_info_screen">
+      <UniqueIdentifier>82BDADF1-ACED-83C0-F048-25D1E894B77E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_info_screen">
+      <UniqueIdentifier>608C630F-CCEA-A0E1-6696-B157D1DD15E4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_info_screen">
+      <UniqueIdentifier>337711D7-90B9-3088-EF56-92D827BD7D34</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_info_screen">
+      <UniqueIdentifier>8D91992E-998F-C128-5218-1CA3C73118A4</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +257,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_settings_screen\screen_settingsViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_info_screen\screen_infoPresenter.cpp">
+      <Filter>Source Files\gui\screen_info_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_info_screen\screen_infoView.cpp">
+      <Filter>Source Files\gui\screen_info_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_info_screen\screen_infoViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_info_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +726,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_settings_screen\screen_settingsViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_info_screen\screen_infoPresenter.hpp">
+      <Filter>Header Files\gui\screen_info_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_info_screen\screen_infoView.hpp">
+      <Filter>Header Files\gui\screen_info_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_info_screen\screen_infoViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_info_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

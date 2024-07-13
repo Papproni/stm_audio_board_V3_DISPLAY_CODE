@@ -6,7 +6,8 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-screen_settingsViewBase::screen_settingsViewBase()
+screen_settingsViewBase::screen_settingsViewBase() :
+    buttonCallback(this, &screen_settingsViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -21,6 +22,7 @@ screen_settingsViewBase::screen_settingsViewBase()
     btn_performance_mode.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3ICT));
     btn_performance_mode.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_performance_mode.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_performance_mode.setAction(buttonCallback);
     add(btn_performance_mode);
 
     btn_editor_mode.setXY(168, 32);
@@ -35,6 +37,7 @@ screen_settingsViewBase::screen_settingsViewBase()
     btn_info.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2SB5));
     btn_info.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_info.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_info.setAction(buttonCallback);
     add(btn_info);
 
     btn_save.setXY(10, 107);
@@ -66,4 +69,22 @@ screen_settingsViewBase::~screen_settingsViewBase()
 void screen_settingsViewBase::setupScreen()
 {
 
+}
+
+void screen_settingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &btn_performance_mode)
+    {
+        //To_perf_mode_screen
+        //When btn_performance_mode clicked change screen to screen_perf_mode
+        //Go to screen_perf_mode with no screen transition
+        application().gotoscreen_perf_modeScreenNoTransition();
+    }
+    if (&src == &btn_info)
+    {
+        //To_info_screen
+        //When btn_info clicked change screen to screen_info
+        //Go to screen_info with no screen transition
+        application().gotoscreen_infoScreenNoTransition();
+    }
 }

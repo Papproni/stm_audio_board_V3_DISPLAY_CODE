@@ -9,10 +9,12 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
-#include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_settings_screen/screen_settingsView.hpp>
 #include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
+#include <gui/screen_info_screen/screen_infoView.hpp>
+#include <gui/screen_info_screen/screen_infoPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -32,6 +34,19 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
+// screen_settings
+
+void FrontendApplicationBase::gotoscreen_settingsScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_settingsScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_settingsScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_settingsView, screen_settingsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
 // screen_perf_mode
 
 void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransition()
@@ -43,4 +58,17 @@ void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_perf_modeView, screen_perf_modePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_info
+
+void FrontendApplicationBase::gotoscreen_infoScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_infoScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_infoScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_infoView, screen_infoPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

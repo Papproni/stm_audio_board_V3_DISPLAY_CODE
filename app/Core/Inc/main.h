@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define LED_OK_GPIO_Port GPIOC
 #define ILI9341_CS_Pin GPIO_PIN_6
 #define ILI9341_CS_GPIO_Port GPIOF
+#define T_CS_Pin GPIO_PIN_4
+#define T_CS_GPIO_Port GPIOA
 #define POT1_Pin GPIO_PIN_6
 #define POT1_GPIO_Port GPIOA
 #define POT2_Pin GPIO_PIN_7
@@ -73,8 +75,9 @@ void Error_Handler(void);
 #define POT5_GPIO_Port GPIOF
 #define POT6_Pin GPIO_PIN_12
 #define POT6_GPIO_Port GPIOF
-#define ILI9341_TOUCH_IQR_Pin GPIO_PIN_6
-#define ILI9341_TOUCH_IQR_GPIO_Port GPIOD
+#define T_IRQ_Pin GPIO_PIN_6
+#define T_IRQ_GPIO_Port GPIOD
+#define T_IRQ_EXTI_IRQn EXTI9_5_IRQn
 #define ILI9341_RESET_Pin GPIO_PIN_10
 #define ILI9341_RESET_GPIO_Port GPIOG
 

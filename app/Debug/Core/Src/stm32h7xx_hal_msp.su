@@ -6,4 +6,4 @@
 ../Core/Src/stm32h7xx_hal_msp.c:244:6:HAL_OSPI_MspInit	256	static
 ../Core/Src/stm32h7xx_hal_msp.c:335:6:HAL_OSPI_MspDeInit	16	static
 ../Core/Src/stm32h7xx_hal_msp.c:377:6:HAL_SPI_MspInit	248	static
-../Core/Src/stm32h7xx_hal_msp.c:510:6:HAL_SPI_MspDeInit	16	static
+../Core/Src/stm32h7xx_hal_msp.c:512:6:HAL_SPI_MspDeInit	16	static

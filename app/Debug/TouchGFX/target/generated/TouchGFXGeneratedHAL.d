@@ -44,21 +44,24 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
- ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
- ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_settings_screen/screen_settingsViewBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsPresenter.hpp \
+ ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
+ ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
@@ -143,21 +146,24 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
-../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
-../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_settings_screen/screen_settingsViewBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsPresenter.hpp:
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:
+../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:

@@ -6,7 +6,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
 
-screen_perf_modeViewBase::screen_perf_modeViewBase()
+screen_perf_modeViewBase::screen_perf_modeViewBase() :
+    buttonCallback(this, &screen_perf_modeViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -16,24 +17,25 @@ screen_perf_modeViewBase::screen_perf_modeViewBase()
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 98, 255));
     add(MAIN_BACKGROUND);
 
-    text_preset_num_main.setXY(51, 40);
+    text_preset_num_main.setXY(30, 19);
     text_preset_num_main.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_preset_num_main.setLinespacing(0);
     text_preset_num_main.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Z2S));
     add(text_preset_num_main);
 
-    text_preset_num_queue.setXY(160, 40);
+    text_preset_num_queue.setXY(174, 19);
     text_preset_num_queue.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_preset_num_queue.setLinespacing(0);
     text_preset_num_queue.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1IH8));
     add(text_preset_num_queue);
 
-    btn_back.setXY(0, 0);
-    btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID));
-    btn_back.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4F5J));
-    btn_back.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(btn_back);
+    btn_opt.setXY(0, 0);
+    btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4F5J));
+    btn_opt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_opt.setAction(buttonCallback);
+    add(btn_opt);
 }
 
 screen_perf_modeViewBase::~screen_perf_modeViewBase()
@@ -44,4 +46,15 @@ screen_perf_modeViewBase::~screen_perf_modeViewBase()
 void screen_perf_modeViewBase::setupScreen()
 {
 
+}
+
+void screen_perf_modeViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &btn_opt)
+    {
+        //ToSettings
+        //When btn_opt clicked change screen to screen_settings
+        //Go to screen_settings with no screen transition
+        application().gotoscreen_settingsScreenNoTransition();
+    }
 }

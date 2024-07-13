@@ -2,74 +2,6 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen_perf_mode",
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "MAIN_BACKGROUND",
-            "Width": 320,
-            "Height": 240,
-            "Color": {
-              "Green": 98,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "text_preset_num_main",
-            "X": 51,
-            "Y": 40,
-            "Width": 109,
-            "Height": 160,
-            "TextId": "__SingleUse_8Z2S",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "text_preset_num_queue",
-            "X": 160,
-            "Y": 40,
-            "Width": 102,
-            "Height": 160,
-            "TextId": "__SingleUse_1IH8",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "btn_back",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-            "TextId": "__SingleUse_4F5J",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          }
-        ],
-        "Interactions": []
-      },
-      {
         "Name": "screen_settings",
         "Components": [
           {
@@ -204,7 +136,180 @@
             "AutoSize": true
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "To_perf_mode_screen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_performance_mode"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_perf_mode"
+            }
+          },
+          {
+            "InteractionName": "To_info_screen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_info"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_info"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_perf_mode",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "MAIN_BACKGROUND",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Green": 98,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_preset_num_main",
+            "X": 30,
+            "Y": 19,
+            "Width": 137,
+            "Height": 203,
+            "TextId": "__SingleUse_8Z2S",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_preset_num_queue",
+            "X": 174,
+            "Y": 19,
+            "Width": 127,
+            "Height": 203,
+            "TextId": "__SingleUse_1IH8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_opt",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_4F5J",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ToSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_opt"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_settings"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_info",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "MAIN_BACKGROUND",
+            "Width": 320,
+            "Height": 240,
+            "Color": {
+              "Green": 98,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_back",
+            "X": 46,
+            "Y": 158,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+            "TextId": "__SingleUse_QX0V",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "debug_top_text",
+            "X": 89,
+            "Y": 9,
+            "Width": 143,
+            "Height": 41,
+            "TextId": "__SingleUse_AS0H",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_to_settings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_back"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_settings"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -214,7 +319,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_perf_mode",
+    "StartupScreenName": "screen_settings",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
