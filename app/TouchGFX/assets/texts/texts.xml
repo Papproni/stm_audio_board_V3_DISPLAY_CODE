@@ -6,6 +6,21 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_Y364" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">LOOP&#10;4</Translation>
+      </Text>
+      <Text Id="__SingleUse_SWZ8" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">LOOP&#10;3</Translation>
+      </Text>
+      <Text Id="__SingleUse_9FAB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">LOOP&#10;2</Translation>
+      </Text>
+      <Text Id="__SingleUse_2QBU" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">LOOP&#10;1</Translation>
+      </Text>
+      <Text Id="__SingleUse_EP17" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">OPT</Translation>
+      </Text>
       <Text Id="__SingleUse_QX0V" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">BACK</Translation>
       </Text>
@@ -15,9 +30,6 @@
       <Text Id="__SingleUse_4F5J" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">OPT</Translation>
       </Text>
-      <Text Id="__SingleUse_FJ9N" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">BACK</Translation>
-      </Text>
       <Text Id="__SingleUse_MVZP" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">SAVE</Translation>
       </Text>
@@ -25,13 +37,13 @@
         <Translation Language="GB">INFO</Translation>
       </Text>
       <Text Id="__SingleUse_RDR0" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Editor</Translation>
+        <Translation Language="GB">EDIT</Translation>
       </Text>
       <Text Id="__SingleUse_52X1" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Options</Translation>
       </Text>
       <Text Id="__SingleUse_3ICT" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Performance</Translation>
+        <Translation Language="GB">PERFORM</Translation>
       </Text>
       <Text Id="__SingleUse_1IH8" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">8</Translation>

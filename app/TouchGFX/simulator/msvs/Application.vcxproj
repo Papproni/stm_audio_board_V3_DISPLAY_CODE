@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\gui\src\screen_info_screen\screen_infoPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen_info_screen\screen_infoView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_info_screen\screen_infoViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_edit_screen\screen_editViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -189,6 +192,9 @@
     <ClInclude Include="..\..\gui\include\gui\screen_info_screen\screen_infoPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen_info_screen\screen_infoView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_info_screen\screen_infoViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_edit_screen\screen_editViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

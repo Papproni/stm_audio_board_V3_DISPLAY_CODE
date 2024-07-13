@@ -15,6 +15,8 @@
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
+#include <gui/screen_edit_screen/screen_editView.hpp>
+#include <gui/screen_edit_screen/screen_editPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -71,4 +73,17 @@ void FrontendApplicationBase::gotoscreen_infoScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_infoScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_infoView, screen_infoPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_edit
+
+void FrontendApplicationBase::gotoscreen_editScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_editScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_editScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_editView, screen_editPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

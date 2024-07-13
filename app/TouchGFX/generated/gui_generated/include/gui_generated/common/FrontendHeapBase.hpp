@@ -18,6 +18,8 @@
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
+#include <gui/screen_edit_screen/screen_editView.hpp>
+#include <gui/screen_edit_screen/screen_editPresenter.hpp>
 
 
 /**
@@ -43,7 +45,8 @@ public:
     typedef touchgfx::meta::TypeList< screen_settingsView,
             touchgfx::meta::TypeList< screen_perf_modeView,
             touchgfx::meta::TypeList< screen_infoView,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< screen_editView,
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,7 +61,8 @@ public:
     typedef touchgfx::meta::TypeList< screen_settingsPresenter,
             touchgfx::meta::TypeList< screen_perf_modePresenter,
             touchgfx::meta::TypeList< screen_infoPresenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< screen_editPresenter,
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

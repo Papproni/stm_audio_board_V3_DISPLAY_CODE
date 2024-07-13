@@ -44,6 +44,7 @@ Drivers/STM32H7xx_HAL_Driver/Src \
 TouchGFX/App \
 TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_edit_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_info_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_perf_mode_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_settings_screen \
@@ -54,6 +55,7 @@ TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/video \
 TouchGFX/build/MINGW32_NT-6.2/generated/texts/src \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/model \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_edit_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_info_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_perf_mode_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_settings_screen \
@@ -62,6 +64,7 @@ TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch \
 TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2 \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
+TouchGFX/generated/gui_generated/src/screen_edit_screen \
 TouchGFX/generated/gui_generated/src/screen_info_screen \
 TouchGFX/generated/gui_generated/src/screen_perf_mode_screen \
 TouchGFX/generated/gui_generated/src/screen_settings_screen \
@@ -70,6 +73,7 @@ TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/model \
+TouchGFX/gui/src/screen_edit_screen \
 TouchGFX/gui/src/screen_info_screen \
 TouchGFX/gui/src/screen_perf_mode_screen \
 TouchGFX/gui/src/screen_settings_screen \

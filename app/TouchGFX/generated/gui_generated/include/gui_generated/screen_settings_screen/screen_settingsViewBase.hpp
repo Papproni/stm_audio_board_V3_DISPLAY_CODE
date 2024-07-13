@@ -32,7 +32,6 @@ protected:
     touchgfx::ButtonWithLabel btn_editor_mode;
     touchgfx::ButtonWithLabel btn_info;
     touchgfx::ButtonWithLabel btn_save;
-    touchgfx::ButtonWithLabel btn_back;
     touchgfx::TextArea text_option;
 
 private:

@@ -63,6 +63,10 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
+ ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
@@ -107,7 +111,9 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 ../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:
@@ -171,6 +177,10 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp:
+../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
@@ -216,3 +226,5 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:

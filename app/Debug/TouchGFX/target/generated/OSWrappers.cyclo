@@ -1,4 +1,3 @@
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:110:17:static touchgfx::HAL* touchgfx::HAL::getInstance()	1
 ../TouchGFX/target/generated/OSWrappers.cpp:34:6:static void touchgfx::OSWrappers::initialize()	1
 ../TouchGFX/target/generated/OSWrappers.cpp:43:6:static void touchgfx::OSWrappers::takeFrameBufferSemaphore()	2
 ../TouchGFX/target/generated/OSWrappers.cpp:52:6:static void touchgfx::OSWrappers::giveFrameBufferSemaphore()	1

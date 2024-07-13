@@ -82,6 +82,10 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/screen_info_screen/screen_infoView.hpp \
  generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
  gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
+ gui/include/gui/screen_edit_screen/screen_editView.hpp \
+ generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
+ gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -251,6 +255,14 @@ gui/include/gui/screen_info_screen/screen_infoView.hpp:
 generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp:
 
 gui/include/gui/screen_info_screen/screen_infoPresenter.hpp:
+
+gui/include/gui/screen_edit_screen/screen_editView.hpp:
+
+generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
+
+gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 

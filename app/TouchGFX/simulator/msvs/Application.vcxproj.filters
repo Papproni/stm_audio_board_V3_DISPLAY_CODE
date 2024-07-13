@@ -208,6 +208,18 @@
     <Filter Include="Source Files\generated\gui_generated\screen_info_screen">
       <UniqueIdentifier>8D91992E-998F-C128-5218-1CA3C73118A4</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen_edit_screen">
+      <UniqueIdentifier>4BC83602-1ADD-ED7B-1E59-44D0A476B871</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_edit_screen">
+      <UniqueIdentifier>778E6400-2A2E-60F4-83FD-8AD8D54B9B5F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_edit_screen">
+      <UniqueIdentifier>294BA858-9C3B-4D17-FF81-EE235783332D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_edit_screen">
+      <UniqueIdentifier>ADFE495E-A4DC-A0CC-D960-9BBFE9FAAD15</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -266,6 +278,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_info_screen\screen_infoViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_info_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editPresenter.cpp">
+      <Filter>Source Files\gui\screen_edit_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editView.cpp">
+      <Filter>Source Files\gui\screen_edit_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_edit_screen\screen_editViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_edit_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +756,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_info_screen\screen_infoViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_info_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editPresenter.hpp">
+      <Filter>Header Files\gui\screen_edit_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editView.hpp">
+      <Filter>Header Files\gui\screen_edit_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_edit_screen\screen_editViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_edit_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

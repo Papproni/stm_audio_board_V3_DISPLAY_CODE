@@ -17,7 +17,7 @@ screen_settingsViewBase::screen_settingsViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
-    btn_performance_mode.setXY(10, 32);
+    btn_performance_mode.setXY(10, 60);
     btn_performance_mode.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
     btn_performance_mode.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3ICT));
     btn_performance_mode.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -25,14 +25,15 @@ screen_settingsViewBase::screen_settingsViewBase() :
     btn_performance_mode.setAction(buttonCallback);
     add(btn_performance_mode);
 
-    btn_editor_mode.setXY(168, 32);
+    btn_editor_mode.setXY(168, 60);
     btn_editor_mode.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
     btn_editor_mode.setLabelText(touchgfx::TypedText(T___SINGLEUSE_RDR0));
     btn_editor_mode.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_editor_mode.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_editor_mode.setAction(buttonCallback);
     add(btn_editor_mode);
 
-    btn_info.setXY(168, 107);
+    btn_info.setXY(168, 152);
     btn_info.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
     btn_info.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2SB5));
     btn_info.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -40,21 +41,14 @@ screen_settingsViewBase::screen_settingsViewBase() :
     btn_info.setAction(buttonCallback);
     add(btn_info);
 
-    btn_save.setXY(10, 107);
+    btn_save.setXY(10, 152);
     btn_save.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
     btn_save.setLabelText(touchgfx::TypedText(T___SINGLEUSE_MVZP));
     btn_save.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_save.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(btn_save);
 
-    btn_back.setXY(46, 180);
-    btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));
-    btn_back.setLabelText(touchgfx::TypedText(T___SINGLEUSE_FJ9N));
-    btn_back.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(btn_back);
-
-    text_option.setXY(122, 0);
+    text_option.setXY(122, 15);
     text_option.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_option.setLinespacing(0);
     text_option.setTypedText(touchgfx::TypedText(T___SINGLEUSE_52X1));
@@ -86,5 +80,12 @@ void screen_settingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //When btn_info clicked change screen to screen_info
         //Go to screen_info with no screen transition
         application().gotoscreen_infoScreenNoTransition();
+    }
+    if (&src == &btn_editor_mode)
+    {
+        //To_edit
+        //When btn_editor_mode clicked change screen to screen_edit
+        //Go to screen_edit with no screen transition
+        application().gotoscreen_editScreenNoTransition();
     }
 }
