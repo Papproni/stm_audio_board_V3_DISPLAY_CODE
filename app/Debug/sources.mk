@@ -44,12 +44,15 @@ Drivers/STM32H7xx_HAL_Driver/Src \
 TouchGFX/App \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
-TouchGFX/generated/gui_generated/src/screen_screen \
+TouchGFX/generated/gui_generated/src/screen_perf_mode_screen \
+TouchGFX/generated/gui_generated/src/screen_settings_screen \
 TouchGFX/generated/images/src \
+TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/model \
-TouchGFX/gui/src/screen_screen \
+TouchGFX/gui/src/screen_perf_mode_screen \
+TouchGFX/gui/src/screen_settings_screen \
 TouchGFX/target \
 TouchGFX/target/generated \
 

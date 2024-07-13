@@ -2,28 +2,205 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
+        "Name": "screen_perf_mode",
         "Components": [
           {
             "Type": "Box",
-            "Name": "box1",
+            "Name": "MAIN_BACKGROUND",
             "Width": 320,
             "Height": 240,
             "Color": {
-              "Red": 232,
-              "Green": 16,
-              "Blue": 16
+              "Green": 98,
+              "Blue": 255
             }
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 87,
-            "Y": 86,
+            "Name": "text_preset_num_main",
+            "X": 51,
+            "Y": 40,
             "Width": 109,
-            "Height": 24,
+            "Height": 160,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_preset_num_queue",
+            "X": 160,
+            "Y": 40,
+            "Width": 102,
+            "Height": 160,
+            "TextId": "__SingleUse_1IH8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_back",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_4F5J",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "screen_settings",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "MAIN_BACKGROUND",
+            "Width": 320,
+            "Height": 240
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_performance_mode",
+            "X": 10,
+            "Y": 32,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_3ICT",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_editor_mode",
+            "X": 168,
+            "Y": 32,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_RDR0",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_info",
+            "X": 168,
+            "Y": 107,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_2SB5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_save",
+            "X": 10,
+            "Y": 107,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_MVZP",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_back",
+            "X": 46,
+            "Y": 180,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+            "TextId": "__SingleUse_FJ9N",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_option",
+            "X": 122,
+            "Width": 76,
+            "Height": 24,
+            "TextId": "__SingleUse_52X1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
             "AutoSize": true
           }
         ],
@@ -37,7 +214,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen",
+    "StartupScreenName": "screen_perf_mode",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

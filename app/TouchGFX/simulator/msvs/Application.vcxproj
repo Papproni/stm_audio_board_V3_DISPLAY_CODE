@@ -20,10 +20,13 @@
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_perf_mode_screen\screen_perf_modePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_perf_mode_screen\screen_perf_modeView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_perf_mode_screen\screen_perf_modeViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_settings_screen\screen_settingsPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_settings_screen\screen_settingsView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_settings_screen\screen_settingsViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -172,11 +175,14 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_perf_mode_screen\screen_perf_modePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_perf_mode_screen\screen_perf_modeView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_perf_mode_screen\screen_perf_modeViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_settings_screen\screen_settingsPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_settings_screen\screen_settingsView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_settings_screen\screen_settingsViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

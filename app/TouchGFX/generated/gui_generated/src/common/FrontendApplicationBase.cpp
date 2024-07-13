@@ -9,8 +9,10 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/screen_screen/screenView.hpp>
-#include <gui/screen_screen/screenPresenter.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
+#include <gui/screen_settings_screen/screen_settingsView.hpp>
+#include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -30,15 +32,15 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// screen
+// screen_perf_mode
 
-void FrontendApplicationBase::gotoscreenScreenNoTransition()
+void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreenScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoscreenScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<screenView, screenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<screen_perf_modeView, screen_perf_modePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

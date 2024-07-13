@@ -12,8 +12,10 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen_screen/screenView.hpp>
-#include <gui/screen_screen/screenPresenter.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
+#include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
+#include <gui/screen_settings_screen/screen_settingsView.hpp>
+#include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
 
 
 /**
@@ -36,8 +38,9 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenView,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< screen_perf_modeView,
+            touchgfx::meta::TypeList< screen_settingsView,
+            touchgfx::meta::Nil >
             > GeneratedViewTypes;
 
     /**
@@ -49,8 +52,9 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenPresenter,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< screen_perf_modePresenter,
+            touchgfx::meta::TypeList< screen_settingsPresenter,
+            touchgfx::meta::Nil >
             > GeneratedPresenterTypes;
 
     /**
@@ -73,7 +77,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreenScreenNoTransition();
+        app.gotoscreen_perf_modeScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)
