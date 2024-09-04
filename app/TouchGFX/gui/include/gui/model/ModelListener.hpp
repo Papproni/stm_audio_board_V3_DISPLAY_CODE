@@ -14,8 +14,10 @@ public:
     {
         model = m;
     }
+    virtual void set_slider1_value(int val){};
 protected:
     Model* model;
+//    uint8_t slider_value_1_u;
 };
 
 #endif // MODELLISTENER_HPP

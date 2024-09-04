@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_settingsScreenNoTransition();
+        gotoscreen_infoScreenNoTransition();
     }
 
     // screen_settings
@@ -28,6 +28,12 @@ public:
 
     // screen_info
     void gotoscreen_infoScreenNoTransition();
+
+    // screen_fx_params
+    void gotoscreen_fx_paramsScreenNoTransition();
+
+    // screen_loop
+    void gotoscreen_loopScreenNoTransition();
 
     // screen_edit
     void gotoscreen_editScreenNoTransition();
@@ -45,6 +51,12 @@ protected:
 
     // screen_info
     void gotoscreen_infoScreenNoTransitionImpl();
+
+    // screen_fx_params
+    void gotoscreen_fx_paramsScreenNoTransitionImpl();
+
+    // screen_loop
+    void gotoscreen_loopScreenNoTransitionImpl();
 
     // screen_edit
     void gotoscreen_editScreenNoTransitionImpl();

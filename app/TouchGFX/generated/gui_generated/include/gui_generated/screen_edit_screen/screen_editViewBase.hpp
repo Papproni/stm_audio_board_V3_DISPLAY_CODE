@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class screen_editViewBase : public touchgfx::View<screen_editPresenter>
 {
@@ -31,10 +32,11 @@ protected:
     touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::Box SCROLL_BACKGROUND;
     touchgfx::ButtonWithLabel btn_Loop1;
-    touchgfx::ButtonWithLabel btn_Loop1_1;
-    touchgfx::ButtonWithLabel btn_Loop1_2;
-    touchgfx::ButtonWithLabel btn_Loop1_3;
+    touchgfx::ButtonWithLabel btn_Loop2;
+    touchgfx::ButtonWithLabel btn_Loop3;
+    touchgfx::ButtonWithLabel btn_Loop4;
     touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::TextArea textArea1;
 
 private:
 

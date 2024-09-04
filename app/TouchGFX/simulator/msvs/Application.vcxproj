@@ -33,6 +33,12 @@
     <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen_edit_screen\screen_editView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_edit_screen\screen_editViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_fx_params_screen\screen_fx_paramsPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_fx_params_screen\screen_fx_paramsView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_fx_params_screen\screen_fx_paramsViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_loop_screen\screen_loopViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -195,6 +201,12 @@
     <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen_edit_screen\screen_editView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_edit_screen\screen_editViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_fx_params_screen\screen_fx_paramsPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_fx_params_screen\screen_fx_paramsView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_fx_params_screen\screen_fx_paramsViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_loop_screen\screen_loopViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

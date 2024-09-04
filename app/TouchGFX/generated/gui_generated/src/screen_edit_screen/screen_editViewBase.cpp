@@ -33,28 +33,29 @@ screen_editViewBase::screen_editViewBase() :
     btn_Loop1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2QBU));
     btn_Loop1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Loop1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop1.setAction(buttonCallback);
     scrollableContainer1.add(btn_Loop1);
 
-    btn_Loop1_1.setXY(160, 143);
-    btn_Loop1_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_Loop1_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9FAB));
-    btn_Loop1_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_Loop1_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    scrollableContainer1.add(btn_Loop1_1);
+    btn_Loop2.setXY(160, 143);
+    btn_Loop2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Loop2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9FAB));
+    btn_Loop2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scrollableContainer1.add(btn_Loop2);
 
-    btn_Loop1_2.setXY(271, 143);
-    btn_Loop1_2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_Loop1_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_SWZ8));
-    btn_Loop1_2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_Loop1_2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    scrollableContainer1.add(btn_Loop1_2);
+    btn_Loop3.setXY(271, 143);
+    btn_Loop3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Loop3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_SWZ8));
+    btn_Loop3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scrollableContainer1.add(btn_Loop3);
 
-    btn_Loop1_3.setXY(384, 143);
-    btn_Loop1_3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_Loop1_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y364));
-    btn_Loop1_3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_Loop1_3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    scrollableContainer1.add(btn_Loop1_3);
+    btn_Loop4.setXY(384, 143);
+    btn_Loop4.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Loop4.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y364));
+    btn_Loop4.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop4.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scrollableContainer1.add(btn_Loop4);
 
     add(scrollableContainer1);
 
@@ -65,6 +66,12 @@ screen_editViewBase::screen_editViewBase() :
     btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_opt.setAction(buttonCallback);
     add(btn_opt);
+
+    textArea1.setXY(105, 10);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3KIE));
+    add(textArea1);
 }
 
 screen_editViewBase::~screen_editViewBase()
@@ -85,5 +92,12 @@ void screen_editViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //When btn_opt clicked change screen to screen_settings
         //Go to screen_settings with no screen transition
         application().gotoscreen_settingsScreenNoTransition();
+    }
+    if (&src == &btn_Loop1)
+    {
+        //ToLoop
+        //When btn_Loop1 clicked change screen to screen_loop
+        //Go to screen_loop with no screen transition
+        application().gotoscreen_loopScreenNoTransition();
     }
 }

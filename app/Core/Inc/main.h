@@ -77,7 +77,6 @@ void Error_Handler(void);
 #define POT6_GPIO_Port GPIOF
 #define T_IRQ_Pin GPIO_PIN_6
 #define T_IRQ_GPIO_Port GPIOD
-#define T_IRQ_EXTI_IRQn EXTI9_5_IRQn
 #define ILI9341_RESET_Pin GPIO_PIN_10
 #define ILI9341_RESET_GPIO_Port GPIOG
 

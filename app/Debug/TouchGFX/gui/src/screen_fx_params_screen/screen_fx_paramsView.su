@@ -1,0 +1,9 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsView.cpp:13:6:virtual void screen_fx_paramsView::tearDownScreen()	0	static
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp:11:13:screen_fx_paramsView::~screen_fx_paramsView()	8	static
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp:11:13:virtual screen_fx_paramsView::~screen_fx_paramsView()	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsView.cpp:3:1:screen_fx_paramsView::screen_fx_paramsView()	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsView.cpp:8:6:virtual void screen_fx_paramsView::setupScreen()	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsView.cpp:19:6:virtual void screen_fx_paramsView::set_slider1_value(int)	8	static

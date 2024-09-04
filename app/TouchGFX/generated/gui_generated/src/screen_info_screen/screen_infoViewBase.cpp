@@ -17,19 +17,128 @@ screen_infoViewBase::screen_infoViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 98, 255));
     add(MAIN_BACKGROUND);
 
-    btn_back.setXY(46, 158);
+    scrollableDeugInfo.setPosition(0, 0, 320, 240);
+    scrollableDeugInfo.enableHorizontalScroll(false);
+    scrollableDeugInfo.setScrollbarsColor(touchgfx::Color::getColorFromRGB(242, 10, 10));
+    scrollableDeugInfo.setScrollbarsAlpha(255);
+    scrollableDeugInfo.setScrollbarsPermanentlyVisible();
+    MAIN_BACKGROUND_1.setPosition(0, 0, 320, 440);
+    MAIN_BACKGROUND_1.setColor(touchgfx::Color::getColorFromRGB(0, 98, 255));
+    scrollableDeugInfo.add(MAIN_BACKGROUND_1);
+
+    btn_DISPLAY_USB_FWUpdate.setXY(48, 240);
+    btn_DISPLAY_USB_FWUpdate.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));
+    btn_DISPLAY_USB_FWUpdate.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ON0F));
+    btn_DISPLAY_USB_FWUpdate.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_DISPLAY_USB_FWUpdate.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scrollableDeugInfo.add(btn_DISPLAY_USB_FWUpdate);
+
+    btn_DSP_USB_FWUpdate_1.setXY(50, 313);
+    btn_DSP_USB_FWUpdate_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));
+    btn_DSP_USB_FWUpdate_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9H5E));
+    btn_DSP_USB_FWUpdate_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_DSP_USB_FWUpdate_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scrollableDeugInfo.add(btn_DSP_USB_FWUpdate_1);
+
+    textArea1.setXY(100, 60);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WNVK));
+    scrollableDeugInfo.add(textArea1);
+
+    textArea1_3_2.setXY(241, 84);
+    textArea1_3_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2.setLinespacing(0);
+    textArea1_3_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JDXN));
+    scrollableDeugInfo.add(textArea1_3_2);
+
+    textArea1_3_2_2.setXY(241, 60);
+    textArea1_3_2_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_2.setLinespacing(0);
+    textArea1_3_2_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDY8));
+    scrollableDeugInfo.add(textArea1_3_2_2);
+
+    textArea1_3_2_3.setXY(241, 108);
+    textArea1_3_2_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_3.setLinespacing(0);
+    textArea1_3_2_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y7UP));
+    scrollableDeugInfo.add(textArea1_3_2_3);
+
+    textArea1_3_2_1.setXY(241, 132);
+    textArea1_3_2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_1.setLinespacing(0);
+    textArea1_3_2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_D3KI));
+    scrollableDeugInfo.add(textArea1_3_2_1);
+
+    textArea1_3_2_1_1.setXY(241, 156);
+    textArea1_3_2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_1_1.setLinespacing(0);
+    textArea1_3_2_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4T82));
+    scrollableDeugInfo.add(textArea1_3_2_1_1);
+
+    textArea1_2.setXY(91, 156);
+    textArea1_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_2.setLinespacing(0);
+    textArea1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GL7Q));
+    scrollableDeugInfo.add(textArea1_2);
+
+    textArea1_2_1.setXY(142, 180);
+    textArea1_2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_2_1.setLinespacing(0);
+    textArea1_2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1CX2));
+    scrollableDeugInfo.add(textArea1_2_1);
+
+    textArea1_2_1_1.setXY(98, 204);
+    textArea1_2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_2_1_1.setLinespacing(0);
+    textArea1_2_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P29E));
+    scrollableDeugInfo.add(textArea1_2_1_1);
+
+    textArea1_3_2_1_1_1.setXY(241, 180);
+    textArea1_3_2_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_1_1_1.setLinespacing(0);
+    textArea1_3_2_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y1WU));
+    scrollableDeugInfo.add(textArea1_3_2_1_1_1);
+
+    textArea1_3_2_1_1_1_1.setXY(241, 204);
+    textArea1_3_2_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_3_2_1_1_1_1.setLinespacing(0);
+    textArea1_3_2_1_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_74CT));
+    scrollableDeugInfo.add(textArea1_3_2_1_1_1_1);
+
+    textArea1_1.setXY(56, 108);
+    textArea1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_1.setLinespacing(0);
+    textArea1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6PKF));
+    scrollableDeugInfo.add(textArea1_1);
+
+    textArea1_1_1.setXY(50, 84);
+    textArea1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_1_1.setLinespacing(0);
+    textArea1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3JIL));
+    scrollableDeugInfo.add(textArea1_1_1);
+
+    textArea1_1_1_1.setXY(6, 132);
+    textArea1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1_1_1_1.setLinespacing(0);
+    textArea1_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_D0CM));
+    scrollableDeugInfo.add(textArea1_1_1_1);
+
+    debug_top_text.setXY(105, 10);
+    debug_top_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    debug_top_text.setLinespacing(0);
+    debug_top_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AS0H));
+    scrollableDeugInfo.add(debug_top_text);
+
+    add(scrollableDeugInfo);
+
+    btn_back.setXY(46, 180);
     btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));
     btn_back.setLabelText(touchgfx::TypedText(T___SINGLEUSE_QX0V));
     btn_back.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_back.setAction(buttonCallback);
     add(btn_back);
-
-    debug_top_text.setXY(89, 9);
-    debug_top_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    debug_top_text.setLinespacing(0);
-    debug_top_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AS0H));
-    add(debug_top_text);
 }
 
 screen_infoViewBase::~screen_infoViewBase()
@@ -47,6 +156,14 @@ void screen_infoViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
     if (&src == &btn_back)
     {
         //back_to_settings
+        //When btn_back clicked change screen to screen_settings
+        //Go to screen_settings with no screen transition
+        application().gotoscreen_settingsScreenNoTransition();
+        //DSP_FW_UPDATE
+        //When btn_back clicked change screen to screen_settings
+        //Go to screen_settings with no screen transition
+        application().gotoscreen_settingsScreenNoTransition();
+        //DISPLAY_FW_UPDATE
         //When btn_back clicked change screen to screen_settings
         //Go to screen_settings with no screen transition
         application().gotoscreen_settingsScreenNoTransition();

@@ -15,6 +15,10 @@
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
+#include <gui/screen_fx_params_screen/screen_fx_paramsView.hpp>
+#include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
+#include <gui/screen_loop_screen/screen_loopView.hpp>
+#include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <gui/screen_edit_screen/screen_editView.hpp>
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
 
@@ -73,6 +77,32 @@ void FrontendApplicationBase::gotoscreen_infoScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_infoScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_infoView, screen_infoPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_fx_params
+
+void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_fx_paramsView, screen_fx_paramsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_loop
+
+void FrontendApplicationBase::gotoscreen_loopScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_loopScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_loopScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_loopView, screen_loopPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // screen_edit

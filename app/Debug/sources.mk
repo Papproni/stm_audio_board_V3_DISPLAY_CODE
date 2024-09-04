@@ -45,7 +45,9 @@ TouchGFX/App \
 TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_edit_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_fx_params_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_info_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_loop_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_perf_mode_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_settings_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/images/src \
@@ -56,7 +58,9 @@ TouchGFX/build/MINGW32_NT-6.2/generated/texts/src \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/model \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_edit_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_fx_params_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_info_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_loop_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_perf_mode_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_settings_screen \
 TouchGFX/build/MINGW32_NT-6.2/simulator \
@@ -65,7 +69,9 @@ TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/s
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/screen_edit_screen \
+TouchGFX/generated/gui_generated/src/screen_fx_params_screen \
 TouchGFX/generated/gui_generated/src/screen_info_screen \
+TouchGFX/generated/gui_generated/src/screen_loop_screen \
 TouchGFX/generated/gui_generated/src/screen_perf_mode_screen \
 TouchGFX/generated/gui_generated/src/screen_settings_screen \
 TouchGFX/generated/images/src \
@@ -74,7 +80,9 @@ TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/model \
 TouchGFX/gui/src/screen_edit_screen \
+TouchGFX/gui/src/screen_fx_params_screen \
 TouchGFX/gui/src/screen_info_screen \
+TouchGFX/gui/src/screen_loop_screen \
 TouchGFX/gui/src/screen_perf_mode_screen \
 TouchGFX/gui/src/screen_settings_screen \
 TouchGFX/target \

@@ -220,6 +220,30 @@
     <Filter Include="Source Files\generated\gui_generated\screen_edit_screen">
       <UniqueIdentifier>ADFE495E-A4DC-A0CC-D960-9BBFE9FAAD15</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screen_loop_screen">
+      <UniqueIdentifier>D11D9705-1254-F5AA-D063-43B099DC1F56</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_loop_screen">
+      <UniqueIdentifier>C03DFFBC-7B65-B606-7440-66AE588A4C3E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_fx_params_screen">
+      <UniqueIdentifier>81B6360A-08FD-DBD0-2BA7-62F95A3149FA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_fx_params_screen">
+      <UniqueIdentifier>A626D136-6BAA-7A82-FF73-0EFDAAE5C113</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_loop_screen">
+      <UniqueIdentifier>5B1ED83D-10D4-AAF2-EC0E-556F8CB0CC48</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_loop_screen">
+      <UniqueIdentifier>694EFFDF-629A-3B59-3ED0-5C2FA22C7DDC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_fx_params_screen">
+      <UniqueIdentifier>98966320-CA5F-44C7-7DA9-452B4DACF003</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_fx_params_screen">
+      <UniqueIdentifier>E64DD76E-7CFE-AEA9-53BF-EA70B06B877F</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -287,6 +311,24 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_edit_screen\screen_editViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_edit_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_fx_params_screen\screen_fx_paramsPresenter.cpp">
+      <Filter>Source Files\gui\screen_fx_params_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_fx_params_screen\screen_fx_paramsView.cpp">
+      <Filter>Source Files\gui\screen_fx_params_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_fx_params_screen\screen_fx_paramsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_fx_params_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopPresenter.cpp">
+      <Filter>Source Files\gui\screen_loop_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopView.cpp">
+      <Filter>Source Files\gui\screen_loop_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_loop_screen\screen_loopViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_loop_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -765,6 +807,24 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_edit_screen\screen_editViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_edit_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_fx_params_screen\screen_fx_paramsPresenter.hpp">
+      <Filter>Header Files\gui\screen_fx_params_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_fx_params_screen\screen_fx_paramsView.hpp">
+      <Filter>Header Files\gui\screen_fx_params_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_fx_params_screen\screen_fx_paramsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_fx_params_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopPresenter.hpp">
+      <Filter>Header Files\gui\screen_loop_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopView.hpp">
+      <Filter>Header Files\gui\screen_loop_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_loop_screen\screen_loopViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_loop_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

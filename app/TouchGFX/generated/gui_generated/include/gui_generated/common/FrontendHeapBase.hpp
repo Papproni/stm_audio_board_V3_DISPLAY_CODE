@@ -18,6 +18,10 @@
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
+#include <gui/screen_fx_params_screen/screen_fx_paramsView.hpp>
+#include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
+#include <gui/screen_loop_screen/screen_loopView.hpp>
+#include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <gui/screen_edit_screen/screen_editView.hpp>
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
 
@@ -45,8 +49,10 @@ public:
     typedef touchgfx::meta::TypeList< screen_settingsView,
             touchgfx::meta::TypeList< screen_perf_modeView,
             touchgfx::meta::TypeList< screen_infoView,
+            touchgfx::meta::TypeList< screen_fx_paramsView,
+            touchgfx::meta::TypeList< screen_loopView,
             touchgfx::meta::TypeList< screen_editView,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -61,8 +67,10 @@ public:
     typedef touchgfx::meta::TypeList< screen_settingsPresenter,
             touchgfx::meta::TypeList< screen_perf_modePresenter,
             touchgfx::meta::TypeList< screen_infoPresenter,
+            touchgfx::meta::TypeList< screen_fx_paramsPresenter,
+            touchgfx::meta::TypeList< screen_loopPresenter,
             touchgfx::meta::TypeList< screen_editPresenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -85,7 +93,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreen_settingsScreenNoTransition();
+        app.gotoscreen_infoScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

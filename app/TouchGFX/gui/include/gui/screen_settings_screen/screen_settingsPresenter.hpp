@@ -25,7 +25,7 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~screen_settingsPresenter() {}
+    virtual ~screen_settingsPresenter() {};
 
 private:
     screen_settingsPresenter();
