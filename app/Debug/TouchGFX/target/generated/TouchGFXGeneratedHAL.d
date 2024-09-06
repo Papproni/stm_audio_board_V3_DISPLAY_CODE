@@ -119,6 +119,7 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
@@ -249,6 +250,7 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:

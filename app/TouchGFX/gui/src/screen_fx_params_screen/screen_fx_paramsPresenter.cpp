@@ -17,9 +17,9 @@ void screen_fx_paramsPresenter::deactivate()
 
 }
 
-void screen_fx_paramsPresenter::set_slider1_value(int val)
+void screen_fx_paramsPresenter::set_sliders_value(uint32_t* val)
 {
-	view.set_slider1_value(val);
+	view.set_sliders_value(val);
 }
 
 

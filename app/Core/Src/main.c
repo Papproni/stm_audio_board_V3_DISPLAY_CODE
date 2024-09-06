@@ -83,6 +83,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 
 }
+#define NUM_OF_POTS 6
+volatile uint32_t adc_values_au32[NUM_OF_POTS];
+
 /* USER CODE END 0 */
 
 /**
@@ -126,6 +129,7 @@ int main(void)
 //	  uint8_t cmd = 0x01;
 //	  HAL_SPI_Transmit(&hspi5, &cmd, 1, 1000);
 //  }
+  HAL_ADC_Start(&hadc1);
 
 
   ILI9341_Init();
@@ -135,8 +139,46 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint32_t adc_channels[] = {
+		  ADC_CHANNEL_7,
+		  ADC_CHANNEL_5,
+		  ADC_CHANNEL_4,
+		  ADC_CHANNEL_2,
+		  ADC_CHANNEL_6,
+		  ADC_CHANNEL_3};
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+	sConfig.Channel = ADC_CHANNEL_3;
+	sConfig.Rank = ADC_REGULAR_RANK_1;
+	sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+	sConfig.SingleDiff = ADC_SINGLE_ENDED;
+	sConfig.OffsetNumber = ADC_OFFSET_NONE;
+	sConfig.Offset = 0;
+	sConfig.OffsetSignedSaturation = DISABLE;
+
+	int i = 0;
   while (1)
   {
+
+
+	  HAL_ADC_Start(&hadc1);
+
+	  // Poll for conversion to complete
+	  if (HAL_ADC_PollForConversion(&hadc1, 1000) == HAL_OK)
+	  {
+	      // Get the ADC value for POT1_Pin
+		  adc_values_au32[i] = HAL_ADC_GetValue(&hadc1)*0.1+adc_values_au32[i]*0.9;
+
+		  sConfig.Channel = adc_channels[i];
+		i++;
+		if(i>=6){
+			i=0;
+		}
+		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+		 {
+		   Error_Handler();
+		 }
+	  }
 
 
     /* USER CODE END WHILE */

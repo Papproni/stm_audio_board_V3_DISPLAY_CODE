@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
 class screen_fx_paramsViewBase : public touchgfx::View<screen_fx_paramsPresenter>
@@ -43,13 +44,19 @@ protected:
     touchgfx::PainterRGB565 ParamSlot5Painter;
     touchgfx::Circle ParamSlot4;
     touchgfx::PainterRGB565 ParamSlot4Painter;
-    touchgfx::TextArea FXname;
+    touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::TextArea param1_name;
     touchgfx::TextArea param2_name;
     touchgfx::TextArea param3_name;
     touchgfx::TextArea param4_name;
     touchgfx::TextArea param5_name;
     touchgfx::TextArea param6_name;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t FXNAME_SIZE = 15;
+    touchgfx::Unicode::UnicodeChar FXnameBuffer[FXNAME_SIZE];
 
 private:
 

@@ -6,6 +6,15 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_76NU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_UK7P" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">FX: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="FX_name_text" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">FX placeholder</Translation>
+      </Text>
       <Text Id="__SingleUse_MV3F" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">pot6</Translation>
       </Text>
@@ -24,8 +33,8 @@
       <Text Id="__SingleUse_B88N" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">pot1</Translation>
       </Text>
-      <Text Id="__SingleUse_1G97" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">FX placeholder</Translation>
+      <Text Id="FXname_buffer" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_AS0H" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">DEBUG</Translation>
@@ -141,7 +150,7 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="a-z,A-z,0-9" WildcardCharacterRanges="a-z,A-z,0-9" />
     <Typography Id="Large" Font="consola.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="200" Bpp="4" Direction="LTR" FallbackCharacter="?" />

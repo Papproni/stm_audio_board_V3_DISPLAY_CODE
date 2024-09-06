@@ -18,6 +18,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:23:18:virtual void screen_loopViewBase::btn_slot1_pressed()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<screen_loopPresenter>::~View()	1
 ../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:51:1:screen_loopViewBase::~screen_loopViewBase()	1
 ../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:56:6:virtual void screen_loopViewBase::setupScreen()	1

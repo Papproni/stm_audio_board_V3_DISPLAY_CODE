@@ -12,8 +12,15 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    virtual void set_slider1_value(int val);
+    int potmeter_scale_value;
+    int potmeter_offset_value;
+    int potmeter_min_value;
+    int adc_raw_max_value;
+
+    virtual void set_sliders_value(uint32_t* val);
+
 protected:
+    int convert_adc_to_pot_values(int val);
 };
 
 #endif // SCREEN_FX_PARAMSVIEW_HPP

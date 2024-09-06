@@ -17,6 +17,14 @@ public:
     virtual ~screen_loopViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void btn_slot1_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

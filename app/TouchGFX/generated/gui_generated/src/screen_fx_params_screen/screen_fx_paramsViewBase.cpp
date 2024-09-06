@@ -91,7 +91,10 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     FXname.setXY(87, 6);
     FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     FXname.setLinespacing(0);
-    FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1G97));
+    Unicode::snprintf(FXnameBuffer, FXNAME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_76NU).getText());
+    FXname.setWildcard(FXnameBuffer);
+    FXname.resizeToCurrentText();
+    FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UK7P));
     add(FXname);
 
     param1_name.setXY(58, 108);

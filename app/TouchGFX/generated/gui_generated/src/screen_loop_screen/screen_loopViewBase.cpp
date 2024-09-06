@@ -69,9 +69,9 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
     }
     if (&src == &btn_FX_slot_1)
     {
-        //Interaction1
-        //When btn_FX_slot_1 clicked change screen to screen_fx_params
-        //Go to screen_fx_params with no screen transition
-        application().gotoscreen_fx_paramsScreenNoTransition();
+        //btn_slot1_pressed
+        //When btn_FX_slot_1 clicked call virtual function
+        //Call btn_slot1_pressed
+        btn_slot1_pressed();
     }
 }

@@ -27,7 +27,7 @@ public:
 
     virtual ~screen_fx_paramsPresenter() {}
 
-    virtual void set_slider1_value(int val);
+    virtual void set_sliders_value(uint32_t* val);
 private:
     screen_fx_paramsPresenter();
 

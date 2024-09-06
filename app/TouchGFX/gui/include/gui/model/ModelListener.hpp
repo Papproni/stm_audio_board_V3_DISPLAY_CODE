@@ -14,7 +14,7 @@ public:
     {
         model = m;
     }
-    virtual void set_slider1_value(int val){};
+    virtual void set_sliders_value(uint32_t* val){};
 protected:
     Model* model;
 //    uint8_t slider_value_1_u;

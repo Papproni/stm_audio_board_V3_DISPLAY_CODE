@@ -101,6 +101,7 @@ TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp:
@@ -204,4 +205,5 @@ TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:

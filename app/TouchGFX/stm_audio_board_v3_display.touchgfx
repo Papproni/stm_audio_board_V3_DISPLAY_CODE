@@ -724,16 +724,21 @@
             "Name": "FXname",
             "X": 87,
             "Y": 6,
-            "Width": 147,
+            "Width": 134,
             "Height": 24,
-            "TextId": "__SingleUse_1G97",
+            "TextId": "__SingleUse_UK7P",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_76NU",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
           },
           {
             "Type": "TextArea",
@@ -957,15 +962,14 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "btn_slot1_pressed",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "btn_FX_slot_1"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_fx_params"
+              "Type": "ActionCustom",
+              "FunctionName": "btn_slot1_pressed"
             }
           }
         ]
@@ -1173,7 +1177,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_info",
+    "StartupScreenName": "screen_fx_params",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
