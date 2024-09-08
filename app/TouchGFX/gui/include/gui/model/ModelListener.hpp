@@ -15,6 +15,8 @@ public:
         model = m;
     }
     virtual void set_sliders_value(uint32_t* val){};
+//    virtual char* get_current_fx_name();
+
 protected:
     Model* model;
 //    uint8_t slider_value_1_u;

@@ -1,7 +1,12 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#ifndef SIMULATOR
 #include "main.h"
+#endif
+
+#include <stdint.h>
+#include "string.h"
 class ModelListener;
 
 
@@ -16,6 +21,8 @@ public:
     }
 
     void tick();
+
+    char current_fx_name[20];
 protected:
     ModelListener* modelListener;
     int pot1_val_adc_raw;

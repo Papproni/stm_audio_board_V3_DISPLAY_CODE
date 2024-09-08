@@ -11,6 +11,8 @@ public:
     virtual ~screen_loopView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void btn_slot1_pressed();
+//    virtual char* get_current_fx_name();
 protected:
 };
 

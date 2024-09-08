@@ -20,14 +20,14 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:23:18:virtual void screen_loopViewBase::btn_slot1_pressed()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<screen_loopPresenter>::~View()	1
-../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:51:1:screen_loopViewBase::~screen_loopViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:56:6:virtual void screen_loopViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:65:1:screen_loopViewBase::~screen_loopViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:70:6:virtual void screen_loopViewBase::setupScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<screen_loopViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = screen_loopViewBase; T1 = const touchgfx::AbstractButton&]	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = screen_loopViewBase; T1 = const touchgfx::AbstractButton&]	4
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<screen_loopViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<screen_loopPresenter>::~View()	1
-../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:51:1:virtual screen_loopViewBase::~screen_loopViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:61:6:void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	3
-../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:9:1:screen_loopViewBase::screen_loopViewBase()	5
+../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:65:1:virtual screen_loopViewBase::~screen_loopViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:75:6:void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	3
+../TouchGFX/generated/gui_generated/src/screen_loop_screen/screen_loopViewBase.cpp:9:1:screen_loopViewBase::screen_loopViewBase()	7

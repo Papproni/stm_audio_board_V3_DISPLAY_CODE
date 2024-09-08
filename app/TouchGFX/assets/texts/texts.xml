@@ -6,6 +6,12 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_LY3P" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">DEL</Translation>
+      </Text>
+      <Text Id="__SingleUse_QZFG" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">ADD</Translation>
+      </Text>
       <Text Id="__SingleUse_76NU" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">New Text</Translation>
       </Text>

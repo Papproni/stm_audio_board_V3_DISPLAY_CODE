@@ -14,3 +14,9 @@ void screen_loopView::tearDownScreen()
 {
     screen_loopViewBase::tearDownScreen();
 }
+
+void screen_loopView::btn_slot1_pressed()
+{
+
+	application().gotoscreen_fx_paramsScreenNoTransition();
+}

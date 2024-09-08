@@ -1,5 +1,6 @@
 #include <gui/screen_fx_params_screen/screen_fx_paramsView.hpp>
 #include <touchgfx/Color.hpp>
+#include "math.h"
 
 
 screen_fx_paramsView::screen_fx_paramsView()
@@ -14,8 +15,6 @@ screen_fx_paramsView::screen_fx_paramsView()
 	FXname.invalidate();
 	char stuff[FXNAME_SIZE+1] = "CustomFX1";
 	stuff[FXNAME_SIZE] = '\0';
-
-	int mynum = 10;
 
 	Unicode::strncpy(FXnameBuffer, stuff, FXNAME_SIZE);
 	FXname.resizeToCurrentText();

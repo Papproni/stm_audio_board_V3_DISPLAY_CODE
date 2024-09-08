@@ -17,27 +17,41 @@ screen_loopViewBase::screen_loopViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
-    btn_FX_slot_3.setXY(233, 143);
+    btn_FX_slot_3.setXY(230, 131);
     btn_FX_slot_3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_DXR1));
     btn_FX_slot_3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(btn_FX_slot_3);
 
-    btn_FX_slot_2.setXY(130, 143);
+    btn_FX_slot_2.setXY(130, 131);
     btn_FX_slot_2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_AUC8));
     btn_FX_slot_2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(btn_FX_slot_2);
 
-    btn_FX_slot_1.setXY(30, 143);
+    btn_FX_slot_1.setXY(30, 131);
     btn_FX_slot_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_A7HO));
     btn_FX_slot_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_1.setAction(buttonCallback);
     add(btn_FX_slot_1);
+
+    btn_Add_fx.setXY(130, 0);
+    btn_Add_fx.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Add_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_QZFG));
+    btn_Add_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Add_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    add(btn_Add_fx);
+
+    btn_Del_fx.setXY(260, 0);
+    btn_Del_fx.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Del_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LY3P));
+    btn_Del_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Del_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    add(btn_Del_fx);
 
     btn_opt.setXY(0, 0);
     btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));

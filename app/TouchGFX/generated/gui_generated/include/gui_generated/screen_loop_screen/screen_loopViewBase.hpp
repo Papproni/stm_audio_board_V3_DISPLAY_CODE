@@ -38,6 +38,8 @@ protected:
     touchgfx::ButtonWithLabel btn_FX_slot_3;
     touchgfx::ButtonWithLabel btn_FX_slot_2;
     touchgfx::ButtonWithLabel btn_FX_slot_1;
+    touchgfx::ButtonWithLabel btn_Add_fx;
+    touchgfx::ButtonWithLabel btn_Del_fx;
     touchgfx::ButtonWithLabel btn_opt;
 
 private:
