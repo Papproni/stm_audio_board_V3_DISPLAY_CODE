@@ -2,7 +2,9 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:13:6:virtual void screen_loopView::tearDownScreen()	0	static
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:18:6:virtual void screen_loopView::btn_slot1_pressed()	8	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:18:6:virtual void screen_loopView::btn_slot1_pressed()	32	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:26:6:virtual void screen_loopView::btn_slot2_pressed()	32	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:33:6:virtual void screen_loopView::btn_slot3_pressed()	32	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:11:13:screen_loopView::~screen_loopView()	8	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:11:13:virtual screen_loopView::~screen_loopView()	8	static
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:3:1:screen_loopView::screen_loopView()	8	static

@@ -21,6 +21,8 @@ public:
     }
 
     void tick();
+    void setFXname(char* name);
+    void getFXname(char* data);
 
     char current_fx_name[20];
 protected:

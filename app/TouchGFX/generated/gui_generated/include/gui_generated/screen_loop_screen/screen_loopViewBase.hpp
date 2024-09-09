@@ -24,6 +24,14 @@ public:
     {
         // Override and implement this function in screen_loop
     }
+    virtual void btn_slot2_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
+    virtual void btn_slot3_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
 
 protected:
     FrontendApplication& application() {

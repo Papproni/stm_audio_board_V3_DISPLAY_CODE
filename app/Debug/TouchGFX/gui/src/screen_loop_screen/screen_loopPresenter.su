@@ -12,3 +12,4 @@
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:28:13:virtual void* screen_loopPresenter::_ZThn4_N20screen_loopPresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:28:13:virtual void* screen_loopPresenter::_ZThn4_N20screen_loopPresenterD0Ev()	8	static
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:4:1:screen_loopPresenter::screen_loopPresenter(screen_loopView&)	4	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:20:6:void screen_loopPresenter::setFXname(char*)	8	static

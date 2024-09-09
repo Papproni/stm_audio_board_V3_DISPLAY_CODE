@@ -11,14 +11,7 @@ screen_fx_paramsView::screen_fx_paramsView()
 	this->potmeter_offset_value = 140;
 	this->adc_raw_max_value		= pow(2,16)-1;
 
-	// Change name
-	FXname.invalidate();
-	char stuff[FXNAME_SIZE+1] = "CustomFX1";
-	stuff[FXNAME_SIZE] = '\0';
 
-	Unicode::strncpy(FXnameBuffer, stuff, FXNAME_SIZE);
-	FXname.resizeToCurrentText();
-	FXname.invalidate();
 
 	// Change background color
 	MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(100, 30, 70));
@@ -26,6 +19,15 @@ screen_fx_paramsView::screen_fx_paramsView()
 
 void screen_fx_paramsView::setupScreen()
 {
+	// Change name
+	FXname.invalidate();
+
+	char stuff[20] = "CustomFX1";
+	presenter->getFxname(stuff);
+
+	Unicode::strncpy(FXnameBuffer, stuff, FXNAME_SIZE);
+	FXname.resizeToCurrentText();
+	FXname.invalidate();
     screen_fx_paramsViewBase::setupScreen();
 }
 

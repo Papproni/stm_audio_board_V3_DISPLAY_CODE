@@ -27,6 +27,8 @@ public:
 //    virtual char* get_current_fx_name();
     virtual ~screen_loopPresenter() {}
 
+    void setFXname(char* name);
+
 private:
     screen_loopPresenter();
 

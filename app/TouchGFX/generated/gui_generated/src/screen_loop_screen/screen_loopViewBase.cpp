@@ -22,6 +22,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_FX_slot_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_DXR1));
     btn_FX_slot_3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_FX_slot_3.setAction(buttonCallback);
     add(btn_FX_slot_3);
 
     btn_FX_slot_2.setXY(130, 131);
@@ -29,6 +30,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_FX_slot_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_AUC8));
     btn_FX_slot_2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_FX_slot_2.setAction(buttonCallback);
     add(btn_FX_slot_2);
 
     btn_FX_slot_1.setXY(30, 131);
@@ -86,6 +88,24 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //btn_slot1_pressed
         //When btn_FX_slot_1 clicked call virtual function
         //Call btn_slot1_pressed
-        btn_slot1_pressed();
+        btn_slot1_pressed();
+        //gotofxparams
+        //When btn_FX_slot_1 clicked change screen to screen_fx_params
+        //Go to screen_fx_params with no screen transition
+        application().gotoscreen_fx_paramsScreenNoTransition();
+    }
+    if (&src == &btn_FX_slot_2)
+    {
+        //btn_slot2_pressed
+        //When btn_FX_slot_2 clicked call virtual function
+        //Call btn_slot2_pressed
+        btn_slot2_pressed();
+    }
+    if (&src == &btn_FX_slot_3)
+    {
+        //btn_slot3_pressed
+        //When btn_FX_slot_3 clicked call virtual function
+        //Call btn_slot3_pressed
+        btn_slot3_pressed();
     }
 }

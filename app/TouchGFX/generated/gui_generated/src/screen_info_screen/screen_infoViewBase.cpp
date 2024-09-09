@@ -31,6 +31,7 @@ screen_infoViewBase::screen_infoViewBase() :
     btn_DISPLAY_USB_FWUpdate.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ON0F));
     btn_DISPLAY_USB_FWUpdate.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_DISPLAY_USB_FWUpdate.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_DISPLAY_USB_FWUpdate.setAction(buttonCallback);
     scrollableDeugInfo.add(btn_DISPLAY_USB_FWUpdate);
 
     btn_DSP_USB_FWUpdate_1.setXY(50, 313);
@@ -38,6 +39,7 @@ screen_infoViewBase::screen_infoViewBase() :
     btn_DSP_USB_FWUpdate_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9H5E));
     btn_DSP_USB_FWUpdate_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_DSP_USB_FWUpdate_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_DSP_USB_FWUpdate_1.setAction(buttonCallback);
     scrollableDeugInfo.add(btn_DSP_USB_FWUpdate_1);
 
     textArea1.setXY(100, 60);
@@ -158,14 +160,20 @@ void screen_infoViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //back_to_settings
         //When btn_back clicked change screen to screen_settings
         //Go to screen_settings with no screen transition
-        application().gotoscreen_settingsScreenNoTransition();
-        //DSP_FW_UPDATE
-        //When btn_back clicked change screen to screen_settings
-        //Go to screen_settings with no screen transition
-        application().gotoscreen_settingsScreenNoTransition();
-        //DISPLAY_FW_UPDATE
-        //When btn_back clicked change screen to screen_settings
-        //Go to screen_settings with no screen transition
         application().gotoscreen_settingsScreenNoTransition();
+    }
+    if (&src == &btn_DSP_USB_FWUpdate_1)
+    {
+        //btn_DSP_fw_update_pressed
+        //When btn_DSP_USB_FWUpdate_1 clicked call virtual function
+        //Call function2
+        function2();
+    }
+    if (&src == &btn_DISPLAY_USB_FWUpdate)
+    {
+        //btn_DISPLAY_fw_update_pressed
+        //When btn_DISPLAY_USB_FWUpdate clicked call virtual function
+        //Call function4
+        function4();
     }
 }

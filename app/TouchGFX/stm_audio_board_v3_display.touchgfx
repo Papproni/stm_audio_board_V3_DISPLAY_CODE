@@ -544,27 +544,25 @@
             }
           },
           {
-            "InteractionName": "DSP_FW_UPDATE",
+            "InteractionName": "btn_DSP_fw_update_pressed",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "btn_back"
+              "TriggerComponent": "btn_DSP_USB_FWUpdate_1"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_settings"
+              "Type": "ActionCustom",
+              "FunctionName": "function2"
             }
           },
           {
-            "InteractionName": "DISPLAY_FW_UPDATE",
+            "InteractionName": "btn_DISPLAY_fw_update_pressed",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "btn_back"
+              "TriggerComponent": "btn_DISPLAY_USB_FWUpdate"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_settings"
+              "Type": "ActionCustom",
+              "FunctionName": "function4"
             }
           }
         ]
@@ -1013,6 +1011,40 @@
               "Type": "ActionCustom",
               "FunctionName": "btn_slot1_pressed"
             }
+          },
+          {
+            "InteractionName": "btn_slot2_pressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_FX_slot_2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_slot2_pressed"
+            }
+          },
+          {
+            "InteractionName": "btn_slot3_pressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_FX_slot_3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_slot3_pressed"
+            }
+          },
+          {
+            "InteractionName": "gotofxparams",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_FX_slot_1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_fx_params"
+            }
           }
         ]
       },
@@ -1219,7 +1251,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_fx_params",
+    "StartupScreenName": "screen_loop",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

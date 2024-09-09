@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_fx_paramsScreenNoTransition();
+        gotoscreen_loopScreenNoTransition();
     }
 
     // screen_settings

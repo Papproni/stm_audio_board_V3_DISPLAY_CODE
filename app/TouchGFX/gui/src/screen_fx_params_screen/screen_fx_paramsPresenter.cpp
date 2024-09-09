@@ -22,4 +22,11 @@ void screen_fx_paramsPresenter::set_sliders_value(uint32_t* val)
 	view.set_sliders_value(val);
 }
 
+void screen_fx_paramsPresenter::getFxname(char* data)
+{
+	model->getFXname(data);
+}
+
+
+
 

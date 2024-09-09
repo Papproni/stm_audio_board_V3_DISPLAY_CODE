@@ -16,3 +16,9 @@ void screen_loopPresenter::deactivate()
 {
 
 }
+
+void screen_loopPresenter::setFXname(char* data)
+{
+	model->setFXname(data);
+}
+

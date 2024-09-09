@@ -19,6 +19,18 @@ public:
     virtual ~screen_infoViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void function2()
+    {
+        // Override and implement this function in screen_info
+    }
+    virtual void function4()
+    {
+        // Override and implement this function in screen_info
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
