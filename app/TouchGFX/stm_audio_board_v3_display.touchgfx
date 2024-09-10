@@ -494,7 +494,7 @@
                 "X": 105,
                 "Y": 10,
                 "Width": 110,
-                "Height": 47,
+                "Height": 40,
                 "LockPosition": true,
                 "TextId": "__SingleUse_AS0H",
                 "TextRotation": "0",
@@ -578,29 +578,8 @@
             "Height": 240
           },
           {
-            "Type": "TextArea",
-            "Name": "FXname",
-            "X": 87,
-            "Y": 6,
-            "Width": 134,
-            "Height": 24,
-            "TextId": "__SingleUse_UK7P",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true,
-            "Wildcard1": {
-              "TextId": "__SingleUse_76NU",
-              "UseBuffer": true,
-              "BufferSize": 15
-            }
-          },
-          {
             "Type": "SwipeContainer",
-            "Name": "swipeContainer1",
+            "Name": "swipeContainer",
             "Width": 320,
             "Height": 240,
             "SwipeCutoff": 50,
@@ -617,6 +596,12 @@
                 "Width": 320,
                 "Height": 240,
                 "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "MAIN_BACKGROUND_1",
+                    "Width": 320,
+                    "Height": 240
+                  },
                   {
                     "Type": "TextArea",
                     "Name": "param6_name",
@@ -858,6 +843,12 @@
                 "Height": 240,
                 "Components": [
                   {
+                    "Type": "Box",
+                    "Name": "MAIN_BACKGROUND_2",
+                    "Width": 320,
+                    "Height": 240
+                  },
+                  {
                     "Type": "TextArea",
                     "Name": "param12_name",
                     "X": 211,
@@ -1076,6 +1067,27 @@
                 ]
               }
             ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "FXname",
+            "X": 87,
+            "Y": 6,
+            "Width": 134,
+            "Height": 24,
+            "TextId": "__SingleUse_UK7P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_76NU",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
           },
           {
             "Type": "ButtonWithLabel",
@@ -1468,7 +1480,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 47,
+            "Height": 40,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {
@@ -1561,7 +1573,9 @@
     "ProjectFile": "../stm_audio_board_v3_display.ioc",
     "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
     "OptionalComponents": [],
-    "AdditionalFeatures": []
+    "AdditionalFeatures": [
+      "Vector"
+    ]
   },
   "Version": "4.22.1"
 }

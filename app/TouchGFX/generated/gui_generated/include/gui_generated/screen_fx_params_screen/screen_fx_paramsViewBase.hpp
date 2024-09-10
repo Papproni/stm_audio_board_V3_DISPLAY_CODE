@@ -8,12 +8,12 @@
 #include <mvp/View.hpp>
 #include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class screen_fx_paramsViewBase : public touchgfx::View<screen_fx_paramsPresenter>
@@ -33,9 +33,9 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
-    touchgfx::TextAreaWithOneWildcard FXname;
-    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::SwipeContainer swipeContainer;
     touchgfx::Container swipeContainerPage1;
+    touchgfx::Box MAIN_BACKGROUND_1;
     touchgfx::TextArea param6_name;
     touchgfx::Circle ParamSlot5;
     touchgfx::PainterRGB565 ParamSlot5Painter;
@@ -56,6 +56,7 @@ protected:
     touchgfx::TextArea param5_name;
     touchgfx::TextArea param5_name_1;
     touchgfx::Container swipeContainerPage2;
+    touchgfx::Box MAIN_BACKGROUND_2;
     touchgfx::TextArea param12_name;
     touchgfx::Circle ParamSlot11;
     touchgfx::PainterRGB565 ParamSlot11Painter;
@@ -74,6 +75,7 @@ protected:
     touchgfx::TextArea param8_name;
     touchgfx::TextArea param10_name;
     touchgfx::TextArea param11_name;
+    touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::ButtonWithLabel btn_opt;
 
     /*

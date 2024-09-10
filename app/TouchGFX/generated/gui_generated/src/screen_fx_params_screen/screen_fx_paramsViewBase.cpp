@@ -4,8 +4,8 @@
 #include <gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     buttonCallback(this, &screen_fx_paramsViewBase::buttonCallbackHandler)
@@ -20,23 +20,18 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
-    FXname.setXY(87, 6);
-    FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    FXname.setLinespacing(0);
-    Unicode::snprintf(FXnameBuffer, FXNAME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_76NU).getText());
-    FXname.setWildcard(FXnameBuffer);
-    FXname.resizeToCurrentText();
-    FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UK7P));
-    add(FXname);
-
-    swipeContainer1.setXY(0, 0);
-    swipeContainer1.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID));
-    swipeContainer1.setPageIndicatorXY(0, 0);
-    swipeContainer1.setSwipeCutoff(50);
-    swipeContainer1.setEndSwipeElasticWidth(50);
+    swipeContainer.setXY(0, 0);
+    swipeContainer.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID));
+    swipeContainer.setPageIndicatorXY(0, 0);
+    swipeContainer.setSwipeCutoff(50);
+    swipeContainer.setEndSwipeElasticWidth(50);
 
     swipeContainerPage1.setWidth(320);
     swipeContainerPage1.setHeight(240);
+    MAIN_BACKGROUND_1.setPosition(0, 0, 320, 240);
+    MAIN_BACKGROUND_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    swipeContainerPage1.add(MAIN_BACKGROUND_1);
+
     param6_name.setXY(218, 198);
     param6_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     param6_name.setLinespacing(0);
@@ -139,10 +134,14 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     param5_name_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_85MD));
     swipeContainerPage1.add(param5_name_1);
 
-    swipeContainer1.add(swipeContainerPage1);
+    swipeContainer.add(swipeContainerPage1);
 
     swipeContainerPage2.setWidth(320);
     swipeContainerPage2.setHeight(240);
+    MAIN_BACKGROUND_2.setPosition(0, 0, 320, 240);
+    MAIN_BACKGROUND_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    swipeContainerPage2.add(MAIN_BACKGROUND_2);
+
     param12_name.setXY(211, 198);
     param12_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     param12_name.setLinespacing(0);
@@ -239,10 +238,19 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     param11_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WCFB));
     swipeContainerPage2.add(param11_name);
 
-    swipeContainer1.add(swipeContainerPage2);
+    swipeContainer.add(swipeContainerPage2);
 
-    swipeContainer1.setSelectedPage(0);
-    add(swipeContainer1);
+    swipeContainer.setSelectedPage(0);
+    add(swipeContainer);
+
+    FXname.setXY(87, 6);
+    FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    FXname.setLinespacing(0);
+    Unicode::snprintf(FXnameBuffer, FXNAME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_76NU).getText());
+    FXname.setWildcard(FXnameBuffer);
+    FXname.resizeToCurrentText();
+    FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UK7P));
+    add(FXname);
 
     btn_opt.setXY(0, 0);
     btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));

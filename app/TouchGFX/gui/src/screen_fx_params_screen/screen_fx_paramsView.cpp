@@ -28,7 +28,11 @@ void screen_fx_paramsView::setupScreen()
 	Unicode::strncpy(FXnameBuffer, stuff, FXNAME_SIZE);
 	FXname.resizeToCurrentText();
 	FXname.invalidate();
+
+	swipeContainer.setSwipeCutoff(20);
+
     screen_fx_paramsViewBase::setupScreen();
+
 }
 
 void screen_fx_paramsView::tearDownScreen()
@@ -45,28 +49,29 @@ int screen_fx_paramsView::convert_adc_to_pot_values(int val)
 void screen_fx_paramsView::set_sliders_value(uint32_t* val)
 {
 
-
-	ParamSlot1.invalidate();
+//	ParamSlot1.invalidate();
     ParamSlot1.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[0]));
-    ParamSlot1.invalidate();
+//    ParamSlot1.invalidate();
 
-    ParamSlot2.invalidate();
+//    ParamSlot2.invalidate();
 	ParamSlot2.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[1]));
-	ParamSlot2.invalidate();
+//	ParamSlot2.invalidate();
 
-	ParamSlot3.invalidate();
+//	ParamSlot3.invalidate();
 	ParamSlot3.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[2]));
-	ParamSlot3.invalidate();
+//	ParamSlot3.invalidate();
 
-	ParamSlot4.invalidate();
+//	ParamSlot4.invalidate();
 	ParamSlot4.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[3]));
-	ParamSlot4.invalidate();
+//	ParamSlot4.invalidate();
 
-	ParamSlot5.invalidate();
+//	ParamSlot5.invalidate();
 	ParamSlot5.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[4]));
-	ParamSlot5.invalidate();
+//	ParamSlot5.invalidate();
 
-	ParamSlot6.invalidate();
+//	ParamSlot6.invalidate();
 	ParamSlot6.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[5]));
-	ParamSlot6.invalidate();
+//	ParamSlot6.invalidate();
+
+	swipeContainer.invalidate();
 }
