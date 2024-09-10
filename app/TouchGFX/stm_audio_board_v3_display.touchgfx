@@ -578,146 +578,6 @@
             "Height": 240
           },
           {
-            "Type": "ButtonWithLabel",
-            "Name": "btn_opt",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-            "TextId": "__SingleUse_3JMF",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot1",
-            "X": 40,
-            "Y": 40,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": 140.0,
-            "EndAngle": -140.0,
-            "CapPrecision": "Round"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot2",
-            "X": 120,
-            "Y": 40,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": -20.0,
-            "EndAngle": -140.0,
-            "CapPrecision": "Round"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot3",
-            "X": 200,
-            "Y": 40,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": 1.0,
-            "EndAngle": 240.0,
-            "CapPrecision": "Round"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot6",
-            "X": 200,
-            "Y": 130,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": 1.0,
-            "EndAngle": 240.0,
-            "CapPrecision": "Round"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot5",
-            "X": 120,
-            "Y": 130,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": 1.0,
-            "EndAngle": 240.0,
-            "CapPrecision": "Round"
-          },
-          {
-            "Type": "Circle",
-            "Name": "ParamSlot4",
-            "X": 40,
-            "Y": 130,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 20.0,
-            "LineWidth": 10.0,
-            "StartAngle": 1.0,
-            "EndAngle": 240.0,
-            "CapPrecision": "Round"
-          },
-          {
             "Type": "TextArea",
             "Name": "FXname",
             "X": 87,
@@ -739,100 +599,503 @@
             }
           },
           {
-            "Type": "TextArea",
-            "Name": "param1_name",
-            "X": 58,
-            "Y": 108,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_B88N",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer1",
+            "Width": 320,
+            "Height": 240,
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
+            "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainerPage1",
+            "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage1",
+                "Width": 320,
+                "Height": 240,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "param6_name",
+                    "X": 218,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_MV3F",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot5",
+                    "X": 120,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot1",
+                    "X": 40,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 140.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot2",
+                    "X": 120,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": -20.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot3",
+                    "X": 200,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot6",
+                    "X": 200,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot4",
+                    "X": 40,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param3_name",
+                    "X": 218,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_CJN2",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param1_name",
+                    "X": 58,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_B88N",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param2_name",
+                    "X": 138,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_LX7X",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param4_name",
+                    "X": 58,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_G74T",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param5_name",
+                    "X": 138,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_FHJA",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param5_name_1",
+                    "X": 138,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_85MD",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage2",
+                "Width": 320,
+                "Height": 240,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "param12_name",
+                    "X": 211,
+                    "Y": 198,
+                    "Width": 58,
+                    "Height": 24,
+                    "TextId": "__SingleUse_WJYM",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot11",
+                    "X": 120,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot7",
+                    "X": 40,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 140.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot8",
+                    "X": 120,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": -20.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot9",
+                    "X": 200,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot12",
+                    "X": 200,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot10",
+                    "X": 40,
+                    "Y": 130,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param9_name",
+                    "X": 218,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_4KAR",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param7_name",
+                    "X": 58,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_0D0P",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param8_name",
+                    "X": 132,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_HYNG",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param10_name",
+                    "X": 51,
+                    "Y": 198,
+                    "Width": 58,
+                    "Height": 24,
+                    "TextId": "__SingleUse_B0J9",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param11_name",
+                    "X": 131,
+                    "Y": 198,
+                    "Width": 58,
+                    "Height": 24,
+                    "TextId": "__SingleUse_WCFB",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  }
+                ]
+              }
+            ]
           },
           {
-            "Type": "TextArea",
-            "Name": "param2_name",
-            "X": 138,
-            "Y": 108,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_LX7X",
-            "TextRotation": "0",
-            "Color": {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_opt",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_3JMF",
+            "ReleasedColor": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "param3_name",
-            "X": 218,
-            "Y": 108,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_CJN2",
-            "TextRotation": "0",
-            "Color": {
+            "PressedColor": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "param4_name",
-            "X": 58,
-            "Y": 198,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_G74T",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "param5_name",
-            "X": 138,
-            "Y": 198,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_FHJA",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "param6_name",
-            "X": 218,
-            "Y": 198,
-            "Width": 45,
-            "Height": 24,
-            "TextId": "__SingleUse_MV3F",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
+            "TextRotation": "0"
           }
         ],
         "Interactions": [
@@ -845,7 +1108,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_settings"
+              "ActionComponent": "screen_loop"
             }
           }
         ]

@@ -8,11 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/SwipeContainer.hpp>
+#include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class screen_fx_paramsViewBase : public touchgfx::View<screen_fx_paramsPresenter>
 {
@@ -31,7 +33,12 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
-    touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::TextAreaWithOneWildcard FXname;
+    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::Container swipeContainerPage1;
+    touchgfx::TextArea param6_name;
+    touchgfx::Circle ParamSlot5;
+    touchgfx::PainterRGB565 ParamSlot5Painter;
     touchgfx::Circle ParamSlot1;
     touchgfx::PainterRGB565 ParamSlot1Painter;
     touchgfx::Circle ParamSlot2;
@@ -40,17 +47,34 @@ protected:
     touchgfx::PainterRGB565 ParamSlot3Painter;
     touchgfx::Circle ParamSlot6;
     touchgfx::PainterRGB565 ParamSlot6Painter;
-    touchgfx::Circle ParamSlot5;
-    touchgfx::PainterRGB565 ParamSlot5Painter;
     touchgfx::Circle ParamSlot4;
     touchgfx::PainterRGB565 ParamSlot4Painter;
-    touchgfx::TextAreaWithOneWildcard FXname;
+    touchgfx::TextArea param3_name;
     touchgfx::TextArea param1_name;
     touchgfx::TextArea param2_name;
-    touchgfx::TextArea param3_name;
     touchgfx::TextArea param4_name;
     touchgfx::TextArea param5_name;
-    touchgfx::TextArea param6_name;
+    touchgfx::TextArea param5_name_1;
+    touchgfx::Container swipeContainerPage2;
+    touchgfx::TextArea param12_name;
+    touchgfx::Circle ParamSlot11;
+    touchgfx::PainterRGB565 ParamSlot11Painter;
+    touchgfx::Circle ParamSlot7;
+    touchgfx::PainterRGB565 ParamSlot7Painter;
+    touchgfx::Circle ParamSlot8;
+    touchgfx::PainterRGB565 ParamSlot8Painter;
+    touchgfx::Circle ParamSlot9;
+    touchgfx::PainterRGB565 ParamSlot9Painter;
+    touchgfx::Circle ParamSlot12;
+    touchgfx::PainterRGB565 ParamSlot12Painter;
+    touchgfx::Circle ParamSlot10;
+    touchgfx::PainterRGB565 ParamSlot10Painter;
+    touchgfx::TextArea param9_name;
+    touchgfx::TextArea param7_name;
+    touchgfx::TextArea param8_name;
+    touchgfx::TextArea param10_name;
+    touchgfx::TextArea param11_name;
+    touchgfx::ButtonWithLabel btn_opt;
 
     /*
      * Wildcard Buffers

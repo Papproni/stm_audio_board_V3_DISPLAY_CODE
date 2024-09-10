@@ -1,4 +1,4 @@
 ../TouchGFX/gui/src/model/Model.cpp:9:1:Model::Model()	4	static
 ../TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	8	static
 ../TouchGFX/gui/src/model/Model.cpp:24:6:void Model::setFXname(char*)	8	static
-../TouchGFX/gui/src/model/Model.cpp:31:6:void Model::getFXname(char*)	8	static
+../TouchGFX/gui/src/model/Model.cpp:33:6:void Model::getFXname(char*)	8	static

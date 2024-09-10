@@ -6,6 +6,27 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_WCFB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot11</Translation>
+      </Text>
+      <Text Id="__SingleUse_B0J9" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot10</Translation>
+      </Text>
+      <Text Id="__SingleUse_HYNG" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot8</Translation>
+      </Text>
+      <Text Id="__SingleUse_0D0P" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot7</Translation>
+      </Text>
+      <Text Id="__SingleUse_4KAR" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot9</Translation>
+      </Text>
+      <Text Id="__SingleUse_WJYM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot12</Translation>
+      </Text>
+      <Text Id="__SingleUse_85MD" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">pot5</Translation>
+      </Text>
       <Text Id="__SingleUse_LY3P" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">DEL</Translation>
       </Text>

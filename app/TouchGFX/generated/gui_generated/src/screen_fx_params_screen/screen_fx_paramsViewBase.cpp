@@ -4,8 +4,8 @@
 #include <gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     buttonCallback(this, &screen_fx_paramsViewBase::buttonCallbackHandler)
@@ -20,74 +20,6 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
-    btn_opt.setXY(0, 0);
-    btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3JMF));
-    btn_opt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setAction(buttonCallback);
-    add(btn_opt);
-
-    ParamSlot1.setPosition(40, 40, 80, 80);
-    ParamSlot1.setCenter(40, 40);
-    ParamSlot1.setRadius(20);
-    ParamSlot1.setLineWidth(10);
-    ParamSlot1.setArc(140, -140);
-    ParamSlot1.setCapPrecision(10);
-    ParamSlot1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot1.setPainter(ParamSlot1Painter);
-    add(ParamSlot1);
-
-    ParamSlot2.setPosition(120, 40, 80, 80);
-    ParamSlot2.setCenter(40, 40);
-    ParamSlot2.setRadius(20);
-    ParamSlot2.setLineWidth(10);
-    ParamSlot2.setArc(-20, -140);
-    ParamSlot2.setCapPrecision(10);
-    ParamSlot2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot2.setPainter(ParamSlot2Painter);
-    add(ParamSlot2);
-
-    ParamSlot3.setPosition(200, 40, 80, 80);
-    ParamSlot3.setCenter(40, 40);
-    ParamSlot3.setRadius(20);
-    ParamSlot3.setLineWidth(10);
-    ParamSlot3.setArc(1, 240);
-    ParamSlot3.setCapPrecision(10);
-    ParamSlot3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot3.setPainter(ParamSlot3Painter);
-    add(ParamSlot3);
-
-    ParamSlot6.setPosition(200, 130, 80, 80);
-    ParamSlot6.setCenter(40, 40);
-    ParamSlot6.setRadius(20);
-    ParamSlot6.setLineWidth(10);
-    ParamSlot6.setArc(1, 240);
-    ParamSlot6.setCapPrecision(10);
-    ParamSlot6Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot6.setPainter(ParamSlot6Painter);
-    add(ParamSlot6);
-
-    ParamSlot5.setPosition(120, 130, 80, 80);
-    ParamSlot5.setCenter(40, 40);
-    ParamSlot5.setRadius(20);
-    ParamSlot5.setLineWidth(10);
-    ParamSlot5.setArc(1, 240);
-    ParamSlot5.setCapPrecision(10);
-    ParamSlot5Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot5.setPainter(ParamSlot5Painter);
-    add(ParamSlot5);
-
-    ParamSlot4.setPosition(40, 130, 80, 80);
-    ParamSlot4.setCenter(40, 40);
-    ParamSlot4.setRadius(20);
-    ParamSlot4.setLineWidth(10);
-    ParamSlot4.setArc(1, 240);
-    ParamSlot4.setCapPrecision(10);
-    ParamSlot4Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ParamSlot4.setPainter(ParamSlot4Painter);
-    add(ParamSlot4);
-
     FXname.setXY(87, 6);
     FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     FXname.setLinespacing(0);
@@ -97,41 +29,228 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UK7P));
     add(FXname);
 
-    param1_name.setXY(58, 108);
-    param1_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    param1_name.setLinespacing(0);
-    param1_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B88N));
-    add(param1_name);
+    swipeContainer1.setXY(0, 0);
+    swipeContainer1.setPageIndicatorBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID));
+    swipeContainer1.setPageIndicatorXY(0, 0);
+    swipeContainer1.setSwipeCutoff(50);
+    swipeContainer1.setEndSwipeElasticWidth(50);
 
-    param2_name.setXY(138, 108);
-    param2_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    param2_name.setLinespacing(0);
-    param2_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LX7X));
-    add(param2_name);
+    swipeContainerPage1.setWidth(320);
+    swipeContainerPage1.setHeight(240);
+    param6_name.setXY(218, 198);
+    param6_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param6_name.setLinespacing(0);
+    param6_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MV3F));
+    swipeContainerPage1.add(param6_name);
+
+    ParamSlot5.setPosition(120, 130, 80, 80);
+    ParamSlot5.setCenter(40, 40);
+    ParamSlot5.setRadius(20);
+    ParamSlot5.setLineWidth(10);
+    ParamSlot5.setArc(1, 240);
+    ParamSlot5.setCapPrecision(10);
+    ParamSlot5Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot5.setPainter(ParamSlot5Painter);
+    swipeContainerPage1.add(ParamSlot5);
+
+    ParamSlot1.setPosition(40, 40, 80, 80);
+    ParamSlot1.setCenter(40, 40);
+    ParamSlot1.setRadius(20);
+    ParamSlot1.setLineWidth(10);
+    ParamSlot1.setArc(140, -140);
+    ParamSlot1.setCapPrecision(10);
+    ParamSlot1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot1.setPainter(ParamSlot1Painter);
+    swipeContainerPage1.add(ParamSlot1);
+
+    ParamSlot2.setPosition(120, 40, 80, 80);
+    ParamSlot2.setCenter(40, 40);
+    ParamSlot2.setRadius(20);
+    ParamSlot2.setLineWidth(10);
+    ParamSlot2.setArc(-20, -140);
+    ParamSlot2.setCapPrecision(10);
+    ParamSlot2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot2.setPainter(ParamSlot2Painter);
+    swipeContainerPage1.add(ParamSlot2);
+
+    ParamSlot3.setPosition(200, 40, 80, 80);
+    ParamSlot3.setCenter(40, 40);
+    ParamSlot3.setRadius(20);
+    ParamSlot3.setLineWidth(10);
+    ParamSlot3.setArc(1, 240);
+    ParamSlot3.setCapPrecision(10);
+    ParamSlot3Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot3.setPainter(ParamSlot3Painter);
+    swipeContainerPage1.add(ParamSlot3);
+
+    ParamSlot6.setPosition(200, 130, 80, 80);
+    ParamSlot6.setCenter(40, 40);
+    ParamSlot6.setRadius(20);
+    ParamSlot6.setLineWidth(10);
+    ParamSlot6.setArc(1, 240);
+    ParamSlot6.setCapPrecision(10);
+    ParamSlot6Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot6.setPainter(ParamSlot6Painter);
+    swipeContainerPage1.add(ParamSlot6);
+
+    ParamSlot4.setPosition(40, 130, 80, 80);
+    ParamSlot4.setCenter(40, 40);
+    ParamSlot4.setRadius(20);
+    ParamSlot4.setLineWidth(10);
+    ParamSlot4.setArc(1, 240);
+    ParamSlot4.setCapPrecision(10);
+    ParamSlot4Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot4.setPainter(ParamSlot4Painter);
+    swipeContainerPage1.add(ParamSlot4);
 
     param3_name.setXY(218, 108);
     param3_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     param3_name.setLinespacing(0);
     param3_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CJN2));
-    add(param3_name);
+    swipeContainerPage1.add(param3_name);
+
+    param1_name.setXY(58, 108);
+    param1_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param1_name.setLinespacing(0);
+    param1_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B88N));
+    swipeContainerPage1.add(param1_name);
+
+    param2_name.setXY(138, 108);
+    param2_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param2_name.setLinespacing(0);
+    param2_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LX7X));
+    swipeContainerPage1.add(param2_name);
 
     param4_name.setXY(58, 198);
     param4_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     param4_name.setLinespacing(0);
     param4_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_G74T));
-    add(param4_name);
+    swipeContainerPage1.add(param4_name);
 
     param5_name.setXY(138, 198);
     param5_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     param5_name.setLinespacing(0);
     param5_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FHJA));
-    add(param5_name);
+    swipeContainerPage1.add(param5_name);
 
-    param6_name.setXY(218, 198);
-    param6_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    param6_name.setLinespacing(0);
-    param6_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MV3F));
-    add(param6_name);
+    param5_name_1.setXY(138, 198);
+    param5_name_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param5_name_1.setLinespacing(0);
+    param5_name_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_85MD));
+    swipeContainerPage1.add(param5_name_1);
+
+    swipeContainer1.add(swipeContainerPage1);
+
+    swipeContainerPage2.setWidth(320);
+    swipeContainerPage2.setHeight(240);
+    param12_name.setXY(211, 198);
+    param12_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param12_name.setLinespacing(0);
+    param12_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WJYM));
+    swipeContainerPage2.add(param12_name);
+
+    ParamSlot11.setPosition(120, 130, 80, 80);
+    ParamSlot11.setCenter(40, 40);
+    ParamSlot11.setRadius(20);
+    ParamSlot11.setLineWidth(10);
+    ParamSlot11.setArc(1, 240);
+    ParamSlot11.setCapPrecision(10);
+    ParamSlot11Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot11.setPainter(ParamSlot11Painter);
+    swipeContainerPage2.add(ParamSlot11);
+
+    ParamSlot7.setPosition(40, 40, 80, 80);
+    ParamSlot7.setCenter(40, 40);
+    ParamSlot7.setRadius(20);
+    ParamSlot7.setLineWidth(10);
+    ParamSlot7.setArc(140, -140);
+    ParamSlot7.setCapPrecision(10);
+    ParamSlot7Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot7.setPainter(ParamSlot7Painter);
+    swipeContainerPage2.add(ParamSlot7);
+
+    ParamSlot8.setPosition(120, 40, 80, 80);
+    ParamSlot8.setCenter(40, 40);
+    ParamSlot8.setRadius(20);
+    ParamSlot8.setLineWidth(10);
+    ParamSlot8.setArc(-20, -140);
+    ParamSlot8.setCapPrecision(10);
+    ParamSlot8Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot8.setPainter(ParamSlot8Painter);
+    swipeContainerPage2.add(ParamSlot8);
+
+    ParamSlot9.setPosition(200, 40, 80, 80);
+    ParamSlot9.setCenter(40, 40);
+    ParamSlot9.setRadius(20);
+    ParamSlot9.setLineWidth(10);
+    ParamSlot9.setArc(1, 240);
+    ParamSlot9.setCapPrecision(10);
+    ParamSlot9Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot9.setPainter(ParamSlot9Painter);
+    swipeContainerPage2.add(ParamSlot9);
+
+    ParamSlot12.setPosition(200, 130, 80, 80);
+    ParamSlot12.setCenter(40, 40);
+    ParamSlot12.setRadius(20);
+    ParamSlot12.setLineWidth(10);
+    ParamSlot12.setArc(1, 240);
+    ParamSlot12.setCapPrecision(10);
+    ParamSlot12Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot12.setPainter(ParamSlot12Painter);
+    swipeContainerPage2.add(ParamSlot12);
+
+    ParamSlot10.setPosition(40, 130, 80, 80);
+    ParamSlot10.setCenter(40, 40);
+    ParamSlot10.setRadius(20);
+    ParamSlot10.setLineWidth(10);
+    ParamSlot10.setArc(1, 240);
+    ParamSlot10.setCapPrecision(10);
+    ParamSlot10Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ParamSlot10.setPainter(ParamSlot10Painter);
+    swipeContainerPage2.add(ParamSlot10);
+
+    param9_name.setXY(218, 108);
+    param9_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param9_name.setLinespacing(0);
+    param9_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4KAR));
+    swipeContainerPage2.add(param9_name);
+
+    param7_name.setXY(58, 108);
+    param7_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param7_name.setLinespacing(0);
+    param7_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0D0P));
+    swipeContainerPage2.add(param7_name);
+
+    param8_name.setXY(132, 108);
+    param8_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param8_name.setLinespacing(0);
+    param8_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HYNG));
+    swipeContainerPage2.add(param8_name);
+
+    param10_name.setXY(51, 198);
+    param10_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param10_name.setLinespacing(0);
+    param10_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B0J9));
+    swipeContainerPage2.add(param10_name);
+
+    param11_name.setXY(131, 198);
+    param11_name.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    param11_name.setLinespacing(0);
+    param11_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WCFB));
+    swipeContainerPage2.add(param11_name);
+
+    swipeContainer1.add(swipeContainerPage2);
+
+    swipeContainer1.setSelectedPage(0);
+    add(swipeContainer1);
+
+    btn_opt.setXY(0, 0);
+    btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3JMF));
+    btn_opt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_opt.setAction(buttonCallback);
+    add(btn_opt);
 }
 
 screen_fx_paramsViewBase::~screen_fx_paramsViewBase()
@@ -149,8 +268,8 @@ void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractBut
     if (&src == &btn_opt)
     {
         //To_setting
-        //When btn_opt clicked change screen to screen_settings
-        //Go to screen_settings with no screen transition
-        application().gotoscreen_settingsScreenNoTransition();
+        //When btn_opt clicked change screen to screen_loop
+        //Go to screen_loop with no screen transition
+        application().gotoscreen_loopScreenNoTransition();
     }
 }
