@@ -165,8 +165,14 @@ int main(void)
 	sConfig.OffsetSignedSaturation = DISABLE;
 
 	int i = 0;
+
+	uint8_t TX_Buffer [] = "ABCDEF" ; // DATA to send
+	uint8_t SLAVE_ADDR = 0x10<<1;
   while (1)
   {
+	  HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
+	  HAL_Delay(100);
+
 
 
 	  HAL_ADC_Start(&hadc1);
@@ -694,6 +700,8 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+  HAL_GPIO_WritePin(LED_OK_GPIO_Port, LED_OK_Pin, GPIO_PIN_RESET);
+
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
   while (1)
