@@ -17,6 +17,6 @@ void screen_infoView::tearDownScreen()
 
 void screen_infoView::updatescreen()
 {
-	container1.invalidate();
+	scrollableDeugInfo.invalidate();
 }
 

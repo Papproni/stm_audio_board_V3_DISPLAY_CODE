@@ -9,7 +9,6 @@
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
-#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
@@ -44,7 +43,6 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::ScrollableContainer scrollableDeugInfo;
-    touchgfx::Container container1;
     touchgfx::ClickListener< touchgfx::Box > MAIN_BACKGROUND_1;
     touchgfx::ButtonWithLabel btn_DSP_USB_FWUpdate_1;
     touchgfx::ButtonWithLabel btn_DISPLAY_USB_FWUpdate;
@@ -59,8 +57,8 @@ protected:
     touchgfx::TextArea textArea1_2;
     touchgfx::TextArea textArea1_3_2_1_1;
     touchgfx::TextArea textArea1_3_2_1;
-    touchgfx::TextArea textArea1_3_2_3;
     touchgfx::TextArea textArea1_3_2_2;
+    touchgfx::TextArea textArea1_3_2_3;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea1_3_2;
     touchgfx::ButtonWithLabel btn_back;

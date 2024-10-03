@@ -204,7 +204,7 @@
             "X": 149,
             "Y": 100,
             "Width": 22,
-            "Height": 40,
+            "Height": 47,
             "TextId": "__SingleUse_4VSK",
             "TextRotation": "0",
             "Color": {
@@ -409,254 +409,246 @@
             "ScrollbarsAlpha": 255,
             "Components": [
               {
-                "Type": "Container",
-                "Name": "container1",
+                "Type": "Box",
+                "Name": "MAIN_BACKGROUND_1",
                 "Width": 320,
                 "Height": 405,
-                "Components": [
-                  {
-                    "Type": "Box",
-                    "Name": "MAIN_BACKGROUND_1",
-                    "Width": 320,
-                    "Height": 405,
-                    "Color": {
-                      "Green": 98,
-                      "Blue": 255
-                    },
-                    "Clickable": true
-                  },
-                  {
-                    "Type": "ButtonWithLabel",
-                    "Name": "btn_DSP_USB_FWUpdate_1",
-                    "X": 50,
-                    "Y": 313,
-                    "Width": 228,
-                    "Height": 60,
-                    "LockPosition": true,
-                    "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                    "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                    "TextId": "__SingleUse_9H5E",
-                    "ReleasedColor": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "PressedColor": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "TextRotation": "0"
-                  },
-                  {
-                    "Type": "ButtonWithLabel",
-                    "Name": "btn_DISPLAY_USB_FWUpdate",
-                    "X": 48,
-                    "Y": 244,
-                    "Width": 228,
-                    "Height": 60,
-                    "LockPosition": true,
-                    "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                    "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                    "TextId": "__SingleUse_ON0F",
-                    "ReleasedColor": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "PressedColor": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "TextRotation": "0"
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "debug_top_text",
-                    "X": 105,
-                    "Y": 10,
-                    "Width": 110,
-                    "Height": 40,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_AS0H",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_1_1_1",
-                    "X": 6,
-                    "Y": 132,
-                    "Width": 223,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_D0CM",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_1_1",
-                    "X": 50,
-                    "Y": 84,
-                    "Width": 179,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_3JIL",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_1",
-                    "X": 56,
-                    "Y": 108,
-                    "Width": 173,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_6PKF",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_1_1_1_1",
-                    "X": 241,
-                    "Y": 204,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_74CT",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_1_1_1",
-                    "X": 241,
-                    "Y": 180,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_Y1WU",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_2_1_1",
-                    "X": 98,
-                    "Y": 204,
-                    "Width": 131,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_P29E",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_2_1",
-                    "X": 142,
-                    "Y": 180,
-                    "Width": 87,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_1CX2",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_2",
-                    "X": 91,
-                    "Y": 156,
-                    "Width": 138,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_GL7Q",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_1_1",
-                    "X": 241,
-                    "Y": 156,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_4T82",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_1",
-                    "X": 241,
-                    "Y": 132,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_D3KI",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_3",
-                    "X": 241,
-                    "Y": 108,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_Y7UP",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2_2",
-                    "X": 241,
-                    "Y": 60,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_CDY8",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1",
-                    "X": 100,
-                    "Y": 60,
-                    "Width": 129,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_WNVK",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "textArea1_3_2",
-                    "X": 241,
-                    "Y": 84,
-                    "Width": 29,
-                    "Height": 24,
-                    "LockPosition": true,
-                    "TextId": "__SingleUse_JDXN",
-                    "TextRotation": "0",
-                    "AutoSize": true
-                  }
-                ]
+                "Color": {
+                  "Green": 98,
+                  "Blue": 255
+                },
+                "Clickable": true
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "btn_DSP_USB_FWUpdate_1",
+                "X": 50,
+                "Y": 313,
+                "Width": 228,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+                "TextId": "__SingleUse_9H5E",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "btn_DISPLAY_USB_FWUpdate",
+                "X": 48,
+                "Y": 244,
+                "Width": 228,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
+                "TextId": "__SingleUse_ON0F",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "debug_top_text",
+                "X": 105,
+                "Y": 10,
+                "Width": 110,
+                "Height": 47,
+                "LockPosition": true,
+                "TextId": "__SingleUse_AS0H",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1_1_1",
+                "X": 6,
+                "Y": 132,
+                "Width": 223,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_D0CM",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1_1",
+                "X": 50,
+                "Y": 84,
+                "Width": 179,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_3JIL",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1",
+                "X": 56,
+                "Y": 108,
+                "Width": 173,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_6PKF",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_1_1_1_1",
+                "X": 241,
+                "Y": 204,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_74CT",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_1_1_1",
+                "X": 241,
+                "Y": 180,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_Y1WU",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_2_1_1",
+                "X": 98,
+                "Y": 204,
+                "Width": 131,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_P29E",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_2_1",
+                "X": 142,
+                "Y": 180,
+                "Width": 87,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_1CX2",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_2",
+                "X": 91,
+                "Y": 156,
+                "Width": 138,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_GL7Q",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_1_1",
+                "X": 241,
+                "Y": 156,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_4T82",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_1",
+                "X": 241,
+                "Y": 132,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_D3KI",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_2",
+                "X": 241,
+                "Y": 60,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_CDY8",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2_3",
+                "X": 241,
+                "Y": 108,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_Y7UP",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1",
+                "X": 100,
+                "Y": 60,
+                "Width": 129,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_WNVK",
+                "TextRotation": "0",
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_3_2",
+                "X": 241,
+                "Y": 84,
+                "Width": 29,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_JDXN",
+                "TextRotation": "0",
+                "AutoSize": true
               }
             ]
           },
