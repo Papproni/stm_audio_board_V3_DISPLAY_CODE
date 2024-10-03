@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
+-include TouchGFX/gui/src/screen_tuning_screen/subdir.mk
 -include TouchGFX/gui/src/screen_settings_screen/subdir.mk
 -include TouchGFX/gui/src/screen_perf_mode_screen/subdir.mk
 -include TouchGFX/gui/src/screen_loop_screen/subdir.mk
@@ -22,6 +23,7 @@ RM := rm -rf
 -include TouchGFX/generated/texts/src/subdir.mk
 -include TouchGFX/generated/images/src/__generated/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen_tuning_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen_settings_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen_perf_mode_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen_loop_screen/subdir.mk
@@ -33,6 +35,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/simulator/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_tuning_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_settings_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_perf_mode_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_loop_screen/subdir.mk
@@ -46,6 +49,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_tuning_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_settings_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_perf_mode_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_loop_screen/subdir.mk
@@ -130,8 +134,8 @@ all: main-build
 main-build: stm_audio_board_v3_display.elf secondary-outputs
 
 # Tool invocations
-stm_audio_board_v3_display.elf stm_audio_board_v3_display.map: $(OBJS) $(USER_OBJS) C:\Projects\Guitar_effects\display\stm_audio_board_V3_DISPLAY_CODE\app\STM32H723ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "stm_audio_board_v3_display.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Projects\Guitar_effects\display\stm_audio_board_V3_DISPLAY_CODE\app\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm_audio_board_v3_display.map" -Wl,--gc-sections -static -L"C:\Projects\Guitar_effects\display\stm_audio_board_V3_DISPLAY_CODE\app\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+stm_audio_board_v3_display.elf stm_audio_board_v3_display.map: $(OBJS) $(USER_OBJS) C:\Users\Aron\Documents\GitHub\DSP_CODE\stm_audio_board_V3_DISPLAY_CODE\app\STM32H723ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "stm_audio_board_v3_display.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\Aron\Documents\GitHub\DSP_CODE\stm_audio_board_V3_DISPLAY_CODE\app\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm_audio_board_v3_display.map" -Wl,--gc-sections -static -L"C:\Users\Aron\Documents\GitHub\DSP_CODE\stm_audio_board_V3_DISPLAY_CODE\app\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

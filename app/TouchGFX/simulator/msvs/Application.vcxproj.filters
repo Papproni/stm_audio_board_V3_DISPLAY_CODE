@@ -244,6 +244,18 @@
     <Filter Include="Header Files\generated\gui_generated\screen_fx_params_screen">
       <UniqueIdentifier>E64DD76E-7CFE-AEA9-53BF-EA70B06B877F</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen_tuning_screen">
+      <UniqueIdentifier>67B11120-1FEC-6C60-B1F9-EAFF26D9FD7D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_tuning_screen">
+      <UniqueIdentifier>D61BE845-0778-F7CE-5180-498AACF9BD89</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_tuning_screen">
+      <UniqueIdentifier>7C5071D6-AB23-3CC2-31BF-34E8F6F155EE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_tuning_screen">
+      <UniqueIdentifier>A7867D84-6479-BAAD-320D-B49296AF80E9</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -329,6 +341,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_loop_screen\screen_loopViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_loop_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_tuning_screen\screen_tuningPresenter.cpp">
+      <Filter>Source Files\gui\screen_tuning_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_tuning_screen\screen_tuningView.cpp">
+      <Filter>Source Files\gui\screen_tuning_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_tuning_screen\screen_tuningViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_tuning_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -825,6 +846,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_loop_screen\screen_loopViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_loop_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_tuning_screen\screen_tuningPresenter.hpp">
+      <Filter>Header Files\gui\screen_tuning_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_tuning_screen\screen_tuningView.hpp">
+      <Filter>Header Files\gui\screen_tuning_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_tuning_screen\screen_tuningViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_tuning_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,7 @@ void Model::tick()
 	#ifndef SIMULATOR
 	modelListener->set_sliders_value(adc_values_au32);
 #endif
+	modelListener->update_screen();
 }
 
 void Model::setFXname(char* data)

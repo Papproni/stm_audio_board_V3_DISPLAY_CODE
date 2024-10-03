@@ -11,6 +11,8 @@
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #include <gui/screen_settings_screen/screen_settingsView.hpp>
 #include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
+#include <gui/screen_tuning_screen/screen_tuningView.hpp>
+#include <gui/screen_tuning_screen/screen_tuningPresenter.hpp>
 #include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>

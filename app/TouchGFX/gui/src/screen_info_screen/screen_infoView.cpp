@@ -14,3 +14,9 @@ void screen_infoView::tearDownScreen()
 {
     screen_infoViewBase::tearDownScreen();
 }
+
+void screen_infoView::updatescreen()
+{
+	container1.invalidate();
+}
+

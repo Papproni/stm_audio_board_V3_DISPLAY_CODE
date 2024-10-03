@@ -4,8 +4,78 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1" />
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId2" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+    </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_9H5E" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">DISPLAY FW UPDATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_WNVK" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DSP FW ver:</Translation>
+      </Text>
+      <Text Id="__SingleUse_JDXN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_CDY8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y7UP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_D3KI" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_4T82" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_GL7Q" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">CODEC state:</Translation>
+      </Text>
+      <Text Id="__SingleUse_1CX2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DSP OK:</Translation>
+      </Text>
+      <Text Id="__SingleUse_P29E" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DISPLAY OK:</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y1WU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_74CT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">NA</Translation>
+      </Text>
+      <Text Id="__SingleUse_6PKF" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DISPLAY FW ver:</Translation>
+      </Text>
+      <Text Id="__SingleUse_3JIL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DSP Update date:</Translation>
+      </Text>
+      <Text Id="__SingleUse_D0CM" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">DISPLAY Update date:</Translation>
+      </Text>
+      <Text Id="__SingleUse_AS0H" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">DEBUG</Translation>
+      </Text>
+      <Text Id="__SingleUse_ON0F" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">DSP FW UPDATE</Translation>
+      </Text>
+      <Text Id="__SingleUse_7JJQ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A#</Translation>
+      </Text>
+      <Text Id="__SingleUse_NM4A" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Ab</Translation>
+      </Text>
+      <Text Id="__SingleUse_QHDI" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">OPT</Translation>
+      </Text>
+      <Text Id="__SingleUse_4VSK" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">A</Translation>
+      </Text>
       <Text Id="__SingleUse_WCFB" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">pot11</Translation>
       </Text>
@@ -62,57 +132,6 @@
       </Text>
       <Text Id="FXname_buffer" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_AS0H" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">DEBUG</Translation>
-      </Text>
-      <Text Id="__SingleUse_D0CM" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DISPLAY Update date:</Translation>
-      </Text>
-      <Text Id="__SingleUse_3JIL" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DSP Update date:</Translation>
-      </Text>
-      <Text Id="__SingleUse_6PKF" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DISPLAY FW ver:</Translation>
-      </Text>
-      <Text Id="__SingleUse_74CT" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_Y1WU" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_P29E" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DISPLAY OK:</Translation>
-      </Text>
-      <Text Id="__SingleUse_1CX2" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DSP OK:</Translation>
-      </Text>
-      <Text Id="__SingleUse_GL7Q" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">CODEC state:</Translation>
-      </Text>
-      <Text Id="__SingleUse_4T82" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_D3KI" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_Y7UP" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_CDY8" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_JDXN" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">NA</Translation>
-      </Text>
-      <Text Id="__SingleUse_WNVK" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">DSP FW ver:</Translation>
-      </Text>
-      <Text Id="__SingleUse_9H5E" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">DISPLAY FW UPDATE</Translation>
-      </Text>
-      <Text Id="__SingleUse_ON0F" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">DSP FW UPDATE</Translation>
       </Text>
       <Text Id="__SingleUse_3KIE" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">LOOPS</Translation>

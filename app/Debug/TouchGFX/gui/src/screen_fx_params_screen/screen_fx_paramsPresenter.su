@@ -3,6 +3,7 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	0	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:ModelListener::~ModelListener()	0	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::set_sliders_value(uint32_t*)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::update_screen()	0	static
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	0	static
 ../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:10:6:virtual void screen_fx_paramsPresenter::activate()	0	static
 ../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:15:6:virtual void screen_fx_paramsPresenter::deactivate()	0	static

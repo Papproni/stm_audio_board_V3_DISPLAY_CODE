@@ -39,6 +39,9 @@
     <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen_loop_screen\screen_loopView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_loop_screen\screen_loopViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_tuning_screen\screen_tuningPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_tuning_screen\screen_tuningView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_tuning_screen\screen_tuningViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -207,6 +210,9 @@
     <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen_loop_screen\screen_loopView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_loop_screen\screen_loopViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_tuning_screen\screen_tuningPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_tuning_screen\screen_tuningView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_tuning_screen\screen_tuningViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

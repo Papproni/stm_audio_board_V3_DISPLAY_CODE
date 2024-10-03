@@ -16,3 +16,8 @@ void screen_infoPresenter::deactivate()
 {
 
 }
+
+void screen_infoPresenter::update_screen()
+{
+	view.updatescreen();
+}

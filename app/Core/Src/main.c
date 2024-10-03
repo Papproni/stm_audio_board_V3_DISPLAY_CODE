@@ -170,8 +170,7 @@ int main(void)
 	uint8_t SLAVE_ADDR = 0x10<<1;
   while (1)
   {
-	  HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
-	  HAL_Delay(100);
+
 
 
 
@@ -180,6 +179,7 @@ int main(void)
 	  // Poll for conversion to complete
 	  if (HAL_ADC_PollForConversion(&hadc1, 1000) == HAL_OK)
 	  {
+		  HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
 	      // Get the ADC value for POT1_Pin
 		  adc_values_au32[i] = HAL_ADC_GetValue(&hadc1)*0.1+adc_values_au32[i]*0.9;
 

@@ -11,6 +11,7 @@ public:
     virtual ~screen_infoView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void updatescreen();
 protected:
 };
 
