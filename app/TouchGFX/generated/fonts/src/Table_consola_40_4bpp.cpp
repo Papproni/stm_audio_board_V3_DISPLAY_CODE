@@ -18,10 +18,14 @@ KEEP extern const touchgfx::GlyphNode glyphs_consola_40_4bpp[] FONT_TABLE_LOCATI
     {  2380, 0x0053,  18,  26,  26,   2,  22,   0,   0, 0x00 },
     {  2614, 0x0054,  20,  26,  26,   1,  22,   0,   0, 0x00 },
     {  2874, 0x0055,  18,  26,  26,   2,  22,   0,   0, 0x00 },
-    {  3108, 0x0065,  18,  20,  20,   2,  22,   0,   0, 0x00 },
-    {  3288, 0x0074,  18,  27,  27,   1,  22,   0,   0, 0x00 },
-    {  3531, 0x0077,  22,  20,  20,   0,  22,   0,   0, 0x00 },
-    {  3751, 0x0078,  20,  20,  20,   1,  22,   0,   0, 0x00 }
+    {  3108, 0x0061,  17,  20,  20,   2,  22,   0,   0, 0x00 },
+    {  3288, 0x0065,  18,  20,  20,   2,  22,   0,   0, 0x00 },
+    {  3468, 0x006D,  20,  20,  20,   1,  22,   0,   0, 0x00 },
+    {  3668, 0x006F,  20,  20,  20,   1,  22,   0,   0, 0x00 },
+    {  3868, 0x0070,  17,  28,  20,   3,  22,   0,   0, 0x00 },
+    {  4120, 0x0074,  18,  27,  27,   1,  22,   0,   0, 0x00 },
+    {  4363, 0x0077,  22,  20,  20,   0,  22,   0,   0, 0x00 },
+    {  4583, 0x0078,  20,  20,  20,   1,  22,   0,   0, 0x00 }
 };
 
 // consola_40_4bpp
@@ -39,6 +43,6 @@ touchgfx::GeneratedFont& getFont_consola_40_4bpp();
 
 touchgfx::GeneratedFont& getFont_consola_40_4bpp()
 {
-    static touchgfx::GeneratedFont consola_40_4bpp(glyphs_consola_40_4bpp, 18, 40, 40, 0, 0, 4, 1, 0, 0, unicodes_consola_40_4bpp, kerning_consola_40_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont consola_40_4bpp(glyphs_consola_40_4bpp, 22, 48, 40, 0, 0, 4, 1, 0, 0, unicodes_consola_40_4bpp, kerning_consola_40_4bpp, 63, 0, 0, 0);
     return consola_40_4bpp;
 }

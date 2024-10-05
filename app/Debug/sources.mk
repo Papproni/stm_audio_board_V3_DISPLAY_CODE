@@ -70,6 +70,7 @@ TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch \
 TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2 \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
+TouchGFX/generated/gui_generated/src/screen_config_screen \
 TouchGFX/generated/gui_generated/src/screen_edit_screen \
 TouchGFX/generated/gui_generated/src/screen_fx_params_screen \
 TouchGFX/generated/gui_generated/src/screen_info_screen \
@@ -82,6 +83,7 @@ TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/model \
+TouchGFX/gui/src/screen_config_screen \
 TouchGFX/gui/src/screen_edit_screen \
 TouchGFX/gui/src/screen_fx_params_screen \
 TouchGFX/gui/src/screen_info_screen \

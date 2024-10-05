@@ -28,7 +28,7 @@ screen_infoViewBase::screen_infoViewBase() :
 
     btn_DSP_USB_FWUpdate_1.setXY(50, 313);
     btn_DSP_USB_FWUpdate_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));
-    btn_DSP_USB_FWUpdate_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9H5E));
+    btn_DSP_USB_FWUpdate_1.setLabelText(touchgfx::TypedText(T_1));
     btn_DSP_USB_FWUpdate_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_DSP_USB_FWUpdate_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_DSP_USB_FWUpdate_1.setAction(buttonCallback);

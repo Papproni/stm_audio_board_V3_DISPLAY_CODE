@@ -13,7 +13,16 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_9H5E" Alignment="Center" TypographyId="Default">
+      <Text Id="__SingleUse_11UT" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">TapTempo</Translation>
+      </Text>
+      <Text Id="__SingleUse_C9B2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">OPT</Translation>
+      </Text>
+      <Text Id="__SingleUse_6BO0" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">TUNER</Translation>
+      </Text>
+      <Text Id="1" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">DISPLAY FW UPDATE</Translation>
       </Text>
       <Text Id="__SingleUse_WNVK" Alignment="Left" TypographyId="Default">
@@ -180,9 +189,6 @@
       </Text>
       <Text Id="__SingleUse_RDR0" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">EDIT</Translation>
-      </Text>
-      <Text Id="__SingleUse_52X1" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Options</Translation>
       </Text>
       <Text Id="__SingleUse_3ICT" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">PERFORM</Translation>

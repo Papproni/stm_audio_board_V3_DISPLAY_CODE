@@ -9,7 +9,6 @@
 #include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 
 class screen_settingsViewBase : public touchgfx::View<screen_settingsPresenter>
 {
@@ -32,7 +31,7 @@ protected:
     touchgfx::ButtonWithLabel btn_editor_mode;
     touchgfx::ButtonWithLabel btn_info;
     touchgfx::ButtonWithLabel btn_save;
-    touchgfx::TextArea text_option;
+    touchgfx::ButtonWithLabel btn_tuner;
 
 private:
 

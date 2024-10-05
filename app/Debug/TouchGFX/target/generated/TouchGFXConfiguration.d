@@ -94,7 +94,6 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../TouchGFX/gui/include/gui/screen_tuning_screen/screen_tuningView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_tuning_screen/screen_tuningViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_tuning_screen/screen_tuningPresenter.hpp \
@@ -113,7 +112,11 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
+ ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
@@ -238,7 +241,6 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../TouchGFX/gui/include/gui/screen_tuning_screen/screen_tuningView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_tuning_screen/screen_tuningViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_tuning_screen/screen_tuningPresenter.hpp:
@@ -257,7 +259,11 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
+../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp:
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:

@@ -14,7 +14,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_performance_mode",
             "X": 10,
-            "Y": 60,
+            "Y": 10,
             "Width": 144,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
@@ -36,7 +36,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_editor_mode",
             "X": 168,
-            "Y": 60,
+            "Y": 10,
             "Width": 144,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
@@ -57,8 +57,8 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "btn_info",
-            "X": 168,
-            "Y": 152,
+            "X": 88,
+            "Y": 165,
             "Width": 144,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
@@ -80,7 +80,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_save",
             "X": 10,
-            "Y": 152,
+            "Y": 87,
             "Width": 144,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
@@ -99,20 +99,26 @@
             "TextRotation": "0"
           },
           {
-            "Type": "TextArea",
-            "Name": "text_option",
-            "X": 122,
-            "Y": 15,
-            "Width": 76,
-            "Height": 24,
-            "TextId": "__SingleUse_52X1",
-            "TextRotation": "0",
-            "Color": {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_tuner",
+            "X": 168,
+            "Y": 87,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_6BO0",
+            "ReleasedColor": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
           }
         ],
         "Interactions": [
@@ -150,6 +156,18 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_edit"
+            }
+          },
+          {
+            "InteractionName": "To_tuning",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_tuner"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_tuning"
             }
           }
         ]
@@ -204,7 +222,7 @@
             "X": 149,
             "Y": 100,
             "Width": 22,
-            "Height": 47,
+            "Height": 40,
             "TextId": "__SingleUse_4VSK",
             "TextRotation": "0",
             "Color": {
@@ -299,6 +317,68 @@
         ]
       },
       {
+        "Name": "screen_config",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "MAIN_BACKGROUND",
+            "Width": 320,
+            "Height": 240
+          },
+          {
+            "Type": "TextArea",
+            "Name": "debug_top_text",
+            "X": 105,
+            "Y": 10,
+            "Width": 176,
+            "Height": 48,
+            "LockPosition": true,
+            "TextId": "__SingleUse_11UT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_opt",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_C9B2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ToSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_opt"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_settings"
+            }
+          }
+        ]
+      },
+      {
         "Name": "screen_perf_mode",
         "Components": [
           {
@@ -317,7 +397,7 @@
             "X": 30,
             "Y": 19,
             "Width": 137,
-            "Height": 243,
+            "Height": 203,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "Color": {
@@ -333,7 +413,7 @@
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 243,
+            "Height": 203,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -429,7 +509,7 @@
                 "LockPosition": true,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                "TextId": "__SingleUse_9H5E",
+                "TextId": "1",
                 "ReleasedColor": {
                   "Red": 255,
                   "Green": 255,
@@ -471,7 +551,7 @@
                 "X": 105,
                 "Y": 10,
                 "Width": 110,
-                "Height": 47,
+                "Height": 40,
                 "LockPosition": true,
                 "TextId": "__SingleUse_AS0H",
                 "TextRotation": "0",
@@ -1500,7 +1580,6 @@
             "Name": "scrollableContainer",
             "Width": 320,
             "Height": 240,
-            "LockPosition": true,
             "HorizontalScrollEnabled": true,
             "ScrollbarsVisible": true,
             "ScrollbarsColor": {
@@ -2002,7 +2081,8 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0"
+            "TextRotation": "0",
+            "Clickable": true
           },
           {
             "Type": "TextArea",

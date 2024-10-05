@@ -256,6 +256,18 @@
     <Filter Include="Header Files\generated\gui_generated\screen_tuning_screen">
       <UniqueIdentifier>A7867D84-6479-BAAD-320D-B49296AF80E9</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screen_config_screen">
+      <UniqueIdentifier>25664FF5-958C-77B2-53B1-7898436FA5C5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_config_screen">
+      <UniqueIdentifier>725EE06F-0311-2CED-7938-56E9E5293FB6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_config_screen">
+      <UniqueIdentifier>B56FD185-BAC6-5EC2-53EF-427B2FE93F1D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_config_screen">
+      <UniqueIdentifier>0FD7998F-ED08-4312-63B8-A8FF6077ED47</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -350,6 +362,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_tuning_screen\screen_tuningViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_tuning_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_config_screen\screen_configPresenter.cpp">
+      <Filter>Source Files\gui\screen_config_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_config_screen\screen_configView.cpp">
+      <Filter>Source Files\gui\screen_config_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_config_screen\screen_configViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_config_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -855,6 +876,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_tuning_screen\screen_tuningViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_tuning_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_config_screen\screen_configPresenter.hpp">
+      <Filter>Header Files\gui\screen_config_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_config_screen\screen_configView.hpp">
+      <Filter>Header Files\gui\screen_config_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_config_screen\screen_configViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_config_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

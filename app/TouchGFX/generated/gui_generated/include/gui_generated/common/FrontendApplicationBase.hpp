@@ -23,6 +23,9 @@ public:
     // screen_settings
     void gotoscreen_settingsScreenNoTransition();
 
+    // screen_tuning
+    void gotoscreen_tuningScreenNoTransition();
+
     // screen_perf_mode
     void gotoscreen_perf_modeScreenNoTransition();
 
@@ -45,6 +48,9 @@ protected:
 
     // screen_settings
     void gotoscreen_settingsScreenNoTransitionImpl();
+
+    // screen_tuning
+    void gotoscreen_tuningScreenNoTransitionImpl();
 
     // screen_perf_mode
     void gotoscreen_perf_modeScreenNoTransitionImpl();

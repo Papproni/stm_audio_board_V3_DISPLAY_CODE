@@ -85,19 +85,19 @@ void screen_editView::boxClickHandler(const Line & b, const ClickEvent& evt)
 {
     if (&b == &line_signal_loop1_loop2_bypass || &b == &line_signal_loop1_out_ext || &b == &line_signal_loop2_in_ext )
     {
-    	if(evt.getType() == ClickEvent::PRESSED){
+    	if(evt.getType() == ClickEvent::RELEASED){
     		L12_ext = !L12_ext;
     	}
     }
     if (&b == &line_signal_loop2_loop3_bypass || &b == &line_signal_loop2_out_ext || &b == &line_signal_loop3_in_ext)
 	{
-    	if(evt.getType() == ClickEvent::PRESSED){
+    	if(evt.getType() == ClickEvent::RELEASED){
     		L23_ext = !L23_ext;
     	}
 	}
     if (&b == &line_signal_loop3_loop4_bypass || &b == &line_signal_loop3_out_ext || &b == &line_signal_loop4_in_ext)
 	{
-    	if(evt.getType() == ClickEvent::PRESSED){
+    	if(evt.getType() == ClickEvent::RELEASED){
     		L34_ext = !L34_ext;
 		}
 	}

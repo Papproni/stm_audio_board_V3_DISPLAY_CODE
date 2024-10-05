@@ -79,7 +79,7 @@ protected:
     touchgfx::Line line_signal_loop1_in;
     touchgfx::PainterRGB565 line_signal_loop1_inPainter;
     touchgfx::ButtonWithLabel btn_Loop1;
-    touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::ClickListener< touchgfx::ButtonWithLabel > btn_opt;
     touchgfx::TextArea textArea1;
 
 private:
