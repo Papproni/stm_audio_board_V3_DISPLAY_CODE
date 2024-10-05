@@ -11,6 +11,7 @@ public:
     virtual ~screen_editView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void update_screen();
 protected:
 };
 

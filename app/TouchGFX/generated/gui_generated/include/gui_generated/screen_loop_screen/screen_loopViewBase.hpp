@@ -8,6 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class screen_loopViewBase : public touchgfx::View<screen_loopPresenter>
@@ -43,6 +45,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
+    touchgfx::Line line_signalPath;
+    touchgfx::PainterRGB565 line_signalPathPainter;
     touchgfx::ButtonWithLabel btn_FX_slot_3;
     touchgfx::ButtonWithLabel btn_FX_slot_2;
     touchgfx::ButtonWithLabel btn_FX_slot_1;
@@ -51,6 +55,12 @@ protected:
     touchgfx::ButtonWithLabel btn_opt;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 4800;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

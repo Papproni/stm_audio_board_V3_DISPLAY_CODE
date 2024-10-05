@@ -15,6 +15,14 @@ void screen_loopView::tearDownScreen()
     screen_loopViewBase::tearDownScreen();
 }
 
+
+
+
+void screen_loopView::update_screen()
+{
+
+}
+
 void screen_loopView::btn_slot1_pressed()
 {
 	char data[20] = "SLOT1";

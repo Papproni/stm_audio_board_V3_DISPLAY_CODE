@@ -1272,12 +1272,28 @@
       },
       {
         "Name": "screen_loop",
+        "CanvasBufferSize": 4800,
         "Components": [
           {
             "Type": "Box",
             "Name": "MAIN_BACKGROUND",
             "Width": 320,
             "Height": 240
+          },
+          {
+            "Type": "Line",
+            "Name": "line_signalPath",
+            "Y": 161,
+            "Width": 320,
+            "Height": 50,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndX": 320.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Round"
           },
           {
             "Type": "ButtonWithLabel",
@@ -1470,6 +1486,7 @@
       },
       {
         "Name": "screen_edit",
+        "CanvasBufferSize": 4800,
         "Components": [
           {
             "Type": "Box",
@@ -1480,7 +1497,7 @@
           },
           {
             "Type": "ScrollableContainer",
-            "Name": "scrollableContainer1",
+            "Name": "scrollableContainer",
             "Width": 320,
             "Height": 240,
             "LockPosition": true,
@@ -1496,25 +1513,43 @@
               {
                 "Type": "Box",
                 "Name": "SCROLL_BACKGROUND",
-                "Y": 85,
+                "Y": 120,
                 "Width": 498,
-                "Height": 155,
+                "Height": 120,
                 "Color": {
                   "Red": 255
                 },
                 "Alpha": 120
               },
               {
+                "Type": "Line",
+                "Name": "line_signal_loop4_out",
+                "X": 459,
+                "Y": 86,
+                "Width": 21,
+                "Height": 67,
+                "Color": {
+                  "Red": 221,
+                  "Green": 3,
+                  "Blue": 255
+                },
+                "StartX": 10.0,
+                "EndX": 10.0,
+                "EndY": 110.0,
+                "LineWidth": 5.0,
+                "LineEndingStyle": "Round"
+              },
+              {
                 "Type": "ButtonWithLabel",
-                "Name": "btn_Loop1",
-                "X": 30,
-                "Y": 143,
+                "Name": "btn_Loop4",
+                "X": 420,
+                "Y": 153,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-                "TextId": "__SingleUse_2QBU",
+                "TextId": "__SingleUse_Y364",
                 "ReleasedColor": {
                   "Red": 255,
                   "Green": 255,
@@ -1528,33 +1563,117 @@
                 "TextRotation": "0"
               },
               {
-                "Type": "ButtonWithLabel",
-                "Name": "btn_Loop2",
-                "X": 160,
-                "Y": 143,
-                "Width": 60,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-                "TextId": "__SingleUse_9FAB",
-                "ReleasedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "PressedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "TextRotation": "0"
+                "Type": "Container",
+                "Name": "container_loop3_loop4_internal_bypass",
+                "Width": 498,
+                "Height": 250,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop3_out",
+                    "X": 330,
+                    "Y": 138,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop3_loop4_bypass",
+                    "X": 330,
+                    "Y": 128,
+                    "Width": 110,
+                    "Height": 15,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "StartY": 10.0,
+                    "EndX": 100.0,
+                    "EndY": 10.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop4_in",
+                    "X": 420,
+                    "Y": 136,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_loop3_loop4_ext",
+                "Width": 450,
+                "Height": 250,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop4_in_ext",
+                    "X": 420,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop3_out_ext",
+                    "X": 330,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
               },
               {
                 "Type": "ButtonWithLabel",
                 "Name": "btn_Loop3",
-                "X": 271,
-                "Y": 143,
+                "X": 291,
+                "Y": 153,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
@@ -1574,16 +1693,272 @@
                 "TextRotation": "0"
               },
               {
+                "Type": "Container",
+                "Name": "container_loop2_loop3_internal_bypass",
+                "Width": 320,
+                "Height": 250,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop2_out_internal",
+                    "X": 200,
+                    "Y": 136,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop2_loop3_bypass",
+                    "X": 200,
+                    "Y": 126,
+                    "Width": 110,
+                    "Height": 15,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "StartY": 10.0,
+                    "EndX": 100.0,
+                    "EndY": 10.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop3_in",
+                    "X": 290,
+                    "Y": 136,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_loop2_loop3_ext",
+                "Width": 320,
+                "Height": 240,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop3_int_ext",
+                    "X": 290,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop2_out_ext",
+                    "X": 200,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
+              },
+              {
                 "Type": "ButtonWithLabel",
-                "Name": "btn_Loop4",
-                "X": 384,
-                "Y": 143,
+                "Name": "btn_Loop2",
+                "X": 160,
+                "Y": 153,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-                "TextId": "__SingleUse_Y364",
+                "TextId": "__SingleUse_9FAB",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0"
+              },
+              {
+                "Type": "Container",
+                "Name": "container_loop1_loop2_internal_bypass",
+                "Width": 250,
+                "Height": 250,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop1_out_internal",
+                    "X": 70,
+                    "Y": 136,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop1_loop2_bypass_internal",
+                    "X": 70,
+                    "Y": 126,
+                    "Width": 110,
+                    "Height": 15,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 106,
+                    "StartX": 10.0,
+                    "StartY": 10.0,
+                    "EndX": 100.0,
+                    "EndY": 10.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop2_in_internal",
+                    "X": 160,
+                    "Y": 136,
+                    "Width": 20,
+                    "Height": 17,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "container_loop1_loop2_ext",
+                "Width": 190,
+                "Height": 240,
+                "Components": [
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop1_out_ext",
+                    "X": 70,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  },
+                  {
+                    "Type": "Line",
+                    "Name": "line_signal_loop2_in_ext",
+                    "X": 160,
+                    "Y": 86,
+                    "Width": 21,
+                    "Height": 67,
+                    "Color": {
+                      "Red": 221,
+                      "Green": 3,
+                      "Blue": 255
+                    },
+                    "StartX": 10.0,
+                    "EndX": 10.0,
+                    "EndY": 110.0,
+                    "LineWidth": 5.0,
+                    "LineEndingStyle": "Round"
+                  }
+                ]
+              },
+              {
+                "Type": "Line",
+                "Name": "line_signal_loop1_in",
+                "X": 30,
+                "Y": 86,
+                "Width": 21,
+                "Height": 67,
+                "Color": {
+                  "Red": 221,
+                  "Green": 3,
+                  "Blue": 255
+                },
+                "StartX": 10.0,
+                "EndX": 10.0,
+                "EndY": 110.0,
+                "LineWidth": 5.0,
+                "LineEndingStyle": "Round"
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "btn_Loop1",
+                "X": 30,
+                "Y": 153,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+                "TextId": "__SingleUse_2QBU",
                 "ReleasedColor": {
                   "Red": 255,
                   "Green": 255,
@@ -1625,7 +2000,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 40,
+            "Height": 47,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {

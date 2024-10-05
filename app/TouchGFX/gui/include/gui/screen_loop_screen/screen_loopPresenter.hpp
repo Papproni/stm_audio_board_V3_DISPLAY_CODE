@@ -24,10 +24,12 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
+
 //    virtual char* get_current_fx_name();
     virtual ~screen_loopPresenter() {}
 
     void setFXname(char* name);
+    virtual void update_screen();
 
 private:
     screen_loopPresenter();

@@ -14,6 +14,8 @@ public:
     virtual void btn_slot1_pressed();
     virtual void btn_slot2_pressed();
     virtual void btn_slot3_pressed();
+
+    virtual void update_screen();
 //    virtual char* get_current_fx_name();
 protected:
 };

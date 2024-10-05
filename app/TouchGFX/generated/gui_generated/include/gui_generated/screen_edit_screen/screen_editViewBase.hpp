@@ -9,7 +9,10 @@
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
 class screen_editViewBase : public touchgfx::View<screen_editPresenter>
@@ -29,16 +32,62 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
-    touchgfx::ScrollableContainer scrollableContainer1;
+    touchgfx::ScrollableContainer scrollableContainer;
     touchgfx::Box SCROLL_BACKGROUND;
-    touchgfx::ButtonWithLabel btn_Loop1;
-    touchgfx::ButtonWithLabel btn_Loop2;
-    touchgfx::ButtonWithLabel btn_Loop3;
+    touchgfx::Line line_signal_loop4_out;
+    touchgfx::PainterRGB565 line_signal_loop4_outPainter;
     touchgfx::ButtonWithLabel btn_Loop4;
+    touchgfx::Container container_loop3_loop4_internal_bypass;
+    touchgfx::Line line_signal_loop3_out;
+    touchgfx::PainterRGB565 line_signal_loop3_outPainter;
+    touchgfx::Line line_signal_loop3_loop4_bypass;
+    touchgfx::PainterRGB565 line_signal_loop3_loop4_bypassPainter;
+    touchgfx::Line line_signal_loop4_in;
+    touchgfx::PainterRGB565 line_signal_loop4_inPainter;
+    touchgfx::Container container_loop3_loop4_ext;
+    touchgfx::Line line_signal_loop4_in_ext;
+    touchgfx::PainterRGB565 line_signal_loop4_in_extPainter;
+    touchgfx::Line line_signal_loop3_out_ext;
+    touchgfx::PainterRGB565 line_signal_loop3_out_extPainter;
+    touchgfx::ButtonWithLabel btn_Loop3;
+    touchgfx::Container container_loop2_loop3_internal_bypass;
+    touchgfx::Line line_signal_loop2_out_internal;
+    touchgfx::PainterRGB565 line_signal_loop2_out_internalPainter;
+    touchgfx::Line line_signal_loop2_loop3_bypass;
+    touchgfx::PainterRGB565 line_signal_loop2_loop3_bypassPainter;
+    touchgfx::Line line_signal_loop3_in;
+    touchgfx::PainterRGB565 line_signal_loop3_inPainter;
+    touchgfx::Container container_loop2_loop3_ext;
+    touchgfx::Line line_signal_loop3_int_ext;
+    touchgfx::PainterRGB565 line_signal_loop3_int_extPainter;
+    touchgfx::Line line_signal_loop2_out_ext;
+    touchgfx::PainterRGB565 line_signal_loop2_out_extPainter;
+    touchgfx::ButtonWithLabel btn_Loop2;
+    touchgfx::Container container_loop1_loop2_internal_bypass;
+    touchgfx::Line line_signal_loop1_out_internal;
+    touchgfx::PainterRGB565 line_signal_loop1_out_internalPainter;
+    touchgfx::Line line_signal_loop1_loop2_bypass_internal;
+    touchgfx::PainterRGB565 line_signal_loop1_loop2_bypass_internalPainter;
+    touchgfx::Line line_signal_loop2_in_internal;
+    touchgfx::PainterRGB565 line_signal_loop2_in_internalPainter;
+    touchgfx::Container container_loop1_loop2_ext;
+    touchgfx::Line line_signal_loop1_out_ext;
+    touchgfx::PainterRGB565 line_signal_loop1_out_extPainter;
+    touchgfx::Line line_signal_loop2_in_ext;
+    touchgfx::PainterRGB565 line_signal_loop2_in_extPainter;
+    touchgfx::Line line_signal_loop1_in;
+    touchgfx::PainterRGB565 line_signal_loop1_inPainter;
+    touchgfx::ButtonWithLabel btn_Loop1;
     touchgfx::ButtonWithLabel btn_opt;
     touchgfx::TextArea textArea1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 4800;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

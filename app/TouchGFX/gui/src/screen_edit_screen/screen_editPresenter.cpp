@@ -16,3 +16,8 @@ void screen_editPresenter::deactivate()
 {
 
 }
+
+void screen_editPresenter::update_screen()
+{
+	view.update_screen();
+}

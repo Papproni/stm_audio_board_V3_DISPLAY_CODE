@@ -22,3 +22,8 @@ void screen_loopPresenter::setFXname(char* data)
 	model->setFXname(data);
 }
 
+void screen_loopPresenter::update_screen()
+{
+	view.update_screen();
+}
+
