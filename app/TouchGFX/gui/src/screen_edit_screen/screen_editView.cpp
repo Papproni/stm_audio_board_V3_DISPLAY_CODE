@@ -5,14 +5,30 @@
 #define PATH_OFF 70
 #define PATH_ON 255
 
-screen_editView::screen_editView()
+#define PATH_EXTERNAL true
+#define PATH_INTERNAL false
+
+screen_editView::screen_editView() : boxClickedCallback(this ,&screen_editView::boxClickHandler)
 {
+	// In constructor for callback, bind to this view object and bind which function to handle the event.
 
 }
 
 void screen_editView::setupScreen()
 {
     screen_editViewBase::setupScreen();
+    line_signal_loop1_loop2_bypass.setClickAction(boxClickedCallback);
+    line_signal_loop2_loop3_bypass.setClickAction(boxClickedCallback);
+    line_signal_loop3_loop4_bypass.setClickAction(boxClickedCallback);
+
+    line_signal_loop1_out_ext.setClickAction(boxClickedCallback);
+    line_signal_loop2_in_ext.setClickAction(boxClickedCallback);
+
+    line_signal_loop2_out_ext.setClickAction(boxClickedCallback);
+    line_signal_loop3_in_ext.setClickAction(boxClickedCallback);
+
+    line_signal_loop3_out_ext.setClickAction(boxClickedCallback);
+	line_signal_loop4_in_ext.setClickAction(boxClickedCallback);
 }
 
 void screen_editView::tearDownScreen()
@@ -62,4 +78,41 @@ void screen_editView::update_screen()
 		setAlphaOfContainer(container_loop3_loop4_internal_bypass, PATH_ON);
 	}
 
+}
+
+
+void screen_editView::boxClickHandler(const Line & b, const ClickEvent& evt)
+{
+    if (&b == &line_signal_loop1_loop2_bypass || &b == &line_signal_loop1_out_ext || &b == &line_signal_loop2_in_ext )
+    {
+    	if(evt.getType() == ClickEvent::PRESSED){
+    		L12_ext = !L12_ext;
+    	}
+    }
+    if (&b == &line_signal_loop2_loop3_bypass || &b == &line_signal_loop2_out_ext || &b == &line_signal_loop3_in_ext)
+	{
+    	if(evt.getType() == ClickEvent::PRESSED){
+    		L23_ext = !L23_ext;
+    	}
+	}
+    if (&b == &line_signal_loop3_loop4_bypass || &b == &line_signal_loop3_out_ext || &b == &line_signal_loop4_in_ext)
+	{
+    	if(evt.getType() == ClickEvent::PRESSED){
+    		L34_ext = !L34_ext;
+		}
+	}
+
+//
+//    if (&b == &line_signal_loop1_out_ext || &b == &line_signal_loop2_in_ext )
+//	{
+//		L12_ext = PATH_EXTERNAL;
+//	}
+//	if (&b == &line_signal_loop2_out_ext || &b == &line_signal_loop3_in_ext)
+//	{
+//		L23_ext = PATH_EXTERNAL;
+//	}
+//	if (&b == &line_signal_loop3_out_ext || &b == &line_signal_loop4_in_ext)
+//	{
+//		L34_ext = PATH_EXTERNAL;
+//	}
 }

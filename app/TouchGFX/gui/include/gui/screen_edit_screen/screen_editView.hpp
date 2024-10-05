@@ -12,7 +12,13 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void update_screen();
+
+    // Declaring callback handler for Box
+    void boxClickHandler(const Line& b, const ClickEvent& e);
+
 protected:
+    // Declaring callback type of box and clickEvent
+    Callback<screen_editView, const Line&, const ClickEvent&> boxClickedCallback;
 };
 
 #endif // SCREEN_EDITVIEW_HPP

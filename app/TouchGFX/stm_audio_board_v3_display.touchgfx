@@ -1584,7 +1584,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1603,7 +1604,8 @@
                     "EndX": 100.0,
                     "EndY": 10.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1647,7 +1649,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1665,7 +1668,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   }
                 ]
               },
@@ -1733,7 +1737,8 @@
                     "EndX": 100.0,
                     "EndY": 10.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1763,7 +1768,7 @@
                 "Components": [
                   {
                     "Type": "Line",
-                    "Name": "line_signal_loop3_int_ext",
+                    "Name": "line_signal_loop3_in_ext",
                     "X": 290,
                     "Y": 86,
                     "Width": 21,
@@ -1777,7 +1782,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1795,7 +1801,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   }
                 ]
               },
@@ -1848,7 +1855,7 @@
                   },
                   {
                     "Type": "Line",
-                    "Name": "line_signal_loop1_loop2_bypass_internal",
+                    "Name": "line_signal_loop1_loop2_bypass",
                     "X": 70,
                     "Y": 126,
                     "Width": 110,
@@ -1864,7 +1871,8 @@
                     "EndX": 100.0,
                     "EndY": 10.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1908,7 +1916,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   },
                   {
                     "Type": "Line",
@@ -1926,7 +1935,8 @@
                     "EndX": 10.0,
                     "EndY": 110.0,
                     "LineWidth": 5.0,
-                    "LineEndingStyle": "Round"
+                    "LineEndingStyle": "Round",
+                    "Clickable": true
                   }
                 ]
               },

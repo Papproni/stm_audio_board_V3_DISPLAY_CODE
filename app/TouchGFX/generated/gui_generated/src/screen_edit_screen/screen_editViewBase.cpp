@@ -136,14 +136,14 @@ screen_editViewBase::screen_editViewBase() :
     scrollableContainer.add(container_loop2_loop3_internal_bypass);
 
     container_loop2_loop3_ext.setPosition(0, 0, 320, 240);
-    line_signal_loop3_int_ext.setPosition(290, 86, 21, 67);
-    line_signal_loop3_int_extPainter.setColor(touchgfx::Color::getColorFromRGB(221, 3, 255));
-    line_signal_loop3_int_ext.setPainter(line_signal_loop3_int_extPainter);
-    line_signal_loop3_int_ext.setStart(10, 0);
-    line_signal_loop3_int_ext.setEnd(10, 110);
-    line_signal_loop3_int_ext.setLineWidth(5);
-    line_signal_loop3_int_ext.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-    container_loop2_loop3_ext.add(line_signal_loop3_int_ext);
+    line_signal_loop3_in_ext.setPosition(290, 86, 21, 67);
+    line_signal_loop3_in_extPainter.setColor(touchgfx::Color::getColorFromRGB(221, 3, 255));
+    line_signal_loop3_in_ext.setPainter(line_signal_loop3_in_extPainter);
+    line_signal_loop3_in_ext.setStart(10, 0);
+    line_signal_loop3_in_ext.setEnd(10, 110);
+    line_signal_loop3_in_ext.setLineWidth(5);
+    line_signal_loop3_in_ext.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    container_loop2_loop3_ext.add(line_signal_loop3_in_ext);
 
     line_signal_loop2_out_ext.setPosition(200, 86, 21, 67);
     line_signal_loop2_out_extPainter.setColor(touchgfx::Color::getColorFromRGB(221, 3, 255));
@@ -173,15 +173,15 @@ screen_editViewBase::screen_editViewBase() :
     line_signal_loop1_out_internal.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     container_loop1_loop2_internal_bypass.add(line_signal_loop1_out_internal);
 
-    line_signal_loop1_loop2_bypass_internal.setPosition(70, 126, 110, 15);
-    line_signal_loop1_loop2_bypass_internalPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    line_signal_loop1_loop2_bypass_internal.setPainter(line_signal_loop1_loop2_bypass_internalPainter);
-    line_signal_loop1_loop2_bypass_internal.setStart(10, 10);
-    line_signal_loop1_loop2_bypass_internal.setEnd(100, 10);
-    line_signal_loop1_loop2_bypass_internal.setLineWidth(5);
-    line_signal_loop1_loop2_bypass_internal.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-    line_signal_loop1_loop2_bypass_internal.setAlpha(106);
-    container_loop1_loop2_internal_bypass.add(line_signal_loop1_loop2_bypass_internal);
+    line_signal_loop1_loop2_bypass.setPosition(70, 126, 110, 15);
+    line_signal_loop1_loop2_bypassPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    line_signal_loop1_loop2_bypass.setPainter(line_signal_loop1_loop2_bypassPainter);
+    line_signal_loop1_loop2_bypass.setStart(10, 10);
+    line_signal_loop1_loop2_bypass.setEnd(100, 10);
+    line_signal_loop1_loop2_bypass.setLineWidth(5);
+    line_signal_loop1_loop2_bypass.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    line_signal_loop1_loop2_bypass.setAlpha(106);
+    container_loop1_loop2_internal_bypass.add(line_signal_loop1_loop2_bypass);
 
     line_signal_loop2_in_internal.setPosition(160, 136, 20, 17);
     line_signal_loop2_in_internalPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
