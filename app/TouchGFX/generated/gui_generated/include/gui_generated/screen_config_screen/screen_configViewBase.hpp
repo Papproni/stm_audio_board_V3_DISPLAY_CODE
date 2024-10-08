@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
 
 class screen_configViewBase : public touchgfx::View<screen_configPresenter>
 {
@@ -29,7 +30,13 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::TextArea debug_top_text;
-    touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::TextArea text_TapTempo;
+    touchgfx::TextArea FX_PARAM;
+    touchgfx::ButtonWithLabel btn_settings;
+    touchgfx::ToggleButton toggleButton1;
+    touchgfx::ToggleButton toggleButton1_1;
+    touchgfx::TextArea FX_PARAM_1;
+    touchgfx::TextArea text_TapTempo_1;
 
 private:
 

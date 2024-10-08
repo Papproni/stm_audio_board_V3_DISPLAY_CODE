@@ -32,6 +32,7 @@ protected:
     touchgfx::ButtonWithLabel btn_info;
     touchgfx::ButtonWithLabel btn_save;
     touchgfx::ButtonWithLabel btn_tuner;
+    touchgfx::ButtonWithLabel btn_config;
 
 private:
 

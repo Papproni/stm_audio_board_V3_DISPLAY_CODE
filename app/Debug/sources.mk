@@ -41,9 +41,12 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32H7xx_HAL_Driver/Src \
+Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Src \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 TouchGFX/App \
 TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_config_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_edit_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_fx_params_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_info_screen \
@@ -58,6 +61,7 @@ TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/video \
 TouchGFX/build/MINGW32_NT-6.2/generated/texts/src \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/model \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_config_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_edit_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_fx_params_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_info_screen \
@@ -93,4 +97,6 @@ TouchGFX/gui/src/screen_settings_screen \
 TouchGFX/gui/src/screen_tuning_screen \
 TouchGFX/target \
 TouchGFX/target/generated \
+USB_DEVICE/App \
+USB_DEVICE/Target \
 

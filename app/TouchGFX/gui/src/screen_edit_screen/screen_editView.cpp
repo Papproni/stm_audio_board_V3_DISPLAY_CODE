@@ -36,7 +36,7 @@ void screen_editView::tearDownScreen()
     screen_editViewBase::tearDownScreen();
 }
 
-void setAlphaOfContainer(Container &conti,uint8_t alpha){
+void screen_editView::setAlphaOfContainer(Container &conti,uint8_t alpha){
 	auto* d = conti.getFirstChild();
 	while(d!=NULL){
 		touchgfx::Line* line = (touchgfx::Line*)(d);

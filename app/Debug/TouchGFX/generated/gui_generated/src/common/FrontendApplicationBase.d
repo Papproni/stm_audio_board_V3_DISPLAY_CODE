@@ -74,6 +74,9 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/common/Meta.hpp \
@@ -111,9 +114,6 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
- ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
@@ -130,6 +130,10 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
@@ -212,6 +216,9 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/common/Meta.hpp:
@@ -249,9 +256,6 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
-../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
-../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp:
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:
@@ -268,6 +272,10 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:

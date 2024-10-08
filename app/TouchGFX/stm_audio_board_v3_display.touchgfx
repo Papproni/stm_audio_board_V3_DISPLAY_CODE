@@ -57,7 +57,7 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "btn_info",
-            "X": 88,
+            "X": 10,
             "Y": 165,
             "Width": 144,
             "Height": 60,
@@ -119,6 +119,28 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_config",
+            "X": 168,
+            "Y": 165,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "TextId": "__SingleUse_0GS3",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
           }
         ],
         "Interactions": [
@@ -168,6 +190,18 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_tuning"
+            }
+          },
+          {
+            "InteractionName": "To_config",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_config"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_config"
             }
           }
         ]
@@ -222,7 +256,7 @@
             "X": 149,
             "Y": 100,
             "Width": 22,
-            "Height": 40,
+            "Height": 47,
             "TextId": "__SingleUse_4VSK",
             "TextRotation": "0",
             "Color": {
@@ -317,68 +351,6 @@
         ]
       },
       {
-        "Name": "screen_config",
-        "Components": [
-          {
-            "Type": "Box",
-            "Name": "MAIN_BACKGROUND",
-            "Width": 320,
-            "Height": 240
-          },
-          {
-            "Type": "TextArea",
-            "Name": "debug_top_text",
-            "X": 105,
-            "Y": 10,
-            "Width": 176,
-            "Height": 48,
-            "LockPosition": true,
-            "TextId": "__SingleUse_11UT",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "btn_opt",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-            "TextId": "__SingleUse_C9B2",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "ToSettings",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_opt"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_settings"
-            }
-          }
-        ]
-      },
-      {
         "Name": "screen_perf_mode",
         "Components": [
           {
@@ -397,7 +369,7 @@
             "X": 30,
             "Y": 19,
             "Width": 137,
-            "Height": 203,
+            "Height": 243,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "Color": {
@@ -413,7 +385,7 @@
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 203,
+            "Height": 243,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -551,7 +523,7 @@
                 "X": 105,
                 "Y": 10,
                 "Width": 110,
-                "Height": 40,
+                "Height": 47,
                 "LockPosition": true,
                 "TextId": "__SingleUse_AS0H",
                 "TextRotation": "0",
@@ -1347,6 +1319,165 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_loop"
             }
+          },
+          {
+            "InteractionName": "To_config",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_opt"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_config"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_config",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "MAIN_BACKGROUND",
+            "Width": 320,
+            "Height": 240
+          },
+          {
+            "Type": "TextArea",
+            "Name": "debug_top_text",
+            "X": 105,
+            "Y": 10,
+            "Width": 176,
+            "Height": 40,
+            "TextId": "__SingleUse_11UT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_TapTempo",
+            "X": 10,
+            "Y": 83,
+            "Width": 143,
+            "Height": 24,
+            "TextId": "__SingleUse_D2X9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "FX_PARAM",
+            "X": 57,
+            "Y": 108,
+            "Width": 48,
+            "Height": 24,
+            "TextId": "__SingleUse_02IQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_settings",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_C9B2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 171,
+            "Y": 83,
+            "Width": 110,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_off_light.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\rounded.json"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1_1",
+            "X": 171,
+            "Y": 154,
+            "Width": 110,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_off_light.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\rounded.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "FX_PARAM_1",
+            "X": 57,
+            "Y": 179,
+            "Width": 48,
+            "Height": 24,
+            "TextId": "__SingleUse_WKET",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_TapTempo_1",
+            "X": 21,
+            "Y": 154,
+            "Width": 130,
+            "Height": 24,
+            "TextId": "__SingleUse_5QNO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ToSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_settings"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_settings"
+            }
           }
         ]
       },
@@ -2090,7 +2221,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 47,
+            "Height": 40,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {

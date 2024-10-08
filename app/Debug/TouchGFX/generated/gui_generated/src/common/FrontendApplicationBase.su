@@ -35,8 +35,9 @@
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:88:6:void FrontendApplicationBase::gotoscreen_infoScreenNoTransition()	40	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:18:18:virtual void FrontendApplicationBase::changeToStartScreen()	8	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:101:6:void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransition()	40	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:114:6:void FrontendApplicationBase::gotoscreen_loopScreenNoTransition()	40	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:127:6:void FrontendApplicationBase::gotoscreen_editScreenNoTransition()	40	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:114:6:void FrontendApplicationBase::gotoscreen_configScreenNoTransition()	40	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:127:6:void FrontendApplicationBase::gotoscreen_loopScreenNoTransition()	40	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:140:6:void FrontendApplicationBase::gotoscreen_editScreenNoTransition()	40	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_settingsView; PresenterType = screen_settingsPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoscreen_settingsScreenNoTransitionImpl()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_tuningView; PresenterType = screen_tuningPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
@@ -47,7 +48,9 @@
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:94:6:void FrontendApplicationBase::gotoscreen_infoScreenNoTransitionImpl()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_fx_paramsView; PresenterType = screen_fx_paramsPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:107:6:void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransitionImpl()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_configView; PresenterType = screen_configPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:120:6:void FrontendApplicationBase::gotoscreen_configScreenNoTransitionImpl()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_loopView; PresenterType = screen_loopPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:120:6:void FrontendApplicationBase::gotoscreen_loopScreenNoTransitionImpl()	16	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:133:6:void FrontendApplicationBase::gotoscreen_loopScreenNoTransitionImpl()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = screen_editView; PresenterType = screen_editPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:133:6:void FrontendApplicationBase::gotoscreen_editScreenNoTransitionImpl()	16	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:146:6:void FrontendApplicationBase::gotoscreen_editScreenNoTransitionImpl()	16	static

@@ -278,6 +278,10 @@ void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractBut
         //To_setting
         //When btn_opt clicked change screen to screen_loop
         //Go to screen_loop with no screen transition
-        application().gotoscreen_loopScreenNoTransition();
+        application().gotoscreen_loopScreenNoTransition();
+        //To_config
+        //When btn_opt clicked change screen to screen_config
+        //Go to screen_config with no screen transition
+        application().gotoscreen_configScreenNoTransition();
     }
 }

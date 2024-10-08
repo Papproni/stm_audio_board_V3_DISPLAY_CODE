@@ -23,13 +23,45 @@ screen_configViewBase::screen_configViewBase() :
     debug_top_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_11UT));
     add(debug_top_text);
 
-    btn_opt.setXY(0, 0);
-    btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_C9B2));
-    btn_opt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setAction(buttonCallback);
-    add(btn_opt);
+    text_TapTempo.setXY(10, 83);
+    text_TapTempo.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_TapTempo.setLinespacing(0);
+    text_TapTempo.setTypedText(touchgfx::TypedText(T___SINGLEUSE_D2X9));
+    add(text_TapTempo);
+
+    FX_PARAM.setXY(57, 108);
+    FX_PARAM.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    FX_PARAM.setLinespacing(0);
+    FX_PARAM.setTypedText(touchgfx::TypedText(T___SINGLEUSE_02IQ));
+    add(FX_PARAM);
+
+    btn_settings.setXY(0, 0);
+    btn_settings.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_settings.setLabelText(touchgfx::TypedText(T___SINGLEUSE_C9B2));
+    btn_settings.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_settings.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_settings.setAction(buttonCallback);
+    add(btn_settings);
+
+    toggleButton1.setXY(171, 83);
+    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_ON_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_OFF_LIGHT_ID));
+    add(toggleButton1);
+
+    toggleButton1_1.setXY(171, 154);
+    toggleButton1_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_ON_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_OFF_LIGHT_ID));
+    add(toggleButton1_1);
+
+    FX_PARAM_1.setXY(57, 179);
+    FX_PARAM_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    FX_PARAM_1.setLinespacing(0);
+    FX_PARAM_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WKET));
+    add(FX_PARAM_1);
+
+    text_TapTempo_1.setXY(21, 154);
+    text_TapTempo_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_TapTempo_1.setLinespacing(0);
+    text_TapTempo_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5QNO));
+    add(text_TapTempo_1);
 }
 
 screen_configViewBase::~screen_configViewBase()
@@ -44,10 +76,10 @@ void screen_configViewBase::setupScreen()
 
 void screen_configViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &btn_opt)
+    if (&src == &btn_settings)
     {
         //ToSettings
-        //When btn_opt clicked change screen to screen_settings
+        //When btn_settings clicked change screen to screen_settings
         //Go to screen_settings with no screen transition
         application().gotoscreen_settingsScreenNoTransition();
     }

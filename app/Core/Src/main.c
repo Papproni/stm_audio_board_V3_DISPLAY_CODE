@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "app_touchgfx.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -43,6 +44,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
+ADC_HandleTypeDef hadc3;
 
 CRC_HandleTypeDef hcrc;
 
@@ -62,6 +64,7 @@ TIM_HandleTypeDef htim2;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void PeriphCommonClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
@@ -71,23 +74,81 @@ static void MX_ADC1_Init(void);
 static void MX_OCTOSPI1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_I2C3_Init(void);
+static void MX_ADC3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void JumpToBootloader(void)
+{
+	  uint32_t i=0;
+	  void (*SysMemBootJump)(void);
+
+	  /* Set the address of the entry point to bootloader */
+	     volatile uint32_t BootAddr = 0x1FF09800;
+
+	  /* Disable all interrupts */
+	     __disable_irq();
+
+	  /* Disable Systick timer */
+	     SysTick->CTRL = 0;
+
+	  /* Set the clock to the default state */
+	     HAL_RCC_DeInit();
+
+	  /* Clear Interrupt Enable Register & Interrupt Pending Register */
+	     for (i=0;i<5;i++)
+	     {
+		  NVIC->ICER[i]=0xFFFFFFFF;
+		  NVIC->ICPR[i]=0xFFFFFFFF;
+	     }
+
+	  /* Re-enable all interrupts */
+	     __enable_irq();
+
+	  /* Set up the jump to booloader address + 4 */
+	     SysMemBootJump = (void (*)(void)) (*((uint32_t *) ((BootAddr + 4))));
+
+	  /* Set the main stack pointer to the bootloader stack */
+	     __set_MSP(*(uint32_t *)BootAddr);
+
+	  /* Call the function to jump to bootloader location */
+	     SysMemBootJump();
+
+	  /* Jump is done successfully */
+	     while (1)
+	     {
+	      /* Code should never reach this loop */
+	     }
+}
+
+#define NUM_OF_POTS 6
+volatile uint32_t adc_values_au32[NUM_OF_POTS];
+volatile uint32_t temperature_u32;
+volatile float	temp_f32;
+#define SENSOR_ADC_MAX 		4095.0
+#define SENSOR_ADC_REFV  		3.3
+#define SENSOR_AVG_SLOPE 		2.5
+#define SENSOR_V25  			        0.76
+
 extern void touchgfxSignalVSync(void);
+
+uint8_t TX_Buffer [] = "ABCDEF" ; // DATA to send
+uint8_t SLAVE_ADDR = 0x10<<1;
+
 // TIMER Interrupts
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim->Instance == TIM2) {
 		touchgfxSignalVSync();
-	}
+//		HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
 
+
+	}
 }
-#define NUM_OF_POTS 6
-volatile uint32_t adc_values_au32[NUM_OF_POTS];
 
 /* USER CODE END 0 */
 
@@ -117,6 +178,9 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+/* Configure the peripherals common clocks */
+  PeriphCommonClock_Config();
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -131,6 +195,8 @@ int main(void)
   MX_OCTOSPI1_Init();
   MX_TIM2_Init();
   MX_I2C3_Init();
+  MX_ADC3_Init();
+  MX_USB_DEVICE_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 //  while(1){
@@ -166,8 +232,8 @@ int main(void)
 
 	int i = 0;
 
-	uint8_t TX_Buffer [] = "ABCDEF" ; // DATA to send
-	uint8_t SLAVE_ADDR = 0x10<<1;
+
+//	JumpToBootloader();
   while (1)
   {
 
@@ -175,18 +241,21 @@ int main(void)
 
 
 	  HAL_ADC_Start(&hadc1);
-
+	  HAL_ADC_Start(&hadc3);
 	  // Poll for conversion to complete
 	  if (HAL_ADC_PollForConversion(&hadc1, 1000) == HAL_OK)
 	  {
-		  HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
+
 	      // Get the ADC value for POT1_Pin
 		  adc_values_au32[i] = HAL_ADC_GetValue(&hadc1)*0.1+adc_values_au32[i]*0.9;
 
+		  temp_f32 = __HAL_ADC_CALC_TEMPERATURE(3240,temperature_u32,ADC_RESOLUTION_16B);
 		  sConfig.Channel = adc_channels[i];
 		i++;
 		if(i>=6){
 			i=0;
+			temperature_u32 = HAL_ADC_GetValue(&hadc3);
+			HAL_I2C_Mem_Write(&hi2c3, SLAVEx_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
 		}
 		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
 		 {
@@ -225,10 +294,12 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSI
+                              |RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = 64;
+  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 2;
@@ -258,6 +329,32 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief Peripherals Common Clock Configuration
+  * @retval None
+  */
+void PeriphCommonClock_Config(void)
+{
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+
+  /** Initializes the peripherals clock
+  */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInitStruct.PLL2.PLL2M = 2;
+  PeriphClkInitStruct.PLL2.PLL2N = 15;
+  PeriphClkInitStruct.PLL2.PLL2P = 2;
+  PeriphClkInitStruct.PLL2.PLL2Q = 2;
+  PeriphClkInitStruct.PLL2.PLL2R = 2;
+  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_3;
+  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOWIDE;
+  PeriphClkInitStruct.PLL2.PLL2FRACN = 2950;
+  PeriphClkInitStruct.AdcClockSelection = RCC_ADCCLKSOURCE_PLL2;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
@@ -332,6 +429,68 @@ static void MX_ADC1_Init(void)
 }
 
 /**
+  * @brief ADC3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC3_Init(void)
+{
+
+  /* USER CODE BEGIN ADC3_Init 0 */
+
+  /* USER CODE END ADC3_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC3_Init 1 */
+
+  /* USER CODE END ADC3_Init 1 */
+
+  /** Common config
+  */
+  hadc3.Instance = ADC3;
+  hadc3.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+  hadc3.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc3.Init.DataAlign = ADC3_DATAALIGN_RIGHT;
+  hadc3.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc3.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc3.Init.LowPowerAutoWait = DISABLE;
+  hadc3.Init.ContinuousConvMode = DISABLE;
+  hadc3.Init.NbrOfConversion = 1;
+  hadc3.Init.DiscontinuousConvMode = DISABLE;
+  hadc3.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc3.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc3.Init.DMAContinuousRequests = DISABLE;
+  hadc3.Init.SamplingMode = ADC_SAMPLING_MODE_NORMAL;
+  hadc3.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DR;
+  hadc3.Init.Overrun = ADC_OVR_DATA_PRESERVED;
+  hadc3.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
+  hadc3.Init.OversamplingMode = DISABLE;
+  if (HAL_ADC_Init(&hadc3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC3_SAMPLETIME_640CYCLES_5;
+  sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  sConfig.Offset = 0;
+  sConfig.OffsetSign = ADC3_OFFSET_SIGN_NEGATIVE;
+  if (HAL_ADC_ConfigChannel(&hadc3, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC3_Init 2 */
+
+  /* USER CODE END ADC3_Init 2 */
+
+}
+
+/**
   * @brief CRC Initialization Function
   * @param None
   * @retval None
@@ -379,7 +538,7 @@ static void MX_I2C3_Init(void)
   /* USER CODE END I2C3_Init 1 */
   hi2c3.Instance = I2C3;
   hi2c3.Init.Timing = 0x00D049FB;
-  hi2c3.Init.OwnAddress1 = 0;
+  hi2c3.Init.OwnAddress1 = 30;
   hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c3.Init.OwnAddress2 = 0;

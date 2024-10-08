@@ -13,14 +13,14 @@
 #include <gui/screen_settings_screen/screen_settingsPresenter.hpp>
 #include <gui/screen_tuning_screen/screen_tuningView.hpp>
 #include <gui/screen_tuning_screen/screen_tuningPresenter.hpp>
-#include <gui/screen_config_screen/screen_configView.hpp>
-#include <gui/screen_config_screen/screen_configPresenter.hpp>
 #include <gui/screen_perf_mode_screen/screen_perf_modeView.hpp>
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <gui/screen_info_screen/screen_infoView.hpp>
 #include <gui/screen_info_screen/screen_infoPresenter.hpp>
 #include <gui/screen_fx_params_screen/screen_fx_paramsView.hpp>
 #include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
+#include <gui/screen_config_screen/screen_configView.hpp>
+#include <gui/screen_config_screen/screen_configPresenter.hpp>
 #include <gui/screen_loop_screen/screen_loopView.hpp>
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <gui/screen_edit_screen/screen_editView.hpp>
@@ -107,6 +107,19 @@ void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_fx_paramsView, screen_fx_paramsPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_config
+
+void FrontendApplicationBase::gotoscreen_configScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_configScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_configScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_configView, screen_configPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // screen_loop

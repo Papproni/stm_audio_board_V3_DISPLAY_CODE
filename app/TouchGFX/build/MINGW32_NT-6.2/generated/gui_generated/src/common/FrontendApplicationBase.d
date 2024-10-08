@@ -52,7 +52,6 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  gui/include/gui/screen_tuning_screen/screen_tuningView.hpp \
  generated/gui_generated/include/gui_generated/screen_tuning_screen/screen_tuningViewBase.hpp \
  gui/include/gui/screen_tuning_screen/screen_tuningPresenter.hpp \
@@ -71,6 +70,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
  generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
@@ -79,6 +79,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
  gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp \
  generated/gui_generated/include/gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp \
  gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp \
@@ -87,6 +88,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ gui/include/gui/screen_config_screen/screen_configView.hpp \
+ generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
+ gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
@@ -201,8 +206,6 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
 gui/include/gui/screen_tuning_screen/screen_tuningView.hpp:
 
 generated/gui_generated/include/gui_generated/screen_tuning_screen/screen_tuningViewBase.hpp:
@@ -239,6 +242,8 @@ gui/include/gui/screen_tuning_screen/screen_tuningPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 
 gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
@@ -255,6 +260,8 @@ gui/include/gui/screen_info_screen/screen_infoPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+
 gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp:
 
 generated/gui_generated/include/gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp:
@@ -270,6 +277,14 @@ gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+gui/include/gui/screen_config_screen/screen_configView.hpp:
+
+generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
+
+gui/include/gui/screen_config_screen/screen_configPresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 
 gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 

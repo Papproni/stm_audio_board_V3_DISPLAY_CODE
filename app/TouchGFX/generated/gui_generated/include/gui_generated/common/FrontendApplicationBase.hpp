@@ -35,6 +35,9 @@ public:
     // screen_fx_params
     void gotoscreen_fx_paramsScreenNoTransition();
 
+    // screen_config
+    void gotoscreen_configScreenNoTransition();
+
     // screen_loop
     void gotoscreen_loopScreenNoTransition();
 
@@ -60,6 +63,9 @@ protected:
 
     // screen_fx_params
     void gotoscreen_fx_paramsScreenNoTransitionImpl();
+
+    // screen_config
+    void gotoscreen_configScreenNoTransitionImpl();
 
     // screen_loop
     void gotoscreen_loopScreenNoTransitionImpl();

@@ -33,7 +33,7 @@ screen_settingsViewBase::screen_settingsViewBase() :
     btn_editor_mode.setAction(buttonCallback);
     add(btn_editor_mode);
 
-    btn_info.setXY(88, 165);
+    btn_info.setXY(10, 165);
     btn_info.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
     btn_info.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2SB5));
     btn_info.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -55,6 +55,14 @@ screen_settingsViewBase::screen_settingsViewBase() :
     btn_tuner.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_tuner.setAction(buttonCallback);
     add(btn_tuner);
+
+    btn_config.setXY(168, 165);
+    btn_config.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
+    btn_config.setLabelText(touchgfx::TypedText(T___SINGLEUSE_0GS3));
+    btn_config.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_config.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_config.setAction(buttonCallback);
+    add(btn_config);
 }
 
 screen_settingsViewBase::~screen_settingsViewBase()
@@ -96,5 +104,12 @@ void screen_settingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //When btn_tuner clicked change screen to screen_tuning
         //Go to screen_tuning with no screen transition
         application().gotoscreen_tuningScreenNoTransition();
+    }
+    if (&src == &btn_config)
+    {
+        //To_config
+        //When btn_config clicked change screen to screen_config
+        //Go to screen_config with no screen transition
+        application().gotoscreen_configScreenNoTransition();
     }
 }

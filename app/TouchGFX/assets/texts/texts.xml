@@ -13,8 +13,23 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_WKET" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Time</Translation>
+      </Text>
+      <Text Id="__SingleUse_5QNO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">EXT POT EN:</Translation>
+      </Text>
+      <Text Id="__SingleUse_0GS3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">CONFIG</Translation>
+      </Text>
+      <Text Id="__SingleUse_02IQ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Time</Translation>
+      </Text>
+      <Text Id="__SingleUse_D2X9" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">TapTempo for:</Translation>
+      </Text>
       <Text Id="__SingleUse_11UT" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">TapTempo</Translation>
+        <Translation Language="GB">Controls</Translation>
       </Text>
       <Text Id="__SingleUse_C9B2" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">OPT</Translation>
