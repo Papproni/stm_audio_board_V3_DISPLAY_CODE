@@ -241,7 +241,7 @@ int main(void)
 
   testing_data(&sab_intercom);
 
-
+  uint8_t fx_slot_counter_u8 = 1;
   while (1)
   {
 
@@ -264,7 +264,11 @@ int main(void)
 			i=0;
 			temperature_u32 = HAL_ADC_GetValue(&hadc3);
 //			HAL_I2C_Mem_Write(&hi2c3, SLAVE_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
-        sab_intercom.set_fx_param(&sab_intercom,1,30);
+			sab_intercom.set_fx_param(&sab_intercom,fx_slot_counter_u8,30);
+			fx_slot_counter_u8++;
+			if(fx_slot_counter_u8>12){
+				fx_slot_counter_u8 = 1;
+			}
 		}
 		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
 		 {
