@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "ili9341.h"
 #include "xpt2046.h"
+#include "sab_intercom.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -135,6 +136,8 @@ volatile float	temp_f32;
 #define SENSOR_V25  			        0.76
 
 extern void touchgfxSignalVSync(void);
+sab_intercom_tst sab_intercom;
+
 
 uint8_t TX_Buffer [] = "ABCDEF" ; // DATA to send
 uint8_t SLAVE_ADDR = 0x10<<1;
@@ -144,7 +147,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim->Instance == TIM2) {
 		touchgfxSignalVSync();
-//		HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
+		// HAL_I2C_Master_Transmit(&hi2c3,SLAVE_ADDR,TX_Buffer,6,1000); //Sending in Blocking mode
 
 
 	}
@@ -196,7 +199,7 @@ int main(void)
   MX_TIM2_Init();
   MX_I2C3_Init();
   MX_ADC3_Init();
-  MX_USB_DEVICE_Init();
+//  MX_USB_DEVICE_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 //  while(1){
@@ -234,6 +237,11 @@ int main(void)
 
 
 //	JumpToBootloader();
+	init_intercom(&sab_intercom, 0x10, &hi2c3);
+
+  testing_data(&sab_intercom);
+
+
   while (1)
   {
 
@@ -255,7 +263,8 @@ int main(void)
 		if(i>=6){
 			i=0;
 			temperature_u32 = HAL_ADC_GetValue(&hadc3);
-//			HAL_I2C_Mem_Write(&hi2c3, SLAVEx_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
+//			HAL_I2C_Mem_Write(&hi2c3, SLAVE_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
+        sab_intercom.set_fx_param(&sab_intercom,1,30);
 		}
 		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
 		 {
