@@ -252,13 +252,13 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UK7P));
     add(FXname);
 
-    btn_opt.setXY(0, 0);
-    btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3JMF));
-    btn_opt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_opt.setAction(buttonCallback);
-    add(btn_opt);
+    btn_back.setXY(0, 0);
+    btn_back.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_back.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3JMF));
+    btn_back.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_back.setAction(buttonCallback);
+    add(btn_back);
 }
 
 screen_fx_paramsViewBase::~screen_fx_paramsViewBase()
@@ -273,15 +273,11 @@ void screen_fx_paramsViewBase::setupScreen()
 
 void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &btn_opt)
+    if (&src == &btn_back)
     {
         //To_setting
-        //When btn_opt clicked change screen to screen_loop
+        //When btn_back clicked change screen to screen_loop
         //Go to screen_loop with no screen transition
-        application().gotoscreen_loopScreenNoTransition();
-        //To_config
-        //When btn_opt clicked change screen to screen_config
-        //Go to screen_config with no screen transition
-        application().gotoscreen_configScreenNoTransition();
+        application().gotoscreen_loopScreenNoTransition();
     }
 }

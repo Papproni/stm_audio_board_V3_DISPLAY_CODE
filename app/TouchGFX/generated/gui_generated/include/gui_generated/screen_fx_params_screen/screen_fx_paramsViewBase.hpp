@@ -76,7 +76,7 @@ protected:
     touchgfx::TextArea param10_name;
     touchgfx::TextArea param11_name;
     touchgfx::TextAreaWithOneWildcard FXname;
-    touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::ButtonWithLabel btn_back;
 
     /*
      * Wildcard Buffers

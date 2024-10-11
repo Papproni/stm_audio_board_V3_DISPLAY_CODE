@@ -12,9 +12,19 @@ screen_fx_paramsView::screen_fx_paramsView()
 	this->adc_raw_max_value		= pow(2,16)-1;
 
 
-
 	// Change background color
-	MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(100, 30, 70));
+//	MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(100, 30, 70));
+//	touchgfx::Circle ParamSlot_generic;
+//	touchgfx::PainterRGB565 ParamSlotPainter_generic;
+//	ParamSlot_generic.setPosition(140, 130, 80, 80);
+//	ParamSlot_generic.setCenter(40, 40);
+//	ParamSlot_generic.setRadius(50);
+//	ParamSlot_generic.setLineWidth(10);
+//	ParamSlot_generic.setArc(1, 240);
+//	ParamSlot_generic.setCapPrecision(10);
+//	ParamSlotPainter_generic.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+//	ParamSlot_generic.setPainter(ParamSlotPainter_generic);
+//	add(ParamSlot_generic);
 }
 
 void screen_fx_paramsView::setupScreen()
@@ -32,6 +42,8 @@ void screen_fx_paramsView::setupScreen()
 	swipeContainer.setSwipeCutoff(20);
 
     screen_fx_paramsViewBase::setupScreen();
+
+
 
 }
 

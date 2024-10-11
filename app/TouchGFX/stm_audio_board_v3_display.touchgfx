@@ -1288,7 +1288,7 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "btn_opt",
+            "Name": "btn_back",
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1312,24 +1312,12 @@
             "InteractionName": "To_setting",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "btn_opt"
+              "TriggerComponent": "btn_back"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_loop"
-            }
-          },
-          {
-            "InteractionName": "To_config",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_opt"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_config"
             }
           }
         ]
@@ -2221,7 +2209,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 40,
+            "Height": 47,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {

@@ -255,7 +255,7 @@ int main(void)
 		if(i>=6){
 			i=0;
 			temperature_u32 = HAL_ADC_GetValue(&hadc3);
-			HAL_I2C_Mem_Write(&hi2c3, SLAVEx_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
+//			HAL_I2C_Mem_Write(&hi2c3, SLAVEx_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
 		}
 		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
 		 {
