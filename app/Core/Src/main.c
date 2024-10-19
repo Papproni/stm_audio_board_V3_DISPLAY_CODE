@@ -153,6 +153,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
+int scale_adc_to_8bit(int val)
+{
+	return 255-(double)val/(double)65535*255;
+}
+
+volatile uint8_t value1,value2,value3;
+volatile uint8_t value1_prev,value2_prev,value3_prev;
+
 /* USER CODE END 0 */
 
 /**
@@ -199,7 +207,7 @@ int main(void)
   MX_TIM2_Init();
   MX_I2C3_Init();
   MX_ADC3_Init();
-//  MX_USB_DEVICE_Init();
+  MX_USB_DEVICE_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 //  while(1){
@@ -255,7 +263,7 @@ int main(void)
 	  {
 
 	      // Get the ADC value for POT1_Pin
-		  adc_values_au32[i] = HAL_ADC_GetValue(&hadc1)*0.1+adc_values_au32[i]*0.9;
+		  adc_values_au32[i] = HAL_ADC_GetValue(&hadc1)*0.5+adc_values_au32[i]*0.5;
 
 		  temp_f32 = __HAL_ADC_CALC_TEMPERATURE(3240,temperature_u32,ADC_RESOLUTION_16B);
 		  sConfig.Channel = adc_channels[i];
@@ -264,9 +272,24 @@ int main(void)
 			i=0;
 			temperature_u32 = HAL_ADC_GetValue(&hadc3);
 //			HAL_I2C_Mem_Write(&hi2c3, SLAVE_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
-			sab_intercom.set_fx_param(&sab_intercom,fx_slot_counter_u8,fx_slot_counter_u8+5);
+			 value1 = scale_adc_to_8bit(adc_values_au32[0]);
+			 value2 = scale_adc_to_8bit(adc_values_au32[1]);
+			 value3 = scale_adc_to_8bit(adc_values_au32[2]);
 
-			sab_intercom.get_preset_data(&sab_intercom);
+      if(value1_prev!=value1){
+        sab_intercom.set_fx_param(&sab_intercom,1,value1);
+      }
+      if(value2_prev!= value2){
+        sab_intercom.set_fx_param(&sab_intercom,2,value2);
+      }
+
+      if(value3_prev!= value3){
+        sab_intercom.set_fx_param(&sab_intercom,3,value3);
+      }
+      value1_prev = value1;
+      value2_prev = value2;
+      value3_prev = value3;
+//			sab_intercom.get_preset_data(&sab_intercom);
 //			sab_intercom.get_fx_param(&sab_intercom,fx_slot_counter_u8);
 			fx_slot_counter_u8++;
 			if(fx_slot_counter_u8>12){
@@ -553,7 +576,7 @@ static void MX_I2C3_Init(void)
 
   /* USER CODE END I2C3_Init 1 */
   hi2c3.Instance = I2C3;
-  hi2c3.Init.Timing = 0x00D049FB;
+  hi2c3.Init.Timing = 0x00601A5C;
   hi2c3.Init.OwnAddress1 = 30;
   hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -579,6 +602,10 @@ static void MX_I2C3_Init(void)
   {
     Error_Handler();
   }
+
+  /** I2C Enable Fast Mode Plus
+  */
+  HAL_I2CEx_EnableFastModePlus(I2C_FASTMODEPLUS_I2C3);
   /* USER CODE BEGIN I2C3_Init 2 */
 
   /* USER CODE END I2C3_Init 2 */
