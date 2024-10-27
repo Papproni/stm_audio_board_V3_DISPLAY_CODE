@@ -20,10 +20,26 @@ void screen_loopView::tearDownScreen()
 
 void screen_loopView::update_screen()
 {
+	if(strcmp(loop_num_un.slot1.name,"NONE")){
+		cont_Slot1.setVisible(true);
+		
+		Unicode::strncpy(text_FXnameBuffer,loop_num_un.slot1.name,10);
+		text_FXname.resizeToCurrentText();
+		text_FXname.invalidate();
+	}else{
+		cont_Slot1.setVisible(false);
+	}
 
-	cont_Slot1.setVisible(loop_num_un.slot1.name!="NONE");
-	cont_Slot2.setVisible(loop_num_un.slot2.name!="NONE");
-	cont_Slot3.setVisible(loop_num_un.slot3.name!="NONE");
+	if(strcmp(loop_num_un.slot2.name,"NONE")){
+		cont_Slot2.setVisible(true);
+	}else{
+		cont_Slot2.setVisible(false);
+	}
+	if(strcmp(loop_num_un.slot3.name,"NONE")){
+		cont_Slot3.setVisible(true);
+	}else{
+		cont_Slot3.setVisible(false);
+	}
 }
 
 void screen_loopView::btn_slot1_pressed()
