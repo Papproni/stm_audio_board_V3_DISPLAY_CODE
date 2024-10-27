@@ -11,6 +11,8 @@
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class screen_loopViewBase : public touchgfx::View<screen_loopPresenter>
 {
@@ -53,6 +55,25 @@ protected:
     touchgfx::ButtonWithLabel btn_Add_fx;
     touchgfx::ButtonWithLabel btn_Del_fx;
     touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::Container cont_Slot1;
+    touchgfx::Box box_FX_background;
+    touchgfx::TextAreaWithOneWildcard text_FXname;
+    touchgfx::Container cont_Slot2;
+    touchgfx::Box box_FX_background_1;
+    touchgfx::TextAreaWithOneWildcard text_FXname_1;
+    touchgfx::Container cont_Slot3;
+    touchgfx::Box box_FX_background_2;
+    touchgfx::TextAreaWithOneWildcard text_FXname_2;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_FXNAME_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_FXnameBuffer[TEXT_FXNAME_SIZE];
+    static const uint16_t TEXT_FXNAME_1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_FXname_1Buffer[TEXT_FXNAME_1_SIZE];
+    static const uint16_t TEXT_FXNAME_2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_FXname_2Buffer[TEXT_FXNAME_2_SIZE];
 
 private:
 

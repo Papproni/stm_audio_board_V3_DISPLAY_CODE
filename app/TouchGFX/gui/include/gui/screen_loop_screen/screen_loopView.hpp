@@ -4,6 +4,10 @@
 #include <gui_generated/screen_loop_screen/screen_loopViewBase.hpp>
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 
+#ifndef SIMULATOR
+#include "sab_intercom.h"
+#endif
+
 class screen_loopView : public screen_loopViewBase
 {
 public:
@@ -16,6 +20,10 @@ public:
     virtual void btn_slot3_pressed();
 
     virtual void update_screen();
+
+#ifndef SIMULATOR
+    sab_loop_num_tun loop_num_un;
+#endif
 //    virtual char* get_current_fx_name();
 protected:
 };

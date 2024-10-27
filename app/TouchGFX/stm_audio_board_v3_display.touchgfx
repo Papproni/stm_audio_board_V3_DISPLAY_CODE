@@ -810,25 +810,9 @@
                     "Height": 240
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "param6_name",
-                    "X": 218,
-                    "Y": 198,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_MV3F",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
                     "Type": "Circle",
-                    "Name": "ParamSlot5",
-                    "X": 120,
+                    "Name": "ParamSlot6",
+                    "X": 200,
                     "Y": 130,
                     "Width": 80,
                     "Height": 80,
@@ -847,68 +831,8 @@
                   },
                   {
                     "Type": "Circle",
-                    "Name": "ParamSlot1",
-                    "X": 40,
-                    "Y": 40,
-                    "Width": 80,
-                    "Height": 80,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "CenterX": 40.0,
-                    "CenterY": 40.0,
-                    "Radius": 20.0,
-                    "LineWidth": 10.0,
-                    "StartAngle": 140.0,
-                    "EndAngle": -140.0,
-                    "CapPrecision": "Round"
-                  },
-                  {
-                    "Type": "Circle",
-                    "Name": "ParamSlot2",
+                    "Name": "ParamSlot5",
                     "X": 120,
-                    "Y": 40,
-                    "Width": 80,
-                    "Height": 80,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "CenterX": 40.0,
-                    "CenterY": 40.0,
-                    "Radius": 20.0,
-                    "LineWidth": 10.0,
-                    "StartAngle": -20.0,
-                    "EndAngle": -140.0,
-                    "CapPrecision": "Round"
-                  },
-                  {
-                    "Type": "Circle",
-                    "Name": "ParamSlot3",
-                    "X": 200,
-                    "Y": 40,
-                    "Width": 80,
-                    "Height": 80,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "CenterX": 40.0,
-                    "CenterY": 40.0,
-                    "Radius": 20.0,
-                    "LineWidth": 10.0,
-                    "StartAngle": 1.0,
-                    "EndAngle": 240.0,
-                    "CapPrecision": "Round"
-                  },
-                  {
-                    "Type": "Circle",
-                    "Name": "ParamSlot6",
-                    "X": 200,
                     "Y": 130,
                     "Width": 80,
                     "Height": 80,
@@ -946,136 +870,10 @@
                     "CapPrecision": "Round"
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "param3_name",
-                    "X": 218,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_CJN2",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param1_name",
-                    "X": 58,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_B88N",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param2_name",
-                    "X": 138,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_LX7X",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param4_name",
-                    "X": 58,
-                    "Y": 198,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_G74T",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param5_name",
-                    "X": 138,
-                    "Y": 198,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_FHJA",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param5_name_1",
-                    "X": 138,
-                    "Y": 198,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_85MD",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  }
-                ]
-              },
-              {
-                "Type": "Container",
-                "Name": "swipeContainerPage2",
-                "Width": 320,
-                "Height": 240,
-                "Components": [
-                  {
-                    "Type": "Box",
-                    "Name": "MAIN_BACKGROUND_2",
-                    "Width": 320,
-                    "Height": 240
-                  },
-                  {
-                    "Type": "TextArea",
-                    "Name": "param12_name",
-                    "X": 211,
-                    "Y": 198,
-                    "Width": 58,
-                    "Height": 24,
-                    "TextId": "__SingleUse_WJYM",
-                    "TextRotation": "0",
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "AutoSize": true
-                  },
-                  {
                     "Type": "Circle",
-                    "Name": "ParamSlot11",
-                    "X": 120,
-                    "Y": 130,
+                    "Name": "ParamSlot3",
+                    "X": 200,
+                    "Y": 40,
                     "Width": 80,
                     "Height": 80,
                     "Color": {
@@ -1093,27 +891,7 @@
                   },
                   {
                     "Type": "Circle",
-                    "Name": "ParamSlot7",
-                    "X": 40,
-                    "Y": 40,
-                    "Width": 80,
-                    "Height": 80,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    },
-                    "CenterX": 40.0,
-                    "CenterY": 40.0,
-                    "Radius": 20.0,
-                    "LineWidth": 10.0,
-                    "StartAngle": 140.0,
-                    "EndAngle": -140.0,
-                    "CapPrecision": "Round"
-                  },
-                  {
-                    "Type": "Circle",
-                    "Name": "ParamSlot8",
+                    "Name": "ParamSlot2",
                     "X": 120,
                     "Y": 40,
                     "Width": 80,
@@ -1133,9 +911,169 @@
                   },
                   {
                     "Type": "Circle",
-                    "Name": "ParamSlot9",
-                    "X": 200,
+                    "Name": "ParamSlot1",
+                    "X": 40,
                     "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 140.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param6_name",
+                    "X": 218,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_MV3F",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_ZBJ7",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param5_name",
+                    "X": 138,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_FHJA",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_5S3X",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param4_name",
+                    "X": 58,
+                    "Y": 198,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_G74T",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_IH4Q",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param3_name",
+                    "X": 218,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_CJN2",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_ZHTY",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param2_name",
+                    "X": 138,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_LX7X",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_2PHD",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param1_name",
+                    "X": 58,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_B88N",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_JWK5",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage2",
+                "Width": 320,
+                "Height": 240,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "MAIN_BACKGROUND_2",
+                    "Width": 320,
+                    "Height": 240
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "ParamSlot12",
+                    "X": 200,
+                    "Y": 130,
                     "Width": 80,
                     "Height": 80,
                     "Color": {
@@ -1153,8 +1091,8 @@
                   },
                   {
                     "Type": "Circle",
-                    "Name": "ParamSlot12",
-                    "X": 200,
+                    "Name": "ParamSlot11",
+                    "X": 120,
                     "Y": 130,
                     "Width": 80,
                     "Height": 80,
@@ -1192,68 +1130,83 @@
                     "CapPrecision": "Round"
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "param9_name",
-                    "X": 218,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_4KAR",
-                    "TextRotation": "0",
+                    "Type": "Circle",
+                    "Name": "ParamSlot9",
+                    "X": 200,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
                     "Color": {
                       "Red": 255,
                       "Green": 255,
                       "Blue": 255
                     },
-                    "AutoSize": true
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 1.0,
+                    "EndAngle": 240.0,
+                    "CapPrecision": "Round"
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "param7_name",
-                    "X": 58,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_0D0P",
-                    "TextRotation": "0",
+                    "Type": "Circle",
+                    "Name": "ParamSlot8",
+                    "X": 120,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
                     "Color": {
                       "Red": 255,
                       "Green": 255,
                       "Blue": 255
                     },
-                    "AutoSize": true
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": -20.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
                   },
                   {
-                    "Type": "TextArea",
-                    "Name": "param8_name",
-                    "X": 132,
-                    "Y": 108,
-                    "Width": 45,
-                    "Height": 24,
-                    "TextId": "__SingleUse_HYNG",
-                    "TextRotation": "0",
+                    "Type": "Circle",
+                    "Name": "ParamSlot7",
+                    "X": 40,
+                    "Y": 40,
+                    "Width": 80,
+                    "Height": 80,
                     "Color": {
                       "Red": 255,
                       "Green": 255,
                       "Blue": 255
                     },
-                    "AutoSize": true
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "LineWidth": 10.0,
+                    "StartAngle": 140.0,
+                    "EndAngle": -140.0,
+                    "CapPrecision": "Round"
                   },
                   {
                     "Type": "TextArea",
-                    "Name": "param10_name",
-                    "X": 51,
+                    "Name": "param12_name",
+                    "X": 211,
                     "Y": 198,
                     "Width": 58,
                     "Height": 24,
-                    "TextId": "__SingleUse_B0J9",
+                    "TextId": "__SingleUse_WJYM",
                     "TextRotation": "0",
                     "Color": {
                       "Red": 255,
                       "Green": 255,
                       "Blue": 255
                     },
-                    "AutoSize": true
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_4XD2"
+                    }
                   },
                   {
                     "Type": "TextArea",
@@ -1269,7 +1222,96 @@
                       "Green": 255,
                       "Blue": 255
                     },
-                    "AutoSize": true
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_NVS6",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param10_name",
+                    "X": 51,
+                    "Y": 198,
+                    "Width": 58,
+                    "Height": 24,
+                    "TextId": "__SingleUse_B0J9",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_CIJR",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param9_name",
+                    "X": 218,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_4KAR",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_DK04",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param8_name",
+                    "X": 132,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_HYNG",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_T80F",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "param7_name",
+                    "X": 58,
+                    "Y": 108,
+                    "Width": 45,
+                    "Height": 24,
+                    "TextId": "__SingleUse_0D0P",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true,
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_8C05",
+                      "UseBuffer": true,
+                      "BufferSize": 5
+                    }
                   }
                 ]
               }
@@ -1347,7 +1389,7 @@
             "X": 105,
             "Y": 10,
             "Width": 176,
-            "Height": 40,
+            "Height": 48,
             "TextId": "__SingleUse_11UT",
             "TextRotation": "0",
             "Color": {
@@ -1631,6 +1673,141 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "Container",
+            "Name": "cont_Slot1",
+            "X": 10,
+            "Y": 110,
+            "Width": 101,
+            "Height": 101,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box_FX_background",
+                "X": 11,
+                "Y": 16,
+                "Width": 78,
+                "Height": 71,
+                "Color": {
+                  "Red": 255,
+                  "Green": 3,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_FXname",
+                "X": 41,
+                "Y": 45,
+                "Width": 19,
+                "Height": 12,
+                "TextId": "__SingleUse_9IQB",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "__SingleUse_1AOW",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "cont_Slot2",
+            "X": 111,
+            "Y": 111,
+            "Width": 101,
+            "Height": 101,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box_FX_background_1",
+                "X": 11,
+                "Y": 16,
+                "Width": 78,
+                "Height": 71,
+                "Color": {
+                  "Red": 255,
+                  "Green": 3,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_FXname_1",
+                "X": 41,
+                "Y": 44,
+                "Width": 19,
+                "Height": 12,
+                "TextId": "__SingleUse_WTNT",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "__SingleUse_A2S0",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "cont_Slot3",
+            "X": 210,
+            "Y": 111,
+            "Width": 101,
+            "Height": 101,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box_FX_background_2",
+                "X": 11,
+                "Y": 16,
+                "Width": 78,
+                "Height": 71,
+                "Color": {
+                  "Red": 255,
+                  "Green": 3,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_FXname_2",
+                "X": 41,
+                "Y": 44,
+                "Width": 19,
+                "Height": 12,
+                "TextId": "__SingleUse_690C",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true,
+                "Wildcard1": {
+                  "TextId": "__SingleUse_8AH2",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2219,7 +2396,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 47,
+            "Height": 48,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {
@@ -2244,15 +2421,47 @@
             }
           },
           {
-            "InteractionName": "ToLoop",
+            "InteractionName": "toLoop1",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "btn_Loop1"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_loop"
+              "Type": "ActionCustom",
+              "FunctionName": "btn_loop1_pressed"
+            }
+          },
+          {
+            "InteractionName": "toLoop2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_Loop2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_loop2_pressed"
+            }
+          },
+          {
+            "InteractionName": "toLoop3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_Loop3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_loop3_pressed"
+            }
+          },
+          {
+            "InteractionName": "toLoop4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_Loop4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_loop4_pressed"
             }
           }
         ]

@@ -50,12 +50,22 @@ public:
     void               set_fx_param(uint8_t slot, uint8_t value);
     void               set_loopbypass(uint8_t loop, uint8_t state);
     #endif
+
+    void set_current_loop_num(uint8_t loopnum);
+    void set_current_fx_slot_num(uint8_t slotnum);
+    uint8_t get_current_loop_num();
+    uint8_t get_current_fx_slot_num();
+    
     char current_fx_name[20];
 protected:
     ModelListener* modelListener;
     #ifndef SIMULATOR
     sab_intercom_tst* intercom_pst;
     #endif
+
+    uint8_t current_loop_num_u8;
+    uint8_t current_fx_slot_u8;
+
     int pot1_val_adc_raw;
     int pot2_val_adc_raw;
     int pot3_val_adc_raw;

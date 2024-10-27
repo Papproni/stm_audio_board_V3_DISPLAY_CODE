@@ -25,6 +25,14 @@ public:
      */
     virtual void deactivate();
     virtual void update_screen();
+
+    virtual void set_current_loop_num(uint8_t loopnum){};
+    virtual void set_current_fx_slot_num(uint8_t slotnum){};
+    virtual uint8_t get_current_loop_num(){};
+    virtual uint8_t get_current_fx_slot_num(){};
+
+    void read_loopdata(uint8_t loopnum);
+    void set_loopbypass(uint8_t loop, uint8_t state);
     virtual ~screen_editPresenter() {}
 
 private:

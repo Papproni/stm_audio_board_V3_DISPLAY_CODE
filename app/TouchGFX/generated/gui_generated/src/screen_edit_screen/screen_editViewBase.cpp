@@ -45,6 +45,7 @@ screen_editViewBase::screen_editViewBase() :
     btn_Loop4.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y364));
     btn_Loop4.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Loop4.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop4.setAction(buttonCallback);
     scrollableContainer.add(btn_Loop4);
 
     container_loop3_loop4_internal_bypass.setPosition(0, 0, 498, 250);
@@ -103,6 +104,7 @@ screen_editViewBase::screen_editViewBase() :
     btn_Loop3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_SWZ8));
     btn_Loop3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Loop3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop3.setAction(buttonCallback);
     scrollableContainer.add(btn_Loop3);
 
     container_loop2_loop3_internal_bypass.setPosition(0, 0, 320, 250);
@@ -161,6 +163,7 @@ screen_editViewBase::screen_editViewBase() :
     btn_Loop2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9FAB));
     btn_Loop2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Loop2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Loop2.setAction(buttonCallback);
     scrollableContainer.add(btn_Loop2);
 
     container_loop1_loop2_internal_bypass.setPosition(0, 0, 250, 250);
@@ -270,9 +273,30 @@ void screen_editViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
     }
     if (&src == &btn_Loop1)
     {
-        //ToLoop
-        //When btn_Loop1 clicked change screen to screen_loop
-        //Go to screen_loop with no screen transition
-        application().gotoscreen_loopScreenNoTransition();
+        //toLoop1
+        //When btn_Loop1 clicked call virtual function
+        //Call btn_loop1_pressed
+        btn_loop1_pressed();
+    }
+    if (&src == &btn_Loop2)
+    {
+        //toLoop2
+        //When btn_Loop2 clicked call virtual function
+        //Call btn_loop2_pressed
+        btn_loop2_pressed();
+    }
+    if (&src == &btn_Loop3)
+    {
+        //toLoop3
+        //When btn_Loop3 clicked call virtual function
+        //Call btn_loop3_pressed
+        btn_loop3_pressed();
+    }
+    if (&src == &btn_Loop4)
+    {
+        //toLoop4
+        //When btn_Loop4 clicked call virtual function
+        //Call btn_loop4_pressed
+        btn_loop4_pressed();
     }
 }

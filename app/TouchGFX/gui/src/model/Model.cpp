@@ -100,4 +100,23 @@ void Model::set_loopbypass(uint8_t loop, uint8_t state){
 #endif
 
 
+void Model::set_current_loop_num(uint8_t loopnum){
+	this->current_loop_num_u8 = loopnum;
+}
+
+void Model::set_current_fx_slot_num(uint8_t slotnum){
+	this->current_fx_slot_u8 = slotnum;
+}
+
+uint8_t Model::get_current_loop_num(){
+	return this->current_loop_num_u8;
+}
+
+uint8_t Model::get_current_fx_slot_num(){
+	return this->current_fx_slot_u8;
+}
+
+
+
+
 

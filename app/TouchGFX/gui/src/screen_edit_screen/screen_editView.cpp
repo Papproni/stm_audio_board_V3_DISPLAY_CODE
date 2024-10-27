@@ -36,6 +36,27 @@ void screen_editView::tearDownScreen()
     screen_editViewBase::tearDownScreen();
 }
 
+void screen_editView::btn_loop1_pressed(){
+	presenter->read_loopdata(LOOP1);
+	presenter->set_current_loop_num(LOOP1);
+	application().gotoscreen_loopScreenNoTransition();
+}
+void screen_editView::btn_loop2_pressed(){
+	presenter->read_loopdata(LOOP2);
+	presenter->set_current_loop_num(LOOP2);
+	application().gotoscreen_loopScreenNoTransition();
+}
+void screen_editView::btn_loop3_pressed(){
+	presenter->read_loopdata(LOOP3);
+	presenter->set_current_loop_num(LOOP3);
+	application().gotoscreen_loopScreenNoTransition();
+}
+void screen_editView::btn_loop4_pressed(){
+	presenter->read_loopdata(LOOP4);
+	presenter->set_current_loop_num(LOOP4);
+	application().gotoscreen_loopScreenNoTransition();
+}
+
 void screen_editView::setAlphaOfContainer(Container &conti,uint8_t alpha){
 	auto* d = conti.getFirstChild();
 	while(d!=NULL){
@@ -51,10 +72,14 @@ volatile bool L34_ext = true;
 
 void screen_editView::update_screen()
 {
+	
+#ifndef SIMULATOR
+	L12_ext = this->loopbypass.L12;
+	L23_ext = this->loopbypass.L23;
+	L34_ext = this->loopbypass.L34;
+#endif	
+	
 	scrollableContainer.invalidate();
-//	setAlphaForAllElements(container_loop1_loop2_ext,				PATH_OFF);
-//	setAlphaForAllElements(container_loop1_loop2_internal_bypass	,PATH_ON);
-//	container_loop1_loop2_ext.forEachChild(setAlpha(container_loop1_loop2_ext, PATH_ON));
 	if (L12_ext){
 		setAlphaOfContainer(container_loop1_loop2_ext, PATH_ON);
 		setAlphaOfContainer(container_loop1_loop2_internal_bypass, PATH_OFF);
@@ -87,32 +112,21 @@ void screen_editView::boxClickHandler(const Line & b, const ClickEvent& evt)
     {
     	if(evt.getType() == ClickEvent::RELEASED){
     		L12_ext = !L12_ext;
+			presenter->set_loopbypass(L12_LOC,L12_ext);
     	}
     }
     if (&b == &line_signal_loop2_loop3_bypass || &b == &line_signal_loop2_out_ext || &b == &line_signal_loop3_in_ext)
 	{
     	if(evt.getType() == ClickEvent::RELEASED){
     		L23_ext = !L23_ext;
+			presenter->set_loopbypass(L23_LOC,L23_ext);
     	}
 	}
     if (&b == &line_signal_loop3_loop4_bypass || &b == &line_signal_loop3_out_ext || &b == &line_signal_loop4_in_ext)
 	{
     	if(evt.getType() == ClickEvent::RELEASED){
     		L34_ext = !L34_ext;
+			presenter->set_loopbypass(L34_LOC,L34_ext);
 		}
 	}
-
-//
-//    if (&b == &line_signal_loop1_out_ext || &b == &line_signal_loop2_in_ext )
-//	{
-//		L12_ext = PATH_EXTERNAL;
-//	}
-//	if (&b == &line_signal_loop2_out_ext || &b == &line_signal_loop3_in_ext)
-//	{
-//		L23_ext = PATH_EXTERNAL;
-//	}
-//	if (&b == &line_signal_loop3_out_ext || &b == &line_signal_loop4_in_ext)
-//	{
-//		L34_ext = PATH_EXTERNAL;
-//	}
 }

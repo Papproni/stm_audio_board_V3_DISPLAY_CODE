@@ -9,7 +9,8 @@ screen_loopPresenter::screen_loopPresenter(screen_loopView& v)
 
 void screen_loopPresenter::activate()
 {
-
+	view.loop_num_un = model->get_loop_data(model->get_current_fx_slot_num());
+	
 }
 
 void screen_loopPresenter::deactivate()
@@ -24,6 +25,7 @@ void screen_loopPresenter::setFXname(char* data)
 
 void screen_loopPresenter::update_screen()
 {
+	model->read_loop_data(model->get_current_loop_num());
 	view.update_screen();
 }
 

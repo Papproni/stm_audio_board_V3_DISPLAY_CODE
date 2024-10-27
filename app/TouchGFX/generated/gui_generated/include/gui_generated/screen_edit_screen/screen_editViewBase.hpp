@@ -23,6 +23,26 @@ public:
     virtual ~screen_editViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void btn_loop1_pressed()
+    {
+        // Override and implement this function in screen_edit
+    }
+    virtual void btn_loop2_pressed()
+    {
+        // Override and implement this function in screen_edit
+    }
+    virtual void btn_loop3_pressed()
+    {
+        // Override and implement this function in screen_edit
+    }
+    virtual void btn_loop4_pressed()
+    {
+        // Override and implement this function in screen_edit
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

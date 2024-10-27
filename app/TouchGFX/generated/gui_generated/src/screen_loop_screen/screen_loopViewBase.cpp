@@ -74,6 +74,57 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_opt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_opt.setAction(buttonCallback);
     add(btn_opt);
+
+    cont_Slot1.setPosition(10, 110, 101, 101);
+    cont_Slot1.setVisible(false);
+    box_FX_background.setPosition(11, 16, 78, 71);
+    box_FX_background.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot1.add(box_FX_background);
+
+    text_FXname.setXY(41, 45);
+    text_FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_FXname.setLinespacing(0);
+    Unicode::snprintf(text_FXnameBuffer, TEXT_FXNAME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1AOW).getText());
+    text_FXname.setWildcard(text_FXnameBuffer);
+    text_FXname.resizeToCurrentText();
+    text_FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9IQB));
+    cont_Slot1.add(text_FXname);
+
+    add(cont_Slot1);
+
+    cont_Slot2.setPosition(111, 111, 101, 101);
+    cont_Slot2.setVisible(false);
+    box_FX_background_1.setPosition(11, 16, 78, 71);
+    box_FX_background_1.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot2.add(box_FX_background_1);
+
+    text_FXname_1.setXY(41, 44);
+    text_FXname_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_FXname_1.setLinespacing(0);
+    Unicode::snprintf(text_FXname_1Buffer, TEXT_FXNAME_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_A2S0).getText());
+    text_FXname_1.setWildcard(text_FXname_1Buffer);
+    text_FXname_1.resizeToCurrentText();
+    text_FXname_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WTNT));
+    cont_Slot2.add(text_FXname_1);
+
+    add(cont_Slot2);
+
+    cont_Slot3.setPosition(210, 111, 101, 101);
+    cont_Slot3.setVisible(false);
+    box_FX_background_2.setPosition(11, 16, 78, 71);
+    box_FX_background_2.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot3.add(box_FX_background_2);
+
+    text_FXname_2.setXY(41, 44);
+    text_FXname_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_FXname_2.setLinespacing(0);
+    Unicode::snprintf(text_FXname_2Buffer, TEXT_FXNAME_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8AH2).getText());
+    text_FXname_2.setWildcard(text_FXname_2Buffer);
+    text_FXname_2.resizeToCurrentText();
+    text_FXname_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_690C));
+    cont_Slot3.add(text_FXname_2);
+
+    add(cont_Slot3);
 }
 
 screen_loopViewBase::~screen_loopViewBase()

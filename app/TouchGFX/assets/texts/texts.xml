@@ -13,6 +13,60 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_8AH2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FX1</Translation>
+      </Text>
+      <Text Id="__SingleUse_690C" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_A2S0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FX1</Translation>
+      </Text>
+      <Text Id="__SingleUse_WTNT" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1AOW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">FX1</Translation>
+      </Text>
+      <Text Id="__SingleUse_9IQB" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4XD2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot12</Translation>
+      </Text>
+      <Text Id="__SingleUse_NVS6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot11</Translation>
+      </Text>
+      <Text Id="__SingleUse_CIJR" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot10</Translation>
+      </Text>
+      <Text Id="__SingleUse_DK04" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot9</Translation>
+      </Text>
+      <Text Id="__SingleUse_T80F" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot8</Translation>
+      </Text>
+      <Text Id="__SingleUse_8C05" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot7</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZBJ7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot6</Translation>
+      </Text>
+      <Text Id="__SingleUse_5S3X" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot5</Translation>
+      </Text>
+      <Text Id="__SingleUse_IH4Q" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot4</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZHTY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot3</Translation>
+      </Text>
+      <Text Id="__SingleUse_2PHD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot2</Translation>
+      </Text>
+      <Text Id="__SingleUse_JWK5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
       <Text Id="__SingleUse_YG4D" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">8</Translation>
       </Text>
@@ -107,25 +161,22 @@
         <Translation Language="GB">A</Translation>
       </Text>
       <Text Id="__SingleUse_WCFB" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot11</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_B0J9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot10</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_HYNG" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot8</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_0D0P" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot7</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_4KAR" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot9</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_WJYM" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot12</Translation>
-      </Text>
-      <Text Id="__SingleUse_85MD" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot5</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_LY3P" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">DEL</Translation>
@@ -143,22 +194,22 @@
         <Translation Language="GB">FX placeholder</Translation>
       </Text>
       <Text Id="__SingleUse_MV3F" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot6</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_FHJA" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot5</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_G74T" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot4</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_CJN2" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot3</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_LX7X" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot2</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_B88N" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">pot1</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="FXname_buffer" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
@@ -227,5 +278,6 @@
     <Typography Id="Large" Font="consola.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-z,0-9" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-z,0-9" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="200" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-z,0-9" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

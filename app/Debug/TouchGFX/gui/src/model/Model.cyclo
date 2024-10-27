@@ -15,3 +15,7 @@
 ../TouchGFX/gui/src/model/Model.cpp:89:6:void Model::set_save()	1
 ../TouchGFX/gui/src/model/Model.cpp:93:6:void Model::set_fx_param(uint8_t, uint8_t)	1
 ../TouchGFX/gui/src/model/Model.cpp:97:6:void Model::set_loopbypass(uint8_t, uint8_t)	1
+../TouchGFX/gui/src/model/Model.cpp:103:6:void Model::set_current_loop_num(uint8_t)	1
+../TouchGFX/gui/src/model/Model.cpp:107:6:void Model::set_current_fx_slot_num(uint8_t)	1
+../TouchGFX/gui/src/model/Model.cpp:111:9:uint8_t Model::get_current_loop_num()	1
+../TouchGFX/gui/src/model/Model.cpp:115:9:uint8_t Model::get_current_fx_slot_num()	1
