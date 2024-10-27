@@ -136,7 +136,7 @@ volatile float	temp_f32;
 #define SENSOR_V25  			        0.76
 
 extern void touchgfxSignalVSync(void);
-sab_intercom_tst sab_intercom;
+sab_intercom_tst sab_intercom_st;
 
 
 uint8_t TX_Buffer [] = "ABCDEF" ; // DATA to send
@@ -193,7 +193,7 @@ int main(void)
   PeriphCommonClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	init_intercom(&sab_intercom_st, 0x10, &hi2c3);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -245,9 +245,6 @@ int main(void)
 
 
 //	JumpToBootloader();
-	init_intercom(&sab_intercom, 0x10, &hi2c3);
-
-  testing_data(&sab_intercom);
 
   uint8_t fx_slot_counter_u8 = 1;
   while (1)
@@ -277,15 +274,17 @@ int main(void)
 			 value3 = scale_adc_to_8bit(adc_values_au32[2]);
 
       if(value1_prev!=value1){
-        sab_intercom.set_fx_param(&sab_intercom,1,value1);
+        sab_intercom_st.set_fx_param(&sab_intercom_st,1,value1);
       }
       if(value2_prev!= value2){
-        sab_intercom.set_fx_param(&sab_intercom,2,value2);
+        sab_intercom_st.set_fx_param(&sab_intercom_st,2,value2);
       }
 
       if(value3_prev!= value3){
-        sab_intercom.set_fx_param(&sab_intercom,3,value3);
+        sab_intercom_st.set_fx_param(&sab_intercom_st,3,value3);
       }
+      sab_intercom_st.get_preset_data(&sab_intercom_st);
+
       value1_prev = value1;
       value2_prev = value2;
       value3_prev = value3;

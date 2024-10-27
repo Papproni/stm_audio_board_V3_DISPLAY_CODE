@@ -8,7 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class screen_perf_modeViewBase : public touchgfx::View<screen_perf_modePresenter>
@@ -28,9 +28,17 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
-    touchgfx::TextArea text_preset_num_main;
-    touchgfx::TextArea text_preset_num_queue;
+    touchgfx::TextAreaWithOneWildcard text_preset_num_minor;
+    touchgfx::TextAreaWithOneWildcard text_preset_num_major;
     touchgfx::ButtonWithLabel btn_opt;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_PRESET_NUM_MINOR_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar text_preset_num_minorBuffer[TEXT_PRESET_NUM_MINOR_SIZE];
+    static const uint16_t TEXT_PRESET_NUM_MAJOR_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar text_preset_num_majorBuffer[TEXT_PRESET_NUM_MAJOR_SIZE];
 
 private:
 

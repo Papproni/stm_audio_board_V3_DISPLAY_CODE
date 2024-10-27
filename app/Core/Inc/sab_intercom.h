@@ -33,7 +33,7 @@ typedef struct sab_intercom_st{
 
     // SETTER (write)
     void (*set_fx_param)     (struct sab_intercom_st* self, uint8_t param_slot_u8, uint8_t new_value_u8);
-    void (*set_loopbypass)  (struct sab_intercom_st* self);
+    void (*set_loopbypass)  (struct sab_intercom_st* self, uint8_t loop, uint8_t state);
 
     // I2C comm handlers
     void (*process_rx_buffer) (struct sab_intercom_st* self, uint8_t*buffer_pu8, uint8_t size_u8);

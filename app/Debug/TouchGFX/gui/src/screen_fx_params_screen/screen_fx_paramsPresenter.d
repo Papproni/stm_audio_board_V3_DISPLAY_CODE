@@ -80,6 +80,7 @@ TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
+ ../Core/Inc/sab_intercom.h ../Core/Inc/sab_i2c_protocol_types.h \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -191,6 +192,8 @@ TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
+../Core/Inc/sab_intercom.h:
+../Core/Inc/sab_i2c_protocol_types.h:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:

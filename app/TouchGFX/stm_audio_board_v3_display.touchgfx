@@ -365,27 +365,11 @@
           },
           {
             "Type": "TextArea",
-            "Name": "text_preset_num_main",
-            "X": 30,
-            "Y": 19,
-            "Width": 137,
-            "Height": 243,
-            "TextId": "__SingleUse_8Z2S",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "text_preset_num_queue",
+            "Name": "text_preset_num_minor",
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 243,
+            "Height": 241,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -393,7 +377,33 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_YG4D",
+              "UseBuffer": true,
+              "BufferSize": 2
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_preset_num_major",
+            "X": 30,
+            "Y": 19,
+            "Width": 137,
+            "Height": 241,
+            "TextId": "__SingleUse_8Z2S",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_322K",
+              "UseBuffer": true,
+              "BufferSize": 2
+            }
           },
           {
             "Type": "ButtonWithLabel",
@@ -2255,7 +2265,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_info",
+    "StartupScreenName": "screen_perf_mode",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

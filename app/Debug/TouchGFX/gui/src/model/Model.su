@@ -1,4 +1,17 @@
-../TouchGFX/gui/src/model/Model.cpp:9:1:Model::Model()	4	static
-../TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	8	static
-../TouchGFX/gui/src/model/Model.cpp:25:6:void Model::setFXname(char*)	8	static
-../TouchGFX/gui/src/model/Model.cpp:34:6:void Model::getFXname(char*)	8	static
+../TouchGFX/gui/src/model/Model.cpp:11:1:Model::Model()	4	static
+../TouchGFX/gui/src/model/Model.cpp:20:6:void Model::tick()	8	static
+../TouchGFX/gui/src/model/Model.cpp:30:6:void Model::setFXname(char*)	8	static
+../TouchGFX/gui/src/model/Model.cpp:39:6:void Model::getFXname(char*)	8	static
+../TouchGFX/gui/src/model/Model.cpp:48:6:void Model::read_preset_data()	8	static
+../TouchGFX/gui/src/model/Model.cpp:53:6:void Model::read_loop_data(uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:57:6:void Model::read_fx_param(uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:61:6:void Model::read_info()	8	static
+../TouchGFX/gui/src/model/Model.cpp:65:6:void Model::read_loopbypass()	8	static
+../TouchGFX/gui/src/model/Model.cpp:69:21:sab_preset_num_tun Model::get_preset_data()	0	static
+../TouchGFX/gui/src/model/Model.cpp:73:20:sab_loop_num_tun Model::get_loop_data(uint8_t)	12	static
+../TouchGFX/gui/src/model/Model.cpp:77:21:sab_fx_param_tun Model::get_fx_param(uint8_t)	0	static
+../TouchGFX/gui/src/model/Model.cpp:81:21:sab_info_tun Model::get_info()	0	static
+../TouchGFX/gui/src/model/Model.cpp:85:21:sab_loopbypass_tun Model::get_loopbypass()	8	static
+../TouchGFX/gui/src/model/Model.cpp:89:6:void Model::set_save()	0	static
+../TouchGFX/gui/src/model/Model.cpp:93:6:void Model::set_fx_param(uint8_t, uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:97:6:void Model::set_loopbypass(uint8_t, uint8_t)	8	static

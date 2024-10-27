@@ -41,6 +41,7 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
+ ../Core/Inc/sab_intercom.h ../Core/Inc/sab_i2c_protocol_types.h \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../Core/Inc/main.h:
@@ -85,4 +86,6 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
+../Core/Inc/sab_intercom.h:
+../Core/Inc/sab_i2c_protocol_types.h:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:

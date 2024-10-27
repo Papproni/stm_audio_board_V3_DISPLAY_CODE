@@ -12,6 +12,8 @@ TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     179, // T_RESOURCEID2: "New Text"
     179, // T_RESOURCEID1: "New Text"
+    364, // T___SINGLEUSE_YG4D: "8"
+    392, // T___SINGLEUSE_322K: "B"
     316, // T___SINGLEUSE_WKET: "Time"
     152, // T___SINGLEUSE_5QNO: "EXT POT EN:"
     204, // T___SINGLEUSE_0GS3: "CONFIG"
@@ -77,6 +79,6 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     306, // T___SINGLEUSE_2SB5: "INFO"
     301, // T___SINGLEUSE_RDR0: "EDIT"
     196, // T___SINGLEUSE_3ICT: "PERFORM"
-    364, // T___SINGLEUSE_1IH8: "8"
-    392  // T___SINGLEUSE_8Z2S: "B"
+    168, // T___SINGLEUSE_1IH8: "<>"
+    168  // T___SINGLEUSE_8Z2S: "<>"
 };

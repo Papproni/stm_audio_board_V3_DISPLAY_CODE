@@ -11,7 +11,13 @@ public:
     virtual ~screen_perf_modeView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    virtual void update_screen();
+    #ifndef SIMULATOR
+    sab_preset_num_tun preset_data_un;
+    #endif
 protected:
+    
 };
 
 #endif // SCREEN_PERF_MODEVIEW_HPP

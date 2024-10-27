@@ -17,17 +17,23 @@ screen_perf_modeViewBase::screen_perf_modeViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 98, 255));
     add(MAIN_BACKGROUND);
 
-    text_preset_num_main.setXY(30, 19);
-    text_preset_num_main.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_preset_num_main.setLinespacing(0);
-    text_preset_num_main.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Z2S));
-    add(text_preset_num_main);
+    text_preset_num_minor.setXY(174, 19);
+    text_preset_num_minor.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_preset_num_minor.setLinespacing(0);
+    Unicode::snprintf(text_preset_num_minorBuffer, TEXT_PRESET_NUM_MINOR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_YG4D).getText());
+    text_preset_num_minor.setWildcard(text_preset_num_minorBuffer);
+    text_preset_num_minor.resizeToCurrentText();
+    text_preset_num_minor.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1IH8));
+    add(text_preset_num_minor);
 
-    text_preset_num_queue.setXY(174, 19);
-    text_preset_num_queue.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_preset_num_queue.setLinespacing(0);
-    text_preset_num_queue.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1IH8));
-    add(text_preset_num_queue);
+    text_preset_num_major.setXY(30, 19);
+    text_preset_num_major.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_preset_num_major.setLinespacing(0);
+    Unicode::snprintf(text_preset_num_majorBuffer, TEXT_PRESET_NUM_MAJOR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_322K).getText());
+    text_preset_num_major.setWildcard(text_preset_num_majorBuffer);
+    text_preset_num_major.resizeToCurrentText();
+    text_preset_num_major.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Z2S));
+    add(text_preset_num_major);
 
     btn_opt.setXY(0, 0);
     btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));

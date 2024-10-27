@@ -99,6 +99,7 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
  generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
  gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  gui/include/gui/screen_info_screen/screen_infoView.hpp \
  generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
  gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
@@ -111,7 +112,6 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  gui/include/gui/screen_config_screen/screen_configView.hpp \
  generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
  gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
@@ -332,6 +332,8 @@ generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_per
 
 gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
 gui/include/gui/screen_info_screen/screen_infoView.hpp:
 
 generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp:
@@ -355,8 +357,6 @@ gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 gui/include/gui/screen_config_screen/screen_configView.hpp:
 

@@ -85,6 +85,7 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
+ ../Core/Inc/sab_intercom.h ../Core/Inc/sab_i2c_protocol_types.h \
  ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_settings_screen/screen_settingsViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
@@ -119,6 +120,7 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp \
@@ -131,7 +133,6 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
@@ -241,6 +242,8 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
+../Core/Inc/sab_intercom.h:
+../Core/Inc/sab_i2c_protocol_types.h:
 ../TouchGFX/gui/include/gui/screen_settings_screen/screen_settingsView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_settings_screen/screen_settingsViewBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
@@ -275,6 +278,7 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modeView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_perf_mode_screen/screen_perf_modeViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_info_screen/screen_infoViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_info_screen/screen_infoPresenter.hpp:
@@ -287,7 +291,6 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp:

@@ -54,7 +54,8 @@ static void set_fx_param (struct sab_intercom_st* self, uint8_t param_slot_u8, u
 			&self->fx_param_un[param_slot_u8-1], SAB_I2C_REG_FXPARAM_LEN, 1000);
 }
 
-static void set_loopbypass (struct sab_intercom_st* self){
+static void set_loopbypass (struct sab_intercom_st* self,uint8_t loop, uint8_t state){
+	self->loopbypass_un.all_u8[loop] = state;
 	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
 				SAB_I2C_REG_LOOPBYPASSSTATE,
 				I2C_MEMADD_SIZE_8BIT,
