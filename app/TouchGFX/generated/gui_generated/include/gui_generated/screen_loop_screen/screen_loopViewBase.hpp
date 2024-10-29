@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class screen_loopViewBase : public touchgfx::View<screen_loopPresenter>
@@ -36,6 +37,14 @@ public:
     {
         // Override and implement this function in screen_loop
     }
+    virtual void btn_del_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
+    virtual void btn_add_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
 
 protected:
     FrontendApplication& application() {
@@ -47,6 +56,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
+    touchgfx::Box box1;
     touchgfx::Line line_signalPath;
     touchgfx::PainterRGB565 line_signalPathPainter;
     touchgfx::ButtonWithLabel btn_FX_slot_3;
@@ -56,24 +66,30 @@ protected:
     touchgfx::ButtonWithLabel btn_Del_fx;
     touchgfx::ButtonWithLabel btn_opt;
     touchgfx::Container cont_Slot1;
-    touchgfx::Box box_FX_background;
-    touchgfx::TextAreaWithOneWildcard text_FXname;
-    touchgfx::Container cont_Slot2;
+    touchgfx::BoxWithBorder glow_1;
     touchgfx::Box box_FX_background_1;
+    touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::TextAreaWithOneWildcard text_FXname_1;
-    touchgfx::Container cont_Slot3;
+    touchgfx::Container cont_Slot2;
+    touchgfx::BoxWithBorder glow_2;
     touchgfx::Box box_FX_background_2;
+    touchgfx::BoxWithBorder boxWithBorder2;
     touchgfx::TextAreaWithOneWildcard text_FXname_2;
+    touchgfx::Container cont_Slot3;
+    touchgfx::BoxWithBorder glow_3;
+    touchgfx::Box box_FX_background_3;
+    touchgfx::BoxWithBorder boxWithBorder3;
+    touchgfx::TextAreaWithOneWildcard text_FXname_3;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXT_FXNAME_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar text_FXnameBuffer[TEXT_FXNAME_SIZE];
     static const uint16_t TEXT_FXNAME_1_SIZE = 10;
     touchgfx::Unicode::UnicodeChar text_FXname_1Buffer[TEXT_FXNAME_1_SIZE];
     static const uint16_t TEXT_FXNAME_2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar text_FXname_2Buffer[TEXT_FXNAME_2_SIZE];
+    static const uint16_t TEXT_FXNAME_3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_FXname_3Buffer[TEXT_FXNAME_3_SIZE];
 
 private:
 

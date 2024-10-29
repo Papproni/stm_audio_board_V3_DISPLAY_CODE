@@ -20,6 +20,11 @@ screen_loopViewBase::screen_loopViewBase() :
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
+    box1.setPosition(-2, 78, 322, 162);
+    box1.setColor(touchgfx::Color::getColorFromRGB(248, 247, 255));
+    box1.setAlpha(62);
+    add(box1);
+
     line_signalPath.setPosition(0, 161, 320, 50);
     line_signalPathPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     line_signalPath.setPainter(line_signalPathPainter);
@@ -58,6 +63,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_Add_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_QZFG));
     btn_Add_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Add_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Add_fx.setAction(buttonCallback);
     add(btn_Add_fx);
 
     btn_Del_fx.setXY(260, 0);
@@ -65,6 +71,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_Del_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LY3P));
     btn_Del_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_Del_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Del_fx.setAction(buttonCallback);
     add(btn_Del_fx);
 
     btn_opt.setXY(0, 0);
@@ -76,53 +83,89 @@ screen_loopViewBase::screen_loopViewBase() :
     add(btn_opt);
 
     cont_Slot1.setPosition(10, 110, 101, 101);
-    cont_Slot1.setVisible(false);
-    box_FX_background.setPosition(11, 16, 78, 71);
-    box_FX_background.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
-    cont_Slot1.add(box_FX_background);
+    glow_1.setPosition(7, 10, 86, 80);
+    glow_1.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
+    glow_1.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    glow_1.setBorderSize(10);
+    glow_1.setVisible(false);
+    cont_Slot1.add(glow_1);
 
-    text_FXname.setXY(41, 45);
-    text_FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FXname.setLinespacing(0);
-    Unicode::snprintf(text_FXnameBuffer, TEXT_FXNAME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1AOW).getText());
-    text_FXname.setWildcard(text_FXnameBuffer);
-    text_FXname.resizeToCurrentText();
-    text_FXname.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9IQB));
-    cont_Slot1.add(text_FXname);
+    box_FX_background_1.setPosition(11, 16, 78, 71);
+    box_FX_background_1.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot1.add(box_FX_background_1);
+
+    boxWithBorder1.setPosition(13, 21, 74, 31);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    boxWithBorder1.setBorderSize(5);
+    cont_Slot1.add(boxWithBorder1);
+
+    text_FXname_1.setXY(20, 30);
+    text_FXname_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    text_FXname_1.setLinespacing(0);
+    Unicode::snprintf(text_FXname_1Buffer, TEXT_FXNAME_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1AOW).getText());
+    text_FXname_1.setWildcard(text_FXname_1Buffer);
+    text_FXname_1.resizeToCurrentText();
+    text_FXname_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9IQB));
+    cont_Slot1.add(text_FXname_1);
 
     add(cont_Slot1);
 
     cont_Slot2.setPosition(111, 111, 101, 101);
-    cont_Slot2.setVisible(false);
-    box_FX_background_1.setPosition(11, 16, 78, 71);
-    box_FX_background_1.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
-    cont_Slot2.add(box_FX_background_1);
+    glow_2.setPosition(7, 11, 86, 80);
+    glow_2.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
+    glow_2.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    glow_2.setBorderSize(10);
+    glow_2.setVisible(false);
+    cont_Slot2.add(glow_2);
 
-    text_FXname_1.setXY(41, 44);
-    text_FXname_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FXname_1.setLinespacing(0);
-    Unicode::snprintf(text_FXname_1Buffer, TEXT_FXNAME_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_A2S0).getText());
-    text_FXname_1.setWildcard(text_FXname_1Buffer);
-    text_FXname_1.resizeToCurrentText();
-    text_FXname_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WTNT));
-    cont_Slot2.add(text_FXname_1);
+    box_FX_background_2.setPosition(11, 16, 78, 71);
+    box_FX_background_2.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot2.add(box_FX_background_2);
+
+    boxWithBorder2.setPosition(13, 20, 74, 31);
+    boxWithBorder2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    boxWithBorder2.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    boxWithBorder2.setBorderSize(5);
+    cont_Slot2.add(boxWithBorder2);
+
+    text_FXname_2.setXY(20, 29);
+    text_FXname_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    text_FXname_2.setLinespacing(0);
+    Unicode::snprintf(text_FXname_2Buffer, TEXT_FXNAME_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_A2S0).getText());
+    text_FXname_2.setWildcard(text_FXname_2Buffer);
+    text_FXname_2.resizeToCurrentText();
+    text_FXname_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WTNT));
+    cont_Slot2.add(text_FXname_2);
 
     add(cont_Slot2);
 
     cont_Slot3.setPosition(210, 111, 101, 101);
-    cont_Slot3.setVisible(false);
-    box_FX_background_2.setPosition(11, 16, 78, 71);
-    box_FX_background_2.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
-    cont_Slot3.add(box_FX_background_2);
+    glow_3.setPosition(7, 11, 86, 80);
+    glow_3.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
+    glow_3.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    glow_3.setBorderSize(10);
+    glow_3.setVisible(false);
+    cont_Slot3.add(glow_3);
 
-    text_FXname_2.setXY(41, 44);
-    text_FXname_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FXname_2.setLinespacing(0);
-    Unicode::snprintf(text_FXname_2Buffer, TEXT_FXNAME_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8AH2).getText());
-    text_FXname_2.setWildcard(text_FXname_2Buffer);
-    text_FXname_2.resizeToCurrentText();
-    text_FXname_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_690C));
-    cont_Slot3.add(text_FXname_2);
+    box_FX_background_3.setPosition(11, 16, 78, 71);
+    box_FX_background_3.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
+    cont_Slot3.add(box_FX_background_3);
+
+    boxWithBorder3.setPosition(13, 20, 74, 31);
+    boxWithBorder3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    boxWithBorder3.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    boxWithBorder3.setBorderSize(5);
+    cont_Slot3.add(boxWithBorder3);
+
+    text_FXname_3.setXY(20, 29);
+    text_FXname_3.setColor(touchgfx::Color::getColorFromRGB(3, 0, 0));
+    text_FXname_3.setLinespacing(0);
+    Unicode::snprintf(text_FXname_3Buffer, TEXT_FXNAME_3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8AH2).getText());
+    text_FXname_3.setWildcard(text_FXname_3Buffer);
+    text_FXname_3.resizeToCurrentText();
+    text_FXname_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_690C));
+    cont_Slot3.add(text_FXname_3);
 
     add(cont_Slot3);
 }
@@ -151,11 +194,7 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //btn_slot1_pressed
         //When btn_FX_slot_1 clicked call virtual function
         //Call btn_slot1_pressed
-        btn_slot1_pressed();
-        //gotofxparams
-        //When btn_FX_slot_1 clicked change screen to screen_fx_params
-        //Go to screen_fx_params with no screen transition
-        application().gotoscreen_fx_paramsScreenNoTransition();
+        btn_slot1_pressed();
     }
     if (&src == &btn_FX_slot_2)
     {
@@ -170,5 +209,19 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //When btn_FX_slot_3 clicked call virtual function
         //Call btn_slot3_pressed
         btn_slot3_pressed();
+    }
+    if (&src == &btn_Del_fx)
+    {
+        //btn_del_pressed
+        //When btn_Del_fx clicked call virtual function
+        //Call btn_del_pressed
+        btn_del_pressed();
+    }
+    if (&src == &btn_Add_fx)
+    {
+        //btn_add_pressed
+        //When btn_Add_fx clicked call virtual function
+        //Call btn_add_pressed
+        btn_add_pressed();
     }
 }

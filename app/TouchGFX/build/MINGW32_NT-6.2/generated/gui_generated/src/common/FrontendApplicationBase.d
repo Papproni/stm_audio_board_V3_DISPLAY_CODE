@@ -95,6 +95,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  gui/include/gui/screen_edit_screen/screen_editView.hpp \
  generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
@@ -291,6 +293,10 @@ gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:
 
 gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 gui/include/gui/screen_edit_screen/screen_editView.hpp:
 

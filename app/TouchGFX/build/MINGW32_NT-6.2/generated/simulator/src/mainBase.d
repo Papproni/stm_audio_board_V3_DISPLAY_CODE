@@ -119,6 +119,8 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  gui/include/gui/screen_edit_screen/screen_editView.hpp \
  generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
@@ -129,7 +131,6 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888LinearGradient.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp
@@ -372,6 +373,10 @@ generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopView
 
 gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+
 gui/include/gui/screen_edit_screen/screen_editView.hpp:
 
 generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
@@ -391,8 +396,6 @@ gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
 
