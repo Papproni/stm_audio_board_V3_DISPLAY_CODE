@@ -12,6 +12,9 @@ void screen_loopPresenter::activate()
 #ifndef  SIMULATOR
 	view.loop_num_un = model->get_loop_data(model->get_current_fx_slot_num());
 #endif
+#ifdef SIMULATOR
+	view.inited = 0;
+#endif // DEBUG
 	view.state = NORMAL;
 }
 

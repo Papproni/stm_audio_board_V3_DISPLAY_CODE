@@ -2,7 +2,6 @@
 
 screen_loopView::screen_loopView()
 {
-
 }
 
 void screen_loopView::setupScreen()
@@ -45,7 +44,6 @@ void screen_loopView::update_screen()
 #endif // !SIMULATOR
 
 #ifdef SIMULATOR
-	static int inited = 0;
 
 	switch (state)
 	{
@@ -101,7 +99,11 @@ void screen_loopView::update_screen()
 }
 
 void screen_loopView::btn_del_pressed(){
-	state = DELETE_FX;
+	if(DELETE_FX == state){
+		state = NORMAL;
+	}else{
+		state = DELETE_FX;
+	}
 }
 
 void screen_loopView::btn_add_pressed(){

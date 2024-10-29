@@ -35,6 +35,9 @@ public:
 #ifndef SIMULATOR
     sab_loop_num_tun loop_num_un;
 #endif
+#ifdef SIMULATOR
+    int inited;
+#endif // DEBUG
 //    virtual char* get_current_fx_name();
 protected:
     
