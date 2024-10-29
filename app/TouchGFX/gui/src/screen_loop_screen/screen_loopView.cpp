@@ -20,6 +20,7 @@ void screen_loopView::tearDownScreen()
 
 void screen_loopView::update_screen()
 {
+#ifndef SIMULATOR
 	if(strcmp(loop_num_un.slot1.name,"NONE")){
 		cont_Slot1.setVisible(true);
 		
@@ -40,6 +41,7 @@ void screen_loopView::update_screen()
 	}else{
 		cont_Slot3.setVisible(false);
 	}
+#endif // !SIMULATOR
 }
 
 void screen_loopView::btn_slot1_pressed()

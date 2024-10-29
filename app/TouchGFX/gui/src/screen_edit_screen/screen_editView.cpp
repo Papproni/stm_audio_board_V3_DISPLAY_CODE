@@ -37,23 +37,31 @@ void screen_editView::tearDownScreen()
 }
 
 void screen_editView::btn_loop1_pressed(){
+#ifndef SIMULATOR
 	presenter->read_loopdata(LOOP1);
 	presenter->set_current_loop_num(LOOP1);
+#endif // !SIMULATOR
 	application().gotoscreen_loopScreenNoTransition();
 }
 void screen_editView::btn_loop2_pressed(){
+#ifndef SIMULATOR
 	presenter->read_loopdata(LOOP2);
 	presenter->set_current_loop_num(LOOP2);
+#endif
 	application().gotoscreen_loopScreenNoTransition();
 }
 void screen_editView::btn_loop3_pressed(){
+#ifndef SIMULATOR
 	presenter->read_loopdata(LOOP3);
 	presenter->set_current_loop_num(LOOP3);
+#endif // !SIMULATOR
 	application().gotoscreen_loopScreenNoTransition();
 }
 void screen_editView::btn_loop4_pressed(){
+#ifndef SIMULATOR
 	presenter->read_loopdata(LOOP4);
 	presenter->set_current_loop_num(LOOP4);
+#endif // !SIMULATOR
 	application().gotoscreen_loopScreenNoTransition();
 }
 

@@ -30,7 +30,7 @@ public:
     void setFXname(char* name);
     void getFXname(char* data);
 
-    #ifndef SIMULATOR
+#ifndef SIMULATOR
     // Hardware comm triggers
     void                read_preset_data();
     void                read_loop_data(uint8_t loop_num_u8);
@@ -49,12 +49,14 @@ public:
     void               set_save();
     void               set_fx_param(uint8_t slot, uint8_t value);
     void               set_loopbypass(uint8_t loop, uint8_t state);
-    #endif
 
     void set_current_loop_num(uint8_t loopnum);
     void set_current_fx_slot_num(uint8_t slotnum);
+
     uint8_t get_current_loop_num();
     uint8_t get_current_fx_slot_num();
+#endif
+
     
     char current_fx_name[20];
 protected:

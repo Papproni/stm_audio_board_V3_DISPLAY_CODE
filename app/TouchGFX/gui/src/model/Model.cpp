@@ -97,7 +97,7 @@ void Model::set_fx_param(uint8_t slot, uint8_t value){
 void Model::set_loopbypass(uint8_t loop, uint8_t state){
 	this->intercom_pst->set_loopbypass(this->intercom_pst,loop,state);
 }
-#endif
+
 
 
 void Model::set_current_loop_num(uint8_t loopnum){
@@ -116,7 +116,7 @@ uint8_t Model::get_current_fx_slot_num(){
 	return this->current_fx_slot_u8;
 }
 
-
+#endif
 
 
 
