@@ -33,17 +33,26 @@ void screen_loopView::update_screen()
 
 	if(strcmp(loop_num_un.slot2.name,"NONE")){
 		cont_Slot2.setVisible(true);
+		Unicode::strncpy(text_FXname_2Buffer,loop_num_un.slot2.name,10);
+		box_FX_background_2.setColor(touchgfx::Color::getColorFromRGB(loop_num_un.slot2.color[0], loop_num_un.slot2.color[1], loop_num_un.slot2.color[2]));
+		text_FXname_2.resizeToCurrentText();
+		text_FXname_2.invalidate();
+
 	}else{
 		cont_Slot2.setVisible(false);
 	}
 	if(strcmp(loop_num_un.slot3.name,"NONE")){
 		cont_Slot3.setVisible(true);
+		Unicode::strncpy(text_FXname_3Buffer,loop_num_un.slot3.name,10);
+		box_FX_background_3.setColor(touchgfx::Color::getColorFromRGB(loop_num_un.slot3.color[0], loop_num_un.slot3.color[1], loop_num_un.slot3.color[2]));
+		text_FXname_3.resizeToCurrentText();
+		text_FXname_3.invalidate();
 	}else{
 		cont_Slot3.setVisible(false);
 	}
 #endif // !SIMULATOR
 
-#ifdef SIMULATOR
+
 
 	switch (state)
 	{
@@ -74,6 +83,7 @@ void screen_loopView::update_screen()
 		break;
 	}
 
+#ifdef SIMULATOR
 	if(inited == 1){
 		return;
 	}
@@ -124,6 +134,7 @@ void screen_loopView::btn_slot1_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot1.setVisible(false);
+		strcpy(loop_num_un.slot1.name,"NONE",10);
 		break;
 	default:
 		break;
@@ -145,6 +156,7 @@ void screen_loopView::btn_slot2_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot2.setVisible(false);
+		strcpy(loop_num_un.slot2.name,"NONE",10);
 		break;
 	default:
 		break;
@@ -166,6 +178,7 @@ void screen_loopView::btn_slot3_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot3.setVisible(false);	
+		strcpy(loop_num_un.slot3.name,"NONE",10);
 		break;
 	default:
 		break;

@@ -283,14 +283,14 @@ int main(void)
       if(value3_prev!= value3){
         sab_intercom_st.set_fx_param(&sab_intercom_st,3,value3);
       }
-      sab_intercom_st.get_preset_data(&sab_intercom_st);
+//      sab_intercom_st.get_preset_data(&sab_intercom_st);
 
       value1_prev = value1;
       value2_prev = value2;
       value3_prev = value3;
 //			sab_intercom.get_preset_data(&sab_intercom);
 //			sab_intercom.get_fx_param(&sab_intercom,fx_slot_counter_u8);
-      sab_intercom_st.get_loop_data(&sab_intercom_st,1);
+//      sab_intercom_st.get_loop_data(&sab_intercom_st,1);
 			fx_slot_counter_u8++;
 			if(fx_slot_counter_u8>12){
 				fx_slot_counter_u8 = 1;

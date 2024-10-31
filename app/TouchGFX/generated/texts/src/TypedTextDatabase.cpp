@@ -9,14 +9,12 @@ extern touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 extern touchgfx::GeneratedFont& getFont_consola_40_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_10_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_200_4bpp();
-extern touchgfx::GeneratedFont& getFont_verdana_15_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_verdana_20_4bpp()),
     &(getFont_consola_40_4bpp()),
     &(getFont_verdana_10_4bpp()),
-    &(getFont_verdana_200_4bpp()),
-    &(getFont_verdana_15_4bpp())
+    &(getFont_verdana_200_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -158,9 +156,6 @@ void resetFont(touchgfx::FontId fontId)
         break;
     case 3:
         touchgfx_fonts[3] = &(getFont_verdana_200_4bpp());
-        break;
-    case 4:
-        touchgfx_fonts[4] = &(getFont_verdana_15_4bpp());
         break;
     }
 }

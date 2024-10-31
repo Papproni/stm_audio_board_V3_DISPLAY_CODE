@@ -142,7 +142,43 @@ uint32_t sab_intercom_get_reg_data_ptr(struct sab_intercom_st* self){
 }
 
 uint8_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
-	return sizeof(self->get_reg_data_ptr(self));
+	switch (self->register_addr_u8)
+	{
+		case SAB_I2C_REG_PRESETNUM:
+			return sizeof(sab_preset_num_tun);  // Returns pointer to the preset data union
+
+		case SAB_I2C_REG_LOOP1FX:
+		case SAB_I2C_REG_LOOP2FX:
+		case SAB_I2C_REG_LOOP3FX:
+		case SAB_I2C_REG_LOOP4FX:
+			return sizeof(sab_loop_num_tun);    // Returns pointer to the fourth loop
+
+		case SAB_I2C_REG_FXPARAM1:
+		case SAB_I2C_REG_FXPARAM2:
+		case SAB_I2C_REG_FXPARAM3:
+		case SAB_I2C_REG_FXPARAM4:
+		case SAB_I2C_REG_FXPARAM5:
+		case SAB_I2C_REG_FXPARAM6:
+		case SAB_I2C_REG_FXPARAM7:
+		case SAB_I2C_REG_FXPARAM8:
+		case SAB_I2C_REG_FXPARAM9:
+		case SAB_I2C_REG_FXPARAM10:
+		case SAB_I2C_REG_FXPARAM11:
+		case SAB_I2C_REG_FXPARAM12:
+			return sizeof(sab_fx_param_tun); // Returns pointer to the twelfth FX parameter
+
+		case SAB_I2C_REG_INFO:
+			return sizeof(sab_info_tun);          // Returns pointer to the info union
+
+		case SAB_I2C_REG_SAVEPRESET:
+			return sizeof(sab_save_tun);           // Returns pointer to the save union
+
+		case SAB_I2C_REG_LOOPBYPASSSTATE:
+			return sizeof(sab_loopbypass_tun);          // Returns pointer to the loop bypass union
+
+		default:
+			return NULL;  // Return NULL if the register enum is out of bounds
+    }
 }
 
 // ----------------------------------INIT-------------------------------------------------

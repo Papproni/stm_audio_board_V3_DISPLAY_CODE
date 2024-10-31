@@ -1,12 +1,14 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:13:6:virtual void screen_loopView::tearDownScreen()	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:45:6:virtual void screen_loopView::btn_slot1_pressed()	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:53:6:virtual void screen_loopView::btn_slot2_pressed()	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:60:6:virtual void screen_loopView::btn_slot3_pressed()	1
-../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:15:13:screen_loopView::~screen_loopView()	1
-../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:15:13:virtual screen_loopView::~screen_loopView()	1
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:12:6:virtual void screen_loopView::tearDownScreen()	1
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:111:6:virtual void screen_loopView::btn_del_pressed()	2
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:119:6:virtual void screen_loopView::btn_add_pressed()	1
+../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:22:13:screen_loopView::~screen_loopView()	1
+../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:22:13:virtual screen_loopView::~screen_loopView()	1
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:3:1:screen_loopView::screen_loopView()	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:8:6:virtual void screen_loopView::setupScreen()	1
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:21:6:virtual void screen_loopView::update_screen()	4
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:7:6:virtual void screen_loopView::setupScreen()	1
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:21:6:virtual void screen_loopView::update_screen()	6
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:123:6:virtual void screen_loopView::btn_slot1_pressed()	4
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:145:6:virtual void screen_loopView::btn_slot2_pressed()	4
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:166:6:virtual void screen_loopView::btn_slot3_pressed()	4

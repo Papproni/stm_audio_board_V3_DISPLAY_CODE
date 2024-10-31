@@ -369,7 +369,7 @@
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 241,
+            "Height": 243,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -390,7 +390,7 @@
             "X": 30,
             "Y": 19,
             "Width": 137,
-            "Height": 241,
+            "Height": 243,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "Color": {
@@ -1389,7 +1389,7 @@
             "X": 105,
             "Y": 10,
             "Width": 176,
-            "Height": 48,
+            "Height": 47,
             "TextId": "__SingleUse_11UT",
             "TextRotation": "0",
             "Color": {
@@ -2596,7 +2596,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_loop",
+    "StartupScreenName": "screen_perf_mode",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

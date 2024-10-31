@@ -140,13 +140,14 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
@@ -298,13 +299,14 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:

@@ -141,6 +141,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
@@ -294,6 +296,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:

@@ -5,13 +5,13 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::set_sliders_value(uint32_t*)	0	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::update_screen()	0	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:29:13:screen_loopPresenter::~screen_loopPresenter()	0	static
-../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:16:6:virtual void screen_loopPresenter::deactivate()	0	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:22:6:virtual void screen_loopPresenter::deactivate()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	8	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	8	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:29:13:virtual screen_loopPresenter::~screen_loopPresenter()	8	static
-../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:10:6:virtual void screen_loopPresenter::activate()	56	static
-../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:26:6:virtual void screen_loopPresenter::update_screen()	16	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:10:6:virtual void screen_loopPresenter::activate()	16	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:32:6:virtual void screen_loopPresenter::update_screen()	56	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:29:13:virtual void* screen_loopPresenter::_ZThn4_N20screen_loopPresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp:29:13:virtual void* screen_loopPresenter::_ZThn4_N20screen_loopPresenterD0Ev()	8	static
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:4:1:screen_loopPresenter::screen_loopPresenter(screen_loopView&)	4	static
-../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:21:6:void screen_loopPresenter::setFXname(char*)	8	static
+../TouchGFX/gui/src/screen_loop_screen/screen_loopPresenter.cpp:27:6:void screen_loopPresenter::setFXname(char*)	8	static

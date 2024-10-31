@@ -27,6 +27,14 @@ void screen_editPresenter::update_screen()
 	view.update_screen();
 }
 
+#ifndef SIMULATOR
+void screen_editPresenter::set_current_loop_num(uint8_t loopnum){
+    model->set_current_loop_num(loopnum);
+}
+void screen_editPresenter::set_current_fx_slot_num(uint8_t slotnum){
+    model->set_current_fx_slot_num(slotnum);
+}
+#endif
 
 
 // 0: L12 

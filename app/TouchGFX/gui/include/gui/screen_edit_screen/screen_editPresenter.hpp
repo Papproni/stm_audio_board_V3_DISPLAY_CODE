@@ -27,11 +27,11 @@ public:
     virtual void update_screen();
 
 #ifndef SIMULATOR
-    virtual void set_current_loop_num(uint8_t loopnum){};
-    virtual void set_current_fx_slot_num(uint8_t slotnum){};
+    void set_current_loop_num(uint8_t loopnum);
+    void set_current_fx_slot_num(uint8_t slotnum);
 
-    virtual uint8_t get_current_loop_num();
-    virtual uint8_t get_current_fx_slot_num();
+    // virtual uint8_t get_current_loop_num();
+    // virtual uint8_t get_current_fx_slot_num();
 #endif // !SIMULATOR
 
 
