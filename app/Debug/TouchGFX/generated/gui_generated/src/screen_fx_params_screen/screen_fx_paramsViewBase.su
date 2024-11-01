@@ -17,11 +17,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:61:34:virtual touchgfx::HAL::RenderingMethod touchgfx::AbstractPainter::getRenderingMethod() const	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:78:18:virtual bool touchgfx::AbstractPainter::setup(const touchgfx::Rect&) const	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:90:18:virtual void touchgfx::AbstractPainter::tearDown() const	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:touchgfx::AbstractPainterColor::~AbstractPainterColor()	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:58:18:virtual void touchgfx::AbstractPainterColor::setColor(touchgfx::colortype)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	32	static
@@ -33,21 +28,17 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<screen_fx_paramsPresenter>::~View()	0	static
-../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:298:6:virtual void screen_fx_paramsViewBase::setupScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<screen_fx_paramsViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = screen_fx_paramsViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = screen_fx_paramsViewBase; T1 = const touchgfx::AbstractButton&]	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:virtual touchgfx::AbstractPainterColor::~AbstractPainterColor()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<screen_fx_paramsPresenter>::~View()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<screen_fx_paramsViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
-../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:303:6:void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:162:10:void touchgfx::Circle::setRadius(T) [with T = int]	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:374:10:void touchgfx::Circle::setLineWidth(T) [with T = int]	0	static
-../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:10:1:screen_fx_paramsViewBase::screen_fx_paramsViewBase()	416	static
-../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:293:1:screen_fx_paramsViewBase::~screen_fx_paramsViewBase()	40	static
-../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:293:1:virtual screen_fx_paramsViewBase::~screen_fx_paramsViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:107:6:virtual void screen_fx_paramsViewBase::setupScreen()	8	static
+../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:123:6:void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:10:1:screen_fx_paramsViewBase::screen_fx_paramsViewBase()	176	static
+../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:102:1:screen_fx_paramsViewBase::~screen_fx_paramsViewBase()	32	static
+../TouchGFX/generated/gui_generated/src/screen_fx_params_screen/screen_fx_paramsViewBase.cpp:102:1:virtual screen_fx_paramsViewBase::~screen_fx_paramsViewBase()	8	static

@@ -271,25 +271,25 @@ int main(void)
 			i=0;
 			temperature_u32 = HAL_ADC_GetValue(&hadc3);
 //			HAL_I2C_Mem_Write(&hi2c3, SLAVE_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
-			 value1 = scale_adc_to_8bit(adc_values_au32[0]);
-			 value2 = scale_adc_to_8bit(adc_values_au32[1]);
-			 value3 = scale_adc_to_8bit(adc_values_au32[2]);
-
-      if(value1_prev!=value1){
-        sab_intercom_st.set_fx_param(&sab_intercom_st,1,value1);
-      }
-      if(value2_prev!= value2){
-        sab_intercom_st.set_fx_param(&sab_intercom_st,2,value2);
-      }
-
-      if(value3_prev!= value3){
-        sab_intercom_st.set_fx_param(&sab_intercom_st,3,value3);
-      }
+//			 value1 = scale_adc_to_8bit(adc_values_au32[0]);
+//			 value2 = scale_adc_to_8bit(adc_values_au32[1]);
+//			 value3 = scale_adc_to_8bit(adc_values_au32[2]);
+//
+//      if(value1_prev!=value1){
+//        sab_intercom_st.set_fx_param(&sab_intercom_st,1,value1);
+//      }
+//      if(value2_prev!= value2){
+//        sab_intercom_st.set_fx_param(&sab_intercom_st,2,value2);
+//      }
+//
+//      if(value3_prev!= value3){
+//        sab_intercom_st.set_fx_param(&sab_intercom_st,3,value3);
+//      }
 //      sab_intercom_st.get_preset_data(&sab_intercom_st);
 
-      value1_prev = value1;
-      value2_prev = value2;
-      value3_prev = value3;
+//      value1_prev = value1;
+//      value2_prev = value2;
+//      value3_prev = value3;
 //			sab_intercom.get_preset_data(&sab_intercom);
 //			sab_intercom.get_fx_param(&sab_intercom,fx_slot_counter_u8);
 //      sab_intercom_st.get_loop_data(&sab_intercom_st,1);

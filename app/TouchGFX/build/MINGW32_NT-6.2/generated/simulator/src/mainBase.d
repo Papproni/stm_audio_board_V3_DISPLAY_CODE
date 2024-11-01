@@ -112,6 +112,8 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ gui/include/gui/containers/template_fx_param_pot.hpp \
+ generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp \
  gui/include/gui/screen_config_screen/screen_configView.hpp \
  generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
  gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
@@ -367,6 +369,10 @@ gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
+gui/include/gui/containers/template_fx_param_pot.hpp:
+
+generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp:
 
 gui/include/gui/screen_config_screen/screen_configView.hpp:
 

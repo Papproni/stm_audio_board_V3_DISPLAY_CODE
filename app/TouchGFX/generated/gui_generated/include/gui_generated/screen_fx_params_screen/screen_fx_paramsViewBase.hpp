@@ -10,8 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <gui/containers/template_fx_param_pot.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
@@ -35,72 +34,26 @@ protected:
     touchgfx::SwipeContainer swipeContainer;
     touchgfx::Container swipeContainerPage1;
     touchgfx::Box MAIN_BACKGROUND_1;
-    touchgfx::Circle ParamSlot6;
-    touchgfx::PainterRGB565 ParamSlot6Painter;
-    touchgfx::Circle ParamSlot5;
-    touchgfx::PainterRGB565 ParamSlot5Painter;
-    touchgfx::Circle ParamSlot4;
-    touchgfx::PainterRGB565 ParamSlot4Painter;
-    touchgfx::Circle ParamSlot3;
-    touchgfx::PainterRGB565 ParamSlot3Painter;
-    touchgfx::Circle ParamSlot2;
-    touchgfx::PainterRGB565 ParamSlot2Painter;
-    touchgfx::Circle ParamSlot1;
-    touchgfx::PainterRGB565 ParamSlot1Painter;
-    touchgfx::TextAreaWithOneWildcard param6_name;
-    touchgfx::TextAreaWithOneWildcard param5_name;
-    touchgfx::TextAreaWithOneWildcard param4_name;
-    touchgfx::TextAreaWithOneWildcard param3_name;
-    touchgfx::TextAreaWithOneWildcard param2_name;
-    touchgfx::TextAreaWithOneWildcard param1_name;
+    template_fx_param_pot template_fx_param_pot6;
+    template_fx_param_pot template_fx_param_pot5;
+    template_fx_param_pot template_fx_param_pot4;
+    template_fx_param_pot template_fx_param_pot3;
+    template_fx_param_pot template_fx_param_pot2;
+    template_fx_param_pot template_fx_param_pot1;
     touchgfx::Container swipeContainerPage2;
-    touchgfx::Box MAIN_BACKGROUND_2;
-    touchgfx::Circle ParamSlot12;
-    touchgfx::PainterRGB565 ParamSlot12Painter;
-    touchgfx::Circle ParamSlot11;
-    touchgfx::PainterRGB565 ParamSlot11Painter;
-    touchgfx::Circle ParamSlot10;
-    touchgfx::PainterRGB565 ParamSlot10Painter;
-    touchgfx::Circle ParamSlot9;
-    touchgfx::PainterRGB565 ParamSlot9Painter;
-    touchgfx::Circle ParamSlot8;
-    touchgfx::PainterRGB565 ParamSlot8Painter;
-    touchgfx::Circle ParamSlot7;
-    touchgfx::PainterRGB565 ParamSlot7Painter;
-    touchgfx::TextAreaWithOneWildcard param12_name;
-    touchgfx::TextAreaWithOneWildcard param11_name;
-    touchgfx::TextAreaWithOneWildcard param10_name;
-    touchgfx::TextAreaWithOneWildcard param9_name;
-    touchgfx::TextAreaWithOneWildcard param8_name;
-    touchgfx::TextAreaWithOneWildcard param7_name;
+    touchgfx::Box MAIN_BACKGROUND_1_1;
+    template_fx_param_pot template_fx_param_pot12;
+    template_fx_param_pot template_fx_param_pot11;
+    template_fx_param_pot template_fx_param_pot10;
+    template_fx_param_pot template_fx_param_pot9;
+    template_fx_param_pot template_fx_param_pot8;
+    template_fx_param_pot template_fx_param_pot7;
     touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::ButtonWithLabel btn_back;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t PARAM6_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param6_nameBuffer[PARAM6_NAME_SIZE];
-    static const uint16_t PARAM5_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param5_nameBuffer[PARAM5_NAME_SIZE];
-    static const uint16_t PARAM4_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param4_nameBuffer[PARAM4_NAME_SIZE];
-    static const uint16_t PARAM3_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param3_nameBuffer[PARAM3_NAME_SIZE];
-    static const uint16_t PARAM2_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param2_nameBuffer[PARAM2_NAME_SIZE];
-    static const uint16_t PARAM1_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param1_nameBuffer[PARAM1_NAME_SIZE];
-    static const uint16_t PARAM11_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param11_nameBuffer[PARAM11_NAME_SIZE];
-    static const uint16_t PARAM10_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param10_nameBuffer[PARAM10_NAME_SIZE];
-    static const uint16_t PARAM9_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param9_nameBuffer[PARAM9_NAME_SIZE];
-    static const uint16_t PARAM8_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param8_nameBuffer[PARAM8_NAME_SIZE];
-    static const uint16_t PARAM7_NAME_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar param7_nameBuffer[PARAM7_NAME_SIZE];
     static const uint16_t FXNAME_SIZE = 15;
     touchgfx::Unicode::UnicodeChar FXnameBuffer[FXNAME_SIZE];
 

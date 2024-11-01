@@ -3,27 +3,20 @@
 
 // #include "sab_intercom.h"
 
-#ifndef SIMULATOR
-extern  uint32_t 			adc_values_au32[6];
-#endif
 
 
-Model::Model() : modelListener(0), pot1_val_adc_raw(0)
+Model::Model() : modelListener(0)
 {
 	strcpy(this->current_fx_name,"DEFAULT");
 	this->current_fx_name[19] = '\0';
 	#ifndef SIMULATOR
-	this->intercom_pst = &sab_intercom_st;
+	this->intercom_pst 			= &sab_intercom_st;
+	this->pot_ctrl_adc_pau32 	= adc_values_au32;
 	#endif
 }
 
 void Model::tick()
 {
-//	int value = temp_value/65535.0*(-280)+139;
-	#ifndef SIMULATOR
-	modelListener->set_sliders_value(adc_values_au32);
-	
-#endif
 	modelListener->update_screen();
 }
 
@@ -154,6 +147,10 @@ uint8_t Model::get_current_loop_num(){
 
 uint8_t Model::get_current_fx_slot_num(){
 	return this->current_fx_slot_u8;
+}
+
+uint32_t* Model::get_adc_value_ptr(){
+	return this->pot_ctrl_adc_pau32;
 }
 
 #endif

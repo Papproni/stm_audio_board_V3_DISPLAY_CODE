@@ -9,17 +9,21 @@ screen_fx_paramsPresenter::screen_fx_paramsPresenter(screen_fx_paramsView& v)
 
 void screen_fx_paramsPresenter::activate()
 {
+#ifndef SIMULATOR
+	// TODO:
+	// send data to change fx params to the current fx!
+	for(int i = 1; i<=12; i++){
+		model->read_fx_param(i);
+		view.fx_params_tun[i-1] = model->get_fx_param(i);
+	}
 
+	view.adc_vals_ptr = model->get_adc_value_ptr();
+#endif
 }
 
 void screen_fx_paramsPresenter::deactivate()
 {
 
-}
-
-void screen_fx_paramsPresenter::set_sliders_value(uint32_t* val)
-{
-	view.set_sliders_value(val);
 }
 
 void screen_fx_paramsPresenter::getFxname(char* data)
@@ -28,5 +32,7 @@ void screen_fx_paramsPresenter::getFxname(char* data)
 }
 
 
-
+void screen_fx_paramsPresenter::update_screen(){
+	view.update_screen();
+}
 

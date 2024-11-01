@@ -5,13 +5,13 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::set_sliders_value(uint32_t*)	0	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::update_screen()	0	static
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	0	static
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:10:6:virtual void screen_fx_paramsPresenter::activate()	0	static
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:15:6:virtual void screen_fx_paramsPresenter::deactivate()	0	static
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:20:6:virtual void screen_fx_paramsPresenter::set_sliders_value(uint32_t*)	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:24:6:virtual void screen_fx_paramsPresenter::deactivate()	0	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:35:6:virtual void screen_fx_paramsPresenter::update_screen()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	8	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	8	static
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:10:6:virtual void screen_fx_paramsPresenter::activate()	32	static
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD0Ev()	8	static
 ../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:4:1:screen_fx_paramsPresenter::screen_fx_paramsPresenter(screen_fx_paramsView&)	4	static
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:25:6:void screen_fx_paramsPresenter::getFxname(char*)	8	static
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:29:6:void screen_fx_paramsPresenter::getFxname(char*)	8	static

@@ -2,6 +2,10 @@
 #include <touchgfx/Color.hpp>
 #include "math.h"
 
+#ifdef SIMULATOR
+#include <touchgfx/Utils.hpp>
+#endif
+
 
 screen_fx_paramsView::screen_fx_paramsView()
 {
@@ -11,20 +15,6 @@ screen_fx_paramsView::screen_fx_paramsView()
 	this->potmeter_offset_value = 140;
 	this->adc_raw_max_value		= pow(2,16)-1;
 
-
-	// Change background color
-//	MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(100, 30, 70));
-//	touchgfx::Circle ParamSlot_generic;
-//	touchgfx::PainterRGB565 ParamSlotPainter_generic;
-//	ParamSlot_generic.setPosition(140, 130, 80, 80);
-//	ParamSlot_generic.setCenter(40, 40);
-//	ParamSlot_generic.setRadius(50);
-//	ParamSlot_generic.setLineWidth(10);
-//	ParamSlot_generic.setArc(1, 240);
-//	ParamSlot_generic.setCapPrecision(10);
-//	ParamSlotPainter_generic.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-//	ParamSlot_generic.setPainter(ParamSlotPainter_generic);
-//	add(ParamSlot_generic);
 }
 
 void screen_fx_paramsView::setupScreen()
@@ -43,8 +33,31 @@ void screen_fx_paramsView::setupScreen()
 
     screen_fx_paramsViewBase::setupScreen();
 
+	
+	fx_controls_p[0] = &template_fx_param_pot1;
+	fx_controls_p[1] = &template_fx_param_pot2;
+	fx_controls_p[2] = &template_fx_param_pot3;
+	fx_controls_p[3] = &template_fx_param_pot4;
+	fx_controls_p[4] = &template_fx_param_pot5;
+	fx_controls_p[5] = &template_fx_param_pot6;
+	fx_controls_p[6] = &template_fx_param_pot7;
+	fx_controls_p[7] = &template_fx_param_pot8;
+	fx_controls_p[8] = &template_fx_param_pot9;
+	fx_controls_p[9] = &template_fx_param_pot10;
+	fx_controls_p[10] = &template_fx_param_pot11;
+	fx_controls_p[11] = &template_fx_param_pot12;
 
+	for(int i = 0;i<12;i++){
+		fx_controls_p[i]->init_potmeter((char*)fx_params_tun[i].name,5,fx_params_tun[i].value_u8);
+	}
 
+#ifdef SIMULATOR
+	char name0[5] = "VOL";
+	char name1[5] = "BASS";
+
+	// fx_controls_p[0]->set_parameter_name((char*)name0,5);
+	// fx_controls_p[1]->set_parameter_name((char*)name1,5);
+#endif
 }
 
 void screen_fx_paramsView::tearDownScreen()
@@ -53,37 +66,32 @@ void screen_fx_paramsView::tearDownScreen()
 
 }
 
-int screen_fx_paramsView::convert_adc_to_pot_values(int val)
-{
-	return (double)val/(double)this->adc_raw_max_value*this->potmeter_scale_value+this->potmeter_offset_value;
-}
+
 
 void screen_fx_paramsView::set_sliders_value(uint32_t* val)
 {
+    // ParamSlot1.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[0]));
+	// ParamSlot2.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[1]));
+	// ParamSlot3.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[2]));
+	// ParamSlot4.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[3]));
+	// ParamSlot5.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[4]));
+	// ParamSlot6.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[5]));
+	
+}
 
-//	ParamSlot1.invalidate();
-    ParamSlot1.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[0]));
-//    ParamSlot1.invalidate();
-
-//    ParamSlot2.invalidate();
-	ParamSlot2.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[1]));
-//	ParamSlot2.invalidate();
-
-//	ParamSlot3.invalidate();
-	ParamSlot3.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[2]));
-//	ParamSlot3.invalidate();
-
-//	ParamSlot4.invalidate();
-	ParamSlot4.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[3]));
-//	ParamSlot4.invalidate();
-
-//	ParamSlot5.invalidate();
-	ParamSlot5.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[4]));
-//	ParamSlot5.invalidate();
-
-//	ParamSlot6.invalidate();
-	ParamSlot6.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[5]));
-//	ParamSlot6.invalidate();
-
+void screen_fx_paramsView::update_screen(){
+	// TODO
+#ifndef SIMULATOR
+	for(int i = 0;i<12;i++){
+		fx_controls_p[i]->update_potmeter(adc_vals_ptr[i%6]);
+	}
 	swipeContainer.invalidate();
+#endif
+
+#ifdef SIMULATOR
+	for(int i = 0;i<12;i++){
+		fx_controls_p[i]->update_potmeter(11000);
+	}
+	swipeContainer.invalidate();
+#endif
 }

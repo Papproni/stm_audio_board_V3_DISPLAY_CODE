@@ -13,6 +13,48 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_QR0T" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_A1S4" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VW1R" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_AA4J" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VQ71" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_WKA5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YO0B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_0CBT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MJ8B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_8XF7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_GBO3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_WOT9" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PQ0T" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
+      </Text>
+      <Text Id="__SingleUse_TSGS" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_94J9" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">SELECTED</Translation>
       </Text>
@@ -48,42 +90,6 @@
       </Text>
       <Text Id="__SingleUse_9IQB" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_4XD2" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot12</Translation>
-      </Text>
-      <Text Id="__SingleUse_NVS6" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot11</Translation>
-      </Text>
-      <Text Id="__SingleUse_CIJR" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot10</Translation>
-      </Text>
-      <Text Id="__SingleUse_DK04" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot9</Translation>
-      </Text>
-      <Text Id="__SingleUse_T80F" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot8</Translation>
-      </Text>
-      <Text Id="__SingleUse_8C05" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot7</Translation>
-      </Text>
-      <Text Id="__SingleUse_ZBJ7" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot6</Translation>
-      </Text>
-      <Text Id="__SingleUse_5S3X" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot5</Translation>
-      </Text>
-      <Text Id="__SingleUse_IH4Q" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot4</Translation>
-      </Text>
-      <Text Id="__SingleUse_ZHTY" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot3</Translation>
-      </Text>
-      <Text Id="__SingleUse_2PHD" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot2</Translation>
-      </Text>
-      <Text Id="__SingleUse_JWK5" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot1</Translation>
       </Text>
       <Text Id="__SingleUse_YG4D" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">8</Translation>
@@ -178,24 +184,6 @@
       <Text Id="__SingleUse_4VSK" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">A</Translation>
       </Text>
-      <Text Id="__SingleUse_WCFB" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_B0J9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_HYNG" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_0D0P" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_4KAR" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_WJYM" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
       <Text Id="__SingleUse_LY3P" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">DEL</Translation>
       </Text>
@@ -210,24 +198,6 @@
       </Text>
       <Text Id="FX_name_text" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">FX placeholder</Translation>
-      </Text>
-      <Text Id="__SingleUse_MV3F" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_FHJA" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_G74T" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_CJN2" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_LX7X" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_B88N" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="FXname_buffer" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>

@@ -30,9 +30,9 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:89:18:virtual void touchgfx::Transition::invalidate()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:33:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	5
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:51:6:void FrontendApplicationBase::gotoscreen_settingsScreenNoTransition()	1
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:18:18:virtual void FrontendApplicationBase::changeToStartScreen()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:64:6:void FrontendApplicationBase::gotoscreen_tuningScreenNoTransition()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:77:6:void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransition()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:18:18:virtual void FrontendApplicationBase::changeToStartScreen()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:90:6:void FrontendApplicationBase::gotoscreen_infoScreenNoTransition()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:103:6:void FrontendApplicationBase::gotoscreen_fx_paramsScreenNoTransition()	1
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:116:6:void FrontendApplicationBase::gotoscreen_configScreenNoTransition()	1

@@ -28,6 +28,8 @@ static void get_loop_data (struct sab_intercom_st* self, uint8_t loop_num_u8){
 						self->loop_data->all_pau8, SAB_I2C_REG_LOOPFX_LEN,
 						1000);
 }
+
+
 static void get_fx_param(struct sab_intercom_st* self, uint8_t param_slot_u8){
 	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_FXPARAM1+param_slot_u8-1,

@@ -134,6 +134,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../TouchGFX/gui/include/gui/containers/template_fx_param_pot.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp \
  ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
@@ -298,6 +300,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+../TouchGFX/gui/include/gui/containers/template_fx_param_pot.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp:
 ../TouchGFX/gui/include/gui/screen_config_screen/screen_configView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_config_screen/screen_configPresenter.hpp:

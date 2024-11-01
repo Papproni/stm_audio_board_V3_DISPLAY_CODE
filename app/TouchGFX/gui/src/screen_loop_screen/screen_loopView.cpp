@@ -128,7 +128,8 @@ void screen_loopView::btn_slot1_pressed()
 	{
 	case NORMAL:
 #ifndef SIMULATOR
-		if(!strcmp(loop_num_un.slot1.name,"NONE")){
+		if(0 != strcmp(loop_num_un.slot1.name,"NONE")){
+			presenter->add_fx(FX_SLOT1);
 			application().gotoscreen_fx_paramsScreenNoTransition();
 		}
 #endif
@@ -162,7 +163,8 @@ void screen_loopView::btn_slot2_pressed()
 	{
 	case NORMAL:
 #ifndef SIMULATOR
-		if(!strcmp(loop_num_un.slot2.name,"NONE")){
+		if(0 != strcmp(loop_num_un.slot2.name,"NONE")){
+			presenter->add_fx(FX_SLOT2);
 			application().gotoscreen_fx_paramsScreenNoTransition();
 		}
 #endif
@@ -195,7 +197,8 @@ void screen_loopView::btn_slot3_pressed()
 	{
 	case NORMAL:
 #ifndef SIMULATOR
-		if(!strcmp(loop_num_un.slot3.name,"NONE")){
+		if(0 != strcmp(loop_num_un.slot3.name,"NONE")){
+			presenter->add_fx(FX_SLOT3);
 			application().gotoscreen_fx_paramsScreenNoTransition();
 		}
 #endif

@@ -7,6 +7,7 @@
 
 extern  sab_intercom_tst 	sab_intercom_st;
 
+extern  uint32_t 			adc_values_au32[6];
 #endif
 
 // #include "../../../../Core/Inc/sab_intercom.h"
@@ -58,10 +59,12 @@ public:
 
     uint8_t get_current_loop_num();
     uint8_t get_current_fx_slot_num();
+
+    uint32_t* get_adc_value_ptr();
 #endif
 
-    
-    char current_fx_name[20];
+    char        current_fx_name[20];
+    uint32_t*    pot_ctrl_adc_pau32;
 protected:
     ModelListener* modelListener;
     #ifndef SIMULATOR
@@ -71,12 +74,6 @@ protected:
     uint8_t current_loop_num_u8;
     uint8_t current_fx_slot_u8;
 
-    int pot1_val_adc_raw;
-    int pot2_val_adc_raw;
-    int pot3_val_adc_raw;
-    int pot4_val_adc_raw;
-    int pot5_val_adc_raw;
-    int pot6_val_adc_raw;
 };
 
 #endif // MODEL_HPP
