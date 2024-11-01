@@ -30,6 +30,7 @@ public:
 
     void setFXname(char* name);
     virtual void update_screen();
+    void set_loop_data();
 
 private:
     screen_loopPresenter();

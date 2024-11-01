@@ -220,6 +220,8 @@ int main(void)
   ILI9341_Init();
   XPT2046_Init();
   HAL_TIM_Base_Start_IT(&htim2);
+
+  sab_intercom_st.get_implemented_effects(&sab_intercom_st);
   /* USER CODE END 2 */
 
   /* Infinite loop */

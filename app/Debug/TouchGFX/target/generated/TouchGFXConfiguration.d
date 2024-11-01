@@ -146,6 +146,15 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
+ ../TouchGFX/gui/include/gui/screen_add_effect_screen/screen_add_effectView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen_add_effect_screen/screen_add_effectViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen_add_effect_screen/screen_add_effectPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../TouchGFX/gui/include/gui/containers/template_choose_fx.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/template_choose_fxBase.hpp \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
@@ -301,6 +310,15 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
+../TouchGFX/gui/include/gui/screen_add_effect_screen/screen_add_effectView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen_add_effect_screen/screen_add_effectViewBase.hpp:
+../TouchGFX/gui/include/gui/screen_add_effect_screen/screen_add_effectPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../TouchGFX/gui/include/gui/containers/template_choose_fx.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/template_choose_fxBase.hpp:
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:

@@ -38,3 +38,10 @@ void screen_loopPresenter::update_screen()
 	view.update_screen();
 }
 
+void screen_loopPresenter::set_loop_data()
+{
+#ifndef  SIMULATOR
+	// model->read_loop_data(model->get_current_loop_num());
+	model->set_loop_data(&view.loop_num_un);
+#endif // ! SIMULATOR
+}

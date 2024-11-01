@@ -86,18 +86,35 @@ sab_loopbypass_tun  Model::get_loopbypass(){
 	return this->intercom_pst->loopbypass_un;
 }
 
+uint8_t Model::get_num_of_implemented_fx(){
+	return this->intercom_pst->num_of_implemented_effects;
+}
+
+fx_data_tst *Model::get_implemented_fx(){
+	return this->intercom_pst->implemented_fx_data_ptr;
+}
+
+
 void Model::set_save(){
 	// TODO
 }
 
 void Model::set_fx_param(uint8_t slot, uint8_t value){
-	this->intercom_pst->set_fx_param(this->intercom_pst,slot,value);
+	this->intercom_pst->set_fx_param(	this->intercom_pst,
+										slot,value);
 }
 
 void Model::set_loopbypass(uint8_t loop, uint8_t state){
-	this->intercom_pst->set_loopbypass(this->intercom_pst,loop,state);
+	this->intercom_pst->set_loopbypass(	this->intercom_pst,
+										loop,
+										state);
 }
 
+void Model::set_loop_data(sab_loop_num_tun* loop_data_pun){
+	this->intercom_pst->set_loop_data(	this->intercom_pst,
+										loop_data_pun,
+										this->current_loop_num_u8);
+}
 
 
 void Model::set_current_loop_num(uint8_t loopnum){
@@ -107,6 +124,8 @@ void Model::set_current_loop_num(uint8_t loopnum){
 void Model::set_current_fx_slot_num(uint8_t slotnum){
 	this->current_fx_slot_u8 = slotnum;
 }
+
+
 
 uint8_t Model::get_current_loop_num(){
 	return this->current_loop_num_u8;

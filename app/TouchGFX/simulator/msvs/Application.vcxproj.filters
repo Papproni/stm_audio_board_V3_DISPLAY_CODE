@@ -268,6 +268,30 @@
     <Filter Include="Header Files\generated\gui_generated\screen_config_screen">
       <UniqueIdentifier>0FD7998F-ED08-4312-63B8-A8FF6077ED47</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen_add_effect_screen">
+      <UniqueIdentifier>7DD6E438-B1EA-BB98-1047-410F0B01BB7F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen_add_effect_screen">
+      <UniqueIdentifier>CD3ACAAD-895D-F6FF-5AF0-230C4088D3EF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_add_effect_screen">
+      <UniqueIdentifier>2C368156-6C8B-E2C6-D28B-15DDD3EF74C2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_add_effect_screen">
+      <UniqueIdentifier>BFDBCFFE-E941-48CC-C553-ABE219F9D075</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>182E338E-CC49-A658-9E20-6F67DC8CA081</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>9D2AD325-5E50-3CC7-E6B4-C21C92E9F454</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>1E1E5E40-6D0A-051A-4136-7EB77FA676B9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>3F849E0C-42EF-1735-B71C-8964A54310CC</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -371,6 +395,21 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_config_screen\screen_configViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen_config_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_add_effect_screen\screen_add_effectPresenter.cpp">
+      <Filter>Source Files\gui\screen_add_effect_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_add_effect_screen\screen_add_effectView.cpp">
+      <Filter>Source Files\gui\screen_add_effect_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_add_effect_screen\screen_add_effectViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_add_effect_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\template_choose_fx.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\template_choose_fxBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -885,6 +924,21 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_config_screen\screen_configViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen_config_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_add_effect_screen\screen_add_effectPresenter.hpp">
+      <Filter>Header Files\gui\screen_add_effect_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_add_effect_screen\screen_add_effectView.hpp">
+      <Filter>Header Files\gui\screen_add_effect_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_add_effect_screen\screen_add_effectViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_add_effect_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\template_choose_fx.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_choose_fxBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

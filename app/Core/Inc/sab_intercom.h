@@ -24,17 +24,25 @@ typedef struct sab_intercom_st{
     sab_save_tun        save_un;
     sab_loopbypass_tun  loopbypass_un;
 
+    fx_data_tst*    implemented_fx_data_ptr;
+    uint8_t         num_of_implemented_effects;
     // GETTER (read)
     void (*get_preset_data) (struct sab_intercom_st* self);
     void (*get_loop_data)   (struct sab_intercom_st* self, uint8_t loop_num_u8);
     void (*get_fx_param)    (struct sab_intercom_st* self, uint8_t param_slot_u8);
     void (*get_info)        (struct sab_intercom_st* self);
     void (*get_loopbypass)  (struct sab_intercom_st* self);
+    
+    void (*get_implemented_effects)  (struct sab_intercom_st* self);
 
     // SETTER (write)
     void (*set_fx_param)     (struct sab_intercom_st* self, uint8_t param_slot_u8, uint8_t new_value_u8);
     void (*set_loopbypass)  (struct sab_intercom_st* self, uint8_t loop, uint8_t state);
+    void (*set_loop_data)  (struct sab_intercom_st* self,sab_loop_num_tun* loop_data_pun, uint8_t loop_num);
 
+    void (*next_preset)(struct sab_intercom_st* self);
+    void (*prev_preset)(struct sab_intercom_st* self);
+    
     // I2C comm handlers
     void (*process_rx_buffer) (struct sab_intercom_st* self, uint8_t*buffer_pu8, uint8_t size_u8);
     uint32_t (*get_reg_data_ptr)  (struct sab_intercom_st* self);

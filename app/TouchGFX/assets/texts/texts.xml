@@ -13,6 +13,21 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_UI75" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">FX_NAME</Translation>
+      </Text>
+      <Text Id="__SingleUse_YIYN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LM13" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Add</Translation>
+      </Text>
+      <Text Id="__SingleUse_YN5I" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Select</Translation>
+      </Text>
+      <Text Id="__SingleUse_4D2T" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">OPT</Translation>
+      </Text>
       <Text Id="__SingleUse_8AH2" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">OVERDRIVE</Translation>
       </Text>

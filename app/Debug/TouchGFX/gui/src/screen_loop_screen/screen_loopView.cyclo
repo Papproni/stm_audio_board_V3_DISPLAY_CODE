@@ -10,5 +10,5 @@
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:7:6:virtual void screen_loopView::setupScreen()	1
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:21:6:virtual void screen_loopView::update_screen()	6
 ../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:123:6:virtual void screen_loopView::btn_slot1_pressed()	4
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:145:6:virtual void screen_loopView::btn_slot2_pressed()	4
-../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:166:6:virtual void screen_loopView::btn_slot3_pressed()	4
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:149:6:virtual void screen_loopView::btn_slot2_pressed()	4
+../TouchGFX/gui/src/screen_loop_screen/screen_loopView.cpp:174:6:virtual void screen_loopView::btn_slot3_pressed()	4

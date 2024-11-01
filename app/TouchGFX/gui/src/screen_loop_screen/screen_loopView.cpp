@@ -134,13 +134,16 @@ void screen_loopView::btn_slot1_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot1.setVisible(false);
-		strcpy(loop_num_un.slot1.name,"NONE",10);
+		#ifndef SIMULATOR
+		strcpy(loop_num_un.slot1.name,"NONE");
+		#endif
 		break;
 	default:
 		break;
 	}
 	state = NORMAL;
 	cont_Slot1.invalidate();
+	presenter->set_loop_data();
 }
 
 void screen_loopView::btn_slot2_pressed()
@@ -156,13 +159,16 @@ void screen_loopView::btn_slot2_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot2.setVisible(false);
-		strcpy(loop_num_un.slot2.name,"NONE",10);
+#ifndef SIMULATOR
+		strcpy(loop_num_un.slot2.name,"NONE");
+#endif
 		break;
 	default:
 		break;
 	}
 	state = NORMAL;
 	cont_Slot2.invalidate();
+	presenter->set_loop_data();
 }
 
 void screen_loopView::btn_slot3_pressed()
@@ -178,11 +184,14 @@ void screen_loopView::btn_slot3_pressed()
 		break;
 	case DELETE_FX:
 		cont_Slot3.setVisible(false);	
-		strcpy(loop_num_un.slot3.name,"NONE",10);
+#ifndef SIMULATOR
+		strcpy(loop_num_un.slot3.name,"NONE");
+#endif
 		break;
 	default:
 		break;
 	}
 	state = NORMAL;
 	cont_Slot3.invalidate();
+	presenter->set_loop_data();
 }

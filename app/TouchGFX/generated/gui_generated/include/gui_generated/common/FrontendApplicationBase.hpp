@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_perf_modeScreenNoTransition();
+        gotoscreen_add_effectScreenNoTransition();
     }
 
     // screen_settings
@@ -43,6 +43,9 @@ public:
 
     // screen_edit
     void gotoscreen_editScreenNoTransition();
+
+    // screen_add_effect
+    void gotoscreen_add_effectScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -72,6 +75,9 @@ protected:
 
     // screen_edit
     void gotoscreen_editScreenNoTransitionImpl();
+
+    // screen_add_effect
+    void gotoscreen_add_effectScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

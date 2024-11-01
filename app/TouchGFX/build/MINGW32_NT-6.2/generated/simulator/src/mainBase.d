@@ -124,6 +124,15 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  gui/include/gui/screen_edit_screen/screen_editView.hpp \
  generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp \
  gui/include/gui/screen_edit_screen/screen_editPresenter.hpp \
+ gui/include/gui/screen_add_effect_screen/screen_add_effectView.hpp \
+ generated/gui_generated/include/gui_generated/screen_add_effect_screen/screen_add_effectViewBase.hpp \
+ gui/include/gui/screen_add_effect_screen/screen_add_effectPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ gui/include/gui/containers/template_choose_fx.hpp \
+ generated/gui_generated/include/gui_generated/containers/template_choose_fxBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
@@ -382,6 +391,24 @@ gui/include/gui/screen_edit_screen/screen_editView.hpp:
 generated/gui_generated/include/gui_generated/screen_edit_screen/screen_editViewBase.hpp:
 
 gui/include/gui/screen_edit_screen/screen_editPresenter.hpp:
+
+gui/include/gui/screen_add_effect_screen/screen_add_effectView.hpp:
+
+generated/gui_generated/include/gui_generated/screen_add_effect_screen/screen_add_effectViewBase.hpp:
+
+gui/include/gui/screen_add_effect_screen/screen_add_effectPresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+gui/include/gui/containers/template_choose_fx.hpp:
+
+generated/gui_generated/include/gui_generated/containers/template_choose_fxBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 

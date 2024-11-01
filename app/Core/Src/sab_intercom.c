@@ -44,6 +44,32 @@ static void get_loopbypass (struct sab_intercom_st* self){
 						1000);
 }
 
+static void get_num_of_implemented_effects  (struct sab_intercom_st* self){
+	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+						SAB_I2C_REG_NUM_OF_IMPLEMENTED_EFFECTS,
+						I2C_MEMADD_SIZE_8BIT,
+						&self->num_of_implemented_effects, 1,
+						1000);
+}
+
+static void get_implemented_effects  (struct sab_intercom_st* self){
+	get_num_of_implemented_effects(self);
+
+	while(!self->num_of_implemented_effects){}
+	
+	self->implemented_fx_data_ptr = malloc(sizeof(fx_data_tst)*self->num_of_implemented_effects);
+	if(NULL == self->implemented_fx_data_ptr){
+		return;
+	}
+
+	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+						SAB_I2C_REG_IMPLEMENTED_EFFECTS,
+						I2C_MEMADD_SIZE_8BIT,
+						self->implemented_fx_data_ptr, sizeof(fx_data_tst)*self->num_of_implemented_effects,
+						1000);
+}
+
+
 // ----------------------------------SETTERS-------------------------------------------------
 static void set_fx_param (struct sab_intercom_st* self, uint8_t param_slot_u8, uint8_t new_value_u8){
 	self->fx_param_un[param_slot_u8-1].value_u8 = new_value_u8;
@@ -60,6 +86,21 @@ static void set_loopbypass (struct sab_intercom_st* self,uint8_t loop, uint8_t s
 				SAB_I2C_REG_LOOPBYPASSSTATE,
 				I2C_MEMADD_SIZE_8BIT,
 				&self->loopbypass_un.all_u8, SAB_I2C_REG_LOOPBYPASSSTATE_LEN, 1000);
+}
+/*
+	loop_num:
+		1 = LOOP1
+		2 = LOOP2
+		3 = LOOP3
+		4 = LOOP4
+*/
+static void set_loop_data  (struct sab_intercom_st* self, sab_loop_num_tun* loop_data_pun, uint8_t loop_num){
+	memcpy(self->loop_data[loop_num-1].all_pau8,loop_data_pun,sizeof(sab_loop_num_tun));
+	
+	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+				SAB_I2C_REG_LOOP1FX+1-loop_num,
+				I2C_MEMADD_SIZE_8BIT,
+				self->loop_data[loop_num-1].all_pau8, sizeof(sab_loop_num_tun), 1000);
 }
 
 /// @brief Saves data received from master (display)
@@ -136,6 +177,12 @@ uint32_t sab_intercom_get_reg_data_ptr(struct sab_intercom_st* self){
 		case SAB_I2C_REG_LOOPBYPASSSTATE:
 			return &self->loopbypass_un;    // Returns pointer to the loop bypass union
 
+		case SAB_I2C_REG_NUM_OF_IMPLEMENTED_EFFECTS:
+			return &self->num_of_implemented_effects;
+		
+		case SAB_I2C_REG_IMPLEMENTED_EFFECTS:
+			return self->implemented_fx_data_ptr;
+
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
@@ -175,7 +222,12 @@ uint8_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
 
 		case SAB_I2C_REG_LOOPBYPASSSTATE:
 			return sizeof(sab_loopbypass_tun);          // Returns pointer to the loop bypass union
-
+		
+		case SAB_I2C_REG_NUM_OF_IMPLEMENTED_EFFECTS:
+			return sizeof(uint8_t);          // Returns pointer to the loop bypass union
+		
+		case SAB_I2C_REG_IMPLEMENTED_EFFECTS:
+			return sizeof(fx_data_tst)*self->num_of_implemented_effects;          // Returns pointer to the loop bypass union
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
@@ -192,9 +244,14 @@ void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_Ha
     self->get_info          = get_info       ;
     self->get_loopbypass    = get_loopbypass ;
 
+	self->get_implemented_effects			= get_implemented_effects;
+	self->num_of_implemented_effects 		= 0;
+	self->implemented_fx_data_ptr			= NULL;
+
     // SETTER function pointers
     self->set_fx_param      = set_fx_param;
     self->set_loopbypass	= set_loopbypass;
+	self->set_loop_data 	= set_loop_data;
 
 	self->process_rx_buffer = sab_intercom_process_i2c_data;
 	self->get_reg_data_ptr = sab_intercom_get_reg_data_ptr;

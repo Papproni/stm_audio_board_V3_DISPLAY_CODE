@@ -28,6 +28,8 @@
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <gui/screen_edit_screen/screen_editView.hpp>
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
+#include <gui/screen_add_effect_screen/screen_add_effectView.hpp>
+#include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
 
 
 /**
@@ -58,7 +60,8 @@ public:
             touchgfx::meta::TypeList< screen_configView,
             touchgfx::meta::TypeList< screen_loopView,
             touchgfx::meta::TypeList< screen_editView,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< screen_add_effectView,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -78,7 +81,8 @@ public:
             touchgfx::meta::TypeList< screen_configPresenter,
             touchgfx::meta::TypeList< screen_loopPresenter,
             touchgfx::meta::TypeList< screen_editPresenter,
-            touchgfx::meta::Nil > > > > > > >
+            touchgfx::meta::TypeList< screen_add_effectPresenter,
+            touchgfx::meta::Nil > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -101,7 +105,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreen_perf_modeScreenNoTransition();
+        app.gotoscreen_add_effectScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

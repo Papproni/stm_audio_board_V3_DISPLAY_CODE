@@ -25,6 +25,8 @@
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <gui/screen_edit_screen/screen_editView.hpp>
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
+#include <gui/screen_add_effect_screen/screen_add_effectView.hpp>
+#include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -146,4 +148,17 @@ void FrontendApplicationBase::gotoscreen_editScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_editScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_editView, screen_editPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_add_effect
+
+void FrontendApplicationBase::gotoscreen_add_effectScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_add_effectScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_add_effectScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_add_effectView, screen_add_effectPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
