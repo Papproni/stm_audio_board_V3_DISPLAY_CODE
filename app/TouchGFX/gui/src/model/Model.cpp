@@ -50,6 +50,12 @@ void Model::read_preset_data(){
 	
 }
 
+/*
+1 = LOOP1
+2 = LOOP2
+3 = LOOP3
+4 = LOOP4
+*/
 void Model::read_loop_data(uint8_t loop_num_u8){
 	this->intercom_pst->get_loop_data(intercom_pst,loop_num_u8);
 }
@@ -70,8 +76,14 @@ sab_preset_num_tun  Model::get_preset_data(){
 	return this->intercom_pst->preset_data_un;
 }
 
+/*
+1 = LOOP1
+2 = LOOP2
+3 = LOOP3
+4 = LOOP4
+*/
 sab_loop_num_tun   Model::get_loop_data(uint8_t loop_num_u8){
-	return this->intercom_pst->loop_data[loop_num_u8];
+	return this->intercom_pst->loop_data[loop_num_u8-1];
 }
 
 sab_fx_param_tun    Model::get_fx_param(uint8_t param_slot_u8){
@@ -116,7 +128,12 @@ void Model::set_loop_data(sab_loop_num_tun* loop_data_pun){
 										this->current_loop_num_u8);
 }
 
-
+/*
+1 = LOOP1
+2 = LOOP2
+3 = LOOP3
+4 = LOOP4
+*/
 void Model::set_current_loop_num(uint8_t loopnum){
 	this->current_loop_num_u8 = loopnum;
 }
@@ -125,8 +142,12 @@ void Model::set_current_fx_slot_num(uint8_t slotnum){
 	this->current_fx_slot_u8 = slotnum;
 }
 
-
-
+/*
+1 = LOOP1
+2 = LOOP2
+3 = LOOP3
+4 = LOOP4
+*/
 uint8_t Model::get_current_loop_num(){
 	return this->current_loop_num_u8;
 }

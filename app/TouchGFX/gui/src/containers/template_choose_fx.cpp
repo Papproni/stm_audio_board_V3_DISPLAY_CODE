@@ -17,3 +17,7 @@ touchgfx::Unicode::UnicodeChar*  template_choose_fx::get_buffer(){
 touchgfx::TextAreaWithOneWildcard template_choose_fx::get_text_wc(){
     return this->text_FX_name;
 }
+
+touchgfx::TextArea template_choose_fx::get_selected_text(){
+    return this->text_selected;
+}

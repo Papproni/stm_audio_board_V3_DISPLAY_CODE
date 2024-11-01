@@ -14,6 +14,13 @@ static void get_preset_data (struct sab_intercom_st* self){
                         &self->preset_data_un.all_u32, SAB_I2C_REG_PRESETNUM_LEN,
                         1000);
 }
+
+/*
+1 = LOOP1
+2 = LOOP2
+3 = LOOP3
+4 = LOOP4
+*/
 static void get_loop_data (struct sab_intercom_st* self, uint8_t loop_num_u8){
 	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_LOOP1FX+loop_num_u8-1,

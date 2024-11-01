@@ -3,22 +3,22 @@
 ../TouchGFX/gui/src/model/Model.cpp:30:6:void Model::setFXname(char*)	8	static
 ../TouchGFX/gui/src/model/Model.cpp:39:6:void Model::getFXname(char*)	8	static
 ../TouchGFX/gui/src/model/Model.cpp:48:6:void Model::read_preset_data()	8	static
-../TouchGFX/gui/src/model/Model.cpp:53:6:void Model::read_loop_data(uint8_t)	8	static
-../TouchGFX/gui/src/model/Model.cpp:57:6:void Model::read_fx_param(uint8_t)	8	static
-../TouchGFX/gui/src/model/Model.cpp:61:6:void Model::read_info()	8	static
-../TouchGFX/gui/src/model/Model.cpp:65:6:void Model::read_loopbypass()	8	static
-../TouchGFX/gui/src/model/Model.cpp:69:21:sab_preset_num_tun Model::get_preset_data()	0	static
-../TouchGFX/gui/src/model/Model.cpp:73:20:sab_loop_num_tun Model::get_loop_data(uint8_t)	12	static
-../TouchGFX/gui/src/model/Model.cpp:77:21:sab_fx_param_tun Model::get_fx_param(uint8_t)	0	static
-../TouchGFX/gui/src/model/Model.cpp:81:21:sab_info_tun Model::get_info()	0	static
-../TouchGFX/gui/src/model/Model.cpp:85:21:sab_loopbypass_tun Model::get_loopbypass()	8	static
-../TouchGFX/gui/src/model/Model.cpp:89:9:uint8_t Model::get_num_of_implemented_fx()	0	static
-../TouchGFX/gui/src/model/Model.cpp:93:14:fx_data_tst* Model::get_implemented_fx()	0	static
-../TouchGFX/gui/src/model/Model.cpp:98:6:void Model::set_save()	0	static
-../TouchGFX/gui/src/model/Model.cpp:102:6:void Model::set_fx_param(uint8_t, uint8_t)	8	static
-../TouchGFX/gui/src/model/Model.cpp:107:6:void Model::set_loopbypass(uint8_t, uint8_t)	8	static
-../TouchGFX/gui/src/model/Model.cpp:113:6:void Model::set_loop_data(sab_loop_num_tun*)	8	static
-../TouchGFX/gui/src/model/Model.cpp:120:6:void Model::set_current_loop_num(uint8_t)	0	static
-../TouchGFX/gui/src/model/Model.cpp:124:6:void Model::set_current_fx_slot_num(uint8_t)	0	static
-../TouchGFX/gui/src/model/Model.cpp:130:9:uint8_t Model::get_current_loop_num()	0	static
-../TouchGFX/gui/src/model/Model.cpp:134:9:uint8_t Model::get_current_fx_slot_num()	0	static
+../TouchGFX/gui/src/model/Model.cpp:59:6:void Model::read_loop_data(uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:63:6:void Model::read_fx_param(uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:67:6:void Model::read_info()	8	static
+../TouchGFX/gui/src/model/Model.cpp:71:6:void Model::read_loopbypass()	8	static
+../TouchGFX/gui/src/model/Model.cpp:75:21:sab_preset_num_tun Model::get_preset_data()	0	static
+../TouchGFX/gui/src/model/Model.cpp:85:20:sab_loop_num_tun Model::get_loop_data(uint8_t)	12	static
+../TouchGFX/gui/src/model/Model.cpp:89:21:sab_fx_param_tun Model::get_fx_param(uint8_t)	0	static
+../TouchGFX/gui/src/model/Model.cpp:93:21:sab_info_tun Model::get_info()	0	static
+../TouchGFX/gui/src/model/Model.cpp:97:21:sab_loopbypass_tun Model::get_loopbypass()	8	static
+../TouchGFX/gui/src/model/Model.cpp:101:9:uint8_t Model::get_num_of_implemented_fx()	0	static
+../TouchGFX/gui/src/model/Model.cpp:105:14:fx_data_tst* Model::get_implemented_fx()	0	static
+../TouchGFX/gui/src/model/Model.cpp:110:6:void Model::set_save()	0	static
+../TouchGFX/gui/src/model/Model.cpp:114:6:void Model::set_fx_param(uint8_t, uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:119:6:void Model::set_loopbypass(uint8_t, uint8_t)	8	static
+../TouchGFX/gui/src/model/Model.cpp:125:6:void Model::set_loop_data(sab_loop_num_tun*)	8	static
+../TouchGFX/gui/src/model/Model.cpp:137:6:void Model::set_current_loop_num(uint8_t)	0	static
+../TouchGFX/gui/src/model/Model.cpp:141:6:void Model::set_current_fx_slot_num(uint8_t)	0	static
+../TouchGFX/gui/src/model/Model.cpp:151:9:uint8_t Model::get_current_loop_num()	0	static
+../TouchGFX/gui/src/model/Model.cpp:155:9:uint8_t Model::get_current_fx_slot_num()	0	static

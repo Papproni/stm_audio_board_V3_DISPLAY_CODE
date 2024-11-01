@@ -9,6 +9,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class template_choose_fxBase : public touchgfx::Container
 {
@@ -28,6 +29,7 @@ protected:
     touchgfx::Box box;
     touchgfx::BoxWithBorder boxWithBorder;
     touchgfx::TextAreaWithOneWildcard text_FX_name;
+    touchgfx::TextArea text_selected;
 
     /*
      * Wildcard Buffers

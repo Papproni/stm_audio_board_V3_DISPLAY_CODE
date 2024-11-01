@@ -31,6 +31,9 @@ public:
     void setFXname(char* name);
     virtual void update_screen();
     void set_loop_data();
+#ifndef  SIMULATOR
+    void add_fx(fx_slots_ten slot);
+#endif
 
 private:
     screen_loopPresenter();

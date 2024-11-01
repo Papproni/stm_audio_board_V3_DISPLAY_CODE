@@ -27,6 +27,13 @@ template_choose_fxBase::template_choose_fxBase()
     text_FX_name.resizeToCurrentText();
     text_FX_name.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YIYN));
     add(text_FX_name);
+
+    text_selected.setXY(25, 96);
+    text_selected.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    text_selected.setLinespacing(0);
+    text_selected.setTypedText(touchgfx::TypedText(T___SINGLEUSE_94J9));
+    text_selected.setVisible(false);
+    add(text_selected);
 }
 
 template_choose_fxBase::~template_choose_fxBase()

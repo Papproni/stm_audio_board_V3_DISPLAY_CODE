@@ -89,6 +89,12 @@ typedef struct{
 	uint8_t color[3];
 }fx_data_tst;
 
+typedef enum{
+	FX_SLOT1,
+	FX_SLOT2,
+	FX_SLOT3
+}fx_slots_ten;
+
 typedef union{
 	uint8_t all_pau8[SAB_I2C_REG_LOOPFX_LEN];
 	struct{

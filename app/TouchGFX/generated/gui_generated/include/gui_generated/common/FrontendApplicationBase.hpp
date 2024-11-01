@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_add_effectScreenNoTransition();
+        gotoscreen_settingsScreenNoTransition();
     }
 
     // screen_settings

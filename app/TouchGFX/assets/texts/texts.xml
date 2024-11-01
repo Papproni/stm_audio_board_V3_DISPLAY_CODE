@@ -13,6 +13,9 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_94J9" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">SELECTED</Translation>
+      </Text>
       <Text Id="__SingleUse_UI75" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">FX_NAME</Translation>
       </Text>

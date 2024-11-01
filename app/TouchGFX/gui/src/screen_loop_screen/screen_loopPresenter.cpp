@@ -10,7 +10,7 @@ screen_loopPresenter::screen_loopPresenter(screen_loopView& v)
 void screen_loopPresenter::activate()
 {
 #ifndef  SIMULATOR
-	model->read_loop_data(model->get_current_loop_num());
+	// model->read_loop_data(model->get_current_loop_num());
 	// view.loop_num_un = model->get_loop_data(model->get_current_fx_slot_num());
 #endif
 #ifdef SIMULATOR
@@ -32,8 +32,8 @@ void screen_loopPresenter::setFXname(char* data)
 void screen_loopPresenter::update_screen()
 {
 #ifndef  SIMULATOR
-	// model->read_loop_data(model->get_current_loop_num());
-	view.loop_num_un = model->get_loop_data(model->get_current_fx_slot_num());
+	model->read_loop_data(model->get_current_loop_num());
+	view.loop_num_un = model->get_loop_data(model->get_current_loop_num());
 #endif // ! SIMULATOR
 	view.update_screen();
 }
@@ -45,3 +45,8 @@ void screen_loopPresenter::set_loop_data()
 	model->set_loop_data(&view.loop_num_un);
 #endif // ! SIMULATOR
 }
+#ifndef  SIMULATOR
+void screen_loopPresenter::add_fx(fx_slots_ten slot){
+	model->set_current_fx_slot_num(slot);
+}
+#endif // ! SIMULATOR

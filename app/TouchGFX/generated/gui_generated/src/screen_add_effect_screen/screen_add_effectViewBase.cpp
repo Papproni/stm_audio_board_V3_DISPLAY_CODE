@@ -33,6 +33,7 @@ screen_add_effectViewBase::screen_add_effectViewBase() :
     btn_add.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LM13));
     btn_add.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_add.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_add.setAction(buttonCallback);
     add(btn_add);
 
     scrollList_FX.setPosition(0, 69, 320, 150);
@@ -71,6 +72,13 @@ void screen_add_effectViewBase::buttonCallbackHandler(const touchgfx::AbstractBu
         //When btn_opt clicked change screen to screen_settings
         //Go to screen_settings with no screen transition
         application().gotoscreen_settingsScreenNoTransition();
+    }
+    if (&src == &btn_add)
+    {
+        //btn_add_pressed
+        //When btn_add clicked change screen to screen_add_effect
+        //Go to screen_add_effect with no screen transition
+        application().gotoscreen_add_effectScreenNoTransition();
     }
 }
 

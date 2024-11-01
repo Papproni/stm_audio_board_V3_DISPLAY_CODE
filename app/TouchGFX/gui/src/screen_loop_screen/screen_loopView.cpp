@@ -2,6 +2,7 @@
 
 screen_loopView::screen_loopView()
 {
+	state = NORMAL;
 }
 
 void screen_loopView::setupScreen()
@@ -130,7 +131,11 @@ void screen_loopView::btn_slot1_pressed()
 		application().gotoscreen_fx_paramsScreenNoTransition();
 		break;
 	case ADD_FX:
-		cont_Slot1.setVisible(true);
+		// cont_Slot1.setVisible(true);
+#ifndef SIMULATOR
+		presenter->add_fx(FX_SLOT1);
+#endif
+		application().gotoscreen_add_effectScreenNoTransition();
 		break;
 	case DELETE_FX:
 		cont_Slot1.setVisible(false);
@@ -155,7 +160,11 @@ void screen_loopView::btn_slot2_pressed()
 		application().gotoscreen_fx_paramsScreenNoTransition();
 		break;
 	case ADD_FX:
-		cont_Slot2.setVisible(true);
+		// cont_Slot2.setVisible(true);
+#ifndef SIMULATOR
+		presenter->add_fx(FX_SLOT2);
+#endif
+		application().gotoscreen_add_effectScreenNoTransition();
 		break;
 	case DELETE_FX:
 		cont_Slot2.setVisible(false);
@@ -180,7 +189,11 @@ void screen_loopView::btn_slot3_pressed()
 		application().gotoscreen_fx_paramsScreenNoTransition();
 		break;
 	case ADD_FX:
-		cont_Slot3.setVisible(true);
+		// cont_Slot3.setVisible(true);
+#ifndef SIMULATOR
+		presenter->add_fx(FX_SLOT3);
+#endif	
+		application().gotoscreen_add_effectScreenNoTransition();
 		break;
 	case DELETE_FX:
 		cont_Slot3.setVisible(false);	

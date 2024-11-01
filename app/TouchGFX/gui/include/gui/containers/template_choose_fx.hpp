@@ -14,6 +14,7 @@ public:
 
     touchgfx::Unicode::UnicodeChar* get_buffer();
     touchgfx::TextAreaWithOneWildcard get_text_wc();
+    touchgfx::TextArea get_selected_text();
 protected:
 };
 
