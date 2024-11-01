@@ -4,9 +4,10 @@
 screen_add_effectPresenter::screen_add_effectPresenter(screen_add_effectView &v)
     : view(v)
 {
+#ifndef SIMULATOR
 	view.implemented_fx_ptr = NULL;
 	view.num_of_implemented_fx = 0;
-
+#endif
 
 }
 
@@ -25,7 +26,7 @@ void screen_add_effectPresenter::deactivate()
 
 void screen_add_effectPresenter::add_effect(uint8_t choosen_fx)
 {
-
+#ifndef SIMULATOR
     fx_data_tst *fx_ptr;
     switch (model->get_current_fx_slot_num())
     {
@@ -50,6 +51,7 @@ void screen_add_effectPresenter::add_effect(uint8_t choosen_fx)
     }
 
     model->set_loop_data(&this->loop_data);
+#endif
 }
 
 void screen_add_effectPresenter::update_screen()

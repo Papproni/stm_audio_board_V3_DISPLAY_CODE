@@ -127,8 +127,12 @@ void screen_loopView::btn_slot1_pressed()
 	switch (state)
 	{
 	case NORMAL:
+#ifndef SIMULATOR
+		if(!strcmp(loop_num_un.slot1.name,"NONE")){
+			application().gotoscreen_fx_paramsScreenNoTransition();
+		}
+#endif
 		
-		application().gotoscreen_fx_paramsScreenNoTransition();
 		break;
 	case ADD_FX:
 		// cont_Slot1.setVisible(true);
@@ -157,7 +161,11 @@ void screen_loopView::btn_slot2_pressed()
 	switch (state)
 	{
 	case NORMAL:
-		application().gotoscreen_fx_paramsScreenNoTransition();
+#ifndef SIMULATOR
+		if(!strcmp(loop_num_un.slot2.name,"NONE")){
+			application().gotoscreen_fx_paramsScreenNoTransition();
+		}
+#endif
 		break;
 	case ADD_FX:
 		// cont_Slot2.setVisible(true);
@@ -186,7 +194,11 @@ void screen_loopView::btn_slot3_pressed()
 	switch (state)
 	{
 	case NORMAL:
-		application().gotoscreen_fx_paramsScreenNoTransition();
+#ifndef SIMULATOR
+		if(!strcmp(loop_num_un.slot3.name,"NONE")){
+			application().gotoscreen_fx_paramsScreenNoTransition();
+		}
+#endif
 		break;
 	case ADD_FX:
 		// cont_Slot3.setVisible(true);

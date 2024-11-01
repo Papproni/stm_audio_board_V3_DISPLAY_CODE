@@ -23,7 +23,7 @@ public:
      * The deactivate function is called automatically when this screen is "switched out"
      * (ie. made inactive). Teardown functionality can be placed here.
      */
-#ifndef SIMUALTOR
+#ifndef SIMULATOR
     sab_loop_num_tun loop_data;
 #endif
     void add_effect(uint8_t choosen_fx);
