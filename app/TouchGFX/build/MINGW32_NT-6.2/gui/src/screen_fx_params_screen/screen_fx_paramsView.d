@@ -71,6 +71,10 @@ build/MINGW32_NT-6.2/gui/src/screen_fx_params_screen/screen_fx_paramsView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ gui/include/gui/containers/template_fx_param_btn.hpp \
+ generated/gui_generated/include/gui_generated/containers/template_fx_param_btnBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 
 gui/include/gui/screen_fx_params_screen/screen_fx_paramsView.hpp:
@@ -214,5 +218,13 @@ generated/gui_generated/include/gui_generated/containers/template_fx_param_potBa
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+gui/include/gui/containers/template_fx_param_btn.hpp:
+
+generated/gui_generated/include/gui_generated/containers/template_fx_param_btnBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

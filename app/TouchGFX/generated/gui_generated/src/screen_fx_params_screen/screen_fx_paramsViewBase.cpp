@@ -97,6 +97,9 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_back.setAction(buttonCallback);
     add(btn_back);
+
+    template_fx_param_btn1.setXY(240, 18);
+    add(template_fx_param_btn1);
 }
 
 screen_fx_paramsViewBase::~screen_fx_paramsViewBase()
@@ -118,6 +121,7 @@ void screen_fx_paramsViewBase::setupScreen()
     template_fx_param_pot9.initialize();
     template_fx_param_pot8.initialize();
     template_fx_param_pot7.initialize();
+    template_fx_param_btn1.initialize();
 }
 
 void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

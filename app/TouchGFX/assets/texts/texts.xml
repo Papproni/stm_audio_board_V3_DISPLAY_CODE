@@ -13,6 +13,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_BCIO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">ctrl</Translation>
+      </Text>
+      <Text Id="__SingleUse_BRGM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_QR0T" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">pot1</Translation>
       </Text>

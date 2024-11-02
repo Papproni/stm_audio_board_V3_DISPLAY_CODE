@@ -975,6 +975,15 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "template_fx_param_btn1",
+            "X": 240,
+            "Y": 18,
+            "Width": 80,
+            "Height": 92,
+            "CustomContainerDefinitionName": "template_fx_param_btn"
           }
         ],
         "Interactions": [
@@ -2378,6 +2387,49 @@
         "Interactions": []
       },
       {
+        "Name": "template_fx_param_btn",
+        "Width": 80,
+        "Height": 92,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "param_name",
+            "X": 18,
+            "Y": 68,
+            "Width": 32,
+            "Height": 24,
+            "TextId": "__SingleUse_BRGM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_BCIO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "RadioButton",
+            "Name": "radioButton",
+            "X": 20,
+            "Y": 20,
+            "Width": 36,
+            "Height": 36,
+            "FileNameSelected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_dark.png",
+            "FileNameSelectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_on_pressed.png",
+            "FileNameUnselected": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off.png",
+            "FileNameUnselectedPressed": "__generated\\alternate_theme_images_widgets_radiobutton_radio_medium_rounded_off_pressed.png",
+            "RadioButtonGroup": "radioButtonGroup1",
+            "Preset": "alternate_theme\\presets\\radiobutton\\radio\\medium_dark_rounded.json"
+          }
+        ],
+        "Interactions": []
+      },
+      {
         "Name": "template_fx_param_pot",
         "Width": 80,
         "Height": 92,
@@ -2431,7 +2483,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_perf_mode",
+    "StartupScreenName": "screen_fx_params",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
@@ -2466,6 +2518,7 @@
     "PostGenerateTargetCommand": "touchgfx update_project",
     "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
     "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "",
     "LandscapeSkinX": 0,
     "LandscapeSkinY": 0,
     "PortraitSkinX": 0,

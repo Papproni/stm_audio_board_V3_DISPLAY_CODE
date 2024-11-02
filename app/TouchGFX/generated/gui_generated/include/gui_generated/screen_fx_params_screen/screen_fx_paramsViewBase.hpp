@@ -13,6 +13,7 @@
 #include <gui/containers/template_fx_param_pot.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <gui/containers/template_fx_param_btn.hpp>
 
 class screen_fx_paramsViewBase : public touchgfx::View<screen_fx_paramsPresenter>
 {
@@ -50,6 +51,7 @@ protected:
     template_fx_param_pot template_fx_param_pot7;
     touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::ButtonWithLabel btn_back;
+    template_fx_param_btn template_fx_param_btn1;
 
     /*
      * Wildcard Buffers

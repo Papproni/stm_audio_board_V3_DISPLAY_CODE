@@ -4,6 +4,7 @@
 #include <gui_generated/screen_fx_params_screen/screen_fx_paramsViewBase.hpp>
 #include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
 
+// #include <template_fx_param_btn.hpp>
 class screen_fx_paramsView : public screen_fx_paramsViewBase
 {
 public:
@@ -17,6 +18,8 @@ public:
     int potmeter_min_value;
     int adc_raw_max_value;
     template_fx_param_pot* fx_controls_p[12];
+    template_fx_param_pot my_potmeter;
+    template_fx_param_btn my_button;
     virtual void set_sliders_value(uint32_t* val);
     uint32_t* adc_vals_ptr;
 #ifndef SIMULATOR

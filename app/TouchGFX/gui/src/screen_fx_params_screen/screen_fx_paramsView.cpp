@@ -33,6 +33,11 @@ void screen_fx_paramsView::setupScreen()
 
     screen_fx_paramsViewBase::setupScreen();
 
+	my_potmeter.setXY(10, 40);
+    swipeContainerPage1.add(my_potmeter);
+	
+	my_button.setXY(50, 40);
+	swipeContainerPage1.add(my_button);
 	
 	fx_controls_p[0] = &template_fx_param_pot1;
 	fx_controls_p[1] = &template_fx_param_pot2;
@@ -47,16 +52,14 @@ void screen_fx_paramsView::setupScreen()
 	fx_controls_p[10] = &template_fx_param_pot11;
 	fx_controls_p[11] = &template_fx_param_pot12;
 
+	presenter->get_fx_param_data();
 	for(int i = 0;i<12;i++){
+#ifndef SIMULATOR
 		fx_controls_p[i]->init_potmeter((char*)fx_params_tun[i].name,5,fx_params_tun[i].value_u8);
+#endif
 	}
 
 #ifdef SIMULATOR
-	char name0[5] = "VOL";
-	char name1[5] = "BASS";
-
-	// fx_controls_p[0]->set_parameter_name((char*)name0,5);
-	// fx_controls_p[1]->set_parameter_name((char*)name1,5);
 #endif
 }
 

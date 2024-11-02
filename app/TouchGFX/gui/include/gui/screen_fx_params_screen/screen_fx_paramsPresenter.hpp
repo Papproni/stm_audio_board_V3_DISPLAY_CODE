@@ -25,6 +25,8 @@ public:
      */
     virtual void deactivate();
 
+    void get_fx_param_data();
+
     virtual ~screen_fx_paramsPresenter() {}
 
     void getFxname(char* data);

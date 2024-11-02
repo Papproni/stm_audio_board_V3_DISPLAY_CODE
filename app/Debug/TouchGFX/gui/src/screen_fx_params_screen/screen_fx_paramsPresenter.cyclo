@@ -4,14 +4,15 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:ModelListener::~ModelListener()	1
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::set_sliders_value(uint32_t*)	1
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::update_screen()	1
-../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	1
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:24:6:virtual void screen_fx_paramsPresenter::deactivate()	1
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:35:6:virtual void screen_fx_paramsPresenter::update_screen()	1
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:30:13:screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	1
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:21:6:virtual void screen_fx_paramsPresenter::deactivate()	1
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:40:6:virtual void screen_fx_paramsPresenter::update_screen()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	1
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	1
-../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	1
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:10:6:virtual void screen_fx_paramsPresenter::activate()	2
-../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD1Ev()	1
-../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:28:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD0Ev()	1
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:30:13:virtual screen_fx_paramsPresenter::~screen_fx_paramsPresenter()	1
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:10:6:virtual void screen_fx_paramsPresenter::activate()	1
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:30:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD1Ev()	1
+../TouchGFX/gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:30:13:virtual void* screen_fx_paramsPresenter::_ZThn4_N25screen_fx_paramsPresenterD0Ev()	1
 ../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:4:1:screen_fx_paramsPresenter::screen_fx_paramsPresenter(screen_fx_paramsView&)	1
-../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:29:6:void screen_fx_paramsPresenter::getFxname(char*)	1
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:26:6:void screen_fx_paramsPresenter::get_fx_param_data()	2
+../TouchGFX/gui/src/screen_fx_params_screen/screen_fx_paramsPresenter.cpp:34:6:void screen_fx_paramsPresenter::getFxname(char*)	1
