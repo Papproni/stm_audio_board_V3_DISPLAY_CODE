@@ -32,23 +32,23 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     MAIN_BACKGROUND_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     swipeContainerPage1.add(MAIN_BACKGROUND_1);
 
-    template_fx_param_pot6.setXY(200, 130);
-    swipeContainerPage1.add(template_fx_param_pot6);
+    template_fx_param1.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param1);
 
-    template_fx_param_pot5.setXY(120, 130);
-    swipeContainerPage1.add(template_fx_param_pot5);
+    template_fx_param2.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param2);
 
-    template_fx_param_pot4.setXY(40, 130);
-    swipeContainerPage1.add(template_fx_param_pot4);
+    template_fx_param3.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param3);
 
-    template_fx_param_pot3.setXY(200, 40);
-    swipeContainerPage1.add(template_fx_param_pot3);
+    template_fx_param4.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param4);
 
-    template_fx_param_pot2.setXY(120, 40);
-    swipeContainerPage1.add(template_fx_param_pot2);
+    template_fx_param5.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param5);
 
-    template_fx_param_pot1.setXY(40, 40);
-    swipeContainerPage1.add(template_fx_param_pot1);
+    template_fx_param6.setXY(20, 60);
+    swipeContainerPage1.add(template_fx_param6);
 
     swipeContainer.add(swipeContainerPage1);
 
@@ -58,23 +58,23 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     MAIN_BACKGROUND_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     swipeContainerPage2.add(MAIN_BACKGROUND_1_1);
 
-    template_fx_param_pot12.setXY(200, 130);
-    swipeContainerPage2.add(template_fx_param_pot12);
+    template_fx_param12.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param12);
 
-    template_fx_param_pot11.setXY(120, 130);
-    swipeContainerPage2.add(template_fx_param_pot11);
+    template_fx_param11.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param11);
 
-    template_fx_param_pot10.setXY(40, 130);
-    swipeContainerPage2.add(template_fx_param_pot10);
+    template_fx_param10.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param10);
 
-    template_fx_param_pot9.setXY(200, 40);
-    swipeContainerPage2.add(template_fx_param_pot9);
+    template_fx_param9.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param9);
 
-    template_fx_param_pot8.setXY(120, 40);
-    swipeContainerPage2.add(template_fx_param_pot8);
+    template_fx_param8.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param8);
 
-    template_fx_param_pot7.setXY(40, 40);
-    swipeContainerPage2.add(template_fx_param_pot7);
+    template_fx_param7.setXY(20, 60);
+    swipeContainerPage2.add(template_fx_param7);
 
     swipeContainer.add(swipeContainerPage2);
 
@@ -97,9 +97,6 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     btn_back.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_back.setAction(buttonCallback);
     add(btn_back);
-
-    template_fx_param_btn1.setXY(240, 18);
-    add(template_fx_param_btn1);
 }
 
 screen_fx_paramsViewBase::~screen_fx_paramsViewBase()
@@ -109,19 +106,18 @@ screen_fx_paramsViewBase::~screen_fx_paramsViewBase()
 
 void screen_fx_paramsViewBase::setupScreen()
 {
-    template_fx_param_pot6.initialize();
-    template_fx_param_pot5.initialize();
-    template_fx_param_pot4.initialize();
-    template_fx_param_pot3.initialize();
-    template_fx_param_pot2.initialize();
-    template_fx_param_pot1.initialize();
-    template_fx_param_pot12.initialize();
-    template_fx_param_pot11.initialize();
-    template_fx_param_pot10.initialize();
-    template_fx_param_pot9.initialize();
-    template_fx_param_pot8.initialize();
-    template_fx_param_pot7.initialize();
-    template_fx_param_btn1.initialize();
+    template_fx_param1.initialize();
+    template_fx_param2.initialize();
+    template_fx_param3.initialize();
+    template_fx_param4.initialize();
+    template_fx_param5.initialize();
+    template_fx_param6.initialize();
+    template_fx_param12.initialize();
+    template_fx_param11.initialize();
+    template_fx_param10.initialize();
+    template_fx_param9.initialize();
+    template_fx_param8.initialize();
+    template_fx_param7.initialize();
 }
 
 void screen_fx_paramsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

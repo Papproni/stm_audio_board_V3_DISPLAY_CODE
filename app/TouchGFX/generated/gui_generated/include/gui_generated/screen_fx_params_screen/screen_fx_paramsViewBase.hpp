@@ -10,10 +10,9 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <gui/containers/template_fx_param_pot.hpp>
+#include <gui/containers/template_fx_param.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <gui/containers/template_fx_param_btn.hpp>
 
 class screen_fx_paramsViewBase : public touchgfx::View<screen_fx_paramsPresenter>
 {
@@ -35,23 +34,22 @@ protected:
     touchgfx::SwipeContainer swipeContainer;
     touchgfx::Container swipeContainerPage1;
     touchgfx::Box MAIN_BACKGROUND_1;
-    template_fx_param_pot template_fx_param_pot6;
-    template_fx_param_pot template_fx_param_pot5;
-    template_fx_param_pot template_fx_param_pot4;
-    template_fx_param_pot template_fx_param_pot3;
-    template_fx_param_pot template_fx_param_pot2;
-    template_fx_param_pot template_fx_param_pot1;
+    template_fx_param template_fx_param1;
+    template_fx_param template_fx_param2;
+    template_fx_param template_fx_param3;
+    template_fx_param template_fx_param4;
+    template_fx_param template_fx_param5;
+    template_fx_param template_fx_param6;
     touchgfx::Container swipeContainerPage2;
     touchgfx::Box MAIN_BACKGROUND_1_1;
-    template_fx_param_pot template_fx_param_pot12;
-    template_fx_param_pot template_fx_param_pot11;
-    template_fx_param_pot template_fx_param_pot10;
-    template_fx_param_pot template_fx_param_pot9;
-    template_fx_param_pot template_fx_param_pot8;
-    template_fx_param_pot template_fx_param_pot7;
+    template_fx_param template_fx_param12;
+    template_fx_param template_fx_param11;
+    template_fx_param template_fx_param10;
+    template_fx_param template_fx_param9;
+    template_fx_param template_fx_param8;
+    template_fx_param template_fx_param7;
     touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::ButtonWithLabel btn_back;
-    template_fx_param_btn template_fx_param_btn1;
 
     /*
      * Wildcard Buffers

@@ -30,7 +30,7 @@ public:
     virtual ~screen_fx_paramsPresenter() {}
 
     void getFxname(char* data);
-
+    void set_fx_param_new_value(uint8_t slotnum_u8, uint8_t new_value_u8);
     virtual void update_screen();
 private:
     screen_fx_paramsPresenter();

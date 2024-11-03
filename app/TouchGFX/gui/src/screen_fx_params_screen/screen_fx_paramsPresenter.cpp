@@ -39,6 +39,12 @@ void screen_fx_paramsPresenter::getFxname(char* data)
 	model->getFXname(data);
 }
 
+void screen_fx_paramsPresenter::set_fx_param_new_value(uint8_t slotnum_u8, uint8_t new_value_u8){
+	#ifndef SIMULATOR
+	model->set_fx_param(slotnum_u8,new_value_u8);
+	
+	#endif // !SIMULATOR
+}
 
 void screen_fx_paramsPresenter::update_screen(){
 	view.update_screen();

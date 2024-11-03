@@ -414,13 +414,10 @@
     <ClCompile Include="..\..\gui\src\containers\template_fx_param_pot.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_param_potBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\template_fx_param_btn.cpp">
+    <ClCompile Include="..\..\gui\src\containers\template_fx_param.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_param_btnBase.cpp">
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_paramBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -955,13 +952,10 @@
     <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param_pot.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_param_potBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param_btn.hpp">
+    <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_param_btnBase.hpp">
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_paramBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
   </ItemGroup>

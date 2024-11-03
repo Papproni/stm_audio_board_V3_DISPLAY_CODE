@@ -13,10 +13,10 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_BCIO" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">ctrl</Translation>
+      <Text Id="__SingleUse_VASA" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">pot1</Translation>
       </Text>
-      <Text Id="__SingleUse_BRGM" Alignment="Center" TypographyId="Default">
+      <Text Id="__SingleUse_Z8LN" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_QR0T" Alignment="Left" TypographyId="Default">
@@ -53,12 +53,6 @@
         <Translation Language="GB">pot1</Translation>
       </Text>
       <Text Id="__SingleUse_WOT9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_PQ0T" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">pot1</Translation>
-      </Text>
-      <Text Id="__SingleUse_TSGS" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_94J9" Alignment="Left" TypographyId="Default">

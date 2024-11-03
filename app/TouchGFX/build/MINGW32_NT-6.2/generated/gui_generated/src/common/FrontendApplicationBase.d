@@ -88,16 +88,12 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- gui/include/gui/containers/template_fx_param_pot.hpp \
- generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp \
- gui/include/gui/containers/template_fx_param_btn.hpp \
- generated/gui_generated/include/gui_generated/containers/template_fx_param_btnBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp \
+ gui/include/gui/containers/template_fx_param.hpp \
+ generated/gui_generated/include/gui_generated/containers/template_fx_paramBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  gui/include/gui/screen_config_screen/screen_configView.hpp \
  generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp \
  gui/include/gui/screen_config_screen/screen_configPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  gui/include/gui/screen_loop_screen/screen_loopView.hpp \
  generated/gui_generated/include/gui_generated/screen_loop_screen/screen_loopViewBase.hpp \
  gui/include/gui/screen_loop_screen/screen_loopPresenter.hpp \
@@ -295,25 +291,17 @@ gui/include/gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 
-gui/include/gui/containers/template_fx_param_pot.hpp:
+gui/include/gui/containers/template_fx_param.hpp:
 
-generated/gui_generated/include/gui_generated/containers/template_fx_param_potBase.hpp:
+generated/gui_generated/include/gui_generated/containers/template_fx_paramBase.hpp:
 
-gui/include/gui/containers/template_fx_param_btn.hpp:
-
-generated/gui_generated/include/gui_generated/containers/template_fx_param_btnBase.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 
 gui/include/gui/screen_config_screen/screen_configView.hpp:
 
 generated/gui_generated/include/gui_generated/screen_config_screen/screen_configViewBase.hpp:
 
 gui/include/gui/screen_config_screen/screen_configPresenter.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 
 gui/include/gui/screen_loop_screen/screen_loopView.hpp:
 
