@@ -50,7 +50,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen_add_effect_screen\screen_add_effectViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\template_choose_fx.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\template_choose_fxBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\containers\template_fx_param_pot.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\template_fx_param.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_paramBase.cpp"/>
   </ItemGroup>
@@ -232,7 +231,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_add_effect_screen\screen_add_effectViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\template_choose_fx.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_choose_fxBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param_pot.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_paramBase.hpp"/>
   </ItemGroup>

@@ -39,7 +39,6 @@ void screen_fx_paramsView::setupScreen()
 	swipeContainer.setSwipeCutoff(20);
 
 	screen_fx_paramsViewBase::setupScreen();
-
 	fx_controls_p[0] = &template_fx_param1;
 	fx_controls_p[1] = &template_fx_param2;
 	fx_controls_p[2] = &template_fx_param3;
