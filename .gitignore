@@ -6,3 +6,4 @@ app/Debug/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
 *.o
 /app/Debug
 /app/TouchGFX/build
+/.vscode
