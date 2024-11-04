@@ -14,6 +14,8 @@
 #define ROW_HEIGHT 90
 #define COLLUM_WIDTH 80
 
+#define FX_PAGE_1
+#define FX_PAGE_2
 // #include <template_fx_param_btn.hpp>
 class screen_fx_paramsView : public screen_fx_paramsViewBase
 {

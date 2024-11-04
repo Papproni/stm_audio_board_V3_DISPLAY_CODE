@@ -24,15 +24,30 @@ void Model::setFXname(char* data)
 {
 
 #ifndef SIMULATOR
-	stpcpy(this->current_fx_name,data);
-	this->current_fx_name[20-1] = '\0';
+	// stpcpy(this->current_fx_name,data);
+	// this->current_fx_name[20-1] = '\0';
 #endif
 }
 
 void Model::getFXname(char* data)
 {
 #ifndef SIMULATOR
-	strcpy(data,this->current_fx_name);
+	switch (this->current_fx_slot_u8)
+	{
+	case FX_SLOT1:
+		strcpy(data,this->intercom_pst->loop_data[this->current_loop_num_u8-1].slot1.name);
+		break;
+	case FX_SLOT2:
+		strcpy(data,this->intercom_pst->loop_data[this->current_loop_num_u8-1].slot2.name);
+		break;
+	case FX_SLOT3:
+		strcpy(data,this->intercom_pst->loop_data[this->current_loop_num_u8-1].slot3.name);
+		break;
+	
+	default:
+		break;
+	}
+	
 #endif
 }
 

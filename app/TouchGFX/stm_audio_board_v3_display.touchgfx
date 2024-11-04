@@ -256,7 +256,7 @@
             "X": 149,
             "Y": 100,
             "Width": 22,
-            "Height": 48,
+            "Height": 47,
             "TextId": "__SingleUse_4VSK",
             "TextRotation": "0",
             "Color": {
@@ -369,7 +369,7 @@
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 241,
+            "Height": 243,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -390,7 +390,7 @@
             "X": 30,
             "Y": 19,
             "Width": 137,
-            "Height": 241,
+            "Height": 243,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "Color": {
@@ -533,7 +533,7 @@
                 "X": 105,
                 "Y": 10,
                 "Width": 110,
-                "Height": 48,
+                "Height": 47,
                 "LockPosition": true,
                 "TextId": "__SingleUse_AS0H",
                 "TextRotation": "0",
@@ -1007,7 +1007,7 @@
             "X": 105,
             "Y": 10,
             "Width": 176,
-            "Height": 48,
+            "Height": 47,
             "TextId": "__SingleUse_11UT",
             "TextRotation": "0",
             "Color": {
@@ -2136,7 +2136,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 48,
+            "Height": 47,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {
@@ -2215,7 +2215,7 @@
             "X": 83,
             "Y": 6,
             "Width": 132,
-            "Height": 48,
+            "Height": 47,
             "TextId": "__SingleUse_YN5I",
             "TextRotation": "0",
             "Color": {
@@ -2444,7 +2444,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_fx_params",
+    "StartupScreenName": "screen_perf_mode",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

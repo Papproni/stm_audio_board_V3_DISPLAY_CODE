@@ -26,7 +26,7 @@ public:
     int adc_raw_max_value;
     
     // The current value
-    uint8_t last_value_u8;
+    int last_value_u8;
     uint8_t delta;
 
     // INIT FUNC
@@ -44,7 +44,7 @@ protected:
     uint8_t update_potmeter(uint32_t new_value);
     uint8_t update_btn();
 
-    int convert_adc_to_pot_values(int val);
+    int convert_adc_to_pot_values(uint32_t val);
     int convert_uint8t_to_pot_values(uint8_t val);
     param_type_ten paramtype;
 };

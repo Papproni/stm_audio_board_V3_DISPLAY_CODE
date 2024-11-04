@@ -71,7 +71,7 @@ void screen_fx_paramsView::setupScreen()
 			uint8_t y = this->parameter_positions_au8[j][1];
 			fx_controls_p[idx]->invalidate();
 #ifndef SIMULATOR
-			fx_controls_p[idx]->init_parameter((char *)fx_params_tun[i].name, 5, fx_params_tun[i].type_en, fx_params_tun[i].value_u8);
+			fx_controls_p[idx]->init_parameter((char *)fx_params_tun[idx].name, 5, fx_params_tun[idx].type_en, fx_params_tun[idx].value_u8);
 #endif
 			fx_controls_p[idx]->setXY(x, y);
 			fx_controls_p[idx]->invalidate();
@@ -118,15 +118,27 @@ void screen_fx_paramsView::update_screen()
 {
 	// TODO
 #ifndef SIMULATOR
-	for (int i = 0; i < 12; i++)
-	{
-		if (fx_controls_p[i]->update_ui(adc_vals_ptr[i % 6]))
+	if(FX_PAGE_1 == swipeContainer.getSelectedPage()){
+		for (int i = 0; i < 6; i++)
 		{
-			// needs offset by 1 in slotnum!
-			presenter->set_fx_param_new_value(i+1, fx_controls_p[i]->get_param_value());
+			if (fx_controls_p[i]->update_ui(adc_vals_ptr[i % 6]))
+			{
+				// needs offset by 1 in slotnum!
+				presenter->set_fx_param_new_value(i+1, fx_controls_p[i]->get_param_value());
+			}
+		}
+	}else{
+		for (int i = 6; i < 12; i++)
+		{
+			if (fx_controls_p[i]->update_ui(adc_vals_ptr[i % 6]))
+			{
+				// needs offset by 1 in slotnum!
+				presenter->set_fx_param_new_value(i+1, fx_controls_p[i]->get_param_value());
+			}
 		}
 	}
 	swipeContainer.invalidate();
+	
 #endif
 
 #ifdef SIMULATOR
