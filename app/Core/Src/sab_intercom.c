@@ -25,7 +25,7 @@ static void get_loop_data (struct sab_intercom_st* self, uint8_t loop_num_u8){
 	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_LOOP1FX+loop_num_u8-1,
 						I2C_MEMADD_SIZE_8BIT,
-						self->loop_data->all_pau8, SAB_I2C_REG_LOOPFX_LEN,
+						self->loop_data->all_pau8, sizeof(sab_loop_num_tun),
 						1000);
 }
 
@@ -112,6 +112,16 @@ static void set_loop_data  (struct sab_intercom_st* self, sab_loop_num_tun* loop
 				self->loop_data[loop_num-1].all_pau8, sizeof(sab_loop_num_tun), 1000);
 }
 
+static void set_current_fx_in_edit (struct sab_intercom_st* self,uint8_t fx_slot_u8){
+	self->current_fx_in_edit = fx_slot_u8;
+	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+				SAB_I2c_REG_CURRENT_FX,
+				I2C_MEMADD_SIZE_8BIT,
+				&self->current_fx_in_edit, sizeof(uint8_t), 1000);
+}
+
+
+
 /// @brief Saves data received from master (display)
 /// @param self
 /// @param buffer_pu8
@@ -191,7 +201,10 @@ uint32_t sab_intercom_get_reg_data_ptr(struct sab_intercom_st* self){
 		
 		case SAB_I2C_REG_IMPLEMENTED_EFFECTS:
 			return self->implemented_fx_data_ptr;
-
+		
+		case SAB_I2c_REG_CURRENT_FX:
+			return &self->current_fx_in_edit;
+		
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
@@ -237,6 +250,10 @@ uint8_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
 		
 		case SAB_I2C_REG_IMPLEMENTED_EFFECTS:
 			return sizeof(fx_data_tst)*self->num_of_implemented_effects;          // Returns pointer to the loop bypass union
+		
+		case SAB_I2c_REG_CURRENT_FX:
+			return sizeof(uint8_t);
+		
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
@@ -261,7 +278,8 @@ void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_Ha
     self->set_fx_param      = set_fx_param;
     self->set_loopbypass	= set_loopbypass;
 	self->set_loop_data 	= set_loop_data;
-
+	self->set_current_fx_in_edit = set_current_fx_in_edit;
+	
 	self->process_rx_buffer = sab_intercom_process_i2c_data;
 	self->get_reg_data_ptr = sab_intercom_get_reg_data_ptr;
 	self->get_reg_data_len = sab_intercom_get_reg_data_size;

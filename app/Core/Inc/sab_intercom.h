@@ -24,6 +24,8 @@ typedef struct sab_intercom_st{
     sab_save_tun        save_un;
     sab_loopbypass_tun  loopbypass_un;
 
+    uint8_t current_fx_in_edit;
+
     fx_data_tst*    implemented_fx_data_ptr;
     uint8_t         num_of_implemented_effects;
     // GETTER (read)
@@ -39,7 +41,7 @@ typedef struct sab_intercom_st{
     void (*set_fx_param)     (struct sab_intercom_st* self, uint8_t param_slot_u8, uint8_t new_value_u8);
     void (*set_loopbypass)  (struct sab_intercom_st* self, uint8_t loop, uint8_t state);
     void (*set_loop_data)  (struct sab_intercom_st* self,sab_loop_num_tun* loop_data_pun, uint8_t loop_num);
-
+    void (*set_current_fx_in_edit)  (struct sab_intercom_st* self,uint8_t fx_slot_u8);
     void (*next_preset)(struct sab_intercom_st* self);
     void (*prev_preset)(struct sab_intercom_st* self);
     

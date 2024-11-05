@@ -150,6 +150,12 @@ void Model::set_current_fx_slot_num(uint8_t slotnum){
 	this->current_fx_slot_u8 = slotnum;
 }
 
+// THis func is used to set the register in DSP,
+// So the paramters pointers are set to the current slot
+void Model::set_current_fx(){
+	uint8_t curr_fx_counter = this->current_fx_slot_u8+(this->current_loop_num_u8-1)*3;
+	this->intercom_pst->set_current_fx_in_edit(this->intercom_pst,curr_fx_counter);
+}
 /*
 1 = LOOP1
 2 = LOOP2

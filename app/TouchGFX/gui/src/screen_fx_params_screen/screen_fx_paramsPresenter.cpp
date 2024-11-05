@@ -26,6 +26,7 @@ void screen_fx_paramsPresenter::deactivate()
 void screen_fx_paramsPresenter::get_fx_param_data(){
 
 #ifndef SIMULATOR
+	model->set_current_fx();
 	for(int i = 1; i<=12; i++){
 		model->read_fx_param(i);
 		view.fx_params_tun[i-1] = model->get_fx_param(i-1);

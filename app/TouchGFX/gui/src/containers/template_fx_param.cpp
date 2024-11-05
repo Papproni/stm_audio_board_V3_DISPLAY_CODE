@@ -17,6 +17,11 @@ void template_fx_param::initialize()
 }
 
 
+uint8_t template_fx_param::convert_adc_to_param_values(uint32_t val)
+{
+	return UINT8_MAX-(double)val/(double)this->adc_raw_max_value*UINT8_MAX;
+}
+
 int template_fx_param::convert_adc_to_pot_values(uint32_t val)
 {
 	return (double)val/(double)this->adc_raw_max_value*this->potmeter_scale_value+this->potmeter_offset_value;
@@ -32,11 +37,13 @@ int template_fx_param::convert_uint8t_to_pot_values(uint8_t val)
 // returns 1 if change should be sent to the DSP module
 uint8_t template_fx_param::update_potmeter(uint32_t new_value){
     potmeter.invalidate();
+
     int value_converted = convert_adc_to_pot_values(new_value);
     if(abs(value_converted-last_value_u8)>delta){
         potmeter.setArc(this->potmeter_min_value, value_converted);
         potmeter.invalidate();
         last_value_u8 = value_converted;
+        this->param_value_u8 = convert_adc_to_param_values(new_value);
         return 1;
     }
     return 0;
@@ -48,6 +55,7 @@ uint8_t template_fx_param::update_btn(){
     uint8_t current_state = this->btn.getState();
     if(current_state != this->last_value_u8){
         this->last_value_u8  = current_state;
+        this->param_value_u8 = current_state;
         return 1;
     }
     // TODO
@@ -78,7 +86,7 @@ void template_fx_param::init_ui(uint8_t value_u8){
     case PARAM_TYPE_POT:
         this->potmeter.setVisible(true);
         potmeter.invalidate();
-        potmeter.setArc(this->potmeter_min_value, this->last_value_u8);
+        potmeter.setArc(this->potmeter_min_value, convert_uint8t_to_pot_values(value_u8));
         potmeter.invalidate();
         break;
     case PARAM_TYPE_BTN:
@@ -117,6 +125,6 @@ param_type_ten template_fx_param::get_param_type(){
 }
 
 uint8_t template_fx_param::get_param_value(){
-    return this->last_value_u8;
+    return this->param_value_u8;
 }
 

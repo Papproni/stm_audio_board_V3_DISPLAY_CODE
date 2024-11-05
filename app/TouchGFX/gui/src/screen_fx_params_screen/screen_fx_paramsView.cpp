@@ -118,7 +118,7 @@ void screen_fx_paramsView::update_screen()
 {
 	// TODO
 #ifndef SIMULATOR
-	if(FX_PAGE_1 == swipeContainer.getSelectedPage()){
+	if(swipeContainer.getSelectedPage() == 0){
 		for (int i = 0; i < 6; i++)
 		{
 			if (fx_controls_p[i]->update_ui(adc_vals_ptr[i % 6]))

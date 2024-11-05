@@ -53,7 +53,8 @@ public:
     void               set_fx_param(uint8_t slot, uint8_t value);
     void               set_loopbypass(uint8_t loop, uint8_t state);
     void               set_loop_data(sab_loop_num_tun* loop_data_pun);
-    
+    void               set_current_fx();
+
     void set_current_loop_num(uint8_t loopnum);
     void set_current_fx_slot_num(uint8_t slotnum);
 

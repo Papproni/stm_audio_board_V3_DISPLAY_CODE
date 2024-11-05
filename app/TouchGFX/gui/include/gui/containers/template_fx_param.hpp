@@ -27,6 +27,7 @@ public:
     
     // The current value
     int last_value_u8;
+    uint8_t param_value_u8;
     uint8_t delta;
 
     // INIT FUNC
@@ -44,6 +45,7 @@ protected:
     uint8_t update_potmeter(uint32_t new_value);
     uint8_t update_btn();
 
+    uint8_t convert_adc_to_param_values(uint32_t val);
     int convert_adc_to_pot_values(uint32_t val);
     int convert_uint8t_to_pot_values(uint8_t val);
     param_type_ten paramtype;
