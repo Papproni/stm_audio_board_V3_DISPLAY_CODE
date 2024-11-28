@@ -14,6 +14,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
 
 class screen_loopViewBase : public touchgfx::View<screen_loopPresenter>
 {
@@ -80,6 +81,9 @@ protected:
     touchgfx::Box box_FX_background_3;
     touchgfx::BoxWithBorder boxWithBorder3;
     touchgfx::TextAreaWithOneWildcard text_FXname_3;
+    touchgfx::ToggleButton toggleBtn_slot1;
+    touchgfx::ToggleButton toggleBtn_slot2;
+    touchgfx::ToggleButton toggleBtn_slot3;
 
     /*
      * Wildcard Buffers

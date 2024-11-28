@@ -25,7 +25,7 @@ screen_loopViewBase::screen_loopViewBase() :
     box1.setAlpha(62);
     add(box1);
 
-    line_signalPath.setPosition(0, 161, 320, 50);
+    line_signalPath.setPosition(0, 141, 320, 50);
     line_signalPathPainter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     line_signalPath.setPainter(line_signalPathPainter);
     line_signalPath.setStart(0, 0);
@@ -34,7 +34,7 @@ screen_loopViewBase::screen_loopViewBase() :
     line_signalPath.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line_signalPath);
 
-    btn_FX_slot_3.setXY(230, 131);
+    btn_FX_slot_3.setXY(230, 111);
     btn_FX_slot_3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_DXR1));
     btn_FX_slot_3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -42,7 +42,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_FX_slot_3.setAction(buttonCallback);
     add(btn_FX_slot_3);
 
-    btn_FX_slot_2.setXY(130, 131);
+    btn_FX_slot_2.setXY(130, 111);
     btn_FX_slot_2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_AUC8));
     btn_FX_slot_2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -50,7 +50,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_FX_slot_2.setAction(buttonCallback);
     add(btn_FX_slot_2);
 
-    btn_FX_slot_1.setXY(30, 131);
+    btn_FX_slot_1.setXY(30, 111);
     btn_FX_slot_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_FX_slot_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_A7HO));
     btn_FX_slot_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -82,7 +82,7 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_opt.setAction(buttonCallback);
     add(btn_opt);
 
-    cont_Slot1.setPosition(10, 110, 101, 101);
+    cont_Slot1.setPosition(10, 87, 101, 101);
     glow_1.setPosition(7, 10, 86, 80);
     glow_1.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
     glow_1.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -90,7 +90,7 @@ screen_loopViewBase::screen_loopViewBase() :
     glow_1.setVisible(false);
     cont_Slot1.add(glow_1);
 
-    box_FX_background_1.setPosition(11, 16, 78, 71);
+    box_FX_background_1.setPosition(11, 17, 78, 71);
     box_FX_background_1.setColor(touchgfx::Color::getColorFromRGB(255, 3, 3));
     cont_Slot1.add(box_FX_background_1);
 
@@ -111,7 +111,7 @@ screen_loopViewBase::screen_loopViewBase() :
 
     add(cont_Slot1);
 
-    cont_Slot2.setPosition(111, 111, 101, 101);
+    cont_Slot2.setPosition(111, 88, 101, 101);
     glow_2.setPosition(7, 11, 86, 80);
     glow_2.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
     glow_2.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -140,7 +140,7 @@ screen_loopViewBase::screen_loopViewBase() :
 
     add(cont_Slot2);
 
-    cont_Slot3.setPosition(210, 111, 101, 101);
+    cont_Slot3.setPosition(210, 88, 101, 101);
     glow_3.setPosition(7, 11, 86, 80);
     glow_3.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));
     glow_3.setBorderColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -168,6 +168,18 @@ screen_loopViewBase::screen_loopViewBase() :
     cont_Slot3.add(text_FXname_3);
 
     add(cont_Slot3);
+
+    toggleBtn_slot1.setXY(28, 191);
+    toggleBtn_slot1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    add(toggleBtn_slot1);
+
+    toggleBtn_slot2.setXY(131, 191);
+    toggleBtn_slot2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    add(toggleBtn_slot2);
+
+    toggleBtn_slot3.setXY(228, 191);
+    toggleBtn_slot3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    add(toggleBtn_slot3);
 }
 
 screen_loopViewBase::~screen_loopViewBase()

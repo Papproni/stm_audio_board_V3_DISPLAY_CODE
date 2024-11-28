@@ -1166,7 +1166,7 @@
           {
             "Type": "Line",
             "Name": "line_signalPath",
-            "Y": 161,
+            "Y": 141,
             "Width": 320,
             "Height": 50,
             "Color": {
@@ -1182,7 +1182,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_3",
             "X": 230,
-            "Y": 131,
+            "Y": 111,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1204,7 +1204,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_2",
             "X": 130,
-            "Y": 131,
+            "Y": 111,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1226,7 +1226,7 @@
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_1",
             "X": 30,
-            "Y": 131,
+            "Y": 111,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1310,7 +1310,7 @@
             "Type": "Container",
             "Name": "cont_Slot1",
             "X": 10,
-            "Y": 110,
+            "Y": 87,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1338,7 +1338,7 @@
                 "Type": "Box",
                 "Name": "box_FX_background_1",
                 "X": 11,
-                "Y": 16,
+                "Y": 17,
                 "Width": 78,
                 "Height": 71,
                 "Color": {
@@ -1383,7 +1383,7 @@
             "Type": "Container",
             "Name": "cont_Slot2",
             "X": 111,
-            "Y": 111,
+            "Y": 88,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1456,7 +1456,7 @@
             "Type": "Container",
             "Name": "cont_Slot3",
             "X": 210,
-            "Y": 111,
+            "Y": 88,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1527,6 +1527,36 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleBtn_slot1",
+            "X": 28,
+            "Y": 191,
+            "Width": 62,
+            "Height": 34,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleBtn_slot2",
+            "X": 131,
+            "Y": 191,
+            "Width": 62,
+            "Height": 34,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleBtn_slot3",
+            "X": 228,
+            "Y": 191,
+            "Width": 62,
+            "Height": 34,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light.png"
           }
         ],
         "Interactions": [
