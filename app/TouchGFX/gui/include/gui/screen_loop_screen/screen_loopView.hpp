@@ -25,8 +25,12 @@ public:
     virtual void btn_slot1_pressed();
     virtual void btn_slot2_pressed();
     virtual void btn_slot3_pressed();
+    virtual void toggleBtn_slot1_pressed();
+    virtual void toggleBtn_slot2_pressed();
+    virtual void toggleBtn_slot3_pressed();
     virtual void btn_del_pressed();
     virtual void btn_add_pressed();
+
 
     virtual void update_screen();
 
@@ -35,9 +39,7 @@ public:
 #ifndef SIMULATOR
     sab_loop_num_tun loop_num_un;
 #endif
-#ifdef SIMULATOR
     int inited;
-#endif // DEBUG
 //    virtual char* get_current_fx_name();
 protected:
     

@@ -171,14 +171,17 @@ screen_loopViewBase::screen_loopViewBase() :
 
     toggleBtn_slot1.setXY(28, 191);
     toggleBtn_slot1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    toggleBtn_slot1.setAction(buttonCallback);
     add(toggleBtn_slot1);
 
     toggleBtn_slot2.setXY(131, 191);
     toggleBtn_slot2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    toggleBtn_slot2.setAction(buttonCallback);
     add(toggleBtn_slot2);
 
     toggleBtn_slot3.setXY(228, 191);
     toggleBtn_slot3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    toggleBtn_slot3.setAction(buttonCallback);
     add(toggleBtn_slot3);
 }
 
@@ -235,5 +238,26 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
         //When btn_Add_fx clicked call virtual function
         //Call btn_add_pressed
         btn_add_pressed();
+    }
+    if (&src == &toggleBtn_slot1)
+    {
+        //toggleBtn_slot1_pressed
+        //When toggleBtn_slot1 clicked call virtual function
+        //Call toggleBtn_slot1_pressed
+        toggleBtn_slot1_pressed();
+    }
+    if (&src == &toggleBtn_slot2)
+    {
+        //toggleBtn_slot2_pressed
+        //When toggleBtn_slot2 clicked call virtual function
+        //Call toggleBtn_slot2_pressed
+        toggleBtn_slot2_pressed();
+    }
+    if (&src == &toggleBtn_slot3)
+    {
+        //toggleBtn_slot3_pressed
+        //When toggleBtn_slot3 clicked call virtual function
+        //Call toggleBtn_slot3_pressed
+        toggleBtn_slot3_pressed();
     }
 }

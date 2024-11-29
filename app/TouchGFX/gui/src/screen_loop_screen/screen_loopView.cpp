@@ -3,6 +3,7 @@
 screen_loopView::screen_loopView()
 {
 	state = NORMAL;
+	inited = 0;
 }
 
 void screen_loopView::setupScreen()
@@ -16,12 +17,30 @@ void screen_loopView::tearDownScreen()
 }
 
 
-
+void screen_loopView::toggleBtn_slot1_pressed(){
+	loop_num_un.slot1.fx_state_en = (this->toggleBtn_slot1.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
+	presenter->set_loop_data();
+}
+void screen_loopView::toggleBtn_slot2_pressed(){
+	loop_num_un.slot2.fx_state_en = (this->toggleBtn_slot2.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
+	presenter->set_loop_data();
+}
+void screen_loopView::toggleBtn_slot3_pressed(){
+	loop_num_un.slot3.fx_state_en = (this->toggleBtn_slot3.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
+	presenter->set_loop_data();
+}
 // #define SIMULATOR
 
 void screen_loopView::update_screen()
 {
 #ifndef SIMULATOR
+	if(0 == inited){
+		this->toggleBtn_slot1.forceState(loop_num_un.slot1.fx_state_en == FX_STATE_ON);
+		this->toggleBtn_slot2.forceState(loop_num_un.slot2.fx_state_en == FX_STATE_ON);
+		this->toggleBtn_slot3.forceState(loop_num_un.slot3.fx_state_en == FX_STATE_ON);
+		inited = 1;
+	}
+
 	if(strcmp(loop_num_un.slot1.name,"NONE")){
 		cont_Slot1.setVisible(true);
 		Unicode::strncpy(text_FXname_1Buffer,loop_num_un.slot1.name,10);
@@ -51,6 +70,8 @@ void screen_loopView::update_screen()
 	}else{
 		cont_Slot3.setVisible(false);
 	}
+	presenter->set_loop_data();
+
 #endif // !SIMULATOR
 
 

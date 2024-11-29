@@ -26,8 +26,8 @@ void screen_add_effectView::onItemSnap(int16_t itemIndex) {
     touchgfx_printf("Snapped item index: %d\n", itemIndex);
 #endif
     choosen_fx_idx = itemIndex;
-#ifndef SIMULATOR
     presenter->add_effect(choosen_fx_idx);
+#ifndef SIMULATOR
     application().gotoscreen_loopScreenNoTransition();
 #endif
 }

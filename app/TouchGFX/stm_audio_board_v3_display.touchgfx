@@ -1637,6 +1637,39 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_fx_params"
             }
+          },
+          {
+            "InteractionName": "toggleBtn_slot1_pressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleBtn_slot1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "toggleBtn_slot1_pressed"
+            }
+          },
+          {
+            "InteractionName": "toggleBtn_slot2_pressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleBtn_slot2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "toggleBtn_slot2_pressed"
+            }
+          },
+          {
+            "InteractionName": "toggleBtn_slot3_pressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleBtn_slot3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "toggleBtn_slot3_pressed"
+            }
           }
         ]
       },

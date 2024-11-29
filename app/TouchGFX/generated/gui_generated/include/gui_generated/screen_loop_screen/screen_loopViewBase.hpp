@@ -46,6 +46,18 @@ public:
     {
         // Override and implement this function in screen_loop
     }
+    virtual void toggleBtn_slot1_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
+    virtual void toggleBtn_slot2_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
+    virtual void toggleBtn_slot3_pressed()
+    {
+        // Override and implement this function in screen_loop
+    }
 
 protected:
     FrontendApplication& application() {
