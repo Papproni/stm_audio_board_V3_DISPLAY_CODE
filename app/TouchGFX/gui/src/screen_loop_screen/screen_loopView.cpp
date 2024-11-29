@@ -18,16 +18,22 @@ void screen_loopView::tearDownScreen()
 
 
 void screen_loopView::toggleBtn_slot1_pressed(){
+	#ifndef SIMULATOR
 	loop_num_un.slot1.fx_state_en = (this->toggleBtn_slot1.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
 	presenter->set_loop_data();
+	#endif
 }
 void screen_loopView::toggleBtn_slot2_pressed(){
+	#ifndef SIMULATOR
 	loop_num_un.slot2.fx_state_en = (this->toggleBtn_slot2.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
 	presenter->set_loop_data();
+	#endif
 }
 void screen_loopView::toggleBtn_slot3_pressed(){
+	#ifndef SIMULATOR
 	loop_num_un.slot3.fx_state_en = (this->toggleBtn_slot3.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
 	presenter->set_loop_data();
+	#endif
 }
 // #define SIMULATOR
 
