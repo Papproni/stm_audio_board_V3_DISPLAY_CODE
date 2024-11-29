@@ -70,7 +70,6 @@ void screen_loopView::update_screen()
 	}else{
 		cont_Slot3.setVisible(false);
 	}
-	presenter->set_loop_data();
 
 #endif // !SIMULATOR
 
@@ -167,6 +166,7 @@ void screen_loopView::btn_slot1_pressed()
 		cont_Slot1.setVisible(false);
 		#ifndef SIMULATOR
 		strcpy(loop_num_un.slot1.name,"NONE");
+		presenter->set_loop_data();
 		#endif
 		break;
 	default:
@@ -174,7 +174,6 @@ void screen_loopView::btn_slot1_pressed()
 	}
 	state = NORMAL;
 	cont_Slot1.invalidate();
-	presenter->set_loop_data();
 }
 
 void screen_loopView::btn_slot2_pressed()
@@ -201,6 +200,7 @@ void screen_loopView::btn_slot2_pressed()
 		cont_Slot2.setVisible(false);
 #ifndef SIMULATOR
 		strcpy(loop_num_un.slot2.name,"NONE");
+		presenter->set_loop_data();
 #endif
 		break;
 	default:
@@ -208,7 +208,6 @@ void screen_loopView::btn_slot2_pressed()
 	}
 	state = NORMAL;
 	cont_Slot2.invalidate();
-	presenter->set_loop_data();
 }
 
 void screen_loopView::btn_slot3_pressed()
@@ -235,6 +234,7 @@ void screen_loopView::btn_slot3_pressed()
 		cont_Slot3.setVisible(false);	
 #ifndef SIMULATOR
 		strcpy(loop_num_un.slot3.name,"NONE");
+		presenter->set_loop_data();
 #endif
 		break;
 	default:
@@ -242,5 +242,4 @@ void screen_loopView::btn_slot3_pressed()
 	}
 	state = NORMAL;
 	cont_Slot3.invalidate();
-	presenter->set_loop_data();
 }
