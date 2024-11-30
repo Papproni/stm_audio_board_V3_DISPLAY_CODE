@@ -76,6 +76,9 @@ void screen_loopView::update_screen()
 	}else{
 		cont_Slot3.setVisible(false);
 	}
+	cont_Slot1.invalidate();
+	cont_Slot2.invalidate();
+	cont_Slot3.invalidate();
 
 #endif // !SIMULATOR
 

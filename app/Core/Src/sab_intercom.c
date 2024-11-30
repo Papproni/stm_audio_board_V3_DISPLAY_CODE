@@ -25,7 +25,7 @@ static void get_loop_data (struct sab_intercom_st* self, uint8_t loop_num_u8){
 	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_LOOP1FX+loop_num_u8-1,
 						I2C_MEMADD_SIZE_8BIT,
-						self->loop_data->all_pau8, sizeof(sab_loop_num_tun),
+						self->loop_data[loop_num_u8-1].all_pau8, sizeof(sab_loop_num_tun),
 						1000);
 }
 
