@@ -40,12 +40,12 @@ void screen_loopView::toggleBtn_slot3_pressed(){
 void screen_loopView::update_screen()
 {
 #ifndef SIMULATOR
-	if(0 == inited){
-		this->toggleBtn_slot1.forceState(loop_num_un.slot1.fx_state_en == FX_STATE_ON);
-		this->toggleBtn_slot2.forceState(loop_num_un.slot2.fx_state_en == FX_STATE_ON);
-		this->toggleBtn_slot3.forceState(loop_num_un.slot3.fx_state_en == FX_STATE_ON);
-		inited = 1;
-	}
+	this->toggleBtn_slot1.forceState(loop_num_un.slot1.fx_state_en == FX_STATE_ON);
+	this->toggleBtn_slot2.forceState(loop_num_un.slot2.fx_state_en == FX_STATE_ON);
+	this->toggleBtn_slot3.forceState(loop_num_un.slot3.fx_state_en == FX_STATE_ON);
+	toggleBtn_slot1.invalidate();
+	toggleBtn_slot2.invalidate();
+	toggleBtn_slot3.invalidate();
 
 	if(strcmp(loop_num_un.slot1.name,"NONE")){
 		cont_Slot1.setVisible(true);
@@ -53,8 +53,10 @@ void screen_loopView::update_screen()
 		box_FX_background_1.setColor(touchgfx::Color::getColorFromRGB(loop_num_un.slot1.color[0], loop_num_un.slot1.color[1], loop_num_un.slot1.color[2]));
 		text_FXname_1.resizeToCurrentText();
 		text_FXname_1.invalidate();
+		toggleBtn_slot1.setVisible(true);
 	}else{
 		cont_Slot1.setVisible(false);
+		toggleBtn_slot1.setVisible(false);
 	}
 
 	if(strcmp(loop_num_un.slot2.name,"NONE")){
@@ -63,9 +65,10 @@ void screen_loopView::update_screen()
 		box_FX_background_2.setColor(touchgfx::Color::getColorFromRGB(loop_num_un.slot2.color[0], loop_num_un.slot2.color[1], loop_num_un.slot2.color[2]));
 		text_FXname_2.resizeToCurrentText();
 		text_FXname_2.invalidate();
-
+		toggleBtn_slot2.setVisible(true);
 	}else{
 		cont_Slot2.setVisible(false);
+		toggleBtn_slot2.setVisible(false);
 	}
 	if(strcmp(loop_num_un.slot3.name,"NONE")){
 		cont_Slot3.setVisible(true);
@@ -73,8 +76,10 @@ void screen_loopView::update_screen()
 		box_FX_background_3.setColor(touchgfx::Color::getColorFromRGB(loop_num_un.slot3.color[0], loop_num_un.slot3.color[1], loop_num_un.slot3.color[2]));
 		text_FXname_3.resizeToCurrentText();
 		text_FXname_3.invalidate();
+		toggleBtn_slot3.setVisible(true);
 	}else{
 		cont_Slot3.setVisible(false);
+		toggleBtn_slot3.setVisible(false);
 	}
 	cont_Slot1.invalidate();
 	cont_Slot2.invalidate();
