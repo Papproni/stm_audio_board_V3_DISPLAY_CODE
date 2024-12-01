@@ -96,6 +96,14 @@ static void set_loopbypass (struct sab_intercom_st* self,uint8_t loop, uint8_t s
 				I2C_MEMADD_SIZE_8BIT,
 				&self->loopbypass_un.all_u8, SAB_I2C_REG_LOOPBYPASSSTATE_LEN, 1000);
 }
+static void set_save (struct sab_intercom_st* self){
+	
+	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+				SAB_I2C_REG_SAVEPRESET,
+				I2C_MEMADD_SIZE_8BIT,
+				&self->save_un, sizeof(sab_save_tun), 1000);
+}
+
 /*
 	loop_num:
 		1 = LOOP1
@@ -279,10 +287,14 @@ void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_Ha
     self->set_loopbypass	= set_loopbypass;
 	self->set_loop_data 	= set_loop_data;
 	self->set_current_fx_in_edit = set_current_fx_in_edit;
-	
+	self->set_save				=set_save;
+
 	self->process_rx_buffer = sab_intercom_process_i2c_data;
 	self->get_reg_data_ptr = sab_intercom_get_reg_data_ptr;
 	self->get_reg_data_len = sab_intercom_get_reg_data_size;
+
+
+	self->save_un.save_command = 1;
 }
 
 static test_fx_params_fill(struct sab_intercom_st* self){

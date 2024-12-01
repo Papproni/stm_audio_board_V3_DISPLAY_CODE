@@ -22,6 +22,7 @@ void screen_editPresenter::deactivate()
 void screen_editPresenter::update_screen()
 {
 #ifndef SIMULATOR
+    model->read_loopbypass();
     view.loopbypass = model->get_loopbypass();
 #endif
 	view.update_screen();

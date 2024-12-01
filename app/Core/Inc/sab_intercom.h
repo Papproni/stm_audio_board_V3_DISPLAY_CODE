@@ -44,6 +44,7 @@ typedef struct sab_intercom_st{
     void (*set_current_fx_in_edit)  (struct sab_intercom_st* self,uint8_t fx_slot_u8);
     void (*next_preset)(struct sab_intercom_st* self);
     void (*prev_preset)(struct sab_intercom_st* self);
+    void (*set_save)     (struct sab_intercom_st* self);
     
     // I2C comm handlers
     void (*process_rx_buffer) (struct sab_intercom_st* self, uint8_t*buffer_pu8, uint8_t size_u8);

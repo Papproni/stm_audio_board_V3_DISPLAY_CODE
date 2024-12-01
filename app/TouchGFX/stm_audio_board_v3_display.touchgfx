@@ -203,6 +203,17 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_config"
             }
+          },
+          {
+            "InteractionName": "btn_save_clicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btn_save"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "btn_save_clicked"
+            }
           }
         ]
       },

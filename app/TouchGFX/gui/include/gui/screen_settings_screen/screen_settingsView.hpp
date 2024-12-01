@@ -11,6 +11,7 @@ public:
     virtual ~screen_settingsView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void btn_save_clicked();
 protected:
 };
 

@@ -46,6 +46,7 @@ screen_settingsViewBase::screen_settingsViewBase() :
     btn_save.setLabelText(touchgfx::TypedText(T___SINGLEUSE_MVZP));
     btn_save.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_save.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_save.setAction(buttonCallback);
     add(btn_save);
 
     btn_tuner.setXY(168, 87);
@@ -111,5 +112,12 @@ void screen_settingsViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //When btn_config clicked change screen to screen_config
         //Go to screen_config with no screen transition
         application().gotoscreen_configScreenNoTransition();
+    }
+    if (&src == &btn_save)
+    {
+        //btn_save_clicked
+        //When btn_save clicked call virtual function
+        //Call btn_save_clicked
+        btn_save_clicked();
     }
 }

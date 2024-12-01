@@ -10,6 +10,9 @@ void screen_settingsView::setupScreen()
     screen_settingsViewBase::setupScreen();
 }
 
+void screen_settingsView::btn_save_clicked(){
+    presenter->save_preset();
+}
 void screen_settingsView::tearDownScreen()
 {
     screen_settingsViewBase::tearDownScreen();

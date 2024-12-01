@@ -116,7 +116,7 @@ fx_data_tst *Model::get_implemented_fx(){
 
 
 void Model::set_save(){
-	// TODO
+	this->intercom_pst->set_save(this->intercom_pst);
 }
 
 void Model::set_fx_param(uint8_t slot, uint8_t value){

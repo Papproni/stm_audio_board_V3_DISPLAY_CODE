@@ -17,6 +17,14 @@ public:
     virtual ~screen_settingsViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void btn_save_clicked()
+    {
+        // Override and implement this function in screen_settings
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
