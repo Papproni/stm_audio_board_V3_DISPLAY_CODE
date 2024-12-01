@@ -19,7 +19,7 @@ void screen_loopView::tearDownScreen()
 
 void screen_loopView::toggleBtn_slot1_pressed(){
 	#ifndef SIMULATOR
-
+	loop_num_un.slot1.fx_state_en = (this->toggleBtn_slot1.getState() == 0) ? FX_STATE_OFF : FX_STATE_ON;
 	presenter->set_loop_data();
 	#endif
 }
