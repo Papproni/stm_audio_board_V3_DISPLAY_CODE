@@ -42,7 +42,7 @@ screen_settingsViewBase::screen_settingsViewBase() :
     add(btn_info);
 
     btn_save.setXY(10, 87);
-    btn_save.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID));
+    btn_save.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUND_DISABLED_ID));
     btn_save.setLabelText(touchgfx::TypedText(T___SINGLEUSE_MVZP));
     btn_save.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_save.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));

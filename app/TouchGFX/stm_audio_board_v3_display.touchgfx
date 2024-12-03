@@ -83,7 +83,7 @@
             "Y": 87,
             "Width": 144,
             "Height": 60,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled.png",
             "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
             "TextId": "__SingleUse_MVZP",
             "ReleasedColor": {
