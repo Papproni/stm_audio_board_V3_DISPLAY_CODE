@@ -103,15 +103,11 @@ void template_fx_param::init_parameter(char* char_ptr, uint8_t len,param_type_te
     if(PARAM_TYPE_POT != type && PARAM_TYPE_BTN != type){
         return;
     }
-
     
     Unicode::strncpy(param_nameBuffer,char_ptr,len);
     param_name.resizeToCurrentText();
     param_name.setVisible(true);
     param_name.invalidate();
-
-    // btn1.forceState(true);
-    // touchgfx_printf("%d",btn1.getState());
 
     this->paramtype     = type;
     this->last_value_u8 = value_u8;

@@ -70,7 +70,7 @@ void MX_USB_DEVICE_Init(void)
   /* Init Device Library, add supported class and start the library. */
   if (USBD_Init(&hUsbDeviceHS, &HS_Desc, DEVICE_HS) != USBD_OK)
   {
-//    Error_Handler();
+    Error_Handler();
   }
   if (USBD_RegisterClass(&hUsbDeviceHS, &USBD_DFU) != USBD_OK)
   {

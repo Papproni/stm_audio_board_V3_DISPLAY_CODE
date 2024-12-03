@@ -34,7 +34,6 @@ public:
 
     template_fx_param *fx_controls_p[12];
 
-    virtual void set_sliders_value(uint32_t *val);
     uint32_t *adc_vals_ptr;
 #ifndef SIMULATOR
     sab_fx_param_tun fx_params_tun[12];

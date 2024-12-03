@@ -104,16 +104,6 @@ void screen_fx_paramsView::tearDownScreen()
 	screen_fx_paramsViewBase::tearDownScreen();
 }
 
-void screen_fx_paramsView::set_sliders_value(uint32_t *val)
-{
-	// ParamSlot1.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[0]));
-	// ParamSlot2.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[1]));
-	// ParamSlot3.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[2]));
-	// ParamSlot4.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[3]));
-	// ParamSlot5.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[4]));
-	// ParamSlot6.setArc(this->potmeter_min_value, convert_adc_to_pot_values(val[5]));
-}
-
 void screen_fx_paramsView::update_screen()
 {
 	// TODO

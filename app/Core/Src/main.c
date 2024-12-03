@@ -83,49 +83,6 @@ static void MX_ADC3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-void JumpToBootloader(void)
-{
-	  uint32_t i=0;
-	  void (*SysMemBootJump)(void);
-
-	  /* Set the address of the entry point to bootloader */
-	     volatile uint32_t BootAddr = 0x1FF09800;
-
-	  /* Disable all interrupts */
-	     __disable_irq();
-
-	  /* Disable Systick timer */
-	     SysTick->CTRL = 0;
-
-	  /* Set the clock to the default state */
-	     HAL_RCC_DeInit();
-
-	  /* Clear Interrupt Enable Register & Interrupt Pending Register */
-	     for (i=0;i<5;i++)
-	     {
-		  NVIC->ICER[i]=0xFFFFFFFF;
-		  NVIC->ICPR[i]=0xFFFFFFFF;
-	     }
-
-	  /* Re-enable all interrupts */
-	     __enable_irq();
-
-	  /* Set up the jump to booloader address + 4 */
-	     SysMemBootJump = (void (*)(void)) (*((uint32_t *) ((BootAddr + 4))));
-
-	  /* Set the main stack pointer to the bootloader stack */
-	     __set_MSP(*(uint32_t *)BootAddr);
-
-	  /* Call the function to jump to bootloader location */
-	     SysMemBootJump();
-
-	  /* Jump is done successfully */
-	     while (1)
-	     {
-	      /* Code should never reach this loop */
-	     }
-}
-
 #define NUM_OF_POTS 6
 volatile uint32_t adc_values_au32[NUM_OF_POTS];
 volatile uint32_t temperature_u32;
@@ -152,14 +109,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 	}
 }
-
-int scale_adc_to_8bit(int val)
-{
-	return 255-(double)val/(double)65535*255;
-}
-
-volatile uint8_t value1,value2,value3;
-volatile uint8_t value1_prev,value2_prev,value3_prev;
 
 /* USER CODE END 0 */
 
@@ -244,17 +193,9 @@ int main(void)
 	sConfig.OffsetSignedSaturation = DISABLE;
 
 	int i = 0;
-
-
-//	JumpToBootloader();
-
   uint8_t fx_slot_counter_u8 = 1;
   while (1)
   {
-
-
-
-
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_Start(&hadc3);
 	  // Poll for conversion to complete
@@ -266,37 +207,14 @@ int main(void)
 
 		  temp_f32 = __HAL_ADC_CALC_TEMPERATURE(3240,temperature_u32,ADC_RESOLUTION_16B);
 		  sConfig.Channel = adc_channels[i];
-		i++;
-		if(i>=6){
-			i=0;
-			temperature_u32 = HAL_ADC_GetValue(&hadc3);
-//			HAL_I2C_Mem_Write(&hi2c3, SLAVE_ADDR, 1, I2C_MEMADD_SIZE_8BIT, TX_Buffer, 6, 1000);
-//			 value1 = scale_adc_to_8bit(adc_values_au32[0]);
-//			 value2 = scale_adc_to_8bit(adc_values_au32[1]);
-//			 value3 = scale_adc_to_8bit(adc_values_au32[2]);
-//
-//      if(value1_prev!=value1){
-//        sab_intercom_st.set_fx_param(&sab_intercom_st,1,value1);
-//      }
-//      if(value2_prev!= value2){
-//        sab_intercom_st.set_fx_param(&sab_intercom_st,2,value2);
-//      }
-//
-//      if(value3_prev!= value3){
-//        sab_intercom_st.set_fx_param(&sab_intercom_st,3,value3);
-//      }
-//      sab_intercom_st.get_preset_data(&sab_intercom_st);
-
-//      value1_prev = value1;
-//      value2_prev = value2;
-//      value3_prev = value3;
-//			sab_intercom.get_preset_data(&sab_intercom);
-//			sab_intercom.get_fx_param(&sab_intercom,fx_slot_counter_u8);
-//      sab_intercom_st.get_loop_data(&sab_intercom_st,1);
-			fx_slot_counter_u8++;
-			if(fx_slot_counter_u8>12){
-				fx_slot_counter_u8 = 1;
-			}
+      i++;
+      if(i>=6){
+        i=0;
+        temperature_u32 = HAL_ADC_GetValue(&hadc3);
+        fx_slot_counter_u8++;
+        if(fx_slot_counter_u8>12){
+          fx_slot_counter_u8 = 1;
+        }
 		}
 		if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
 		 {
@@ -304,10 +222,10 @@ int main(void)
 		 }
 	  }
 
-
+    MX_TouchGFX_Process();
     /* USER CODE END WHILE */
 
-  MX_TouchGFX_Process();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
