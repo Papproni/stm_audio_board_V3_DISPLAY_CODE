@@ -129,6 +129,14 @@ static void set_current_fx_in_edit (struct sab_intercom_st* self,uint8_t fx_slot
 				&self->current_fx_in_edit, sizeof(uint8_t), 1000);
 }
 
+static void set_dsp_fw_update_flg(struct sab_intercom_st* self){
+	self->dsp_fw_update_flg = 1;
+		HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+					SAB_I2C_REG_DSP_FW_UPDATE,
+					I2C_MEMADD_SIZE_8BIT,
+					&self->dsp_fw_update_flg, sizeof(uint8_t), 1000);
+}
+
 
 
 /// @brief Saves data received from master (display)
@@ -214,6 +222,9 @@ uint32_t sab_intercom_get_reg_data_ptr(struct sab_intercom_st* self){
 		case SAB_I2c_REG_CURRENT_FX:
 			return &self->current_fx_in_edit;
 		
+		case SAB_I2C_REG_DSP_FW_UPDATE:
+			return &self->dsp_fw_update_flg;
+
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
@@ -263,10 +274,15 @@ uint8_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
 		case SAB_I2c_REG_CURRENT_FX:
 			return sizeof(uint8_t);
 		
+		case SAB_I2C_REG_DSP_FW_UPDATE:
+			return sizeof(uint8_t);
+
 		default:
 			return NULL;  // Return NULL if the register enum is out of bounds
     }
 }
+
+
 
 // ----------------------------------INIT-------------------------------------------------
 void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_HandleTypeDef *i2c_h){
@@ -289,13 +305,15 @@ void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_Ha
 	self->set_loop_data 	= set_loop_data;
 	self->set_current_fx_in_edit = set_current_fx_in_edit;
 	self->set_save				=set_save;
+	self->set_dsp_fw_update_flg = set_dsp_fw_update_flg;
 
 	self->process_rx_buffer = sab_intercom_process_i2c_data;
 	self->get_reg_data_ptr = sab_intercom_get_reg_data_ptr;
 	self->get_reg_data_len = sab_intercom_get_reg_data_size;
 
 
-	self->save_un.save_command = 1;
+	self->save_un.save_command 	= 1;
+	self->dsp_fw_update_flg 	= 0;
 }
 
 static test_fx_params_fill(struct sab_intercom_st* self){

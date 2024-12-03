@@ -12,6 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void updatescreen();
+
+    virtual void btn_DSP_fw_update_pressed();
 protected:
 };
 

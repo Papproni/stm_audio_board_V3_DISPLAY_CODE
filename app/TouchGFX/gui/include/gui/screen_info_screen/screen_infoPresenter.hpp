@@ -20,12 +20,14 @@ public:
     virtual void activate();
 
     virtual void update_screen();
+    void update_DSP();
 
     /**
      * The deactivate function is called automatically when this screen is "switched out"
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
+
 
     virtual ~screen_infoPresenter() {}
 

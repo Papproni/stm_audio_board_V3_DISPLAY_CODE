@@ -21,3 +21,8 @@ void screen_infoPresenter::update_screen()
 {
 	view.updatescreen();
 }
+
+
+void screen_infoPresenter::update_DSP(){
+    model->set_dsp_fw_update_flg();
+}

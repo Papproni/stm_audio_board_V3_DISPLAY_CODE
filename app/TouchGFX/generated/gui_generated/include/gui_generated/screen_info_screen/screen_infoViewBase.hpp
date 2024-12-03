@@ -23,11 +23,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void function2()
-    {
-        // Override and implement this function in screen_info
-    }
-    virtual void function4()
+    virtual void btn_DSP_fw_update_pressed()
     {
         // Override and implement this function in screen_info
     }
@@ -45,7 +41,6 @@ protected:
     touchgfx::ScrollableContainer scrollableDeugInfo;
     touchgfx::ClickListener< touchgfx::Box > MAIN_BACKGROUND_1;
     touchgfx::ButtonWithLabel btn_DSP_USB_FWUpdate_1;
-    touchgfx::ButtonWithLabel btn_DISPLAY_USB_FWUpdate;
     touchgfx::TextArea debug_top_text;
     touchgfx::TextArea textArea1_1_1_1;
     touchgfx::TextArea textArea1_1_1;

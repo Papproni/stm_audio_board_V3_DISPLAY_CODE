@@ -156,6 +156,10 @@ void Model::set_current_fx(){
 	uint8_t curr_fx_counter = this->current_fx_slot_u8+(this->current_loop_num_u8-1)*3;
 	this->intercom_pst->set_current_fx_in_edit(this->intercom_pst,curr_fx_counter);
 }
+
+void Model::set_dsp_fw_update_flg(){
+	this->intercom_pst->set_dsp_fw_update_flg(this->intercom_pst);
+}
 /*
 1 = LOOP1
 2 = LOOP2

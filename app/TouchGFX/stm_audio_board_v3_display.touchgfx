@@ -496,36 +496,13 @@
                 "Type": "ButtonWithLabel",
                 "Name": "btn_DSP_USB_FWUpdate_1",
                 "X": 50,
-                "Y": 313,
+                "Y": 248,
                 "Width": 228,
                 "Height": 60,
                 "LockPosition": true,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
                 "TextId": "1",
-                "ReleasedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "PressedColor": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "TextRotation": "0"
-              },
-              {
-                "Type": "ButtonWithLabel",
-                "Name": "btn_DISPLAY_USB_FWUpdate",
-                "X": 48,
-                "Y": 244,
-                "Width": 228,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_round_normal.png",
-                "TextId": "__SingleUse_ON0F",
                 "ReleasedColor": {
                   "Red": 255,
                   "Green": 255,
@@ -769,18 +746,7 @@
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "function2"
-            }
-          },
-          {
-            "InteractionName": "btn_DISPLAY_fw_update_pressed",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "btn_DISPLAY_USB_FWUpdate"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "function4"
+              "FunctionName": "btn_DSP_fw_update_pressed"
             }
           }
         ]

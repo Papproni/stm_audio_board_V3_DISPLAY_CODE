@@ -169,9 +169,6 @@
       <Text Id="__SingleUse_AS0H" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">DEBUG</Translation>
       </Text>
-      <Text Id="__SingleUse_ON0F" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">DSP FW UPDATE</Translation>
-      </Text>
       <Text Id="__SingleUse_7JJQ" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">A#</Translation>
       </Text>

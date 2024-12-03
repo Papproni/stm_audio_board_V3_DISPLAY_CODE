@@ -15,6 +15,10 @@ void screen_infoView::tearDownScreen()
     screen_infoViewBase::tearDownScreen();
 }
 
+
+ void screen_infoView::btn_DSP_fw_update_pressed(){
+    presenter->update_DSP();
+ }
 void screen_infoView::updatescreen()
 {
 	scrollableDeugInfo.invalidate();
