@@ -62,9 +62,11 @@ static void get_num_of_implemented_effects  (struct sab_intercom_st* self){
 }
 
 static void get_implemented_effects  (struct sab_intercom_st* self){
-	get_num_of_implemented_effects(self);
 
-	while(!self->num_of_implemented_effects){}
+
+	while(!self->num_of_implemented_effects){
+		get_num_of_implemented_effects(self);
+	}
 	
 	self->implemented_fx_data_ptr = malloc(sizeof(fx_data_tst)*self->num_of_implemented_effects);
 	if(NULL == self->implemented_fx_data_ptr){
