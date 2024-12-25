@@ -39,7 +39,7 @@ from Original source:
 #define READ_TIMES 	5
 #define LOST_VAL 	1
 #define ERR_RANGE 50
-#define Z_THRESHOLD     250
+#define Z_THRESHOLD     350
 #define Z_THRESHOLD_INT	75
 #define MSEC_THRESHOLD  3
 
