@@ -200,9 +200,9 @@ void screen_loopViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& 
     if (&src == &btn_opt)
     {
         //To_setting
-        //When btn_opt clicked change screen to screen_settings
-        //Go to screen_settings with no screen transition
-        application().gotoscreen_settingsScreenNoTransition();
+        //When btn_opt clicked change screen to screen_edit
+        //Go to screen_edit with no screen transition
+        application().gotoscreen_editScreenNoTransition();
     }
     if (&src == &btn_FX_slot_1)
     {

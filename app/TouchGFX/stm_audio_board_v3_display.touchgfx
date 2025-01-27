@@ -1546,7 +1546,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_settings"
+              "ActionComponent": "screen_edit"
             }
           },
           {
