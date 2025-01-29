@@ -290,6 +290,7 @@ void LCD_WR_REG(uint8_t data)
 	if (HAL_SPI_Transmit(&hspi5, &data, 1, 1000) != HAL_OK) {
 		Error_Handler();
 	}
+
 }
 
 static void LCD_WR_DATA(uint8_t data)

@@ -60,6 +60,8 @@
     "*.c": "c",
     "type_traits": "cpp",
     "sab_intercom.h": "c",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "touchgfx_datatransfer.h": "c",
+    "ili9341.h": "c"
   }
 }
