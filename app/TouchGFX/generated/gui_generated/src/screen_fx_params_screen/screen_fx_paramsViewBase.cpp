@@ -11,7 +11,7 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     buttonCallback(this, &screen_fx_paramsViewBase::buttonCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
-    
+
     __background.setPosition(0, 0, 320, 240);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);

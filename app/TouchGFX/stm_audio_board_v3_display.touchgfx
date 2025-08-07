@@ -2532,9 +2532,7 @@
     "ProjectFile": "../stm_audio_board_v3_display.ioc",
     "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
     "OptionalComponents": [],
-    "AdditionalFeatures": [
-      "Vector"
-    ]
+    "AdditionalFeatures": []
   },
-  "Version": "4.22.1"
+  "Version": "4.25.0"
 }

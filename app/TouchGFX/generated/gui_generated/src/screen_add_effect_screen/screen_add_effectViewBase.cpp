@@ -45,6 +45,7 @@ screen_add_effectViewBase::screen_add_effectViewBase() :
     scrollList_FX.setNumberOfItems(2);
     scrollList_FX.setPadding(60, 0);
     scrollList_FX.setSnapping(true);
+    scrollList_FX.setOvershootPercentage(0);
     scrollList_FX.setDrawableSize(151, 25);
     scrollList_FX.setDrawables(scrollList_FXListItems, updateItemCallback);
     add(scrollList_FX);
