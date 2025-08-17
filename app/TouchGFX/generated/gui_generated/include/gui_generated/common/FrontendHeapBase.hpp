@@ -9,6 +9,8 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
@@ -30,6 +32,8 @@
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
 #include <gui/screen_add_effect_screen/screen_add_effectView.hpp>
 #include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
+#include <gui/screen_startup_screen/screen_startupView.hpp>
+#include <gui/screen_startup_screen/screen_startupPresenter.hpp>
 
 
 /**
@@ -61,7 +65,8 @@ public:
             touchgfx::meta::TypeList< screen_loopView,
             touchgfx::meta::TypeList< screen_editView,
             touchgfx::meta::TypeList< screen_add_effectView,
-            touchgfx::meta::Nil > > > > > > > >
+            touchgfx::meta::TypeList< screen_startupView,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -82,7 +87,8 @@ public:
             touchgfx::meta::TypeList< screen_loopPresenter,
             touchgfx::meta::TypeList< screen_editPresenter,
             touchgfx::meta::TypeList< screen_add_effectPresenter,
-            touchgfx::meta::Nil > > > > > > > >
+            touchgfx::meta::TypeList< screen_startupPresenter,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -95,7 +101,8 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::Nil
+            touchgfx::meta::TypeList< CoverTransition<EAST>,
+            touchgfx::meta::Nil >
             > GeneratedTransitionTypes;
 
     /**
@@ -105,7 +112,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreen_perf_modeScreenNoTransition();
+        app.gotoscreen_startupScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

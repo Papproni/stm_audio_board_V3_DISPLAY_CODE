@@ -91,6 +91,7 @@ void screen_loopView::update_screen()
 
 	switch (state)
 	{
+    case ADD_FX:
 	case DELETE_FX:
 		glow_1.setVisible(true);
 		glow_2.setVisible(true);
@@ -152,7 +153,11 @@ void screen_loopView::btn_del_pressed(){
 }
 
 void screen_loopView::btn_add_pressed(){
-	state = ADD_FX;
+	if(ADD_FX == state){
+		state = NORMAL;
+	}else{
+		state = ADD_FX;
+	}
 }
 
 void screen_loopView::btn_slot1_pressed()

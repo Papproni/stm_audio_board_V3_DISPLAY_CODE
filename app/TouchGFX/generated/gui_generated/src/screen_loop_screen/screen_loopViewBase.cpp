@@ -4,8 +4,8 @@
 #include <gui_generated/screen_loop_screen/screen_loopViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 screen_loopViewBase::screen_loopViewBase() :
     buttonCallback(this, &screen_loopViewBase::buttonCallbackHandler)
@@ -16,11 +16,38 @@ screen_loopViewBase::screen_loopViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    MAIN_BACKGROUND.setPosition(0, 0, 320, 240);
+    MAIN_BACKGROUND.setPosition(-2, 0, 320, 240);
     MAIN_BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(MAIN_BACKGROUND);
 
-    box1.setPosition(-2, 78, 322, 162);
+    Preset_text_backgnd.setPosition(191, 0, 69, 30);
+    Preset_text_backgnd.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(Preset_text_backgnd);
+
+    Loop_text_backgnd.setPosition(47, 0, 94, 27);
+    Loop_text_backgnd.setColor(touchgfx::Color::getColorFromRGB(89, 89, 89));
+    add(Loop_text_backgnd);
+
+    box2.setPosition(225, 30, 18, 30);
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 174, 0));
+    box2.setAlpha(80);
+    add(box2);
+
+    box2_2.setPosition(243, 30, 18, 30);
+    box2_2.setColor(touchgfx::Color::getColorFromRGB(83, 14, 194));
+    box2_2.setAlpha(80);
+    add(box2_2);
+
+    box2_1.setPosition(208, 30, 17, 30);
+    box2_1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    box2_1.setAlpha(80);
+    add(box2_1);
+
+    box2_1_3.setPosition(190, 30, 18, 30);
+    box2_1_3.setColor(touchgfx::Color::getColorFromRGB(77, 255, 0));
+    add(box2_1_3);
+
+    box1.setPosition(-2, 94, 322, 146);
     box1.setColor(touchgfx::Color::getColorFromRGB(248, 247, 255));
     box1.setAlpha(62);
     add(box1);
@@ -33,6 +60,46 @@ screen_loopViewBase::screen_loopViewBase() :
     line_signalPath.setLineWidth(10);
     line_signalPath.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line_signalPath);
+
+    Preset_text_1.setXY(193, 33);
+    Preset_text_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Preset_text_1.setLinespacing(0);
+    Preset_text_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_M2UR));
+    add(Preset_text_1);
+
+    Preset_text_1_3.setXY(210, 33);
+    Preset_text_1_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Preset_text_1_3.setLinespacing(0);
+    Preset_text_1_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CAJE));
+    add(Preset_text_1_3);
+
+    Preset_text_1_4.setXY(227, 33);
+    Preset_text_1_4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Preset_text_1_4.setLinespacing(0);
+    Preset_text_1_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BQO9));
+    add(Preset_text_1_4);
+
+    box2_1_2.setPosition(180, 0, 90, 30);
+    box2_1_2.setColor(touchgfx::Color::getColorFromRGB(82, 82, 82));
+    add(box2_1_2);
+
+    Preset_text_1_5.setXY(245, 33);
+    Preset_text_1_5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Preset_text_1_5.setLinespacing(0);
+    Preset_text_1_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9URI));
+    add(Preset_text_1_5);
+
+    Preset_text_1_2.setXY(191, 3);
+    Preset_text_1_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Preset_text_1_2.setLinespacing(0);
+    Preset_text_1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9Z0E));
+    add(Preset_text_1_2);
+
+    Preset_text_1_1.setXY(81, 33);
+    Preset_text_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Preset_text_1_1.setLinespacing(0);
+    Preset_text_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TBDA));
+    add(Preset_text_1_1);
 
     btn_FX_slot_3.setXY(230, 111);
     btn_FX_slot_3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
@@ -49,6 +116,12 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_FX_slot_2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     btn_FX_slot_2.setAction(buttonCallback);
     add(btn_FX_slot_2);
+
+    Preset_text.setXY(63, 1);
+    Preset_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Preset_text.setLinespacing(0);
+    Preset_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_64PR));
+    add(Preset_text);
 
     btn_FX_slot_1.setXY(30, 111);
     btn_FX_slot_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));

@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
+#include <touchgfx/widgets/QRCode.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
@@ -40,6 +41,9 @@ protected:
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::ScrollableContainer scrollableDeugInfo;
     touchgfx::ClickListener< touchgfx::Box > MAIN_BACKGROUND_1;
+    uint8_t qrBuffer_qrCode1[QRCODE_BUFFER_SIZE(6)];
+    uint8_t qrScratchBuffer_qrCode1[QRCODE_BUFFER_SIZE(6)];
+    touchgfx::QRCode qrCode1;
     touchgfx::ButtonWithLabel btn_DSP_USB_FWUpdate_1;
     touchgfx::TextArea debug_top_text;
     touchgfx::TextArea textArea1_1_1_1;

@@ -22,9 +22,16 @@ screen_infoViewBase::screen_infoViewBase() :
     scrollableDeugInfo.setScrollbarsColor(touchgfx::Color::getColorFromRGB(242, 10, 10));
     scrollableDeugInfo.setScrollbarsAlpha(255);
     scrollableDeugInfo.setScrollbarsPermanentlyVisible();
-    MAIN_BACKGROUND_1.setPosition(0, 0, 320, 405);
+    MAIN_BACKGROUND_1.setPosition(0, 0, 320, 632);
     MAIN_BACKGROUND_1.setColor(touchgfx::Color::getColorFromRGB(0, 98, 255));
     scrollableDeugInfo.add(MAIN_BACKGROUND_1);
+
+    qrCode1.setXY(58, 355);
+    qrCode1.setBuffers(qrBuffer_qrCode1, qrScratchBuffer_qrCode1);
+    qrCode1.setQRCodeVersion(6);
+    qrCode1.setScale(4);
+    qrCode1.convertStringToQRCode("https://github.com/Papproni/stm_audio_board_V3_DISPLAY_CODE");
+    scrollableDeugInfo.add(qrCode1);
 
     btn_DSP_USB_FWUpdate_1.setXY(50, 248);
     btn_DSP_USB_FWUpdate_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID));

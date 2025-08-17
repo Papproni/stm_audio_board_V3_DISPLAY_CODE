@@ -52,6 +52,11 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\template_choose_fxBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\template_fx_param.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_paramBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\mode_header_container.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\mode_header_containerBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_startup_screen\screen_startupViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -233,6 +238,11 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_choose_fxBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\template_fx_param.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_paramBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\mode_header_container.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\mode_header_containerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_startup_screen\screen_startupViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

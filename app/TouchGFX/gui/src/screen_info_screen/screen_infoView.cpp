@@ -8,6 +8,8 @@ screen_infoView::screen_infoView()
 void screen_infoView::setupScreen()
 {
     screen_infoViewBase::setupScreen();
+    scrollableDeugInfo.setScrollDurationSlowdown(500);
+    scrollableDeugInfo.setScrollDurationSpeedup(1);
 }
 
 void screen_infoView::tearDownScreen()

@@ -292,6 +292,18 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>3F849E0C-42EF-1735-B71C-8964A54310CC</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screen_startup_screen">
+      <UniqueIdentifier>C639CCC6-F4E6-A4F1-0C7A-6BED98546D2E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen_startup_screen">
+      <UniqueIdentifier>587CBC3C-8022-E5E1-DCCD-BEBD8F3451D6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen_startup_screen">
+      <UniqueIdentifier>400C0E45-4599-E529-2EE3-9450498EAE16</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen_startup_screen">
+      <UniqueIdentifier>A2E95394-75AE-F3EB-36E3-7DBDD3294BC0</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -416,6 +428,21 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\template_fx_paramBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\mode_header_container.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\mode_header_containerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupPresenter.cpp">
+      <Filter>Source Files\gui\screen_startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupView.cpp">
+      <Filter>Source Files\gui\screen_startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen_startup_screen\screen_startupViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen_startup_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -951,6 +978,21 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\template_fx_paramBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\mode_header_container.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\mode_header_containerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupPresenter.hpp">
+      <Filter>Header Files\gui\screen_startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupView.hpp">
+      <Filter>Header Files\gui\screen_startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_startup_screen\screen_startupViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen_startup_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

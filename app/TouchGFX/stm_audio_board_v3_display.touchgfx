@@ -267,7 +267,7 @@
             "X": 149,
             "Y": 100,
             "Width": 22,
-            "Height": 47,
+            "Height": 48,
             "TextId": "__SingleUse_4VSK",
             "TextRotation": "0",
             "Color": {
@@ -380,7 +380,7 @@
             "X": 174,
             "Y": 19,
             "Width": 127,
-            "Height": 243,
+            "Height": 241,
             "TextId": "__SingleUse_1IH8",
             "TextRotation": "0",
             "Color": {
@@ -401,7 +401,7 @@
             "X": 30,
             "Y": 19,
             "Width": 137,
-            "Height": 243,
+            "Height": 241,
             "TextId": "__SingleUse_8Z2S",
             "TextRotation": "0",
             "Color": {
@@ -415,6 +415,13 @@
               "UseBuffer": true,
               "BufferSize": 2
             }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mode_header_container1",
+            "Width": 320,
+            "Height": 60,
+            "CustomContainerDefinitionName": "mode_header_container"
           },
           {
             "Type": "ButtonWithLabel",
@@ -485,12 +492,29 @@
                 "Type": "Box",
                 "Name": "MAIN_BACKGROUND_1",
                 "Width": 320,
-                "Height": 405,
+                "Height": 632,
                 "Color": {
                   "Green": 98,
                   "Blue": 255
                 },
                 "Clickable": true
+              },
+              {
+                "Type": "QRCode",
+                "Name": "qrCode1",
+                "X": 58,
+                "Y": 355,
+                "Width": 164,
+                "Height": 164,
+                "LockPosition": true,
+                "QRVersion": 6,
+                "Scale": 4,
+                "Text": "https://github.com/Papproni/stm_audio_board_V3_DISPLAY_CODE",
+                "BackgroundColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
               },
               {
                 "Type": "ButtonWithLabel",
@@ -521,7 +545,7 @@
                 "X": 105,
                 "Y": 10,
                 "Width": 110,
-                "Height": 47,
+                "Height": 48,
                 "LockPosition": true,
                 "TextId": "__SingleUse_AS0H",
                 "TextRotation": "0",
@@ -984,7 +1008,7 @@
             "X": 105,
             "Y": 10,
             "Width": 176,
-            "Height": 47,
+            "Height": 48,
             "TextId": "__SingleUse_11UT",
             "TextRotation": "0",
             "Color": {
@@ -1123,16 +1147,87 @@
           {
             "Type": "Box",
             "Name": "MAIN_BACKGROUND",
+            "X": -2,
             "Width": 320,
             "Height": 240
           },
           {
             "Type": "Box",
+            "Name": "Preset_text_backgnd",
+            "X": 191,
+            "Width": 69,
+            "Height": 30
+          },
+          {
+            "Type": "Box",
+            "Name": "Loop_text_backgnd",
+            "X": 47,
+            "Width": 94,
+            "Height": 27,
+            "Color": {
+              "Red": 89,
+              "Green": 89,
+              "Blue": 89
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 225,
+            "Y": 30,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 174
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_2",
+            "X": 243,
+            "Y": 30,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 83,
+              "Green": 14,
+              "Blue": 194
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1",
+            "X": 208,
+            "Y": 30,
+            "Width": 17,
+            "Height": 30,
+            "Color": {
+              "Red": 255
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_3",
+            "X": 190,
+            "Y": 30,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 77,
+              "Green": 255
+            }
+          },
+          {
+            "Type": "Box",
             "Name": "box1",
             "X": -2,
-            "Y": 78,
+            "Y": 94,
             "Width": 322,
-            "Height": 162,
+            "Height": 146,
             "Color": {
               "Red": 248,
               "Green": 247,
@@ -1154,6 +1249,94 @@
             "EndX": 320.0,
             "LineWidth": 10.0,
             "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1",
+            "X": 193,
+            "Y": 33,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_M2UR",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1_3",
+            "X": 210,
+            "Y": 33,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_CAJE",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1_4",
+            "X": 227,
+            "Y": 33,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_BQO9",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_2",
+            "X": 180,
+            "Width": 90,
+            "Height": 30,
+            "Color": {
+              "Red": 82,
+              "Green": 82,
+              "Blue": 82
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1_5",
+            "X": 245,
+            "Y": 33,
+            "Width": 15,
+            "Height": 24,
+            "TextId": "__SingleUse_9URI",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1_2",
+            "X": 191,
+            "Y": 3,
+            "Width": 67,
+            "Height": 24,
+            "TextId": "__SingleUse_9Z0E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text_1_1",
+            "X": 81,
+            "Y": 33,
+            "Width": 27,
+            "Height": 24,
+            "TextId": "__SingleUse_TBDA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
           },
           {
             "Type": "ButtonWithLabel",
@@ -1198,6 +1381,22 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Preset_text",
+            "X": 63,
+            "Y": 1,
+            "Width": 63,
+            "Height": 24,
+            "TextId": "__SingleUse_64PR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
           },
           {
             "Type": "ButtonWithLabel",
@@ -1646,6 +1845,15 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "toggleBtn_slot3_pressed"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
             }
           }
         ]
@@ -2176,7 +2384,7 @@
             "X": 105,
             "Y": 10,
             "Width": 110,
-            "Height": 47,
+            "Height": 48,
             "TextId": "__SingleUse_3KIE",
             "TextRotation": "0",
             "Color": {
@@ -2255,7 +2463,7 @@
             "X": 83,
             "Y": 6,
             "Width": 132,
-            "Height": 47,
+            "Height": 48,
             "TextId": "__SingleUse_YN5I",
             "TextRotation": "0",
             "Color": {
@@ -2350,6 +2558,136 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "screen_add_effect"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_startup",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 18,
+            "Y": 41,
+            "Width": 66,
+            "Height": 48,
+            "TextId": "__SingleUse_TMHR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2",
+            "X": 84,
+            "Y": 41,
+            "Width": 44,
+            "Height": 48,
+            "TextId": "__SingleUse_VILC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1",
+            "X": 190,
+            "Y": 105,
+            "Width": 88,
+            "Height": 48,
+            "TextId": "__SingleUse_5GHE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 18,
+            "Y": 81,
+            "Width": 182,
+            "Height": 24,
+            "TextId": "__SingleUse_6ZLS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1",
+            "X": 10,
+            "Y": 169,
+            "Width": 102,
+            "Height": 24,
+            "TextId": "__SingleUse_5K66",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "boxProgress1",
+            "X": 10,
+            "Y": 199,
+            "Width": 300,
+            "Height": 10,
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "Direction": "Right",
+            "Preset": "alternate_theme\\presets\\boxprogress\\normal\\medium_active.json",
+            "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_normal_medium.png",
+            "IndicatorPositionWidth": 300,
+            "IndicatorPositionHeight": 10,
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 60
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Startup_Over",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 5000
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Startup_Over"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "screen_perf_mode"
             }
           }
         ]
@@ -2476,6 +2814,257 @@
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "mode_header_container",
+        "Width": 320,
+        "Height": 60,
+        "Components": [
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_opt",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_TF39",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 118,
+            "Y": 24,
+            "Width": 50,
+            "Height": 36,
+            "Color": {
+              "Red": 38,
+              "Green": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_3",
+            "X": 118,
+            "Width": 50,
+            "Height": 24,
+            "Color": {
+              "Red": 194,
+              "Green": 128,
+              "Blue": 165
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_3_1",
+            "X": 168,
+            "Width": 51,
+            "Height": 24,
+            "Color": {
+              "Red": 62,
+              "Green": 92,
+              "Blue": 41
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_3_1_1",
+            "X": 219,
+            "Width": 51,
+            "Height": 24,
+            "Color": {
+              "Red": 81,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_3_1_2",
+            "X": 270,
+            "Width": 50,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 225
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_2",
+            "X": 60,
+            "Width": 58,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 169,
+              "Blue": 10
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_2_1",
+            "X": 60,
+            "Y": 24,
+            "Width": 58,
+            "Height": 36
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_1",
+            "X": 168,
+            "Y": 24,
+            "Width": 51,
+            "Height": 36,
+            "Color": {
+              "Red": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_1_1",
+            "X": 219,
+            "Y": 24,
+            "Width": 51,
+            "Height": 36,
+            "Color": {
+              "Red": 255,
+              "Green": 187
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1_1_1_1",
+            "X": 270,
+            "Y": 24,
+            "Width": 50,
+            "Height": 36,
+            "Color": {
+              "Red": 187,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 132,
+            "Y": 15,
+            "Width": 22,
+            "Height": 48,
+            "TextId": "__SingleUse_YXGY",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4",
+            "X": 66,
+            "Width": 47,
+            "Height": 24,
+            "TextId": "__SingleUse_KHDB",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4_2",
+            "X": 128,
+            "Width": 31,
+            "Height": 24,
+            "TextId": "__SingleUse_JR1D",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4_2_1",
+            "X": 178,
+            "Width": 31,
+            "Height": 24,
+            "TextId": "__SingleUse_3NI2",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4_2_2",
+            "X": 228,
+            "Width": 31,
+            "Height": 24,
+            "TextId": "__SingleUse_XAZY",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4_2_3",
+            "X": 280,
+            "Width": 31,
+            "Height": 24,
+            "TextId": "__SingleUse_ZOI4",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_4_1",
+            "X": 63,
+            "Y": 30,
+            "Width": 53,
+            "Height": 24,
+            "TextId": "__SingleUse_KEGH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 182,
+            "Y": 15,
+            "Width": 22,
+            "Height": 48,
+            "TextId": "__SingleUse_TQIR",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2",
+            "X": 232,
+            "Y": 15,
+            "Width": 22,
+            "Height": 48,
+            "TextId": "__SingleUse_SWIK",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_3",
+            "X": 284,
+            "Y": 15,
+            "Width": 22,
+            "Height": 48,
+            "TextId": "__SingleUse_2V32",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": []
       }
     ],
     "Name": "MyApplication",
@@ -2484,7 +3073,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen_perf_mode",
+    "StartupScreenName": "screen_startup",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

@@ -14,6 +14,8 @@ void screen_add_effectView::setupScreen()
     screen_add_effectViewBase::setupScreen();
 
     scrollList_FX.setItemSelectedCallback(itemSnapCallback);
+
+    scrollList_FX.setMaxSwipeItems(1);
 }
 
 void screen_add_effectView::tearDownScreen()
@@ -84,7 +86,6 @@ void screen_add_effectView::scrollList_FXUpdateItem(template_choose_fx &item, in
 }
 
 void screen_add_effectView::btn_add_pressed(){
-
 }
 
 void screen_add_effectView::update_screen()

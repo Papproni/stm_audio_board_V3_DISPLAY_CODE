@@ -81,6 +81,8 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
 	static uint16_t prevy = GUI_HEIGHT;
 	uint16_t intx, inty;
 	XPT2046_Update(&intx, &inty);
+    // intx = (uint16_t)(0.05*(float)intx + 0.95*(float)prevx);
+    // inty = (uint16_t)(0.05*(float)inty + 0.95*(float)prevy);
 	if (XPT2046_IsReasonable(intx, inty)) {
 		ConvXPTtoILI(&intx, &inty);
 		if (intx != prevx || inty != prevy) {
@@ -90,6 +92,11 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
 			y = (int32_t)inty;
 			return true;
 		}
+        // prevx = intx;
+        // prevy = inty;
+        // x = (int32_t)intx;
+        // y = (int32_t)inty;
+        // return true;
 	}
     return false;
 }

@@ -35,6 +35,9 @@ screen_perf_modeViewBase::screen_perf_modeViewBase() :
     text_preset_num_major.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Z2S));
     add(text_preset_num_major);
 
+    mode_header_container1.setXY(0, 0);
+    add(mode_header_container1);
+
     btn_opt.setXY(0, 0);
     btn_opt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
     btn_opt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4F5J));
@@ -51,7 +54,7 @@ screen_perf_modeViewBase::~screen_perf_modeViewBase()
 
 void screen_perf_modeViewBase::setupScreen()
 {
-
+    mode_header_container1.initialize();
 }
 
 void screen_perf_modeViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

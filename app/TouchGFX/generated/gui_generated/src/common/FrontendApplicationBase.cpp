@@ -27,6 +27,8 @@
 #include <gui/screen_edit_screen/screen_editPresenter.hpp>
 #include <gui/screen_add_effect_screen/screen_add_effectView.hpp>
 #include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
+#include <gui/screen_startup_screen/screen_startupView.hpp>
+#include <gui/screen_startup_screen/screen_startupPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -84,6 +86,17 @@ void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_perf_modeScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_perf_modeView, screen_perf_modePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoscreen_perf_modeScreenCoverTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_perf_modeScreenCoverTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_perf_modeScreenCoverTransitionEastImpl()
+{
+    touchgfx::makeTransition<screen_perf_modeView, screen_perf_modePresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // screen_info
@@ -162,4 +175,17 @@ void FrontendApplicationBase::gotoscreen_add_effectScreenNoTransition()
 void FrontendApplicationBase::gotoscreen_add_effectScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<screen_add_effectView, screen_add_effectPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// screen_startup
+
+void FrontendApplicationBase::gotoscreen_startupScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoscreen_startupScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoscreen_startupScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<screen_startupView, screen_startupPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
