@@ -33,7 +33,7 @@ public:
     uint8_t parameter_positions_au8[NUM_OF_PARAMS_PER_PAGE][2];
 
     template_fx_param *fx_controls_p[12];
-
+    int prev_selected_page;
     uint32_t *adc_vals_ptr;
 #ifndef SIMULATOR
     sab_fx_param_tun fx_params_tun[12];
