@@ -35,7 +35,7 @@ screen_perf_modeViewBase::screen_perf_modeViewBase() :
     text_preset_num_major.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8Z2S));
     add(text_preset_num_major);
 
-    mode_header_container1.setXY(0, 0);
+    mode_header_container1.setXY(60, 0);
     add(mode_header_container1);
 
     btn_opt.setXY(0, 0);

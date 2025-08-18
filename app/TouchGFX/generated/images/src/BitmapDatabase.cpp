@@ -5,35 +5,49 @@
 #include <touchgfx/Bitmap.hpp>
 
 extern const unsigned char image_alternate_theme_images_widgets_boxprogress_normal_medium[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BOXPROGRESS_NORMAL_MEDIUM_ID = 0, Size: 300x10 pixels
+extern const unsigned char image_alternate_theme_images_widgets_boxprogress_normal_medium_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID = 1, Size: 60x60 pixels
+extern const unsigned char image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID = 2, Size: 60x60 pixels
+extern const unsigned char image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_small_round_normal[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_SMALL_ROUND_NORMAL_ID = 3, Size: 228x60 pixels
+extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_small_round_normal_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUND_DISABLED_ID = 4, Size: 144x60 pixels
+extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_TINY_ROUNDED_PRESSED_ID = 5, Size: 144x60 pixels
+extern const unsigned char image_alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_radiobutton_check_large_rounded_off[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_CHECK_LARGE_ROUNDED_OFF_ID = 6, Size: 50x50 pixels
+extern const unsigned char image_alternate_theme_images_widgets_radiobutton_check_large_rounded_off_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_radiobutton_check_large_rounded_on_active[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_RADIOBUTTON_CHECK_LARGE_ROUNDED_ON_ACTIVE_ID = 7, Size: 50x50 pixels
+extern const unsigned char image_alternate_theme_images_widgets_radiobutton_check_large_rounded_on_active_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_off_normal[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID = 8, Size: 20x20 pixels
+extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_off_normal_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_on_active[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID = 9, Size: 20x20 pixels
+extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_on_active_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_OFF_LIGHT_ID = 10, Size: 110x50 pixels
+extern const unsigned char image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUNDED_ON_NORMAL_ID = 11, Size: 110x50 pixels
+extern const unsigned char image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID = 12, Size: 62x34 pixels
+extern const unsigned char image_alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID = 13, Size: 62x34 pixels
+extern const unsigned char image_alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active_extra_data[];
 
 const touchgfx::Bitmap::BitmapData bitmap_database[] = {
-    { image_alternate_theme_images_widgets_boxprogress_normal_medium, 0, 300, 10, 0, 0, 300, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 10, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled, 0, 60, 60, 2, 2, 56, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 56, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal, 0, 60, 60, 2, 2, 56, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 56, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_button_regular_height_60_small_round_normal, 0, 228, 60, 22, 1, 184, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 58, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled, 0, 144, 60, 17, 3, 110, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 54, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed, 0, 144, 60, 7, 1, 130, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 58, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_radiobutton_check_large_rounded_off, 0, 50, 50, 46, 7, 4, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 36, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_radiobutton_check_large_rounded_on_active, 0, 50, 50, 3, 2, 44, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 46, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_swipecontainer_medium_off_normal, 0, 20, 20, 17, 6, 2, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 8, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_swipecontainer_medium_on_active, 0, 20, 20, 8, 7, 4, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 6, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light, 0, 110, 50, 10, 9, 43, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 32, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal, 0, 110, 50, 57, 9, 43, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 32, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light, 0, 62, 34, 9, 7, 20, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 20, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active, 0, 62, 34, 33, 7, 20, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 20, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 }
+    { image_alternate_theme_images_widgets_boxprogress_normal_medium, image_alternate_theme_images_widgets_boxprogress_normal_medium_extra_data, 300, 10, 0, 0, 300, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 10, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled, image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled_extra_data, 60, 60, 2, 2, 56, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 56, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal, image_alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal_extra_data, 60, 60, 2, 2, 56, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 56, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_button_regular_height_60_small_round_normal, image_alternate_theme_images_widgets_button_regular_height_60_small_round_normal_extra_data, 228, 60, 22, 1, 184, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 58, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled, image_alternate_theme_images_widgets_button_regular_height_60_tiny_round_disabled_extra_data, 144, 60, 17, 3, 110, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 54, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed, image_alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed_extra_data, 144, 60, 7, 1, 130, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 58, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_radiobutton_check_large_rounded_off, image_alternate_theme_images_widgets_radiobutton_check_large_rounded_off_extra_data, 50, 50, 46, 7, 4, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 36, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_radiobutton_check_large_rounded_on_active, image_alternate_theme_images_widgets_radiobutton_check_large_rounded_on_active_extra_data, 50, 50, 3, 2, 44, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 46, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_swipecontainer_medium_off_normal, image_alternate_theme_images_widgets_swipecontainer_medium_off_normal_extra_data, 20, 20, 17, 6, 2, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 8, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_swipecontainer_medium_on_active, image_alternate_theme_images_widgets_swipecontainer_medium_on_active_extra_data, 20, 20, 8, 7, 4, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 6, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light, image_alternate_theme_images_widgets_togglebutton_medium_rounded_off_light_extra_data, 110, 50, 10, 9, 43, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 32, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal, image_alternate_theme_images_widgets_togglebutton_medium_rounded_on_normal_extra_data, 110, 50, 57, 9, 43, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 32, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light, image_alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light_extra_data, 62, 34, 9, 7, 20, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 20, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active, image_alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active_extra_data, 62, 34, 33, 7, 20, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 20, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 }
 };
 
 namespace BitmapDatabase

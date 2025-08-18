@@ -13,6 +13,21 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_QBMX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A</Translation>
+      </Text>
+      <Text Id="__SingleUse_KXR4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">B</Translation>
+      </Text>
+      <Text Id="__SingleUse_K4VX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_DDDV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">D</Translation>
+      </Text>
+      <Text Id="__SingleUse_SXXK" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A1</Translation>
+      </Text>
       <Text Id="__SingleUse_5GHE" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">2025</Translation>
       </Text>
@@ -28,26 +43,8 @@
       <Text Id="__SingleUse_TMHR" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">SAB</Translation>
       </Text>
-      <Text Id="__SingleUse_9URI" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">D</Translation>
-      </Text>
-      <Text Id="__SingleUse_BQO9" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">C</Translation>
-      </Text>
-      <Text Id="__SingleUse_CAJE" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">B</Translation>
-      </Text>
-      <Text Id="__SingleUse_9Z0E" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_9Z0E" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Loop 4</Translation>
-      </Text>
-      <Text Id="__SingleUse_TBDA" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">A1</Translation>
-      </Text>
-      <Text Id="__SingleUse_M2UR" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">A</Translation>
-      </Text>
-      <Text Id="__SingleUse_64PR" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Preset</Translation>
       </Text>
       <Text Id="__SingleUse_ZOI4" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">ON</Translation>
@@ -63,9 +60,6 @@
       </Text>
       <Text Id="__SingleUse_KEGH" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Mode</Translation>
-      </Text>
-      <Text Id="__SingleUse_TF39" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">OPT</Translation>
       </Text>
       <Text Id="__SingleUse_KHDB" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Loop</Translation>

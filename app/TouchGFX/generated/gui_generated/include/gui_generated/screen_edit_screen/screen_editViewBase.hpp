@@ -15,6 +15,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <gui/containers/mode_preset_display_container.hpp>
 
 class screen_editViewBase : public touchgfx::View<screen_editPresenter>
 {
@@ -101,6 +102,7 @@ protected:
     touchgfx::ButtonWithLabel btn_Loop1;
     touchgfx::ClickListener< touchgfx::ButtonWithLabel > btn_opt;
     touchgfx::TextArea textArea1;
+    mode_preset_display_container mode_preset_display_container1;
 
 private:
 

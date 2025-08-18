@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <gui/containers/mode_preset_display_container.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
@@ -70,25 +71,13 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
-    touchgfx::Box Preset_text_backgnd;
-    touchgfx::Box Loop_text_backgnd;
-    touchgfx::Box box2;
-    touchgfx::Box box2_2;
-    touchgfx::Box box2_1;
-    touchgfx::Box box2_1_3;
     touchgfx::Box box1;
+    mode_preset_display_container mode_preset_display_container1;
     touchgfx::Line line_signalPath;
     touchgfx::PainterRGB565 line_signalPathPainter;
-    touchgfx::TextArea Preset_text_1;
-    touchgfx::TextArea Preset_text_1_3;
-    touchgfx::TextArea Preset_text_1_4;
-    touchgfx::Box box2_1_2;
-    touchgfx::TextArea Preset_text_1_5;
-    touchgfx::TextArea Preset_text_1_2;
-    touchgfx::TextArea Preset_text_1_1;
+    touchgfx::TextArea text_current_loop;
     touchgfx::ButtonWithLabel btn_FX_slot_3;
     touchgfx::ButtonWithLabel btn_FX_slot_2;
-    touchgfx::TextArea Preset_text;
     touchgfx::ButtonWithLabel btn_FX_slot_1;
     touchgfx::ButtonWithLabel btn_Add_fx;
     touchgfx::ButtonWithLabel btn_Del_fx;

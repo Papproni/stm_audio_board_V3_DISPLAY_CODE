@@ -419,7 +419,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "mode_header_container1",
-            "Width": 320,
+            "X": 60,
+            "Width": 260,
             "Height": 60,
             "CustomContainerDefinitionName": "mode_header_container"
           },
@@ -1147,87 +1148,16 @@
           {
             "Type": "Box",
             "Name": "MAIN_BACKGROUND",
-            "X": -2,
             "Width": 320,
             "Height": 240
           },
           {
             "Type": "Box",
-            "Name": "Preset_text_backgnd",
-            "X": 191,
-            "Width": 69,
-            "Height": 30
-          },
-          {
-            "Type": "Box",
-            "Name": "Loop_text_backgnd",
-            "X": 47,
-            "Width": 94,
-            "Height": 27,
-            "Color": {
-              "Red": 89,
-              "Green": 89,
-              "Blue": 89
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 225,
-            "Y": 30,
-            "Width": 18,
-            "Height": 30,
-            "Color": {
-              "Red": 255,
-              "Green": 174
-            },
-            "Alpha": 80
-          },
-          {
-            "Type": "Box",
-            "Name": "box2_2",
-            "X": 243,
-            "Y": 30,
-            "Width": 18,
-            "Height": 30,
-            "Color": {
-              "Red": 83,
-              "Green": 14,
-              "Blue": 194
-            },
-            "Alpha": 80
-          },
-          {
-            "Type": "Box",
-            "Name": "box2_1",
-            "X": 208,
-            "Y": 30,
-            "Width": 17,
-            "Height": 30,
-            "Color": {
-              "Red": 255
-            },
-            "Alpha": 80
-          },
-          {
-            "Type": "Box",
-            "Name": "box2_1_3",
-            "X": 190,
-            "Y": 30,
-            "Width": 18,
-            "Height": 30,
-            "Color": {
-              "Red": 77,
-              "Green": 255
-            }
-          },
-          {
-            "Type": "Box",
             "Name": "box1",
             "X": -2,
-            "Y": 94,
+            "Y": 102,
             "Width": 322,
-            "Height": 146,
+            "Height": 138,
             "Color": {
               "Red": 248,
               "Green": 247,
@@ -1236,9 +1166,19 @@
             "Alpha": 62
           },
           {
+            "Type": "CustomContainerInstance",
+            "Name": "mode_preset_display_container1",
+            "X": 190,
+            "Y": 3,
+            "Width": 71,
+            "Height": 54,
+            "CustomContainerDefinitionName": "mode_preset_display_container"
+          },
+          {
             "Type": "Line",
             "Name": "line_signalPath",
-            "Y": 141,
+            "X": -2,
+            "Y": 149,
             "Width": 320,
             "Height": 50,
             "Color": {
@@ -1252,84 +1192,12 @@
           },
           {
             "Type": "TextArea",
-            "Name": "Preset_text_1",
-            "X": 193,
-            "Y": 33,
-            "Width": 14,
-            "Height": 24,
-            "TextId": "__SingleUse_M2UR",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Preset_text_1_3",
-            "X": 210,
-            "Y": 33,
-            "Width": 14,
-            "Height": 24,
-            "TextId": "__SingleUse_CAJE",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Preset_text_1_4",
-            "X": 227,
-            "Y": 33,
-            "Width": 14,
-            "Height": 24,
-            "TextId": "__SingleUse_BQO9",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "Box",
-            "Name": "box2_1_2",
-            "X": 180,
-            "Width": 90,
-            "Height": 30,
-            "Color": {
-              "Red": 82,
-              "Green": 82,
-              "Blue": 82
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Preset_text_1_5",
-            "X": 245,
-            "Y": 33,
-            "Width": 15,
-            "Height": 24,
-            "TextId": "__SingleUse_9URI",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Preset_text_1_2",
-            "X": 191,
-            "Y": 3,
-            "Width": 67,
-            "Height": 24,
+            "Name": "text_current_loop",
+            "X": 87,
+            "Y": 48,
+            "Width": 132,
+            "Height": 48,
             "TextId": "__SingleUse_9Z0E",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Preset_text_1_1",
-            "X": 81,
-            "Y": 33,
-            "Width": 27,
-            "Height": 24,
-            "TextId": "__SingleUse_TBDA",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -1341,8 +1209,8 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_3",
-            "X": 230,
-            "Y": 111,
+            "X": 228,
+            "Y": 119,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1363,8 +1231,8 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_2",
-            "X": 130,
-            "Y": 111,
+            "X": 128,
+            "Y": 119,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1383,26 +1251,10 @@
             "TextRotation": "0"
           },
           {
-            "Type": "TextArea",
-            "Name": "Preset_text",
-            "X": 63,
-            "Y": 1,
-            "Width": 63,
-            "Height": 24,
-            "TextId": "__SingleUse_64PR",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
             "Type": "ButtonWithLabel",
             "Name": "btn_FX_slot_1",
-            "X": 30,
-            "Y": 111,
+            "X": 28,
+            "Y": 119,
             "Width": 60,
             "Height": 60,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
@@ -1485,8 +1337,8 @@
           {
             "Type": "Container",
             "Name": "cont_Slot1",
-            "X": 10,
-            "Y": 87,
+            "X": 8,
+            "Y": 95,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1558,8 +1410,8 @@
           {
             "Type": "Container",
             "Name": "cont_Slot2",
-            "X": 111,
-            "Y": 88,
+            "X": 109,
+            "Y": 95,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1631,8 +1483,8 @@
           {
             "Type": "Container",
             "Name": "cont_Slot3",
-            "X": 210,
-            "Y": 88,
+            "X": 208,
+            "Y": 96,
             "Width": 101,
             "Height": 101,
             "Components": [
@@ -1660,7 +1512,7 @@
                 "Type": "Box",
                 "Name": "box_FX_background_3",
                 "X": 11,
-                "Y": 16,
+                "Y": 15,
                 "Width": 78,
                 "Height": 71,
                 "Color": {
@@ -1889,6 +1741,7 @@
                 "Y": 120,
                 "Width": 498,
                 "Height": 120,
+                "LockPosition": true,
                 "Color": {
                   "Red": 255
                 },
@@ -1901,6 +1754,7 @@
                 "Y": 86,
                 "Width": 21,
                 "Height": 67,
+                "LockPosition": true,
                 "Color": {
                   "Red": 221,
                   "Green": 3,
@@ -1940,6 +1794,7 @@
                 "Name": "container_loop3_loop4_internal_bypass",
                 "Width": 498,
                 "Height": 250,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2005,6 +1860,7 @@
                 "Name": "container_loop3_loop4_ext",
                 "Width": 450,
                 "Height": 250,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2074,6 +1930,7 @@
                 "Name": "container_loop2_loop3_internal_bypass",
                 "Width": 320,
                 "Height": 250,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2138,6 +1995,7 @@
                 "Name": "container_loop2_loop3_ext",
                 "Width": 320,
                 "Height": 240,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2207,6 +2065,7 @@
                 "Name": "container_loop1_loop2_internal_bypass",
                 "Width": 250,
                 "Height": 250,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2272,6 +2131,7 @@
                 "Name": "container_loop1_loop2_ext",
                 "Width": 190,
                 "Height": 240,
+                "LockPosition": true,
                 "Components": [
                   {
                     "Type": "Line",
@@ -2320,6 +2180,7 @@
                 "Y": 86,
                 "Width": 21,
                 "Height": 67,
+                "LockPosition": true,
                 "Color": {
                   "Red": 221,
                   "Green": 3,
@@ -2381,8 +2242,8 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 105,
-            "Y": 10,
+            "X": 91,
+            "Y": 12,
             "Width": 110,
             "Height": 48,
             "TextId": "__SingleUse_3KIE",
@@ -2393,6 +2254,14 @@
               "Blue": 255
             },
             "AutoSize": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "mode_preset_display_container1",
+            "X": 249,
+            "Width": 71,
+            "Height": 54,
+            "CustomContainerDefinitionName": "mode_preset_display_container"
           }
         ],
         "Interactions": [
@@ -2817,91 +2686,18 @@
       },
       {
         "Name": "mode_header_container",
-        "Width": 320,
+        "Width": 260,
         "Height": 60,
         "Components": [
           {
-            "Type": "ButtonWithLabel",
-            "Name": "btn_opt",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
-            "TextId": "__SingleUse_TF39",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
+            "Type": "Box",
+            "Name": "bgnd",
+            "Width": 260,
+            "Height": 60
           },
           {
             "Type": "Box",
-            "Name": "box1",
-            "X": 118,
-            "Y": 24,
-            "Width": 50,
-            "Height": 36,
-            "Color": {
-              "Red": 38,
-              "Green": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1_3",
-            "X": 118,
-            "Width": 50,
-            "Height": 24,
-            "Color": {
-              "Red": 194,
-              "Green": 128,
-              "Blue": 165
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1_3_1",
-            "X": 168,
-            "Width": 51,
-            "Height": 24,
-            "Color": {
-              "Red": 62,
-              "Green": 92,
-              "Blue": 41
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1_3_1_1",
-            "X": 219,
-            "Width": 51,
-            "Height": 24,
-            "Color": {
-              "Red": 81,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1_3_1_2",
-            "X": 270,
-            "Width": 50,
-            "Height": 24,
-            "Color": {
-              "Red": 255,
-              "Green": 225
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box1_2",
-            "X": 60,
+            "Name": "loop_bgnd",
             "Width": 58,
             "Height": 24,
             "Color": {
@@ -2912,62 +2708,114 @@
           },
           {
             "Type": "Box",
-            "Name": "box1_2_1",
-            "X": 60,
+            "Name": "loop1_bgnd",
+            "X": 58,
+            "Width": 50,
+            "Height": 24,
+            "Color": {
+              "Red": 194,
+              "Green": 128,
+              "Blue": 165
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "loop2_bgnd",
+            "X": 108,
+            "Width": 51,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "loop3_bgnd",
+            "X": 159,
+            "Width": 51,
+            "Height": 24,
+            "Color": {
+              "Red": 81,
+              "Blue": 255
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "loop4_bgnd",
+            "X": 210,
+            "Width": 50,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 225
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "mode_bgnd",
             "Y": 24,
             "Width": 58,
             "Height": 36
           },
           {
             "Type": "Box",
-            "Name": "box1_1",
-            "X": 168,
+            "Name": "text_mode_A_bgnd",
+            "X": 58,
+            "Y": 24,
+            "Width": 50,
+            "Height": 36,
+            "Color": {
+              "Red": 38,
+              "Green": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "text_mode_B_bgnd",
+            "X": 108,
             "Y": 24,
             "Width": 51,
             "Height": 36,
             "Color": {
               "Red": 255
-            }
+            },
+            "Alpha": 80
           },
           {
             "Type": "Box",
-            "Name": "box1_1_1",
-            "X": 219,
+            "Name": "text_mode_C_bgnd",
+            "X": 159,
             "Y": 24,
             "Width": 51,
             "Height": 36,
             "Color": {
               "Red": 255,
               "Green": 187
-            }
+            },
+            "Alpha": 80
           },
           {
             "Type": "Box",
-            "Name": "box1_1_1_1",
-            "X": 270,
+            "Name": "text_mode_D_bgnd",
+            "X": 210,
             "Y": 24,
             "Width": 50,
             "Height": 36,
             "Color": {
               "Red": 187,
               "Blue": 255
-            }
+            },
+            "Alpha": 80
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 132,
-            "Y": 15,
-            "Width": 22,
-            "Height": 48,
-            "TextId": "__SingleUse_YXGY",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea1_4",
-            "X": 66,
+            "Name": "text_loop",
+            "X": 6,
             "Width": 47,
             "Height": 24,
             "TextId": "__SingleUse_KHDB",
@@ -2976,8 +2824,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_4_2",
-            "X": 128,
+            "Name": "text_loop1_state",
+            "X": 68,
             "Width": 31,
             "Height": 24,
             "TextId": "__SingleUse_JR1D",
@@ -2986,8 +2834,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_4_2_1",
-            "X": 178,
+            "Name": "text_loop2_state",
+            "X": 118,
             "Width": 31,
             "Height": 24,
             "TextId": "__SingleUse_3NI2",
@@ -2996,8 +2844,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_4_2_2",
-            "X": 228,
+            "Name": "text_loop3_state",
+            "X": 168,
             "Width": 31,
             "Height": 24,
             "TextId": "__SingleUse_XAZY",
@@ -3006,8 +2854,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_4_2_3",
-            "X": 280,
+            "Name": "text_loop4_state",
+            "X": 220,
             "Width": 31,
             "Height": 24,
             "TextId": "__SingleUse_ZOI4",
@@ -3016,8 +2864,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_4_1",
-            "X": 63,
+            "Name": "text_mode",
+            "X": 3,
             "Y": 30,
             "Width": 53,
             "Height": 24,
@@ -3032,8 +2880,19 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_1",
-            "X": 182,
+            "Name": "text_mode_A",
+            "X": 72,
+            "Y": 15,
+            "Width": 22,
+            "Height": 48,
+            "TextId": "__SingleUse_YXGY",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_mode_B",
+            "X": 122,
             "Y": 15,
             "Width": 22,
             "Height": 48,
@@ -3043,8 +2902,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_2",
-            "X": 232,
+            "Name": "text_mode_C",
+            "X": 172,
             "Y": 15,
             "Width": 22,
             "Height": 48,
@@ -3054,13 +2913,130 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1_3",
-            "X": 284,
+            "Name": "text_mode_D",
+            "X": 224,
             "Y": 15,
             "Width": 22,
             "Height": 48,
             "TextId": "__SingleUse_2V32",
             "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "mode_preset_display_container",
+        "Width": 71,
+        "Height": 54,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "mode_C_bgnd",
+            "X": 35,
+            "Y": 24,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 174
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "mode_D_bgnd",
+            "X": 53,
+            "Y": 24,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 83,
+              "Green": 14,
+              "Blue": 194
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "mode_B_bgnd",
+            "X": 18,
+            "Y": 24,
+            "Width": 17,
+            "Height": 30,
+            "Color": {
+              "Red": 255
+            },
+            "Alpha": 80
+          },
+          {
+            "Type": "Box",
+            "Name": "mode_A_bgnd",
+            "Y": 24,
+            "Width": 18,
+            "Height": 30,
+            "Color": {
+              "Red": 77,
+              "Green": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_mode_A",
+            "X": 3,
+            "Y": 27,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_QBMX",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_mode_B",
+            "X": 20,
+            "Y": 27,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_KXR4",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_mode_C",
+            "X": 37,
+            "Y": 27,
+            "Width": 14,
+            "Height": 24,
+            "TextId": "__SingleUse_K4VX",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txt_mode_D",
+            "X": 55,
+            "Y": 27,
+            "Width": 15,
+            "Height": 24,
+            "TextId": "__SingleUse_DDDV",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_curr_preset",
+            "X": 22,
+            "Width": 27,
+            "Height": 24,
+            "TextId": "__SingleUse_SXXK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
             "AutoSize": true
           }
         ],

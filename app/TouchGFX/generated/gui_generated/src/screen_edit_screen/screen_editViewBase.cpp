@@ -245,11 +245,14 @@ screen_editViewBase::screen_editViewBase() :
     btn_opt.setAction(buttonCallback);
     add(btn_opt);
 
-    textArea1.setXY(105, 10);
+    textArea1.setXY(91, 12);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3KIE));
     add(textArea1);
+
+    mode_preset_display_container1.setXY(249, 0);
+    add(mode_preset_display_container1);
 }
 
 screen_editViewBase::~screen_editViewBase()
@@ -259,7 +262,7 @@ screen_editViewBase::~screen_editViewBase()
 
 void screen_editViewBase::setupScreen()
 {
-
+    mode_preset_display_container1.initialize();
 }
 
 void screen_editViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

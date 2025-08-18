@@ -67,7 +67,7 @@ void screen_startupViewBase::transitionBegins()
 {
     //Startup_Over
     //When screen transition begins delay
-    //Delay for 1000 ms (60 Ticks)
+    //Delay for 5000 ms (300 Ticks)
     startup_OverCounter = STARTUP_OVER_DURATION;
 }
 
@@ -76,8 +76,6 @@ void screen_startupViewBase::handleTickEvent()
     if (startup_OverCounter > 0)
     {
         startup_OverCounter--;
-        boxProgress1.setValue((STARTUP_OVER_DURATION-startup_OverCounter)*100/STARTUP_OVER_DURATION);
-        boxProgress1.invalidate();
         if (startup_OverCounter == 0)
         {
 

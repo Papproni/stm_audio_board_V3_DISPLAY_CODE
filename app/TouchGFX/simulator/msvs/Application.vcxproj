@@ -57,6 +57,8 @@
     <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen_startup_screen\screen_startupView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen_startup_screen\screen_startupViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\mode_preset_display_container.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\mode_preset_display_containerBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -243,6 +245,8 @@
     <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen_startup_screen\screen_startupView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_startup_screen\screen_startupViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\mode_preset_display_container.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\mode_preset_display_containerBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

@@ -6,7 +6,6 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
@@ -25,27 +24,27 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::ButtonWithLabel btn_opt;
-    touchgfx::Box box1;
-    touchgfx::Box box1_3;
-    touchgfx::Box box1_3_1;
-    touchgfx::Box box1_3_1_1;
-    touchgfx::Box box1_3_1_2;
-    touchgfx::Box box1_2;
-    touchgfx::Box box1_2_1;
-    touchgfx::Box box1_1;
-    touchgfx::Box box1_1_1;
-    touchgfx::Box box1_1_1_1;
-    touchgfx::TextArea textArea1;
-    touchgfx::TextArea textArea1_4;
-    touchgfx::TextArea textArea1_4_2;
-    touchgfx::TextArea textArea1_4_2_1;
-    touchgfx::TextArea textArea1_4_2_2;
-    touchgfx::TextArea textArea1_4_2_3;
-    touchgfx::TextArea textArea1_4_1;
-    touchgfx::TextArea textArea1_1;
-    touchgfx::TextArea textArea1_2;
-    touchgfx::TextArea textArea1_3;
+    touchgfx::Box bgnd;
+    touchgfx::Box loop_bgnd;
+    touchgfx::Box loop1_bgnd;
+    touchgfx::Box loop2_bgnd;
+    touchgfx::Box loop3_bgnd;
+    touchgfx::Box loop4_bgnd;
+    touchgfx::Box mode_bgnd;
+    touchgfx::Box text_mode_A_bgnd;
+    touchgfx::Box text_mode_B_bgnd;
+    touchgfx::Box text_mode_C_bgnd;
+    touchgfx::Box text_mode_D_bgnd;
+    touchgfx::TextArea text_loop;
+    touchgfx::TextArea text_loop1_state;
+    touchgfx::TextArea text_loop2_state;
+    touchgfx::TextArea text_loop3_state;
+    touchgfx::TextArea text_loop4_state;
+    touchgfx::TextArea text_mode;
+    touchgfx::TextArea text_mode_A;
+    touchgfx::TextArea text_mode_B;
+    touchgfx::TextArea text_mode_C;
+    touchgfx::TextArea text_mode_D;
 
 private:
 
