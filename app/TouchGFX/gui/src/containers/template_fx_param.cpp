@@ -29,7 +29,7 @@ int template_fx_param::convert_adc_to_pot_values(uint32_t val)
 
 int template_fx_param::convert_uint8t_to_pot_values(uint8_t val)
 {
-	return (double)val/(double)UINT8_MAX*this->potmeter_scale_value+this->potmeter_offset_value;
+	return (double)(UINT8_MAX-(double)val)/(double)UINT8_MAX*this->potmeter_scale_value+this->potmeter_offset_value;
 }
 
 
