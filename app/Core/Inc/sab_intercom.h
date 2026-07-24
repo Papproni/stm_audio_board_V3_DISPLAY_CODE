@@ -7,6 +7,7 @@
 #include "stm32h7xx_hal_i2c.h"
 #include "string.h"
 #include "stdint.h"
+#include <stdlib.h>
 // THis file contains the communication basics for the I2C protocoll
 // between the DSP and DISPLAY unit
 #define NUM_OF_LOOPS 4
