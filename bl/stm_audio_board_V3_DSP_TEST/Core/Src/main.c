@@ -196,7 +196,7 @@ int main(void)
   MX_OCTOSPI1_Init();
   MX_TIM2_Init();
   MX_USB_DEVICE_Init();
-//  MX_IWDG1_Init();
+  MX_IWDG1_Init();
   /* USER CODE BEGIN 2 */
   // uint32_t last_blink_tick = HAL_GetTick();
 
