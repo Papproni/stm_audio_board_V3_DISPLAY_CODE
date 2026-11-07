@@ -24,5 +24,7 @@ void screen_infoPresenter::update_screen()
 
 
 void screen_infoPresenter::update_DSP(){
+#ifndef SIMULATOR
     model->set_dsp_fw_update_flg();
+#endif
 }

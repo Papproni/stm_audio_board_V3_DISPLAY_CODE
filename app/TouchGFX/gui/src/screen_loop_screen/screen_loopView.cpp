@@ -1,14 +1,35 @@
 #include <gui/screen_loop_screen/screen_loopView.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 screen_loopView::screen_loopView()
 {
 	state = NORMAL;
+	move_source_slot = 0;
 	inited = 0;
 }
 
 void screen_loopView::setupScreen()
 {
     screen_loopViewBase::setupScreen();
+
+    // MOVE button: built by this view (positioned in the gap between btn_opt and btn_Add_fx)
+    btn_Move_fx.setXY(65, 0);
+    btn_Move_fx.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_Move_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_MVFX));
+    btn_Move_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_Move_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    moveBtnCallback = touchgfx::Callback<screen_loopView, const touchgfx::AbstractButton&>(this, &screen_loopView::moveBtnCallbackHandler);
+    btn_Move_fx.setAction(moveBtnCallback);
+    add(btn_Move_fx);
+}
+
+void screen_loopView::moveBtnCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &btn_Move_fx)
+    {
+        btn_move_pressed();
+    }
 }
 
 void screen_loopView::tearDownScreen()
@@ -36,6 +57,63 @@ void screen_loopView::toggleBtn_slot3_pressed(){
 	#endif
 }
 // #define SIMULATOR
+
+// MOVE helpers --------------------------------------------------------------
+#ifndef SIMULATOR
+bool screen_loopView::slot_has_fx(int slot)
+{
+	switch (slot)
+	{
+	case 1: return strcmp(loop_num_un.slot1.name, "NONE") != 0;
+	case 2: return strcmp(loop_num_un.slot2.name, "NONE") != 0;
+	case 3: return strcmp(loop_num_un.slot3.name, "NONE") != 0;
+	}
+	return false;
+}
+
+fx_data_tst* screen_loopView::slot_ptr(int slot)
+{
+	switch (slot)
+	{
+	case 1: return &loop_num_un.slot1;
+	case 2: return &loop_num_un.slot2;
+	default: return &loop_num_un.slot3;
+	}
+}
+#endif
+
+void screen_loopView::refresh_move_glow()
+{
+	if (state == MOVE_FX)
+	{
+		glow_1.setVisible(slot_has_fx(1));
+		glow_2.setVisible(slot_has_fx(2));
+		glow_3.setVisible(slot_has_fx(3));
+
+		touchgfx::colortype src_color = touchgfx::Color::getColorFromRGB(255, 255, 0); // yellow = selected source (border ring; fill is hidden behind FX box)
+		if (move_source_slot == 1) glow_1.setBorderColor(src_color);
+		if (move_source_slot == 2) glow_2.setBorderColor(src_color);
+		if (move_source_slot == 3) glow_3.setBorderColor(src_color);
+	}
+	else
+	{
+		touchgfx::colortype def_color = touchgfx::Color::getColorFromRGB(161, 58, 58); // reset to default so re-entering MOVE starts clean
+		touchgfx::colortype def_border = touchgfx::Color::getColorFromRGB(255, 255, 255);
+		glow_1.setColor(def_color);
+		glow_2.setColor(def_color);
+		glow_3.setColor(def_color);
+		glow_1.setBorderColor(def_border);
+		glow_2.setBorderColor(def_border);
+		glow_3.setBorderColor(def_border);
+		glow_1.setVisible(false);
+		glow_2.setVisible(false);
+		glow_3.setVisible(false);
+	}
+
+	glow_1.invalidate();
+	glow_2.invalidate();
+	glow_3.invalidate();
+}
 
 void screen_loopView::update_screen()
 {
@@ -101,11 +179,21 @@ void screen_loopView::update_screen()
 		glow_2.invalidate();
 		glow_3.invalidate();
 		break;
-	
+
+	case MOVE_FX:
+		refresh_move_glow();
+		break;
+
 	case NORMAL:
-		glow_1.invalidate();
-		glow_2.invalidate();
-		glow_3.invalidate();
+	{
+		touchgfx::colortype def_color = touchgfx::Color::getColorFromRGB(161, 58, 58);
+		touchgfx::colortype def_border = touchgfx::Color::getColorFromRGB(255, 255, 255);
+		glow_1.setColor(def_color);
+		glow_2.setColor(def_color);
+		glow_3.setColor(def_color);
+		glow_1.setBorderColor(def_border);
+		glow_2.setBorderColor(def_border);
+		glow_3.setBorderColor(def_border);
 
 		glow_1.setVisible(false);
 		glow_2.setVisible(false);
@@ -115,6 +203,7 @@ void screen_loopView::update_screen()
 		glow_2.invalidate();
 		glow_3.invalidate();
 		break;
+	}
 	default:
 		break;
 	}
@@ -150,6 +239,7 @@ void screen_loopView::btn_del_pressed(){
 	}else{
 		state = DELETE_FX;
 	}
+	update_screen();
 }
 
 void screen_loopView::btn_add_pressed(){
@@ -158,6 +248,18 @@ void screen_loopView::btn_add_pressed(){
 	}else{
 		state = ADD_FX;
 	}
+	update_screen();
+}
+
+void screen_loopView::btn_move_pressed(){
+	if(MOVE_FX == state){
+		state = NORMAL;
+		move_source_slot = 0;
+	}else{
+		state = MOVE_FX;
+		move_source_slot = 0;
+	}
+	update_screen();
 }
 
 void screen_loopView::btn_slot1_pressed()
@@ -188,11 +290,33 @@ void screen_loopView::btn_slot1_pressed()
 		presenter->set_loop_data();
 		#endif
 		break;
+	case MOVE_FX:
+		// first tap: mark this slot as the move source (only if it has an fx)
+		if(move_source_slot == 0){
+			if(slot_has_fx(1)){
+				move_source_slot = 1;
+			}
+		}else if(move_source_slot != 1){
+			// second tap: swap source fx into slot 1 (keeps any fx already there)
+#ifndef SIMULATOR
+			fx_data_tst* src = slot_ptr(move_source_slot);
+			fx_data_tst dst = loop_num_un.slot1;
+			loop_num_un.slot1 = *src;
+			*src = dst;
+			presenter->set_loop_data();
+#endif
+			state = NORMAL;
+			move_source_slot = 0;
+		}
+		break;
 	default:
 		break;
 	}
-	state = NORMAL;
+	if(state != MOVE_FX){
+		state = NORMAL;
+	}
 	cont_Slot1.invalidate();
+	update_screen();
 }
 
 void screen_loopView::btn_slot2_pressed()
@@ -222,11 +346,31 @@ void screen_loopView::btn_slot2_pressed()
 		presenter->set_loop_data();
 #endif
 		break;
+	case MOVE_FX:
+		if(move_source_slot == 0){
+			if(slot_has_fx(2)){
+				move_source_slot = 2;
+			}
+		}else if(move_source_slot != 2){
+#ifndef SIMULATOR
+			fx_data_tst* src = slot_ptr(move_source_slot);
+			fx_data_tst dst = loop_num_un.slot2;
+			loop_num_un.slot2 = *src;
+			*src = dst;
+			presenter->set_loop_data();
+#endif
+			state = NORMAL;
+			move_source_slot = 0;
+		}
+		break;
 	default:
 		break;
 	}
-	state = NORMAL;
+	if(state != MOVE_FX){
+		state = NORMAL;
+	}
 	cont_Slot2.invalidate();
+	update_screen();
 }
 
 void screen_loopView::btn_slot3_pressed()
@@ -256,9 +400,29 @@ void screen_loopView::btn_slot3_pressed()
 		presenter->set_loop_data();
 #endif
 		break;
+	case MOVE_FX:
+		if(move_source_slot == 0){
+			if(slot_has_fx(3)){
+				move_source_slot = 3;
+			}
+		}else if(move_source_slot != 3){
+#ifndef SIMULATOR
+			fx_data_tst* src = slot_ptr(move_source_slot);
+			fx_data_tst dst = loop_num_un.slot3;
+			loop_num_un.slot3 = *src;
+			*src = dst;
+			presenter->set_loop_data();
+#endif
+			state = NORMAL;
+			move_source_slot = 0;
+		}
+		break;
 	default:
 		break;
 	}
-	state = NORMAL;
+	if(state != MOVE_FX){
+		state = NORMAL;
+	}
 	cont_Slot3.invalidate();
+	update_screen();
 }

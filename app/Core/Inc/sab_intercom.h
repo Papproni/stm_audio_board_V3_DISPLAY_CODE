@@ -53,7 +53,8 @@ typedef struct sab_intercom_st{
     // I2C comm handlers
     void (*process_rx_buffer) (struct sab_intercom_st* self, uint8_t*buffer_pu8, uint8_t size_u8);
     uint32_t (*get_reg_data_ptr)  (struct sab_intercom_st* self);
-    uint8_t (*get_reg_data_len)  (struct sab_intercom_st* self);
+    /* The STM32 HAL reloads its 255-byte counter for transfers larger than one frame. */
+    uint16_t (*get_reg_data_len)  (struct sab_intercom_st* self);
 }sab_intercom_tst;
 
 void init_intercom(struct sab_intercom_st* self,uint8_t slave_address_u8, I2C_HandleTypeDef *i2c_h);

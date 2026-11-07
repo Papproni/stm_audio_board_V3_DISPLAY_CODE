@@ -12,7 +12,8 @@
 typedef enum screen_states_en{
     NORMAL,
     ADD_FX,
-    DELETE_FX
+    DELETE_FX,
+    MOVE_FX
 }screen_states_ten;
 
 class screen_loopView : public screen_loopViewBase
@@ -30,14 +31,26 @@ public:
     virtual void toggleBtn_slot3_pressed();
     virtual void btn_del_pressed();
     virtual void btn_add_pressed();
+    virtual void btn_move_pressed();
 
 
     virtual void update_screen();
 
     screen_states_ten state;
+    int move_source_slot; // 1..3 slot selected as source in MOVE_FX mode, 0 = none yet
+    void refresh_move_glow();
+
+    // MOVE button - owned by this view (not in generated base) so Designer regeneration can't wipe it
+    touchgfx::ButtonWithLabel btn_Move_fx;
+    touchgfx::Callback<screen_loopView, const touchgfx::AbstractButton&> moveBtnCallback;
+    void moveBtnCallbackHandler(const touchgfx::AbstractButton& src);
 
 #ifndef SIMULATOR
     sab_loop_num_tun loop_num_un;
+    bool slot_has_fx(int slot);
+    fx_data_tst* slot_ptr(int slot);
+#else
+    inline bool slot_has_fx(int) { return true; }
 #endif
     int inited;
 //    virtual char* get_current_fx_name();

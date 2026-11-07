@@ -113,5 +113,8 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     344, // T___SINGLEUSE_RDR0: "EDIT"
     238, // T___SINGLEUSE_3ICT: "PERFORM"
     171, // T___SINGLEUSE_1IH8: "<>"
-    171  // T___SINGLEUSE_8Z2S: "<>"
+    171, // T___SINGLEUSE_8Z2S: "<>"
+    426, // T___SINGLEUSE_MVFX: "MOVE"
+    431, // T___SINGLEUSE_MOVC: "MOVE:"
+    437  // T___SINGLEUSE_PTTG: "PICK TARGET"
 };

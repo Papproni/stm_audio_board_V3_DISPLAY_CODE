@@ -232,7 +232,7 @@ uint32_t sab_intercom_get_reg_data_ptr(struct sab_intercom_st* self){
     }
 }
 
-uint8_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
+uint16_t sab_intercom_get_reg_data_size(struct sab_intercom_st* self){
 	switch (self->register_addr_u8)
 	{
 		case SAB_I2C_REG_PRESETNUM:
