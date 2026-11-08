@@ -104,6 +104,11 @@ void screen_fx_paramsView::tearDownScreen()
 	screen_fx_paramsViewBase::tearDownScreen();
 }
 
+void screen_fx_paramsView::return_to_loop_screen()
+{
+	application().gotoscreen_loopScreenNoTransition();
+}
+
 void screen_fx_paramsView::update_screen()
 {
 	// TODO

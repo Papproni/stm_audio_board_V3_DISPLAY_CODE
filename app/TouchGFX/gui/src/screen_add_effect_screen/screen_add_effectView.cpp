@@ -23,6 +23,11 @@ void screen_add_effectView::tearDownScreen()
     screen_add_effectViewBase::tearDownScreen();
 }
 
+void screen_add_effectView::return_to_loop_screen()
+{
+    application().gotoscreen_loopScreenNoTransition();
+}
+
 void screen_add_effectView::onItemSnap(int16_t itemIndex) {
 #ifdef SIMULATOR
     touchgfx_printf("Snapped item index: %d\n", itemIndex);

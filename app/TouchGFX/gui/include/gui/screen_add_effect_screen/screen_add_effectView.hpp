@@ -17,6 +17,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void update_screen();
+    void return_to_loop_screen(); // preset changed while adding effect -> back to loop screen (new effect setup)
     
     uint16_t choosen_fx_idx;
     uint8_t num_of_implemented_fx;

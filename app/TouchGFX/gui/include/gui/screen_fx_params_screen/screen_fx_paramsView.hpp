@@ -39,6 +39,7 @@ public:
     sab_fx_param_tun fx_params_tun[12];
 #endif
     virtual void update_screen();
+    void return_to_loop_screen(); // preset changed while on FX params -> back to loop screen (new effect setup)
 
 protected:
     int convert_adc_to_pot_values(int val);

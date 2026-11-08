@@ -2,7 +2,7 @@
 #include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
 
 screen_add_effectPresenter::screen_add_effectPresenter(screen_add_effectView &v)
-    : view(v)
+    : view(v), last_preset_major_u8(0xFF), last_preset_minor_u8(0xFF)
 {
 #ifndef SIMULATOR
 	view.implemented_fx_ptr = NULL;
@@ -56,5 +56,19 @@ void screen_add_effectPresenter::add_effect(uint8_t choosen_fx)
 
 void screen_add_effectPresenter::update_screen()
 {
+#ifndef SIMULATOR
+    // If the preset number changes while adding an effect, go back to the loop screen —
+    // a new preset can have a different effect setup than the one being edited.
+    model->read_preset_data();
+    sab_preset_num_tun pst = model->get_preset_data();
+    if (last_preset_major_u8 != 0xFF &&
+        (pst.preset_Major_u8 != last_preset_major_u8 || pst.preset_Minor_u8 != last_preset_minor_u8))
+    {
+        view.return_to_loop_screen();
+        return;
+    }
+    last_preset_major_u8 = pst.preset_Major_u8;
+    last_preset_minor_u8 = pst.preset_Minor_u8;
+#endif // ! SIMULATOR
     view.update_screen();
 }

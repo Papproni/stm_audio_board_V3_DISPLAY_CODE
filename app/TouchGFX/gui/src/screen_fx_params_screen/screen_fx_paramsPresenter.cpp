@@ -2,7 +2,7 @@
 #include <gui/screen_fx_params_screen/screen_fx_paramsPresenter.hpp>
 
 screen_fx_paramsPresenter::screen_fx_paramsPresenter(screen_fx_paramsView& v)
-    : view(v)
+    : view(v), last_preset_major_u8(0xFF), last_preset_minor_u8(0xFF)
 {
 
 }
@@ -48,6 +48,20 @@ void screen_fx_paramsPresenter::set_fx_param_new_value(uint8_t slotnum_u8, uint8
 }
 
 void screen_fx_paramsPresenter::update_screen(){
+#ifndef SIMULATOR
+	// If the preset number changes while on FX params, go back to the loop screen —
+	// a new preset can have a different effect setup than the one being edited.
+	model->read_preset_data();
+	sab_preset_num_tun pst = model->get_preset_data();
+	if (last_preset_major_u8 != 0xFF &&
+	    (pst.preset_Major_u8 != last_preset_major_u8 || pst.preset_Minor_u8 != last_preset_minor_u8))
+	{
+		view.return_to_loop_screen();
+		return;
+	}
+	last_preset_major_u8 = pst.preset_Major_u8;
+	last_preset_minor_u8 = pst.preset_Minor_u8;
+#endif // ! SIMULATOR
 	view.update_screen();
 }
 

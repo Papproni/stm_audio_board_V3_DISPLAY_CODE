@@ -38,6 +38,8 @@ private:
     screen_add_effectPresenter();
 
     screen_add_effectView& view;
+    uint8_t last_preset_major_u8; // 0xFF = not read yet (sentinel); preset-change detection
+    uint8_t last_preset_minor_u8;
 };
 
 #endif // SCREEN_ADD_EFFECTPRESENTER_HPP

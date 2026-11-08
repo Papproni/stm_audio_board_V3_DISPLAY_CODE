@@ -36,6 +36,8 @@ private:
     screen_fx_paramsPresenter();
 
     screen_fx_paramsView& view;
+    uint8_t last_preset_major_u8; // 0xFF = not read yet (sentinel); preset-change detection
+    uint8_t last_preset_minor_u8;
 };
 
 #endif // SCREEN_FX_PARAMSPRESENTER_HPP
