@@ -117,6 +117,13 @@ void screen_loopView::refresh_move_glow()
 
 void screen_loopView::update_screen()
 {
+// Current preset number in the top-right container (same values as screen_perf_mode)
+#ifndef SIMULATOR
+	mode_preset_display_container1.set_current_preset(preset_data_un.preset_Major_u8, preset_data_un.preset_Minor_u8);
+#else
+	mode_preset_display_container1.set_current_preset('Z', 9);
+#endif
+
 #ifndef SIMULATOR
 	this->toggleBtn_slot1.forceState(loop_num_un.slot1.fx_state_en == FX_STATE_ON);
 	this->toggleBtn_slot2.forceState(loop_num_un.slot2.fx_state_en == FX_STATE_ON);

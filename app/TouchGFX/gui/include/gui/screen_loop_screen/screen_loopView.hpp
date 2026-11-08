@@ -47,6 +47,7 @@ public:
 
 #ifndef SIMULATOR
     sab_loop_num_tun loop_num_un;
+    sab_preset_num_tun preset_data_un;
     bool slot_has_fx(int slot);
     fx_data_tst* slot_ptr(int slot);
 #else

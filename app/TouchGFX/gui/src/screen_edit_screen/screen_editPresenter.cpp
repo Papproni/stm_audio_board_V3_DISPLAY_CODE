@@ -24,6 +24,8 @@ void screen_editPresenter::update_screen()
 #ifndef SIMULATOR
     model->read_loopbypass();
     view.loopbypass = model->get_loopbypass();
+    model->read_preset_data();
+    view.preset_data_un = model->get_preset_data();
 #endif
 	view.update_screen();
 }

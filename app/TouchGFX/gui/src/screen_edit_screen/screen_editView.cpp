@@ -81,6 +81,13 @@ volatile bool L34_ext = true;
 void screen_editView::update_screen()
 {
 	
+// Current preset number in the top-right container (same values as screen_perf_mode)
+#ifndef SIMULATOR
+	mode_preset_display_container1.set_current_preset(preset_data_un.preset_Major_u8, preset_data_un.preset_Minor_u8);
+#else
+	mode_preset_display_container1.set_current_preset('Z', 9);
+#endif
+
 #ifndef SIMULATOR
 	L12_ext = this->loopbypass.L12;
 	L23_ext = this->loopbypass.L23;

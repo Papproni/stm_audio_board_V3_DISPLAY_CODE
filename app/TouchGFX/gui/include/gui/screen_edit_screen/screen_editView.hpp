@@ -37,6 +37,7 @@ public:
     void setAlphaOfContainer(Container &conti,uint8_t alpha);
 #ifndef SIMULATOR
     sab_loopbypass_tun loopbypass;
+    sab_preset_num_tun preset_data_un;
 #endif
 
 protected:
