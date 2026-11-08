@@ -33,6 +33,7 @@ public:
     void set_loop_data();
 #ifndef  SIMULATOR
     void add_fx(fx_slots_ten slot);
+    void swap_slot_fx_params(uint8_t slot_a_u8, uint8_t slot_b_u8);
 #endif
 
 private:

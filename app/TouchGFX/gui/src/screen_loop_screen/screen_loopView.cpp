@@ -298,13 +298,15 @@ void screen_loopView::btn_slot1_pressed()
 			}
 		}else if(move_source_slot != 1){
 			// second tap: swap source fx into slot 1 (keeps any fx already there)
-#ifndef SIMULATOR
-			fx_data_tst* src = slot_ptr(move_source_slot);
-			fx_data_tst dst = loop_num_un.slot1;
-			loop_num_un.slot1 = *src;
-			*src = dst;
-			presenter->set_loop_data();
-#endif
+			#ifndef SIMULATOR
+				// move the effect's parameters along with it (DSP keeps params per slot position on rebuild)
+				presenter->swap_slot_fx_params(move_source_slot - 1, 0);
+				fx_data_tst* src = slot_ptr(move_source_slot);
+				fx_data_tst dst = loop_num_un.slot1;
+				loop_num_un.slot1 = *src;
+				*src = dst;
+				presenter->set_loop_data();
+			#endif
 			state = NORMAL;
 			move_source_slot = 0;
 		}
@@ -353,6 +355,8 @@ void screen_loopView::btn_slot2_pressed()
 			}
 		}else if(move_source_slot != 2){
 #ifndef SIMULATOR
+			// move the effect's parameters along with it (DSP keeps params per slot position on rebuild)
+			presenter->swap_slot_fx_params(move_source_slot - 1, 1);
 			fx_data_tst* src = slot_ptr(move_source_slot);
 			fx_data_tst dst = loop_num_un.slot2;
 			loop_num_un.slot2 = *src;
@@ -407,6 +411,8 @@ void screen_loopView::btn_slot3_pressed()
 			}
 		}else if(move_source_slot != 3){
 #ifndef SIMULATOR
+			// move the effect's parameters along with it (DSP keeps params per slot position on rebuild)
+			presenter->swap_slot_fx_params(move_source_slot - 1, 2);
 			fx_data_tst* src = slot_ptr(move_source_slot);
 			fx_data_tst dst = loop_num_un.slot3;
 			loop_num_un.slot3 = *src;
