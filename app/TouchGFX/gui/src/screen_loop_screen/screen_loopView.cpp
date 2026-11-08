@@ -1,6 +1,9 @@
 #include <gui/screen_loop_screen/screen_loopView.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <touchgfx/hal/HAL.hpp>
+#include <touchgfx/FontManager.hpp>
+#include <fonts/ApplicationFontProvider.hpp>
 
 screen_loopView::screen_loopView()
 {
@@ -12,6 +15,14 @@ screen_loopView::screen_loopView()
 void screen_loopView::setupScreen()
 {
     screen_loopViewBase::setupScreen();
+
+    // Replace the static "Loop 4" label with a dynamic one showing the actually open loop.
+    // No text-database entry with a wildcard placeholder is bound to Consola 40, so the label
+    // is drawn directly in draw() (see below) using Typography::LARGE = consola_40.
+    // Keep the original widget's fitted geometry so the new label sits exactly where "Loop 4" did.
+    loopLabelRect = touchgfx::Rect(text_current_loop.getX(), text_current_loop.getY(),
+                                   text_current_loop.getWidth(), text_current_loop.getHeight());
+    remove(text_current_loop);
 
     // MOVE button: built by this view (positioned in the gap between btn_opt and btn_Add_fx)
     btn_Move_fx.setXY(65, 0);
@@ -29,6 +40,36 @@ void screen_loopView::moveBtnCallbackHandler(const touchgfx::AbstractButton& src
     if (&src == &btn_Move_fx)
     {
         btn_move_pressed();
+    }
+}
+
+void screen_loopView::draw(touchgfx::Rect& invalidatedArea)
+{
+    screen_loopViewBase::draw(invalidatedArea);
+
+    // Dynamic "Loop N" label, drawn directly with Consola 40 (same font/size as the original
+    // static "Loop 4" widget that was removed in setupScreen()). The view sits at (0,0), so
+    // invalidatedArea is absolute; drawString wants it relative to the label's origin.
+    if (!loopLabelRect.isEmpty())
+    {
+        const touchgfx::Rect region = invalidatedArea & loopLabelRect;
+        if (!region.isEmpty())
+        {
+            const touchgfx::Font* font = touchgfx::FontManager::getFont(Typography::LARGE);
+            if (font != 0)
+            {
+                touchgfx::Unicode::UnicodeChar buf[8];
+                touchgfx::Unicode::snprintf(buf, 8, "Loop %d", current_loop_num_u8 ? current_loop_num_u8 : 1);
+                const touchgfx::LCD::StringVisuals visuals(font,
+                                                           touchgfx::Color::getColorFromRGB(255, 255, 255),
+                                                           255, touchgfx::LEFT, 0,
+                                                           touchgfx::TEXT_ROTATE_0,
+                                                           touchgfx::TEXT_DIRECTION_LTR, 0);
+                const touchgfx::Rect relRegion(region.x - loopLabelRect.x, region.y - loopLabelRect.y,
+                                               region.width, region.height);
+                touchgfx::HAL::lcd().drawString(loopLabelRect, relRegion, visuals, buf);
+            }
+        }
     }
 }
 
@@ -117,6 +158,12 @@ void screen_loopView::refresh_move_glow()
 
 void screen_loopView::update_screen()
 {
+// "Loop N" label: show which loop is actually open (drawn in draw())
+	if (!loopLabelRect.isEmpty() && current_loop_num_u8 != 0)
+	{
+		invalidate(); // this fork has no region overload; full-screen redraw is cheap here
+	}
+
 // Current preset number in the top-right container (same values as screen_perf_mode)
 #ifndef SIMULATOR
 	mode_preset_display_container1.set_current_preset(preset_data_un.preset_Major_u8, preset_data_un.preset_Minor_u8);

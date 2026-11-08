@@ -34,6 +34,8 @@ void screen_loopPresenter::setFXname(char* data)
 
 void screen_loopPresenter::update_screen()
 {
+// Current loop number for the dynamic "Loop N" label (plain model field, safe in simulator too)
+	view.current_loop_num_u8 = model->get_current_loop_num();
 #ifndef  SIMULATOR
 	model->read_loop_data(model->get_current_loop_num());
 	view.loop_num_un = model->get_loop_data(model->get_current_loop_num());
