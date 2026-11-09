@@ -7,12 +7,46 @@
 
 #include "sab_intercom.h"
 
+// ----------------------------------I2C BUS HEALTH-------------------------------------------------
+// Every I2C transaction below runs on the GUI thread. If the DSP slave stops answering
+// (crash, brownout, stuck bus), a blocking HAL_I2C_Mem_Read/Write would stall the whole
+// GUI for the full timeout on every call - with per-frame polling that freezes the UI
+// completely (buttons become unpressable). To keep the GUI alive:
+//   1) the per-transaction timeout is short (SAB_I2C_TIMEOUT_MS), and
+//   2) after SAB_I2C_FAIL_LIMIT consecutive failures all transactions are skipped for
+//      SAB_I2C_BACKOFF_MS, retrying periodically instead of hammering a dead bus.
+#define SAB_I2C_TIMEOUT_MS     300U
+#define SAB_I2C_FAIL_LIMIT     3U
+#define SAB_I2C_BACKOFF_MS     3000U
+
+static uint8_t  sab_i2c_fail_count_u8 = 0;
+static uint32_t sab_i2c_backoff_until_u32 = 0;
+
+/// @brief 1 if a transaction may be attempted now, 0 while in backoff (keep stale data).
+static int sab_i2c_bus_ready(void){
+	return (HAL_GetTick() >= sab_i2c_backoff_until_u32);
+}
+
+/// @brief Feed the result of a transaction into the backoff logic.
+static void sab_i2c_note_result(int ok){
+	if(ok){
+		sab_i2c_fail_count_u8 = 0;
+		sab_i2c_backoff_until_u32 = 0;
+	}else{
+		if(++sab_i2c_fail_count_u8 >= SAB_I2C_FAIL_LIMIT){
+			sab_i2c_backoff_until_u32 = HAL_GetTick() + SAB_I2C_BACKOFF_MS;
+		}
+	}
+}
+
 // ----------------------------------GETTERS-------------------------------------------------
 static void get_preset_data (struct sab_intercom_st* self){
-    HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
                         SAB_I2C_REG_PRESETNUM, I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->preset_data_un.all_u32, SAB_I2C_REG_PRESETNUM_LEN,
-                        1000);
+                        SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 /*
@@ -22,50 +56,64 @@ static void get_preset_data (struct sab_intercom_st* self){
 4 = LOOP4
 */
 static void get_loop_data (struct sab_intercom_st* self, uint8_t loop_num_u8){
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_LOOP1FX+loop_num_u8-1,
 						I2C_MEMADD_SIZE_8BIT,
 						self->loop_data[loop_num_u8-1].all_pau8, sizeof(sab_loop_num_tun),
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 
 static void get_fx_param(struct sab_intercom_st* self, uint8_t param_slot_u8){
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_FXPARAM1+param_slot_u8-1,
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->fx_param_un[param_slot_u8-1].all_au8, SAB_I2C_REG_FXPARAM_LEN,
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void get_info (struct sab_intercom_st* self){
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_INFO,
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->info_un.all_u8, SAB_I2C_REG_INFO_LEN,
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 static void get_loopbypass (struct sab_intercom_st* self){
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_LOOPBYPASSSTATE,
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->loopbypass_un.all_u8, SAB_I2C_REG_LOOPBYPASSSTATE_LEN,
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void get_num_of_implemented_effects  (struct sab_intercom_st* self){
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_NUM_OF_IMPLEMENTED_EFFECTS,
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->num_of_implemented_effects, 1,
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void get_implemented_effects  (struct sab_intercom_st* self){
 
 
+	// Boot path: wait until the DSP reports how many effects it has. The per-call bus
+	// backoff makes get_num_of_implemented_effects() return instantly while in backoff,
+	// so pace the retry with a delay instead of spinning the CPU.
 	while(!self->num_of_implemented_effects){
 		get_num_of_implemented_effects(self);
+		HAL_Delay(50);
 	}
 	
 	self->implemented_fx_data_ptr = malloc(sizeof(fx_data_tst)*self->num_of_implemented_effects);
@@ -73,11 +121,13 @@ static void get_implemented_effects  (struct sab_intercom_st* self){
 		return;
 	}
 
-	HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
 						SAB_I2C_REG_IMPLEMENTED_EFFECTS,
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)self->implemented_fx_data_ptr, sizeof(fx_data_tst)*self->num_of_implemented_effects,
-						1000);
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 
@@ -85,25 +135,31 @@ static void get_implemented_effects  (struct sab_intercom_st* self){
 static void set_fx_param (struct sab_intercom_st* self, uint8_t param_slot_u8, uint8_t new_value_u8){
 	self->fx_param_un[param_slot_u8-1].value_u8 = new_value_u8;
 
-	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
 			SAB_I2C_REG_FXPARAM1+param_slot_u8-1,
 			I2C_MEMADD_SIZE_8BIT,
-			(uint8_t*)&self->fx_param_un[param_slot_u8-1], SAB_I2C_REG_FXPARAM_LEN, 1000);
+			(uint8_t*)&self->fx_param_un[param_slot_u8-1], SAB_I2C_REG_FXPARAM_LEN, SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void set_loopbypass (struct sab_intercom_st* self,uint8_t loop, uint8_t state){
 	self->loopbypass_un.all_u8[loop] = state;
-	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
-				SAB_I2C_REG_LOOPBYPASSSTATE,
-				I2C_MEMADD_SIZE_8BIT,
-				(uint8_t*)&self->loopbypass_un.all_u8, SAB_I2C_REG_LOOPBYPASSSTATE_LEN, 1000);
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+						SAB_I2C_REG_LOOPBYPASSSTATE,
+						I2C_MEMADD_SIZE_8BIT,
+						(uint8_t*)&self->loopbypass_un.all_u8, SAB_I2C_REG_LOOPBYPASSSTATE_LEN, SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 static void set_save (struct sab_intercom_st* self){
 	
-	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
-				SAB_I2C_REG_SAVEPRESET,
-				I2C_MEMADD_SIZE_8BIT,
-				(uint8_t*)&self->save_un, sizeof(sab_save_tun), 1000);
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+						SAB_I2C_REG_SAVEPRESET,
+						I2C_MEMADD_SIZE_8BIT,
+						(uint8_t*)&self->save_un, sizeof(sab_save_tun), SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 	HAL_Delay(500);
 }
 
@@ -117,26 +173,32 @@ static void set_save (struct sab_intercom_st* self){
 static void set_loop_data  (struct sab_intercom_st* self, sab_loop_num_tun* loop_data_pun, uint8_t loop_num){
 	memcpy(self->loop_data[loop_num-1].all_pau8,loop_data_pun,sizeof(sab_loop_num_tun));
 	
-	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
-				SAB_I2C_REG_LOOP1FX+loop_num-1,
-				I2C_MEMADD_SIZE_8BIT,
-				self->loop_data[loop_num-1].all_pau8, sizeof(sab_loop_num_tun), 1000);
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+						SAB_I2C_REG_LOOP1FX+loop_num-1,
+						I2C_MEMADD_SIZE_8BIT,
+						self->loop_data[loop_num-1].all_pau8, sizeof(sab_loop_num_tun), SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void set_current_fx_in_edit (struct sab_intercom_st* self,uint8_t fx_slot_u8){
 	self->current_fx_in_edit = fx_slot_u8;
-	HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
-				SAB_I2c_REG_CURRENT_FX,
-				I2C_MEMADD_SIZE_8BIT,
-				&self->current_fx_in_edit, sizeof(uint8_t), 1000);
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+						SAB_I2c_REG_CURRENT_FX,
+						I2C_MEMADD_SIZE_8BIT,
+						&self->current_fx_in_edit, sizeof(uint8_t), SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 static void set_dsp_fw_update_flg(struct sab_intercom_st* self){
 	self->dsp_fw_update_flg = 1;
-		HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
-					SAB_I2C_REG_DSP_FW_UPDATE,
-					I2C_MEMADD_SIZE_8BIT,
-					&self->dsp_fw_update_flg, sizeof(uint8_t), 1000);
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Write(self->i2c_h,self->slave_addr_u8,
+						SAB_I2C_REG_DSP_FW_UPDATE,
+						I2C_MEMADD_SIZE_8BIT,
+						&self->dsp_fw_update_flg, sizeof(uint8_t), SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
 }
 
 

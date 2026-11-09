@@ -29,7 +29,6 @@ protected:
     touchgfx::Box loop1_bgnd;
     touchgfx::Box loop2_bgnd;
     touchgfx::Box loop3_bgnd;
-    touchgfx::Box loop4_bgnd;
     touchgfx::Box mode_bgnd;
     touchgfx::Box text_mode_A_bgnd;
     touchgfx::Box text_mode_B_bgnd;
@@ -39,7 +38,6 @@ protected:
     touchgfx::TextArea text_loop1_state;
     touchgfx::TextArea text_loop2_state;
     touchgfx::TextArea text_loop3_state;
-    touchgfx::TextArea text_loop4_state;
     touchgfx::TextArea text_mode;
     touchgfx::TextArea text_mode_A;
     touchgfx::TextArea text_mode_B;

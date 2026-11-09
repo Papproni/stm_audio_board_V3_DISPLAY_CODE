@@ -13,6 +13,9 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_2DBY" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">MOVE</Translation>
+      </Text>
       <Text Id="__SingleUse_QBMX" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">A</Translation>
       </Text>
@@ -47,16 +50,16 @@
         <Translation Language="GB">Loop 4</Translation>
       </Text>
       <Text Id="__SingleUse_ZOI4" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">ON</Translation>
+        <Translation Language="GB">L34</Translation>
       </Text>
       <Text Id="__SingleUse_XAZY" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">ON</Translation>
       </Text>
       <Text Id="__SingleUse_3NI2" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">ON</Translation>
+        <Translation Language="GB">L23</Translation>
       </Text>
       <Text Id="__SingleUse_JR1D" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">ON</Translation>
+        <Translation Language="GB">L12</Translation>
       </Text>
       <Text Id="__SingleUse_KEGH" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Mode</Translation>

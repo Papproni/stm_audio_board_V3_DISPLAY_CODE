@@ -82,6 +82,7 @@ protected:
     touchgfx::ButtonWithLabel btn_Add_fx;
     touchgfx::ButtonWithLabel btn_Del_fx;
     touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::ButtonWithLabel btn_move;
     touchgfx::Container cont_Slot1;
     touchgfx::BoxWithBorder glow_1;
     touchgfx::Box box_FX_background_1;

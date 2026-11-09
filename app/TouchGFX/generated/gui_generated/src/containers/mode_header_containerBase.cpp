@@ -17,24 +17,19 @@ mode_header_containerBase::mode_header_containerBase()
     loop_bgnd.setColor(touchgfx::Color::getColorFromRGB(255, 169, 10));
     add(loop_bgnd);
 
-    loop1_bgnd.setPosition(58, 0, 50, 24);
+    loop1_bgnd.setPosition(58, 0, 64, 24);
     loop1_bgnd.setColor(touchgfx::Color::getColorFromRGB(194, 128, 165));
     loop1_bgnd.setAlpha(80);
     add(loop1_bgnd);
 
-    loop2_bgnd.setPosition(108, 0, 51, 24);
+    loop2_bgnd.setPosition(122, 0, 72, 24);
     loop2_bgnd.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     loop2_bgnd.setAlpha(80);
     add(loop2_bgnd);
 
-    loop3_bgnd.setPosition(159, 0, 51, 24);
-    loop3_bgnd.setColor(touchgfx::Color::getColorFromRGB(81, 0, 255));
-    loop3_bgnd.setAlpha(80);
+    loop3_bgnd.setPosition(194, 0, 66, 24);
+    loop3_bgnd.setColor(touchgfx::Color::getColorFromRGB(255, 225, 0));
     add(loop3_bgnd);
-
-    loop4_bgnd.setPosition(210, 0, 50, 24);
-    loop4_bgnd.setColor(touchgfx::Color::getColorFromRGB(255, 225, 0));
-    add(loop4_bgnd);
 
     mode_bgnd.setPosition(0, 24, 58, 36);
     mode_bgnd.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -65,29 +60,23 @@ mode_header_containerBase::mode_header_containerBase()
     text_loop.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KHDB));
     add(text_loop);
 
-    text_loop1_state.setXY(68, 0);
+    text_loop1_state.setXY(72, 0);
     text_loop1_state.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     text_loop1_state.setLinespacing(0);
     text_loop1_state.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JR1D));
     add(text_loop1_state);
 
-    text_loop2_state.setXY(118, 0);
+    text_loop2_state.setXY(143, 0);
     text_loop2_state.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     text_loop2_state.setLinespacing(0);
     text_loop2_state.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3NI2));
     add(text_loop2_state);
 
-    text_loop3_state.setXY(168, 0);
+    text_loop3_state.setXY(209, 0);
     text_loop3_state.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     text_loop3_state.setLinespacing(0);
-    text_loop3_state.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XAZY));
+    text_loop3_state.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZOI4));
     add(text_loop3_state);
-
-    text_loop4_state.setXY(220, 0);
-    text_loop4_state.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    text_loop4_state.setLinespacing(0);
-    text_loop4_state.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZOI4));
-    add(text_loop4_state);
 
     text_mode.setXY(3, 30);
     text_mode.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -107,7 +96,7 @@ mode_header_containerBase::mode_header_containerBase()
     text_mode_B.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TQIR));
     add(text_mode_B);
 
-    text_mode_C.setXY(172, 15);
+    text_mode_C.setXY(173, 15);
     text_mode_C.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     text_mode_C.setLinespacing(0);
     text_mode_C.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SWIK));

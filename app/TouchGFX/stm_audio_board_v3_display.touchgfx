@@ -1335,6 +1335,27 @@
             "TextRotation": "0"
           },
           {
+            "Type": "ButtonWithLabel",
+            "Name": "btn_move",
+            "X": 65,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_fill_normal.png",
+            "TextId": "__SingleUse_2DBY",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
             "Type": "Container",
             "Name": "cont_Slot1",
             "X": 8,
@@ -2710,7 +2731,7 @@
             "Type": "Box",
             "Name": "loop1_bgnd",
             "X": 58,
-            "Width": 50,
+            "Width": 64,
             "Height": 24,
             "Color": {
               "Red": 194,
@@ -2722,8 +2743,8 @@
           {
             "Type": "Box",
             "Name": "loop2_bgnd",
-            "X": 108,
-            "Width": 51,
+            "X": 122,
+            "Width": 72,
             "Height": 24,
             "Color": {
               "Red": 255,
@@ -2735,20 +2756,8 @@
           {
             "Type": "Box",
             "Name": "loop3_bgnd",
-            "X": 159,
-            "Width": 51,
-            "Height": 24,
-            "Color": {
-              "Red": 81,
-              "Blue": 255
-            },
-            "Alpha": 80
-          },
-          {
-            "Type": "Box",
-            "Name": "loop4_bgnd",
-            "X": 210,
-            "Width": 50,
+            "X": 194,
+            "Width": 66,
             "Height": 24,
             "Color": {
               "Red": 255,
@@ -2825,8 +2834,8 @@
           {
             "Type": "TextArea",
             "Name": "text_loop1_state",
-            "X": 68,
-            "Width": 31,
+            "X": 72,
+            "Width": 37,
             "Height": 24,
             "TextId": "__SingleUse_JR1D",
             "TextRotation": "0",
@@ -2835,8 +2844,8 @@
           {
             "Type": "TextArea",
             "Name": "text_loop2_state",
-            "X": 118,
-            "Width": 31,
+            "X": 143,
+            "Width": 37,
             "Height": 24,
             "TextId": "__SingleUse_3NI2",
             "TextRotation": "0",
@@ -2845,18 +2854,8 @@
           {
             "Type": "TextArea",
             "Name": "text_loop3_state",
-            "X": 168,
-            "Width": 31,
-            "Height": 24,
-            "TextId": "__SingleUse_XAZY",
-            "TextRotation": "0",
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "text_loop4_state",
-            "X": 220,
-            "Width": 31,
+            "X": 209,
+            "Width": 37,
             "Height": 24,
             "TextId": "__SingleUse_ZOI4",
             "TextRotation": "0",
@@ -2903,7 +2902,7 @@
           {
             "Type": "TextArea",
             "Name": "text_mode_C",
-            "X": 172,
+            "X": 173,
             "Y": 15,
             "Width": 22,
             "Height": 48,

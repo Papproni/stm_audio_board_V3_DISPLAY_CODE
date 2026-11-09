@@ -15,6 +15,7 @@ public:
     virtual void update_screen();
     #ifndef SIMULATOR
     sab_preset_num_tun preset_data_un;
+    sab_loopbypass_tun loopbypass_un;
     #endif
 protected:
     

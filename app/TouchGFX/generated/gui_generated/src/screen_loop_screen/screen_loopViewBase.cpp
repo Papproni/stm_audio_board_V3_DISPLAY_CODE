@@ -91,6 +91,13 @@ screen_loopViewBase::screen_loopViewBase() :
     btn_opt.setAction(buttonCallback);
     add(btn_opt);
 
+    btn_move.setXY(65, 0);
+    btn_move.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
+    btn_move.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2DBY));
+    btn_move.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    btn_move.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    add(btn_move);
+
     cont_Slot1.setPosition(8, 95, 101, 101);
     glow_1.setPosition(7, 10, 86, 80);
     glow_1.setColor(touchgfx::Color::getColorFromRGB(161, 58, 58));

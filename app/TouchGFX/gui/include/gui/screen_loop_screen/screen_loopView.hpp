@@ -42,8 +42,8 @@ public:
     int move_source_slot; // 1..3 slot selected as source in MOVE_FX mode, 0 = none yet
     void refresh_move_glow();
 
-    // MOVE button - owned by this view (not in generated base) so Designer regeneration can't wipe it
-    touchgfx::ButtonWithLabel btn_Move_fx;
+    // MOVE button: created by the Designer (generated base owns the btn_move widget).
+    // moveBtnCallback wires its action to moveBtnCallbackHandler in setupScreen().
     touchgfx::Callback<screen_loopView, const touchgfx::AbstractButton&> moveBtnCallback;
     void moveBtnCallbackHandler(const touchgfx::AbstractButton& src);
 

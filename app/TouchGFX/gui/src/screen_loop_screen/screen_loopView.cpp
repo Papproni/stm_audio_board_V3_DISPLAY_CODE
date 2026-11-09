@@ -24,20 +24,15 @@ void screen_loopView::setupScreen()
                                    text_current_loop.getWidth(), text_current_loop.getHeight());
     remove(text_current_loop);
 
-    // MOVE button: built by this view (positioned in the gap between btn_opt and btn_Add_fx)
-    btn_Move_fx.setXY(65, 0);
-    btn_Move_fx.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_FILL_DISABLED_ID));
-    btn_Move_fx.setLabelText(touchgfx::TypedText(T___SINGLEUSE_MVFX));
-    btn_Move_fx.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    btn_Move_fx.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    // MOVE button: created by the Designer (see generated base, label T___SINGLEUSE_2DBY "MOVE").
+    // No pressed handler is assigned in the Designer yet, so wire the action here.
     moveBtnCallback = touchgfx::Callback<screen_loopView, const touchgfx::AbstractButton&>(this, &screen_loopView::moveBtnCallbackHandler);
-    btn_Move_fx.setAction(moveBtnCallback);
-    add(btn_Move_fx);
+    btn_move.setAction(moveBtnCallback);
 }
 
 void screen_loopView::moveBtnCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &btn_Move_fx)
+    if (&src == &btn_move)
     {
         btn_move_pressed();
     }
