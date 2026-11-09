@@ -76,28 +76,29 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
-	
-		static uint16_t prevx = GUI_WIDTH;
-	static uint16_t prevy = GUI_HEIGHT;
-	uint16_t intx, inty;
-	XPT2046_Update(&intx, &inty);
-    // intx = (uint16_t)(0.05*(float)intx + 0.95*(float)prevx);
-    // inty = (uint16_t)(0.05*(float)inty + 0.95*(float)prevy);
-	if (XPT2046_IsReasonable(intx, inty)) {
-		ConvXPTtoILI(&intx, &inty);
-		if (intx != prevx || inty != prevy) {
-			prevx = intx;
-			prevy = inty;
-			x = (int32_t)intx;
-			y = (int32_t)inty;
-			return true;
-		}
-        // prevx = intx;
-        // prevy = inty;
-        // x = (int32_t)intx;
-        // y = (int32_t)inty;
-        // return true;
-	}
+
+    // XPT2046_Update() only writes *x/*y while the finger is on the pad
+    // (pressure above threshold). Pre-filling with out-of-range sentinels
+    // turns "no write" into a reliable no-touch signal, and also removes
+    // the previous use of uninitialized values when nothing was written.
+    uint16_t intx = 0; // 0 < XPT_XMIN(350) -> never reasonable
+    uint16_t inty = 0;
+    XPT2046_Update(&intx, &inty);
+
+    if (XPT2046_IsReasonable(intx, inty)) {
+        ConvXPTtoILI(&intx, &inty);
+        x = (int32_t)intx;
+        y = (int32_t)inty;
+        // Report touch for EVERY tick the finger is on the pad - even when
+        // the coordinates have not changed. The framework then keeps the
+        // button in its PRESSED state and only emits RELEASED after the
+        // finger really leaves the pad, so actions fire on release, never
+        // while the finger is still resting on the screen. Moving fingers
+        // still deliver coordinate changes exactly as before (sliders,
+        // scroll areas and drag gestures are unaffected).
+        return true;
+    }
+    // Finger actually off the pad -> framework debounce will emit RELEASED.
     return false;
 }
 
