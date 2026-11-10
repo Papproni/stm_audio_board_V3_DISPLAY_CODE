@@ -2484,6 +2484,17 @@
               "Type": "ActionCustom",
               "FunctionName": "btn_add_pressed"
             }
+          },
+          {
+            "InteractionName": "To_add_effect",
+            "Trigger": {
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_add_effect"
+            }
           }
         ]
       },
