@@ -39,9 +39,10 @@ from Original source:
 #define READ_TIMES 	5
 #define LOST_VAL 	1
 #define ERR_RANGE 50
-#define Z_THRESHOLD     250
+#define Z_THRESHOLD     400   // pressure (Z) needed to count as "finger down". Raise if light/no-touch still triggers; lower if firm presses stop registering.
 #define Z_THRESHOLD_INT	75
 #define MSEC_THRESHOLD  3
+#define PRESS_DEBOUNCE  2     // require this many consecutive "finger down" samples before reporting a touch (drops single-sample EMI/mechanical ghost taps)
 
 extern SPI_HandleTypeDef hspi1;
 extern void Error_Handler(void);
@@ -115,6 +116,7 @@ void XPT2046_Update(uint16_t *x, uint16_t *y)
 {
 	int16_t data[6];
 	static uint32_t ptime = 0;
+	static uint8_t press_count = 0; // consecutive "finger down" samples (debounce)
 
 	if (XPT2046_initilazed == 0) {
 		return;
@@ -143,7 +145,18 @@ void XPT2046_Update(uint16_t *x, uint16_t *y)
 	if (z < 0) z = 0;
 	int16_t intx = besttwoavg( data[0], data[2], data[4] );
 	int16_t inty = besttwoavg( data[1], data[3], data[5] );
+
+	// Debounce the "finger down" decision: only report a touch once it has been
+	// present for PRESS_DEBOUNCE consecutive samples. A single noisy sample (EMI
+	// from the audio circuitry, or the top film briefly touching the bottom layer)
+	// no longer becomes a phantom tap; a real finger stays down for many samples so
+	// this only adds ~PRESS_DEBOUNCE*MSEC_THRESHOLD (~6 ms) of press latency.
 	if (z >= Z_THRESHOLD) {
+		if (press_count < PRESS_DEBOUNCE) press_count++;
+	} else {
+		if (press_count > 0) press_count--; // decay, not full reset: one glitchy sample mid-touch won't drop the state
+	}
+	if (press_count >= PRESS_DEBOUNCE) {
 		*x = intx;
 		*y = inty;
 	}
