@@ -37,7 +37,7 @@ screen_loopViewBase::screen_loopViewBase() :
     line_signalPath.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line_signalPath);
 
-    text_current_loop.setXY(87, 48);
+    text_current_loop.setXY(87, 54);
     text_current_loop.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_current_loop.setLinespacing(0);
     text_current_loop.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9Z0E));

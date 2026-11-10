@@ -31,6 +31,9 @@ public:
     void setFXname(char* name);
     virtual void update_screen();
     void set_loop_data();
+    // Swipe navigation: +1 = next loop (swipe left), -1 = previous (swipe right).
+    // Wraps 4 -> 1 and 1 -> 4, then refreshes the screen from the new loop.
+    void change_loop(int8_t direction);
 #ifndef  SIMULATOR
     void add_fx(fx_slots_ten slot);
     void swap_slot_fx_params(uint8_t slot_a_u8, uint8_t slot_b_u8);

@@ -45,6 +45,38 @@ void screen_loopPresenter::update_screen()
 	view.update_screen();
 }
 
+void screen_loopPresenter::change_loop(int8_t direction)
+{
+	const uint8_t num_loops = NUM_OF_LOOPS; // 4
+	uint8_t cur = model->get_current_loop_num();
+	if (cur < 1 || cur > num_loops)
+	{
+		cur = 1;
+	}
+
+	uint8_t next;
+	if (direction > 0)
+	{
+		next = (cur >= num_loops) ? 1 : cur + 1;   // swipe left -> next loop, wrap 4 -> 1
+	}
+	else if (direction < 0)
+	{
+		next = (cur <= 1) ? num_loops : cur - 1;   // swipe right -> previous loop, wrap 1 -> 4
+	}
+	else
+	{
+		return;
+	}
+
+	if (next == cur)
+	{
+		return;
+	}
+
+	model->set_current_loop_num(next);
+	update_screen(); // re-reads the new loop's data and refreshes every widget + "Loop N" label
+}
+
 void screen_loopPresenter::set_loop_data()
 {
 #ifndef  SIMULATOR

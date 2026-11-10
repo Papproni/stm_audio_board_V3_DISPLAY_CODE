@@ -1230,7 +1230,7 @@
             "Type": "TextArea",
             "Name": "text_current_loop",
             "X": 87,
-            "Y": 48,
+            "Y": 54,
             "Width": 132,
             "Height": 48,
             "TextId": "__SingleUse_9Z0E",

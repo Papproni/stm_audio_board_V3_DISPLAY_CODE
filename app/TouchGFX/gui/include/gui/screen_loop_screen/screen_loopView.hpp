@@ -5,6 +5,7 @@
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <touchgfx/Color.hpp>
 #include <touchgfx/Unicode.hpp>
+#include <touchgfx/events/GestureEvent.hpp>
 
 #ifndef SIMULATOR
 #include "sab_intercom.h"
@@ -37,6 +38,11 @@ public:
 
     virtual void update_screen();
     virtual void draw(touchgfx::Rect& invalidatedArea); // draws dynamic "Loop N" label (Consola 40)
+
+    // Swipe left/right to move between loops (wraps 1..4). Uses the framework's
+    // gesture path (same as SwipeContainer): velocity < 0 = swipe left = next loop,
+    // velocity > 0 = swipe right = previous loop. Delegates to presenter->change_loop().
+    virtual void handleGestureEvent(const touchgfx::GestureEvent& event);
 
     screen_states_ten state;
     int move_source_slot; // 1..3 slot selected as source in MOVE_FX mode, 0 = none yet

@@ -483,3 +483,25 @@ void screen_loopView::btn_slot3_pressed()
 	cont_Slot3.invalidate();
 	update_screen();
 }
+
+// Swipe navigation between loops (wraps 1..4). The framework's HAL detects the swipe and
+// routes it here via Screen::handleGestureEvent. Mirrors SwipeContainer's convention:
+// velocity < 0 = finger moved left = next loop; velocity > 0 = finger moved right = previous.
+void screen_loopView::handleGestureEvent(const touchgfx::GestureEvent& event)
+{
+    if (event.getType() != touchgfx::GestureEvent::SWIPE_HORIZONTAL)
+    {
+        return; // ignore vertical swipes and non-swipe gestures
+    }
+
+    const int16_t v = event.getVelocity();
+    if (v < 0)
+    {
+        presenter->change_loop(1);   // swipe left -> next loop (Loop4 wraps to Loop1)
+    }
+    else if (v > 0)
+    {
+        presenter->change_loop(-1);  // swipe right -> previous loop (Loop1 wraps to Loop4)
+    }
+    // v == 0: no directional swipe; ignore.
+}
