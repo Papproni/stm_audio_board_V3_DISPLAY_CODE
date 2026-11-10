@@ -162,8 +162,10 @@ void screen_loopView::update_screen()
 // Current preset number in the top-right container (same values as screen_perf_mode)
 #ifndef SIMULATOR
 	mode_preset_display_container1.set_current_preset(preset_data_un.preset_Major_u8, preset_data_un.preset_Minor_u8);
+	mode_preset_display_container1.set_active_mode(preset_data_un.fx_active_mode_u8);
 #else
 	mode_preset_display_container1.set_current_preset('Z', 9);
+	mode_preset_display_container1.set_active_mode(0);
 #endif
 
 #ifndef SIMULATOR
