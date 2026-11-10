@@ -13,11 +13,20 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_STKJ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A#</Translation>
+      </Text>
+      <Text Id="__SingleUse_JNKJ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A#</Translation>
+      </Text>
+      <Text Id="__SingleUse_T4L0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A</Translation>
+      </Text>
       <Text Id="__SingleUse_DVIW" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">69</Translation>
       </Text>
       <Text Id="__SingleUse_IYE0" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">A#</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_2DBY" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">MOVE</Translation>
@@ -245,13 +254,13 @@
         <Translation Language="GB">f: &lt;value&gt;Hz</Translation>
       </Text>
       <Text Id="__SingleUse_NM4A" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Ab</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_QHDI" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">OPT</Translation>
       </Text>
       <Text Id="__SingleUse_4VSK" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">A</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_LY3P" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">DEL</Translation>

@@ -43,12 +43,18 @@ screen_tuningViewBase::screen_tuningViewBase() :
     text_note_higher.setXY(252, 174);
     text_note_higher.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_note_higher.setLinespacing(0);
+    Unicode::snprintf(text_note_higherBuffer, TEXT_NOTE_HIGHER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_JNKJ).getText());
+    text_note_higher.setWildcard(text_note_higherBuffer);
+    text_note_higher.resizeToCurrentText();
     text_note_higher.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IYE0));
     add(text_note_higher);
 
     text_note_middle.setXY(149, 100);
     text_note_middle.setColor(touchgfx::Color::getColorFromRGB(9, 255, 0));
     text_note_middle.setLinespacing(0);
+    Unicode::snprintf(text_note_middleBuffer, TEXT_NOTE_MIDDLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_T4L0).getText());
+    text_note_middle.setWildcard(text_note_middleBuffer);
+    text_note_middle.resizeToCurrentText();
     text_note_middle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4VSK));
     add(text_note_middle);
 
@@ -64,6 +70,9 @@ screen_tuningViewBase::screen_tuningViewBase() :
     text_note_lower.setXY(47, 174);
     text_note_lower.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_note_lower.setLinespacing(0);
+    Unicode::snprintf(text_note_lowerBuffer, TEXT_NOTE_LOWER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_STKJ).getText());
+    text_note_lower.setWildcard(text_note_lowerBuffer);
+    text_note_lower.resizeToCurrentText();
     text_note_lower.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NM4A));
     add(text_note_lower);
 

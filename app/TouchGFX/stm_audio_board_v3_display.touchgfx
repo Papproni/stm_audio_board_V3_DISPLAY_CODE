@@ -275,7 +275,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_JNKJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -290,7 +295,12 @@
               "Red": 9,
               "Green": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_T4L0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -318,7 +328,7 @@
             "Name": "text_note_lower",
             "X": 47,
             "Y": 174,
-            "Width": 26,
+            "Width": 30,
             "Height": 24,
             "TextId": "__SingleUse_NM4A",
             "TextRotation": "0",
@@ -327,7 +337,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_STKJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "ButtonWithLabel",
