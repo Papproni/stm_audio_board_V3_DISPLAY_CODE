@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 
@@ -35,12 +36,19 @@ protected:
     touchgfx::PainterRGB565 tuning_circlePainter;
     touchgfx::Circle tuning_current_loc;
     touchgfx::PainterRGB565 tuning_current_locPainter;
-    touchgfx::TextArea text_note_middle;
     touchgfx::TextArea text_note_higher;
+    touchgfx::TextArea text_note_middle;
+    touchgfx::TextAreaWithOneWildcard text_freq;
     touchgfx::TextArea text_note_lower;
     touchgfx::ButtonWithLabel btn_opt;
     touchgfx::Line line1;
     touchgfx::PainterRGB565 line1Painter;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_FREQ_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_freqBuffer[TEXT_FREQ_SIZE];
 
 private:
 

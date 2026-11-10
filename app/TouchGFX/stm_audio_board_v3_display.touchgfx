@@ -263,6 +263,22 @@
           },
           {
             "Type": "TextArea",
+            "Name": "text_note_higher",
+            "X": 252,
+            "Y": 174,
+            "Width": 30,
+            "Height": 24,
+            "TextId": "__SingleUse_IYE0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
             "Name": "text_note_middle",
             "X": 149,
             "Y": 100,
@@ -278,10 +294,10 @@
           },
           {
             "Type": "TextArea",
-            "Name": "text_note_higher",
-            "X": 252,
-            "Y": 174,
-            "Width": 30,
+            "Name": "text_freq",
+            "X": 123,
+            "Y": 207,
+            "Width": 75,
             "Height": 24,
             "TextId": "__SingleUse_7JJQ",
             "TextRotation": "0",
@@ -290,7 +306,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_DVIW",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",

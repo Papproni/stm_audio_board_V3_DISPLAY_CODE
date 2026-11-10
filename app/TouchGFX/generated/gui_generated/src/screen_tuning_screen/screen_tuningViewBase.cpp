@@ -40,17 +40,26 @@ screen_tuningViewBase::screen_tuningViewBase() :
     tuning_current_loc.setPainter(tuning_current_locPainter);
     add(tuning_current_loc);
 
+    text_note_higher.setXY(252, 174);
+    text_note_higher.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_note_higher.setLinespacing(0);
+    text_note_higher.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IYE0));
+    add(text_note_higher);
+
     text_note_middle.setXY(149, 100);
     text_note_middle.setColor(touchgfx::Color::getColorFromRGB(9, 255, 0));
     text_note_middle.setLinespacing(0);
     text_note_middle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4VSK));
     add(text_note_middle);
 
-    text_note_higher.setXY(252, 174);
-    text_note_higher.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_note_higher.setLinespacing(0);
-    text_note_higher.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7JJQ));
-    add(text_note_higher);
+    text_freq.setXY(123, 207);
+    text_freq.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_freq.setLinespacing(0);
+    Unicode::snprintf(text_freqBuffer, TEXT_FREQ_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DVIW).getText());
+    text_freq.setWildcard(text_freqBuffer);
+    text_freq.resizeToCurrentText();
+    text_freq.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7JJQ));
+    add(text_freq);
 
     text_note_lower.setXY(47, 174);
     text_note_lower.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

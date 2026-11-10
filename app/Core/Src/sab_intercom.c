@@ -95,6 +95,16 @@ static void get_loopbypass (struct sab_intercom_st* self){
 	sab_i2c_note_result(st == HAL_OK);
 }
 
+static void get_tuner_data (struct sab_intercom_st* self){
+	if(!sab_i2c_bus_ready()){ return; }
+	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
+						SAB_I2C_REG_TUNER_DATA,
+						I2C_MEMADD_SIZE_8BIT,
+						(uint8_t*)&self->tuner_data_un.all_u8, SAB_I2C_REG_TUNER_DATA_LEN,
+						SAB_I2C_TIMEOUT_MS);
+	sab_i2c_note_result(st == HAL_OK);
+}
+
 static void get_num_of_implemented_effects  (struct sab_intercom_st* self){
 	if(!sab_i2c_bus_ready()){ return; }
 	HAL_StatusTypeDef st = HAL_I2C_Mem_Read(self->i2c_h, self->slave_addr_u8,
@@ -358,6 +368,7 @@ void init_intercom(struct sab_intercom_st* self, uint8_t slave_address_u8,I2C_Ha
     self->get_fx_param		= get_fx_param   ;
     self->get_info          = get_info       ;
     self->get_loopbypass    = get_loopbypass ;
+    self->get_tuner_data    = get_tuner_data ;
 
 	self->get_implemented_effects			= get_implemented_effects;
 	self->num_of_implemented_effects 		= 0;

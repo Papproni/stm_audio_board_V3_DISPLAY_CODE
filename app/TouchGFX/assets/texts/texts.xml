@@ -13,6 +13,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_DVIW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">69</Translation>
+      </Text>
+      <Text Id="__SingleUse_IYE0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">A#</Translation>
+      </Text>
       <Text Id="__SingleUse_2DBY" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">MOVE</Translation>
       </Text>
@@ -236,7 +242,7 @@
         <Translation Language="GB">DEBUG</Translation>
       </Text>
       <Text Id="__SingleUse_7JJQ" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">A#</Translation>
+        <Translation Language="GB">f: &lt;value&gt;Hz</Translation>
       </Text>
       <Text Id="__SingleUse_NM4A" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Ab</Translation>

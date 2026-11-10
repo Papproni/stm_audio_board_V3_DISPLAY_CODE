@@ -24,6 +24,7 @@ typedef struct sab_intercom_st{
     sab_info_tun        info_un;
     sab_save_tun        save_un;
     sab_loopbypass_tun  loopbypass_un;
+    sab_tuner_data_tun  tuner_data_un;
 
     uint8_t current_fx_in_edit;
 
@@ -37,7 +38,8 @@ typedef struct sab_intercom_st{
     void (*get_fx_param)    (struct sab_intercom_st* self, uint8_t param_slot_u8);
     void (*get_info)        (struct sab_intercom_st* self);
     void (*get_loopbypass)  (struct sab_intercom_st* self);
-    
+    void (*get_tuner_data)  (struct sab_intercom_st* self);
+
     void (*get_implemented_effects)  (struct sab_intercom_st* self);
 
     // SETTER (write)
