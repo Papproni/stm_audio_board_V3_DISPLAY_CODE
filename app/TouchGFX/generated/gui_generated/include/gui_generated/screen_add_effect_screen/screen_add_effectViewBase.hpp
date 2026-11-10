@@ -26,6 +26,11 @@ public:
         // Override and implement this function in screen_add_effect
     }
 
+    virtual void btn_add_pressed()
+    {
+        // Override and implement this function in screen_add_effect
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

@@ -27,6 +27,7 @@ public:
     sab_loop_num_tun loop_data;
 #endif
     void add_effect(uint8_t choosen_fx);
+    void add_current_effect();   // commit the effect currently centered by the pot scroll
 
     virtual void deactivate();
     virtual void update_screen();
@@ -40,6 +41,8 @@ private:
     screen_add_effectView& view;
     uint8_t last_preset_major_u8; // 0xFF = not read yet (sentinel); preset-change detection
     uint8_t last_preset_minor_u8;
+    int16_t scroll_index;         // effect currently centered in the list (driven by pot 0)
+    int16_t num_effects;          // number of selectable effects this screen shows
 };
 
 #endif // SCREEN_ADD_EFFECTPRESENTER_HPP

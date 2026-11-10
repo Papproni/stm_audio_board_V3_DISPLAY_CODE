@@ -13,7 +13,10 @@ void screen_add_effectView::setupScreen()
 {
     screen_add_effectViewBase::setupScreen();
 
-    scrollList_FX.setItemSelectedCallback(itemSnapCallback);
+    // Pot 0 is the only scroll source for this carousel: disable finger-drag so touch and
+    // pot can't desync, and drop the snap-to-add callback (the ADD button commits instead).
+    scrollList_FX.allowHorizontalDrag(false);
+    scrollList_FX.allowVerticalDrag(false);
 
     scrollList_FX.setMaxSwipeItems(1);
 }
@@ -91,6 +94,18 @@ void screen_add_effectView::scrollList_FXUpdateItem(template_choose_fx &item, in
 }
 
 void screen_add_effectView::btn_add_pressed(){
+    // Commit the effect currently centered by the pot scroll, then return to the loop screen.
+    presenter->add_current_effect();
+}
+
+void screen_add_effectView::set_scroll_index(int16_t index)
+{
+    if (index < 0)
+    {
+        index = 0;
+    }
+    // Instantly snap the carousel so item 'index' sits at the selected/centered position.
+    scrollList_FX.animateToItem(index, 0);
 }
 
 void screen_add_effectView::update_screen()

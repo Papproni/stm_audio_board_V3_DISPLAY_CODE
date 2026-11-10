@@ -1,8 +1,10 @@
 #include <gui/screen_add_effect_screen/screen_add_effectView.hpp>
 #include <gui/screen_add_effect_screen/screen_add_effectPresenter.hpp>
+#include <gui/model/Model.hpp>
+#include <stdlib.h>
 
 screen_add_effectPresenter::screen_add_effectPresenter(screen_add_effectView &v)
-    : view(v), last_preset_major_u8(0xFF), last_preset_minor_u8(0xFF)
+    : view(v), last_preset_major_u8(0xFF), last_preset_minor_u8(0xFF), scroll_index(0), num_effects(0)
 {
 #ifndef SIMULATOR
 	view.implemented_fx_ptr = NULL;
@@ -17,7 +19,11 @@ void screen_add_effectPresenter::activate()
     view.num_of_implemented_fx = model->get_num_of_implemented_fx();
     view.implemented_fx_ptr = model->get_implemented_fx();
     this->loop_data = model->get_loop_data(model->get_current_loop_num());
+    num_effects = view.num_of_implemented_fx;
+#else
+    num_effects = 4; // matches the SIMULATOR list size in screen_add_effectView::update_screen()
 #endif
+    scroll_index = 0;
 }
 
 void screen_add_effectPresenter::deactivate()
@@ -54,6 +60,27 @@ void screen_add_effectPresenter::add_effect(uint8_t choosen_fx)
 #endif
 }
 
+void screen_add_effectPresenter::add_current_effect()
+{
+#ifndef SIMULATOR
+    if (num_effects <= 0)
+    {
+        return;
+    }
+    int16_t idx = scroll_index;
+    if (idx < 0)
+    {
+        idx = 0;
+    }
+    if (idx > num_effects - 1)
+    {
+        idx = (int16_t)(num_effects - 1);
+    }
+    add_effect((uint8_t)idx);
+    view.return_to_loop_screen();
+#endif
+}
+
 void screen_add_effectPresenter::update_screen()
 {
 #ifndef SIMULATOR
@@ -70,5 +97,30 @@ void screen_add_effectPresenter::update_screen()
     last_preset_major_u8 = pst.preset_Major_u8;
     last_preset_minor_u8 = pst.preset_Minor_u8;
 #endif // ! SIMULATOR
+
+#ifndef SIMULATOR
+    // Pot 0 drives the effect carousel. Its full 16-bit range is mapped across the effects so
+    // turning it left -> right walks first -> last, keeping the selected effect centered.
+    if (num_effects > 1 && model->get_adc_value_ptr() != NULL)
+    {
+        uint32_t pot = model->get_adc_value_ptr()[0];
+        if (pot > 65535u)
+        {
+            pot = 65535u;
+        }
+        // round(pot/65535 * (num_effects-1)) in integer math: (a + b/2)/b with a=pot*(N-1), b=65535
+        int16_t idx = (int16_t)(((uint32_t)pot * (num_effects - 1) + 32767u) / 65535u);
+        if (idx > num_effects - 1)
+        {
+            idx = num_effects - 1;
+        }
+        if (idx != scroll_index)
+        {
+            scroll_index = idx;
+            view.set_scroll_index(scroll_index);
+        }
+    }
+#endif // ! SIMULATOR
+
     view.update_screen();
 }

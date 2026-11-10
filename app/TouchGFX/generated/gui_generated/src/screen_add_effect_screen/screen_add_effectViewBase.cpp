@@ -77,9 +77,9 @@ void screen_add_effectViewBase::buttonCallbackHandler(const touchgfx::AbstractBu
     if (&src == &btn_add)
     {
         //btn_add_pressed
-        //When btn_add clicked change screen to screen_add_effect
-        //Go to screen_add_effect with no screen transition
-        application().gotoscreen_add_effectScreenNoTransition();
+        //When btn_add clicked call virtual function
+        //Call btn_add_pressed
+        btn_add_pressed();
     }
 }
 

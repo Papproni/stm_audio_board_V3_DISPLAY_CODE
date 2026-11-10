@@ -2481,9 +2481,8 @@
               "TriggerComponent": "btn_add"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_add_effect"
+              "Type": "ActionCustom",
+              "FunctionName": "btn_add_pressed"
             }
           }
         ]
