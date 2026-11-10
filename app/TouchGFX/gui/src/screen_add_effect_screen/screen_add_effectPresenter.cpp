@@ -109,7 +109,7 @@ void screen_add_effectPresenter::update_screen()
             pot = 65535u;
         }
         // round(pot/65535 * (num_effects-1)) in integer math: (a + b/2)/b with a=pot*(N-1), b=65535
-        int16_t idx = (int16_t)(((uint32_t)pot * (num_effects - 1) + 32767u) / 65535u);
+        int16_t idx = (int16_t)(((uint32_t)(65535u - pot) * (num_effects - 1) + 32767u) / 65535u);
         if (idx > num_effects - 1)
         {
             idx = num_effects - 1;
