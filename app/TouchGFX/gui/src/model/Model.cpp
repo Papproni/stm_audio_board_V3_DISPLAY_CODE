@@ -17,7 +17,11 @@ Model::Model() : modelListener(0)
 
 void Model::tick()
 {
-	modelListener->update_screen();
+	// modelListener is 0 until the first screen transition binds a presenter;
+	// guard so an early tick (before startup screen is up) is a safe no-op.
+	if (modelListener != 0) {
+		modelListener->update_screen();
+	}
 }
 
 void Model::setFXname(char* data)
