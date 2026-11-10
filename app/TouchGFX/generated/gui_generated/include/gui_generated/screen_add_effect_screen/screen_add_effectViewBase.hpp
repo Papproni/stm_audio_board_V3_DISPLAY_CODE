@@ -26,6 +26,9 @@ public:
         // Override and implement this function in screen_add_effect
     }
 
+    /*
+     * Virtual Action Handlers
+     */
     virtual void btn_add_pressed()
     {
         // Override and implement this function in screen_add_effect
