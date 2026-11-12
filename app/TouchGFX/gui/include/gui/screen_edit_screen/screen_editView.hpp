@@ -35,6 +35,8 @@ public:
     // Declaring callback handler for Box
     void boxClickHandler(const Line& b, const ClickEvent& e);
     void setAlphaOfContainer(Container &conti,uint8_t alpha);
+    // Pot 0 drives the swipe container: full CW = left, full CCW = right
+    void set_scroll_from_pot(uint32_t pot);
 #ifndef SIMULATOR
     sab_loopbypass_tun loopbypass;
     sab_preset_num_tun preset_data_un;

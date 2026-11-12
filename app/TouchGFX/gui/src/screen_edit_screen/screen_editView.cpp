@@ -17,6 +17,57 @@ screen_editView::screen_editView() : boxClickedCallback(this ,&screen_editView::
 void screen_editView::setupScreen()
 {
     screen_editViewBase::setupScreen();
+    // Horizontal scroll is owned by pot 0 (set_scroll_from_pot), not the finger:
+    // a non-touchable container receives no click/drag/swipe events, so it can no
+    // longer be scrolled by touch. Child widgets (buttons, signal lines) keep their
+    // own touchability and stay clickable.
+    scrollableContainer.setTouchable(false);
+
+    // ---- Enlarge the touch footprint of the loop-toggle signal lines ----
+    // Touch routing hit-tests on the widget bounding box (Container::getLastChild
+    // uses getRect().intersect), while Line rendering is clipped to the line's
+    // minimal rect - so widening the box ONLY makes the line easier to press
+    // with a finger; the drawn line stays exactly where it was (endpoints are
+    // shifted by the same amount as the widget origin).
+    // Horizontal bypass lines: 110x15 -> 126x39 (L34: 126x36, bottom capped at
+    // y=153 where the btn_Loop* row starts) - much taller tap band.
+    line_signal_loop1_loop2_bypass.setPosition(70 - 8, 126 - 12, 110 + 16, 15 + 24);
+    line_signal_loop1_loop2_bypass.setStart(10 + 8, 10 + 12);
+    line_signal_loop1_loop2_bypass.setEnd(100 + 8, 10 + 12);
+
+    line_signal_loop2_loop3_bypass.setPosition(200 - 8, 126 - 12, 110 + 16, 15 + 24);
+    line_signal_loop2_loop3_bypass.setStart(10 + 8, 10 + 12);
+    line_signal_loop2_loop3_bypass.setEnd(100 + 8, 10 + 12);
+
+    line_signal_loop3_loop4_bypass.setPosition(330 - 8, 128 - 11, 110 + 16, 15 + 22);
+    line_signal_loop3_loop4_bypass.setStart(10 + 8, 10 + 11);
+    line_signal_loop3_loop4_bypass.setEnd(100 + 8, 10 + 11);
+
+    // Vertical external lines: 21x67 -> 37x67 (wider tap column)
+    line_signal_loop1_out_ext.setPosition(70 - 8, 86, 21 + 16, 67);
+    line_signal_loop1_out_ext.setStart(10 + 8, 0);
+    line_signal_loop1_out_ext.setEnd(10 + 8, 110);
+
+    line_signal_loop2_in_ext.setPosition(160 - 8, 86, 21 + 16, 67);
+    line_signal_loop2_in_ext.setStart(10 + 8, 0);
+    line_signal_loop2_in_ext.setEnd(10 + 8, 110);
+
+    line_signal_loop2_out_ext.setPosition(200 - 8, 86, 21 + 16, 67);
+    line_signal_loop2_out_ext.setStart(10 + 8, 0);
+    line_signal_loop2_out_ext.setEnd(10 + 8, 110);
+
+    line_signal_loop3_in_ext.setPosition(290 - 8, 86, 21 + 16, 67);
+    line_signal_loop3_in_ext.setStart(10 + 8, 0);
+    line_signal_loop3_in_ext.setEnd(10 + 8, 110);
+
+    line_signal_loop3_out_ext.setPosition(330 - 8, 86, 21 + 16, 67);
+    line_signal_loop3_out_ext.setStart(10 + 8, 0);
+    line_signal_loop3_out_ext.setEnd(10 + 8, 110);
+
+    line_signal_loop4_in_ext.setPosition(420 - 8, 86, 21 + 16, 67);
+    line_signal_loop4_in_ext.setStart(10 + 8, 0);
+    line_signal_loop4_in_ext.setEnd(10 + 8, 110);
+
     line_signal_loop1_loop2_bypass.setClickAction(boxClickedCallback);
     line_signal_loop2_loop3_bypass.setClickAction(boxClickedCallback);
     line_signal_loop3_loop4_bypass.setClickAction(boxClickedCallback);
@@ -34,6 +85,32 @@ void screen_editView::setupScreen()
 void screen_editView::tearDownScreen()
 {
     screen_editViewBase::tearDownScreen();
+}
+
+void screen_editView::set_scroll_from_pot(uint32_t pot)
+{
+    if (pot > 65535u)
+    {
+        pot = 65535u;
+    }
+    // How far the content can be scrolled to the right: content width beyond the container window.
+    // getContainedArea() = children union expanded over the window, so its width is the
+    // content width (independent of the current scroll offset).
+    const Rect contained = scrollableContainer.getContainedArea();
+    int32_t maxRight = (int32_t)contained.width - (int32_t)scrollableContainer.getWidth();
+    if (maxRight <= 0)
+    {
+        return; // content fits in the window - nothing to scroll
+    }
+    // pot = 65535 (full CW) -> targetX = 0 (left); pot = 0 (full CCW) -> targetX = -maxRight (right end)
+    // round(maxRight * (65535 - pot) / 65535) in integer math: (a + b/2)/b with a = maxRight*(65535-pot), b = 65535
+    int16_t targetX = -(int16_t)(((uint32_t)maxRight * (65535u - pot) + 32767u) / 65535u);
+    int16_t delta = (int16_t)(targetX - contained.x);
+    if (delta != 0)
+    {
+        // doScroll clamps to the left/right limits internally
+        scrollableContainer.doScroll(delta, 0);
+    }
 }
 
 void screen_editView::btn_loop1_pressed(){

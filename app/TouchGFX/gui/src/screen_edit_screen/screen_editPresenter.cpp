@@ -26,6 +26,12 @@ void screen_editPresenter::update_screen()
     view.loopbypass = model->get_loopbypass();
     model->read_preset_data();
     view.preset_data_un = model->get_preset_data();
+
+    // Pot 0 drives the swipe container: full CW = left, full CCW = right
+    if (model->get_adc_value_ptr() != NULL)
+    {
+        view.set_scroll_from_pot(model->get_adc_value_ptr()[0]);
+    }
 #endif
 	view.update_screen();
 }
