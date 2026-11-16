@@ -81,6 +81,10 @@ screen_fx_paramsViewBase::screen_fx_paramsViewBase() :
     swipeContainer.setSelectedPage(0);
     add(swipeContainer);
 
+    toggleBtn_fx_on_off.setXY(246, 0);
+    toggleBtn_fx_on_off.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_OFF_LIGHT_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_SMALL_ROUNDED_SMALL_ON_ACTIVE_ID));
+    add(toggleBtn_fx_on_off);
+
     FXname.setXY(87, 6);
     FXname.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     FXname.setLinespacing(0);

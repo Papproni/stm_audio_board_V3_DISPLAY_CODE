@@ -974,6 +974,15 @@
             ]
           },
           {
+            "Type": "ToggleButton",
+            "Name": "toggleBtn_fx_on_off",
+            "X": 246,
+            "Width": 62,
+            "Height": 34,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_on_active.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_small_rounded_small_off_light.png"
+          },
+          {
             "Type": "TextArea",
             "Name": "FXname",
             "X": 87,

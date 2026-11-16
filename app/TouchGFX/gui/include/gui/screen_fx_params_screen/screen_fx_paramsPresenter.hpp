@@ -31,6 +31,8 @@ public:
 
     void getFxname(char* data);
     void set_fx_param_new_value(uint8_t slotnum_u8, uint8_t new_value_u8);
+    void set_fx_on_off(bool is_on);      // write the toggle's on/off to the current FX (DSP)
+    bool get_current_fx_on_off();        // read the current FX on/off for display
     virtual void update_screen();
 private:
     screen_fx_paramsPresenter();

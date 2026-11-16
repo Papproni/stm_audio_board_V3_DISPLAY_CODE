@@ -39,6 +39,10 @@ void screen_fx_paramsView::setupScreen()
 	swipeContainer.setSwipeCutoff(20);
 
 	screen_fx_paramsViewBase::setupScreen();
+	// Wire the FX on/off toggle: reflect the current FX's on/off and act on taps.
+	toggleFxCallback = touchgfx::Callback<screen_fx_paramsView, const touchgfx::AbstractButton&>(this, &screen_fx_paramsView::toggleFxOnOffHandler);
+	toggleBtn_fx_on_off.setAction(toggleFxCallback);
+	toggleBtn_fx_on_off.forceState(presenter->get_current_fx_on_off());
 	fx_controls_p[0] = &template_fx_param1;
 	fx_controls_p[1] = &template_fx_param2;
 	fx_controls_p[2] = &template_fx_param3;
@@ -168,5 +172,13 @@ void screen_fx_paramsView::update_screen()
 	}
 	swipeContainer.invalidate();
 
+#endif
+}
+
+void screen_fx_paramsView::toggleFxOnOffHandler(const touchgfx::AbstractButton& src)
+{
+	(void)src;
+#ifndef SIMULATOR
+	presenter->set_fx_on_off(toggleBtn_fx_on_off.getState());
 #endif
 }
