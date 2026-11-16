@@ -170,7 +170,7 @@ static void set_save (struct sab_intercom_st* self){
 						I2C_MEMADD_SIZE_8BIT,
 						(uint8_t*)&self->save_un, sizeof(sab_save_tun), SAB_I2C_TIMEOUT_MS);
 	sab_i2c_note_result(st == HAL_OK);
-	HAL_Delay(500);
+	HAL_Delay(2000);
 }
 
 /*
