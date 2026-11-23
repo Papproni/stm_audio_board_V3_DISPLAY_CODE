@@ -82,8 +82,10 @@ static uint8_t ApplicationIsValid(void)
 {
   const uint32_t stack = *(const uint32_t *)APP_ADDRESS;
   const uint32_t reset = *(const uint32_t *)(APP_ADDRESS + 4U);
-  return ((stack & 0x2FFE0000UL) == 0x20000000UL) &&
-         ((reset & 0xFF000000UL) == 0x08000000UL);
+  const uint32_t reset_address = reset & ~1UL;
+  return (stack >= 0x24000000UL) && (stack <= 0x24050000UL) &&
+         ((stack & 7U) == 0U) && ((reset & 1U) != 0U) &&
+         (reset_address >= APP_ADDRESS) && (reset_address < 0x08100000UL);
 }
 
 static uint8_t BootRequestPending(void)
@@ -206,6 +208,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint32_t last_blink_tick = 0;
   uint32_t app_blink_tick = HAL_GetTick();
+  const uint8_t stay_in_bootloader = (BootRequestPending() != 0U) || (ApplicationIsValid() == 0U);
   while (1)
   {
       if(FW_Update_Process()){
@@ -223,10 +226,11 @@ int main(void)
         HAL_GPIO_TogglePin(DSP_OK_GPIO_Port, DSP_OK_Pin);
         last_blink_tick = HAL_GetTick();
       }
-      if ((HAL_GetTick() - app_blink_tick) >= 4000U)
-	   {
-		 JumpToApplication();
-	   }
+      if ((stay_in_bootloader == 0U) && (FW_Update_SessionActive() == 0U) &&
+          ((HAL_GetTick() - app_blink_tick) >= 4000U))
+      {
+        JumpToApplication();
+      }
      HAL_IWDG_Refresh(&hiwdg1);
   }
     /* USER CODE END WHILE */

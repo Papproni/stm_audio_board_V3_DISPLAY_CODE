@@ -205,6 +205,9 @@ int main(void)
     }
     if (FW_Update_ResetRequested() != 0U)
     {
+      HAL_PWR_EnableBkUpAccess();
+      RTC->BKP0R = 0x53414255UL;
+      __DSB();
       NVIC_SystemReset();
     }
 

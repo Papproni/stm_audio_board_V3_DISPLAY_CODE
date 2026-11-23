@@ -112,6 +112,7 @@ uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len);
 /* Called from the bootloader main loop, never from the USB IRQ. */
 int FW_Update_Process(void);
 uint8_t FW_Update_ResetRequested(void);
+uint8_t FW_Update_SessionActive(void);
 
 /* USER CODE END EXPORTED_FUNCTIONS */
 

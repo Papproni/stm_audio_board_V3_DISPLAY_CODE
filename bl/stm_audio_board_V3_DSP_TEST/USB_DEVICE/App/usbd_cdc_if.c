@@ -97,19 +97,23 @@ uint8_t UserTxBufferHS[APP_TX_DATA_SIZE];
 
 /* USER CODE BEGIN PRIVATE_VARIABLES */
 /* SAB updater framing: magic, command, reserved, payload length, sequence,
- * payload, CRC-32.  Commands are HELLO(1), ERASE(2), WRITE(3), RESET(4).
+ * payload, CRC-32. Commands: HELLO(1), ERASE(2), WRITE(3), RESET(4), VERIFY(5).
  * WRITE payload is a little-endian offset followed by 32-byte-aligned data. */
 #define SABU_MAGIC             0x55424153UL
 #define SABU_APP_BASE           0x08020000UL
 #define SABU_APP_END            0x08100000UL
 #define SABU_RING_SIZE          4096U
 #define SABU_MAX_PAYLOAD        516U
+#define SABU_APP_SIZE           (SABU_APP_END - SABU_APP_BASE)
+#define SABU_FIRST_APP_SECTOR   1U
+#define SABU_APP_SECTOR_COUNT   7U
 
 enum SABU_COMMANDS {
   SABU_HELLO = 1,
   SABU_ERASE = 2,
   SABU_WRITE = 3,
-  SABU_RESET = 4
+  SABU_RESET = 4,
+  SABU_VERIFY = 5
 };
 
 static volatile uint8_t sabu_ring[SABU_RING_SIZE];
@@ -121,6 +125,7 @@ static uint16_t sabu_frame_expected;
 static uint8_t sabu_response[16];
 static uint8_t sabu_response_pending;
 static uint8_t sabu_reset_requested;
+static uint8_t sabu_session_active;
 
 static uint32_t sabu_u32(const uint8_t *p)
 {
@@ -156,28 +161,21 @@ static void sabu_reply(uint8_t command, uint8_t status, uint32_t sequence, uint3
   sabu_response_pending = 1U;
 }
 
-static FLASH_EraseInitTypeDef EraseInitStruct;
 static uint8_t sabu_erase_application_sector(uint32_t sector)
 {
     FLASH_EraseInitTypeDef erase;
     uint32_t sector_error = 0;
     HAL_StatusTypeDef status;
 
-    if (sector > 7U)
+    if ((sector < SABU_FIRST_APP_SECTOR) ||
+        (sector >= SABU_FIRST_APP_SECTOR + SABU_APP_SECTOR_COUNT))
         return 2U;
 
     memset(&erase, 0, sizeof(erase));
-
-    // erase.TypeErase    = FLASH_TYPEERASE_SECTORS;
-    // erase.Banks        = FLASH_BANK_1;
-    // erase.Sector       = sector;
-    // erase.NbSectors    = 1;
-    // erase.VoltageRange = FLASH_VOLTAGE_RANGE_3;
-
-      erase.TypeErase    = FLASH_TYPEERASE_SECTORS;
+    erase.TypeErase    = FLASH_TYPEERASE_SECTORS;
     erase.Banks        = FLASH_BANK_1;
-    erase.Sector       = 1;
-    erase.NbSectors    = 7;
+    erase.Sector       = sector;
+    erase.NbSectors    = 1U;
     erase.VoltageRange = FLASH_VOLTAGE_RANGE_3;
 
     __disable_irq();
@@ -223,15 +221,11 @@ static uint8_t sabu_write_application(const uint8_t *payload, uint16_t length)
         return 2U;
 
     const uint32_t offset = sabu_u32(payload);
-    uint32_t address = SABU_APP_BASE + offset;
     const uint32_t bytes = length - 4U;
-
-    if ((address < SABU_APP_BASE) ||
-        ((address + bytes) > SABU_APP_END) ||
-        ((address & 31U) != 0U))
-    {
+    if ((offset > SABU_APP_SIZE) || (bytes > SABU_APP_SIZE - offset) ||
+        ((offset & 31U) != 0U))
         return 3U;
-    }
+    const uint32_t address = SABU_APP_BASE + offset;
 
     /* Source must be word aligned */
     if ((((uint32_t)(payload + 4U)) & 3U) != 0U)
@@ -545,6 +539,7 @@ int FW_Update_Process(void)
       if (received_crc != sabu_crc32(sabu_frame, 12U + length)) {
         status = 10U;
       } else if (command == SABU_HELLO) {
+        sabu_session_active = 1U;
         detail = SABU_APP_END - SABU_APP_BASE;
       } else if (command == SABU_ERASE) {
         if (length != 1U) {
@@ -556,6 +551,19 @@ int FW_Update_Process(void)
       } else if (command == SABU_WRITE) {
         status = sabu_write_application(&sabu_frame[12], length);
         retval = 1;
+      } else if (command == SABU_VERIFY) {
+        if (length != 8U) {
+          status = 12U;
+        } else {
+          const uint32_t offset = sabu_u32(&sabu_frame[12]);
+          const uint32_t bytes = sabu_u32(&sabu_frame[16]);
+          if ((bytes == 0U) || (offset > SABU_APP_SIZE) ||
+              (bytes > SABU_APP_SIZE - offset)) {
+            status = 12U;
+          } else {
+            detail = sabu_crc32((const uint8_t *)(SABU_APP_BASE + offset), bytes);
+          }
+        }
       } else if (command == SABU_RESET) {
           sabu_reset_requested = 1U;
       } else {
@@ -573,6 +581,11 @@ int FW_Update_Process(void)
 uint8_t FW_Update_ResetRequested(void)
 {
   return sabu_reset_requested;
+}
+
+uint8_t FW_Update_SessionActive(void)
+{
+  return sabu_session_active;
 }
 
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
