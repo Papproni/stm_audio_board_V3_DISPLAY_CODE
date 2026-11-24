@@ -17,6 +17,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void update_screen();
+    void return_to_loop_screen(); // preset changed while adding effect -> back to loop screen (new effect setup)
     
     uint16_t choosen_fx_idx;
     uint8_t num_of_implemented_fx;
@@ -26,6 +27,7 @@ public:
 
     void onItemSnap(int16_t itemIndex);
     virtual void btn_add_pressed();
+    void set_scroll_index(int16_t index); // center effect 'index' in the carousel (pot-driven)
     virtual void scrollList_FXUpdateItem(template_choose_fx& item, int16_t itemIndex);
 protected:
 private:

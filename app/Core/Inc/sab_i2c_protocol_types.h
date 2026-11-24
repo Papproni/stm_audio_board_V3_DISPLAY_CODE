@@ -29,7 +29,10 @@ enum SAB_I2C_REGS{
 	SAB_I2C_REG_NUM_OF_IMPLEMENTED_EFFECTS,
 	SAB_I2C_REG_IMPLEMENTED_EFFECTS,
 	SAB_I2c_REG_CURRENT_FX,
-	SAB_I2C_REG_DSP_FW_UPDATE
+	SAB_I2C_REG_DSP_FW_UPDATE,
+	SAB_I2C_REG_TUNER_DATA,
+	SAB_I2C_REG_FX_TABLE_OFFSET,	// Low byte of the byte offset into the fx table (reg 22)
+	SAB_I2C_REG_FX_TABLE_OFFSET_HIGH	// High byte of the fx table byte offset
 };
 // #define SAB_I2C_REG_PRESETNUM        1
 #define SAB_I2C_REG_PRESETNUM_LEN    	4
@@ -65,6 +68,16 @@ enum SAB_I2C_REGS{
 // #define SAB_I2C_REG_LOOPBYPASSSTATE  20
 #define SAB_I2C_REG_LOOPBYPASSSTATE_LEN  3
 
+// #define SAB_I2C_REG_TUNER_DATA       25
+#define SAB_I2C_REG_TUNER_DATA_LEN     8
+
+// #define SAB_I2C_REG_FX_TABLE_OFFSET  26 (low byte), 27 (high byte)
+#define SAB_I2C_REG_FX_TABLE_OFFSET_LEN 2
+#define SAB_I2C_REG_FX_TABLE_OFFSET_HIGH_LEN 1
+
+// The I2C NBYTES data counter is 8-bit: a single transaction carries at most 255 bytes
+#define SAB_I2C_MAX_FRAME_LEN 255
+
 
 // SIZE DEFINES
 #define SLOT_NAME_MAX_LEN				10
@@ -80,8 +93,8 @@ typedef union{
 	struct{
 		uint8_t preset_Major_u8;
 		uint8_t preset_Minor_u8;
-		btn_state_ten BTN3_state_en;
-		btn_state_ten BTN4_state_en;
+		uint8_t fx_active_mode_u8;  // mirrors DSP fx_active_modes_ten (PRESET_MODE_A..D)
+		uint8_t unused_u8;
 	};
 }sab_preset_num_tun;
 
@@ -168,5 +181,14 @@ typedef union{
 		uint8_t   L34;
 	};
 }sab_loopbypass_tun;
+
+// TunerData ----------------------------------------------
+typedef union{
+	uint8_t all_u8[SAB_I2C_REG_TUNER_DATA_LEN];
+	struct{
+		float   freq_f32;
+		uint8_t active_u8;
+	};
+}sab_tuner_data_tun;
 
 #endif /* INC_SAB_I2C_PROTOCOL_TYPES_H */

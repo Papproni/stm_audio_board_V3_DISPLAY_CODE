@@ -9,6 +9,7 @@
 #include <gui/screen_perf_mode_screen/screen_perf_modePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <gui/containers/mode_header_container.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class screen_perf_modeViewBase : public touchgfx::View<screen_perf_modePresenter>
@@ -30,6 +31,7 @@ protected:
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::TextAreaWithOneWildcard text_preset_num_minor;
     touchgfx::TextAreaWithOneWildcard text_preset_num_major;
+    mode_header_container mode_header_container1;
     touchgfx::ButtonWithLabel btn_opt;
 
     /*

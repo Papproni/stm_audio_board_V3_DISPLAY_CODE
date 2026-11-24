@@ -8,8 +8,10 @@
 #include <mvp/View.hpp>
 #include <gui/screen_loop_screen/screen_loopPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <gui/containers/mode_preset_display_container.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
@@ -70,14 +72,17 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box MAIN_BACKGROUND;
     touchgfx::Box box1;
+    mode_preset_display_container mode_preset_display_container1;
     touchgfx::Line line_signalPath;
     touchgfx::PainterRGB565 line_signalPathPainter;
+    touchgfx::TextArea text_current_loop;
     touchgfx::ButtonWithLabel btn_FX_slot_3;
     touchgfx::ButtonWithLabel btn_FX_slot_2;
     touchgfx::ButtonWithLabel btn_FX_slot_1;
     touchgfx::ButtonWithLabel btn_Add_fx;
     touchgfx::ButtonWithLabel btn_Del_fx;
     touchgfx::ButtonWithLabel btn_opt;
+    touchgfx::ButtonWithLabel btn_move;
     touchgfx::Container cont_Slot1;
     touchgfx::BoxWithBorder glow_1;
     touchgfx::Box box_FX_background_1;

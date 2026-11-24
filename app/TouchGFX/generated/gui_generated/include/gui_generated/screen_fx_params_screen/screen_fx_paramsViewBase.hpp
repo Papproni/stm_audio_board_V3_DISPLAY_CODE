@@ -11,6 +11,7 @@
 #include <touchgfx/containers/SwipeContainer.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <gui/containers/template_fx_param.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 
@@ -48,6 +49,7 @@ protected:
     template_fx_param template_fx_param9;
     template_fx_param template_fx_param8;
     template_fx_param template_fx_param7;
+    touchgfx::ToggleButton toggleBtn_fx_on_off;
     touchgfx::TextAreaWithOneWildcard FXname;
     touchgfx::ButtonWithLabel btn_back;
 

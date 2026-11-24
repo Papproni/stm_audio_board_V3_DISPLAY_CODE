@@ -33,12 +33,15 @@ public:
     uint8_t parameter_positions_au8[NUM_OF_PARAMS_PER_PAGE][2];
 
     template_fx_param *fx_controls_p[12];
-
+    int prev_selected_page;
     uint32_t *adc_vals_ptr;
 #ifndef SIMULATOR
     sab_fx_param_tun fx_params_tun[12];
 #endif
     virtual void update_screen();
+    void return_to_loop_screen(); // preset changed while on FX params -> back to loop screen (new effect setup)
+    void toggleFxOnOffHandler(const touchgfx::AbstractButton& src); // FX on/off toggle clicked
+    touchgfx::Callback<screen_fx_paramsView, const touchgfx::AbstractButton&> toggleFxCallback;
 
 protected:
     int convert_adc_to_pot_values(int val);

@@ -38,6 +38,7 @@ public:
     void                read_fx_param(uint8_t param_slot_u8);
     void                read_info();
     void                read_loopbypass();
+    void                read_tuner_data();
 
     // intercom data GETTERS (NO COMM)
     sab_preset_num_tun  get_preset_data();
@@ -45,6 +46,7 @@ public:
     sab_fx_param_tun    get_fx_param(uint8_t param_slot_u8);
     sab_info_tun        get_info();
     sab_loopbypass_tun  get_loopbypass();
+    sab_tuner_data_tun  get_tuner_data();
     uint8_t             get_num_of_implemented_fx();
     fx_data_tst*        get_implemented_fx();
     

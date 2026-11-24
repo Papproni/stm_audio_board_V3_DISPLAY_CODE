@@ -25,6 +25,11 @@ public:
      */
     virtual void deactivate();
 
+    /**
+     * Called every frame by the Model (via ModelListener) to refresh the tuner display.
+     */
+    virtual void update_screen();
+
     virtual ~screen_tuningPresenter() {}
 
 private:

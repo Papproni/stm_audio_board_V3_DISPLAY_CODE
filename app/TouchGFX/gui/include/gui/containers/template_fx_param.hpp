@@ -26,7 +26,7 @@ public:
     int adc_raw_max_value;
     
     // The current value
-    int last_value_u8;
+    int last_value_i8;
     uint8_t param_value_u8;
     uint8_t delta;
 

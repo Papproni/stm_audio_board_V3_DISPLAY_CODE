@@ -10,7 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 
@@ -35,12 +35,25 @@ protected:
     touchgfx::PainterRGB565 tuning_circlePainter;
     touchgfx::Circle tuning_current_loc;
     touchgfx::PainterRGB565 tuning_current_locPainter;
-    touchgfx::TextArea text_note_middle;
-    touchgfx::TextArea text_note_higher;
-    touchgfx::TextArea text_note_lower;
+    touchgfx::TextAreaWithOneWildcard text_note_higher;
+    touchgfx::TextAreaWithOneWildcard text_note_middle;
+    touchgfx::TextAreaWithOneWildcard text_freq;
+    touchgfx::TextAreaWithOneWildcard text_note_lower;
     touchgfx::ButtonWithLabel btn_opt;
     touchgfx::Line line1;
     touchgfx::PainterRGB565 line1Painter;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_NOTE_HIGHER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_note_higherBuffer[TEXT_NOTE_HIGHER_SIZE];
+    static const uint16_t TEXT_NOTE_MIDDLE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_note_middleBuffer[TEXT_NOTE_MIDDLE_SIZE];
+    static const uint16_t TEXT_FREQ_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_freqBuffer[TEXT_FREQ_SIZE];
+    static const uint16_t TEXT_NOTE_LOWER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar text_note_lowerBuffer[TEXT_NOTE_LOWER_SIZE];
 
 private:
 

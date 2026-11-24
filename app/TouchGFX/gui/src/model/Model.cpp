@@ -17,7 +17,11 @@ Model::Model() : modelListener(0)
 
 void Model::tick()
 {
-	modelListener->update_screen();
+	// modelListener is 0 until the first screen transition binds a presenter;
+	// guard so an early tick (before startup screen is up) is a safe no-op.
+	if (modelListener != 0) {
+		modelListener->update_screen();
+	}
 }
 
 void Model::setFXname(char* data)
@@ -80,6 +84,10 @@ void Model::read_loopbypass(){
 	this->intercom_pst->get_loopbypass(intercom_pst);
 }
 
+void Model::read_tuner_data(){
+	this->intercom_pst->get_tuner_data(intercom_pst);
+}
+
 sab_preset_num_tun  Model::get_preset_data(){
 	return this->intercom_pst->preset_data_un;
 }
@@ -104,6 +112,10 @@ sab_info_tun        Model::get_info(){
 
 sab_loopbypass_tun  Model::get_loopbypass(){
 	return this->intercom_pst->loopbypass_un;
+}
+
+sab_tuner_data_tun  Model::get_tuner_data(){
+	return this->intercom_pst->tuner_data_un;
 }
 
 uint8_t Model::get_num_of_implemented_fx(){

@@ -18,5 +18,7 @@ void screen_settingsPresenter::deactivate()
 }
 
 void screen_settingsPresenter::save_preset(){
+#ifndef SIMULATOR
     model->set_save();
+#endif
 }

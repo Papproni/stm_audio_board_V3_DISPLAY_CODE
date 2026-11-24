@@ -39,6 +39,10 @@ void screen_fx_paramsView::setupScreen()
 	swipeContainer.setSwipeCutoff(20);
 
 	screen_fx_paramsViewBase::setupScreen();
+	// Wire the FX on/off toggle: reflect the current FX's on/off and act on taps.
+	toggleFxCallback = touchgfx::Callback<screen_fx_paramsView, const touchgfx::AbstractButton&>(this, &screen_fx_paramsView::toggleFxOnOffHandler);
+	toggleBtn_fx_on_off.setAction(toggleFxCallback);
+	toggleBtn_fx_on_off.forceState(presenter->get_current_fx_on_off());
 	fx_controls_p[0] = &template_fx_param1;
 	fx_controls_p[1] = &template_fx_param2;
 	fx_controls_p[2] = &template_fx_param3;
@@ -104,11 +108,37 @@ void screen_fx_paramsView::tearDownScreen()
 	screen_fx_paramsViewBase::tearDownScreen();
 }
 
+void screen_fx_paramsView::return_to_loop_screen()
+{
+	application().gotoscreen_loopScreenNoTransition();
+}
+
 void screen_fx_paramsView::update_screen()
 {
 	// TODO
 #ifndef SIMULATOR
-	if(swipeContainer.getSelectedPage() == 0){
+	int curr_page = swipeContainer.getSelectedPage();
+	if(prev_selected_page != curr_page){
+		presenter->get_fx_param_data();
+		// Reinit to not change value on page swipe
+		for (int i = 0; i < NUM_OF_PARAM_PAGES; i++)
+		{
+			for (int j = 0; j < NUM_OF_PARAMS_PER_PAGE; j++)
+			{
+				int idx = i * NUM_OF_PARAMS_PER_PAGE + j;
+				uint8_t x = this->parameter_positions_au8[j][0];
+				uint8_t y = this->parameter_positions_au8[j][1];
+				fx_controls_p[idx]->invalidate();
+	#ifndef SIMULATOR
+				fx_controls_p[idx]->init_parameter((char *)fx_params_tun[idx].name, 5, fx_params_tun[idx].type_en, fx_params_tun[idx].value_u8);
+	#endif
+				fx_controls_p[idx]->setXY(x, y);
+				fx_controls_p[idx]->invalidate();
+			}
+		}
+	}
+
+	else if(swipeContainer.getSelectedPage() == 0){
 		for (int i = 0; i < 6; i++)
 		{
 			if (fx_controls_p[i]->update_ui(adc_vals_ptr[i % 6]))
@@ -127,6 +157,7 @@ void screen_fx_paramsView::update_screen()
 			}
 		}
 	}
+	prev_selected_page = curr_page;
 	swipeContainer.invalidate();
 	
 #endif
@@ -141,5 +172,13 @@ void screen_fx_paramsView::update_screen()
 	}
 	swipeContainer.invalidate();
 
+#endif
+}
+
+void screen_fx_paramsView::toggleFxOnOffHandler(const touchgfx::AbstractButton& src)
+{
+	(void)src;
+#ifndef SIMULATOR
+	presenter->set_fx_on_off(toggleBtn_fx_on_off.getState());
 #endif
 }

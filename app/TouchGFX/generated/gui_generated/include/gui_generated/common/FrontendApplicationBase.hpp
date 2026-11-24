@@ -17,7 +17,7 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreen_perf_modeScreenNoTransition();
+        gotoscreen_startupScreenNoTransition();
     }
 
     // screen_settings
@@ -28,6 +28,8 @@ public:
 
     // screen_perf_mode
     void gotoscreen_perf_modeScreenNoTransition();
+
+    void gotoscreen_perf_modeScreenCoverTransitionEast();
 
     // screen_info
     void gotoscreen_infoScreenNoTransition();
@@ -47,6 +49,9 @@ public:
     // screen_add_effect
     void gotoscreen_add_effectScreenNoTransition();
 
+    // screen_startup
+    void gotoscreen_startupScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -60,6 +65,8 @@ protected:
 
     // screen_perf_mode
     void gotoscreen_perf_modeScreenNoTransitionImpl();
+
+    void gotoscreen_perf_modeScreenCoverTransitionEastImpl();
 
     // screen_info
     void gotoscreen_infoScreenNoTransitionImpl();
@@ -78,6 +85,9 @@ protected:
 
     // screen_add_effect
     void gotoscreen_add_effectScreenNoTransitionImpl();
+
+    // screen_startup
+    void gotoscreen_startupScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP
