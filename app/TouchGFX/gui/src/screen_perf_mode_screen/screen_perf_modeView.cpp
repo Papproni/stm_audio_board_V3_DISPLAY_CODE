@@ -33,7 +33,13 @@ void screen_perf_modeView::update_screen()
     // Change major character
     Unicode::snprintf(text_preset_num_majorBuffer,TEXT_PRESET_NUM_MAJOR_SIZE,"%c",major_u8);
     Unicode::snprintf(text_preset_num_minorBuffer,TEXT_PRESET_NUM_MINOR_SIZE,"%d",minor_u8);
-    
+    // Push the new values into the wildcard TextAreas — typed text is the
+    // single <placeholder> (0x02) set in the ViewBase constructor, so the
+    // number only appears via setWildcard(); without it the areas stay at
+    // their initial Designer text ("B"/"8").
+    text_preset_num_major.setWildcard(text_preset_num_majorBuffer);
+    text_preset_num_minor.setWildcard(text_preset_num_minorBuffer);
+
     text_preset_num_major.resizeToCurrentText();
     text_preset_num_major.invalidate();
     text_preset_num_minor.resizeToCurrentText();
